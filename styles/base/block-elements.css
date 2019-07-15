@@ -1,10 +1,70 @@
 
 /****  ELEMENT STYLE *****/
+
+/* STEPS  *********/
+ol.steps{ist-style: none; counter-reset: my-counter; display: inline-flex; flex-wrap: wrap;  margin: 0px; padding: 0px; }
+ol.steps li::before{content: "" counter(my-counter);font-weight: bold; color: #ccc;font-size: 1.8rem; margin-right: 10px;line-height: 1;border-right: 1px dotted #ccc;padding-right: 10px; }
+ol.steps li{counter-increment: my-counter; display:inline-flex; font-size: 1.1rem;margin-bottom: 25px; flex-wrap: wrap; width: 100%; overflow: auto; float: left;}
+/* sub-STEPS  *********/
+ol.sublist{ist-style: none; counter-reset: my-counter; display: inline-flex;  }
+ol.sublist li::before{content: "" counter(my-counter);border: 1px solid #aaa; border-radius: 50%; width: 12px; height: 12px; padding: 5px; font-size: 1rem; text-align: center; line-height: .8;  color: #aaa; }
+ol.sublist li{counter-increment:my-counter; }
+ol.sublist li:first-child{margin-top: 20px;}
+/* END STEPS  *********/
+
+
+/* CHOICE *********/
+ul li.choice::before{ content:''; width: 0px; height: 2px; background-color: #09AFD6; margin-right: 10px; margin-left: 60px; align-self: center;}
+ul li.choice:first-child{padding-top: 10px;}
+ul li.choice{padding: 3px 0px; font-size: 1rem; font-style: italic; margin: 0px; }
+/* END CHOICE *********/
+
+
+/* FIG *********/
+figure{padding: 0px; margin: 0px;}
+figure img{ margin: 0px; float: left; }
+figure figcaption {font-style: italic; font-size: .9rem; text-align:left;}
+/* END FIG *********/
+
+
 /*  shortdescribtion */
 p.shortdesc{font-style: italic; font-size:1rem; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; margin: 15px auto 20px auto; line-height: 20px; padding: 15px 0px;}
 
 /* IMAGES *********/
-.image{border: solid 1px #ccc; padding: 15px; margin: 20px;}
+.image{ padding: 15px; margin: 20px auto; display: block;}/**** aligned-center *********/
+/*.image{ padding: 15px; margin: 20px; float: left;} /**** aligned-left *********/
+/*.image{ padding: 15px; margin: 20px; float: right;} /**** aligned-right *********/
+
+
+/* Table ****/
+table{margin:20px 0px; padding: 10px; line-height: 1.3rem;}
+th{border-top: solid 3px #ebebeb; border-bottom: solid 1px #ccc; line-height: 1.1rem; text-align: left; }
+td{border-bottom: solid 1px #ccc; }
+tr:first-child{border-top: solid 3px #ebebeb;}
+tr:last-child{border-bottom: solid 3px #ebebeb;}
+/* end Table ****/
+
+
+/* Reference table ****/
+.reference h2{margin-left: 20px; font-size: 1.2rem;}
+ div>p.ref_desc {border-bottom: dotted 1px #ccc; border-top: dotted 1px #ccc; overflow: auto; margin: 10px 20px;}
+.reference table {border: solid 1px #ccc; margin: 0px; padding: 0px;}
+.reference tbody{border: none;}
+.reference table th{background-color:#ebebeb; color: #404040; padding: 10px;  border: none; line-height: 1; text-align: left;}
+.reference table tr:nth-child(even){background-color: #f1f2f3; }
+.reference table tr:first-child{border-top: solid 1px #ccc;}
+.reference table tr td{border: none; vertical-align: top; padding: 10px;}
+/* end Reference table ****/
+
+
+
+/* Note */
+div.blue_note{padding: 5px; overflow: auto; margin: 40px 15px; border-left: solid 5px #ccc; font-style: italic; font-size: 0.9rem; margin-left: 0px; padding-left: 10px; clear: both;}
+div.blue_note span{font-weight: bold; }
+/* end Note */
+
+
+
 
 
 /* COVER PAGE *********/
@@ -44,15 +104,28 @@ nav li:first-child{margin-top: 20px;}
   font-family: "Roboto", Helvetica, Arial;
   size: a4;
   /* marks: crop cross; */
-  margin: 80px 55px;
-  /* margin-left: 20mm;
-  margin-right: 20mm; */
+  margin: 80px 55px; 
+}
 
+/* FIRST PAGE- start on right *********/
+@page :first {
+  margin-top: 8cm;
+}
+
+/* BLANK PAGE- start on left *********/
+
+/*@page :blank {
+  @top-center { 
+    content: "This page is intentionally left blank";
+    }*/
+    
+/* LEFT PAGE *********/
+@page:left{
   /* Header ***/
   @top-left {
     content: "User Guide";
     font-size: .9rem; 
-    margin: -21mm -15mm; padding: 20px;
+    margin-left:-15mm; padding: 20px;
    color:  #7c8d99; font-weight: bold;
    text-transform: uppercase; letter-spacing: 1px;
   }
@@ -60,18 +133,14 @@ nav li:first-child{margin-top: 20px;}
   @top-right {
     content: "Jorsek";
     font-size: .9rem;
-    margin: -21mm -15mm;
+     margin-right:-15mm;
     padding: 20px; color: #aaa;
     text-transform: uppercase; letter-spacing: 1px;
   }
 
-/* Footer page***/
- /* @bottom {
-    content: " "; float: left; display: flex;
-  }*/
   @bottom-right {
     font-size:1.2rem; font-weight: bold; border-top: solid 1px #d8d8d8; 
-    margin: 0 -15mm;
+    margin-right:-15mm;
     content: counter(page);
     background-color:#fff;
     color:  #7c8d99;
@@ -79,11 +148,46 @@ nav li:first-child{margin-top: 20px;}
   }
   @bottom-left {
     font-size:.9rem; border-top: solid 1px #ccc; 
-    margin: 0 -15mm;
+    margin-left: -15mm;
     content: "Copyright © 2004-2018 Jorsek LLC.";
     background-color: #fff;
     color: #aaa; font-style: italic;
     padding-left: 20px;  letter-spacing: 1px;
+  }
+}
+
+/* RIGHT PAGE *********/
+@page:right{
+  /* Header ***/
+  @top-right {
+    content: "User Guide";
+    font-size: .9rem; 
+     margin-right:-15mm; padding: 20px;
+   color:  #7c8d99; font-weight: bold;
+   text-transform: uppercase; letter-spacing: 1px;
+  }
+  @top-left {
+    content: "Jorsek";
+    font-size: .9rem;
+     margin-left:-15mm;
+    padding: 20px; color: #aaa;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  @bottom-left {
+    font-size:1.2rem; font-weight: bold; border-top: solid 1px #d8d8d8; 
+    margin-left:-15mm;
+    content: counter(page);
+    background-color:#fff;
+    color:  #7c8d99;
+    padding-left:20px;
+  }
+  @bottom-right{
+    font-size:.9rem; border-top: solid 1px #ccc; 
+    margin-right:-15mm;
+    content: "Copyright © 2004-2018 Jorsek LLC.";
+    background-color: #fff;
+    color: #aaa; font-style: italic;
+    padding-right: 20px;  letter-spacing: 1px;
   }
 }
 /* END HEADER AND FOOTER *********/
