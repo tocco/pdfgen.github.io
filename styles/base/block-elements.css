@@ -4,6 +4,8 @@
 /*---------------------------------------- DEFAULT STYLE -------------------------------------------  */
 
 /*DEFINITION STYLES****/
+
+
 /* default */
 dl.dl{margin: 20px;padding: 0px;}
 dl dt.dt{position: relative; padding: 15px 0px 0px 20px; width: 15%; font-weight: bold; float: left;}
@@ -74,10 +76,13 @@ div.stepresult{margin: 20px; overflow: auto;}
 
 /* SECTION *********/
 .section {margin: 20px;}
+.sectiontitle{left: -20px; position: relative; border-left: solid 20px #eee; padding: 0px 5px; display: block; clear: both; line-height: 20px; }
+.sectiontitle>.p{margin-top: 0px; padding-top: 0px;}
+.section>.p{left: 10px; position: relative;}
 /* END SECTION *********/
 
 /* SECTION RESULT *********/
-.result{margin: 5px 0px 0px 40px; border: solid 2px #ccc; padding: 10px; -webkit-border-radius: 5px; border-radius: 5px;}
+.result{margin: 5px 0px 0px 40px; border: solid 2px #ccc; padding: 10px; -webkit-border-radius: 5px; border-radius: 5px;}*/
 /* ---vertical style -------
 /* END SECTION RESULT *********/
 
@@ -90,27 +95,50 @@ div.stepresult{margin: 20px; overflow: auto;}
 
 
 /* FIG *********/
-figure{padding: 0px; margin: 0px;}
-figure img{ margin: 0px; float: left; }
-figure figcaption {font-style: italic; font-size: .9rem; text-align:left;}
+.fig{padding: 0px; margin: 0px; font-style: italic; font-size: .9rem; display: block; clear: both;}
+.fig img{ padding: 10px 0px; left: 5px; position: relative; }
+.fig>figcaption{left: 10px; position: relative;}
+div>.fig img{left: -1px; position: relative;}
+div>.fig>figcaption{left: 0px; position: relative;}
 /* END FIG *********/
 
 
 /* IMAGES *********/
-/**** center *********/
-.image{ padding: 15px; margin: 20px auto; display: block;}
 /**** aligned-left *********/
-/*.image{ padding: 15px; margin: 20px; float: left;}
+img.go_left{ margin-right: 15px; float: left; margin-bottom: 20px; margin-top: 20px; width: 500px; clear: both;}
+/**** center *********/
+img.go_right{ margin-left: 15px; float: right; margin-bottom: 20px; margin-top: 20px; width: 500px; clear: both;}
 /**** aligned-right *********/
-/*.image{ padding: 15px; margin: 20px; float: right;}
+img.keep_center{display: block; margin: 5px auto;  width: 500px; clear: both;}
 
 
 /* Table ****/
-table{margin:20px 0px; padding: 10px; line-height: 1.3rem;}
-th{border-top: solid 3px #ebebeb; border-bottom: solid 1px #ccc; line-height: 1.1rem; text-align: left; }
-td{border-bottom: solid 1px #ccc; }
-tr:first-child{border-top: solid 3px #ebebeb;}
-tr:last-child{border-bottom: solid 3px #ebebeb;}
+.table{margin:20px 0px;line-height: 1.3rem; }
+.thead{border-top: solid 3px #ebebeb; border-bottom: solid 1px #ccc; line-height: 1.1rem;  ;}
+.row{border-bottom: solid 1px #ccc; padding: 10px 15px 10px 3px;}
+.row:first-child{border-top: solid 3px #ebebeb;}
+.row:last-child{border-bottom: solid 3px #ebebeb;}
+/* column with vertical line */
+.vertical_left .entry{border-left:solid 1px #ccc; border-bottom:none; padding: 10px 15px;}
+.vertical_left .entry:last-child{border-right:solid 1px #ccc; border-bottom:none;}
+.vertical_left{border-bottom: none ;}
+/* row line only */
+.row_line{border-bottom:solid 1px #ccc; padding: 10px 15px 10px 5px;}
+.row_line:first-child{border-top: none ;}
+.row_line:last-child{border-bottom: none ;}
+/* row + column line */
+.all_lines{border:solid 1px #ccc; padding: 10px 15px 10px 5px;}
+.all_lines .entry{border-right:solid 1px #ccc; }
+.all_lines:first-child{border-top:solid 1px #ccc;}
+.no_vline{border-left:solid 1px #ccc ; border-right:solid 1px #ccc; }
+/* Table label */
+.table--title-label{padding: 0px 0px 3px 0px; margin: 0px; font-style: italic; font-size: .9rem; display: block; }
+.title{font-weight: bold; font-size: 1.2rem; display: block; padding-bottom: 10px;}
+/* Table nested <p> and list */
+.entry .ul{margin-left: 20px;}
+.entry .ul .li{padding: 0px;}
+.entry .ul .li>p{padding: 0px; margin: 0px;}
+.entry .p:first-child{margin-top: 0px;}
 /* end Table ****/
 
 
@@ -132,7 +160,7 @@ div.blue_note span{font-weight: bold; }
 
 
 /*  shortdescribtion */
-p.shortdesc{font-style: italic; font-size:1rem; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; margin: 15px auto 20px auto; line-height: 20px; padding: 15px 0px;}
+.shortdesc{font-style: italic; font-size:1rem; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; margin: 5px auto 20px auto; line-height: 20px; padding: 10px 0px;}
 
 
 /* COVER PAGE *********/
@@ -140,11 +168,12 @@ html, body { height: 100%; width: 100%;}
 * {font-family: "'Roboto", Helvetica, Arial !important;}
 html {margin-right: 2000px;}
 .coverPageContainer {width: 100%; height: 100%}
-.centeredContainer {height: 100%; width: 100%; display: table; margin: 0px;padding: 0px;}
+.centeredContainer {height: 100%; width: 100%; display: table; margin:0px; padding: 0px; }
 .centeredContainer .centered {
-  display: table-cell;vertical-align: middle; text-align: center;}
+  display: table-cell; vertical-align: middle; }
 /* Title style */
-.coverPage-title {font-family: "'Roboto", Helvetica, Arial; border-top: solid 5px #aaa; border-bottom: solid 5px #aaa; padding: 35px 0px; font-size: 2.6rem; text-align: center; line-height: 3.2rem; }
+.coverPage-title {font-family: "'Roboto", Helvetica, Arial;  padding: 60px ; font-size: 2.6rem; text-align:center; line-height: 3.2rem; }
+.leading-bar{ background-color: #f1f2f3; border-top: solid 1px #eee; border-bottom: solid 1px #eee; width: 100%; }
 /* END COVER PAGE *********/
 
 
@@ -173,8 +202,7 @@ nav li:first-child{margin-top: 20px;}
   margin: 80px 55px; 
 }
 /* FIRST PAGE- start on right *********/
-@page :first {
- 
+@page:first { margin: 0px; border: solid 15px #f1f2f3;
 }
 /* BLANK PAGE- start on left *********/
 /*@page :blank {
