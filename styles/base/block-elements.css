@@ -41,16 +41,25 @@ padding: 6px 5px; font-size: 1rem; text-align: center; line-height: .7;  color: 
 
 /* CHOICE *********/
 .choices{list-style: none; margin-left: 0px;}
+.choices .arrow::before{content:""; background-color: #09AFD6; display: inline-block; position: absolute; left: 80px; width: 10px; height: 2px; margin-right: 0px; margin-top: 12px;}
+.choices .arriw{font-size: 1rem; font-style: italic; overflow: auto;} 
+/* sub choice *****/
 .choices .sub_arrow::before{content:""; background-color: #09AFD6; display: inline-block; position: absolute; left: 80px; width: 10px; height: 2px; margin-right: 0px; margin-top: 12px; }
 .choices .sub_arrow{ font-size: 1rem; font-style: italic; overflow: auto;}
 /* END CHOICE ********/
 
+
 /* CHOICE TABLE*********/
-.choicetable{border-collapse: collapse;  border: solid 1px #ccc;}
-.choicetable th{font-weight: bold; padding: 10px; background-color: #fff;}
+.choicetable{border-collapse: collapse;  border: solid 1px #ccc; left: -50px; position: relative;}
+.choicetable th{font-weight: bold; padding: 10px; background-color: #fff; border: none;}
 .choicetable tr:nth-child(odd){background-color: #f1f2f3;}
 .choicetable tr:last-child{border-bottom: solid 1px #f1f2f3;}
-.choicetable td{padding: 10px; vertical-align: top;}
+.choicetable tr{border: none;}
+.choicetable td{padding: 10px; vertical-align: top; border: none;}
+/* Nested in step */
+.step:first-child>.choicetable{left: -50px; position: relative;}
+.step>.choicetable{left: -115px; position: relative;}
+.step>.fixed_table{left: -150px; position: relative;}
 /* END CHOICE TABLE*********/
 
 
@@ -75,14 +84,15 @@ div.stepresult{margin: 20px; overflow: auto;}
 /* END RESULT *********/
 
 /* SECTION *********/
-.section {margin: 20px;}
-.sectiontitle{left: -20px; position: relative; border-left: solid 20px #eee; padding: 0px 5px; display: block; clear: both; line-height: 20px; }
+.section {margin: 20px; }
+.sectiontitle{left: -20px; position: relative; height: 10px; line-height: 1.4rem; border-left: solid 20px #eee; padding: 0px 5px;  display: block; clear: both; }
 .sectiontitle>.p{margin-top: 0px; padding-top: 0px;}
 .section>.p{left: 10px; position: relative;}
 /* END SECTION *********/
 
+
 /* SECTION RESULT *********/
-.result{margin: 5px 0px 0px 40px; border: solid 2px #ccc; padding: 10px; -webkit-border-radius: 5px; border-radius: 5px;}*/
+.result{margin: 5px 0px 0px 40px; border: solid 2px #ccc; padding: 10px; -webkit-border-radius: 5px; border-radius: 5px;}
 /* ---vertical style -------
 /* END SECTION RESULT *********/
 
@@ -90,16 +100,30 @@ div.stepresult{margin: 20px; overflow: auto;}
 .dl {margin: 20px; padding: 0px;}
 .dt {position: relative; padding: 15px 0px 0px 20px; width: 15%; font-weight: bold; float: left;}
 .dd { border-left: 1px solid #ccc; margin: 2% 0% 2% 17%; padding: 0px 20px;
-}
+vertical-align: top;}
+
+/* Nested default */
+.dl .default_nested{ margin: 20px 0px; padding: 0px; display: block;}
+.default_nested dt{ width: 100px !important;; border-left: 2px solid #DBD8D8; border-top:none;  overflow: auto;display: block;  padding: 5px 15px 5px 10px !important; margin-bottom: 20px; clear: both;}
+.default_nested dd{ width: 400px; border:none; display: block; padding: 15px 0px !important; vertical-align: top;}
+/* end Nested default */
 /*  END DEFINATION LIST-----*/
 
 
 /* FIG *********/
-.fig{padding: 0px; margin: 0px; font-style: italic; font-size: .9rem; display: block; clear: both;}
+.fig{padding: 0px; margin: 0px; font-style: italic; font-size: .9rem; display: block; clear: both; overflow: auto;}
 .fig img{ padding: 10px 0px; left: 5px; position: relative; }
 .fig>figcaption{left: 10px; position: relative;}
 div>.fig img{left: -1px; position: relative;}
 div>.fig>figcaption{left: 0px; position: relative;}
+
+/* FIG Alignment *********/
+.fig-result{margin: 10px 0px 20px 75px; padding: 15px; display: table; width: 600px; }
+.fig-result>.fig img{width: 300px;}
+.fig-result>.fig{ display: block; }
+.fig-result>.fig_left{display: block; float: left; margin-bottom: 10px; clear: both;}
+.fig-result>.fig_right{display: block; float: right; margin-bottom: 10px; clear: both; padding-right: 10px;}
+.result>.fig_center{display: block; margin: 0px auto 10px auto; clear: both; width: 300px;}
 /* END FIG *********/
 
 
@@ -188,9 +212,11 @@ nav a::after {
 nav a { color:#404040; text-decoration: none;}
 nav ul { margin-left: 20px;}
 nav li {
-  list-style-type: none; padding: 10px 0px; font-size: 1.2rem; font-style: italic;
+  list-style-type: none; padding: 5px 0px; font-size: 1.2rem; font-style: italic;
 }
 nav li:first-child{margin-top: 20px;}
+nav li>ul li:first-child{margin-top: 5px; margin-left: 0px;}
+nav li>ul li{margin-left: 0px;}
 /* END TABLE CONTENT *********/
 
 
