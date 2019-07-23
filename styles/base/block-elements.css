@@ -169,7 +169,7 @@ img.keep_center{display: block; margin: 5px auto;  width: 500px; clear: both;}
 /* Reference table ****/
 .reference h2{margin-left: 20px; font-size: 1.2rem;}
  div>p.ref_desc {border-bottom: dotted 1px #ccc; border-top: dotted 1px #ccc; overflow: auto; margin: 10px 20px;}
-.reference table {border: solid 1px #ccc; margin: 0px; padding: 0px;}
+.reference table {border: solid 1px #ccc; margin: 0px; padding: 0px; width: 100%;}
 .reference tbody{border: none;}
 .reference table th{background-color:#ebebeb; color: #404040; padding: 10px;  border: none; line-height: 1; text-align: left;}
 .reference table tr:nth-child(even){background-color: #f1f2f3; }
