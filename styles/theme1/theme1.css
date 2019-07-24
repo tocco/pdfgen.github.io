@@ -134,7 +134,7 @@ div.blue_note span{font-weight: bold; }
 
 /* DEFINATION LIST-----*/
 .dl {padding: 0px; margin: 0px;}
-.dt{ background-color: rgba(0, 131, 185, .1);  font-weight: bold; text-transform: uppercase; font-size: 1rem; padding: 5px 5px 5px 10px !important; margin:20px 0px 0px 0px !important; border-radius: 5px 0px 0px 5px; width: 15%; float: left; color:rgba(4, 137, 167, .7); border-right: 1px dotted #9ac1d4;
+.dt{ background-color: rgba(0, 131, 185, .1);  font-weight: bold; text-transform: uppercase; font-size: 1rem; padding: 5px 5px 5px 10px !important; margin:20px 0px 0px 0px !important; border-radius: 5px 0px 0px 5px; width: 15%; float: left; color:rgba(4, 137, 167, .7); 
 }
 .dd{float:left; padding: 0px 5px 0px 15px !important;margin: 0px 0px 0px 116px !important; border-left: 1px dotted #9ac1d4 !important;}
 /* END DEFINATION LIST-----*/
