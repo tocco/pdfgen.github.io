@@ -1,7 +1,6 @@
-@import "../base/base.css";
+@import "../base/base.css")
 
 /* Additional theme css */
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
 
 /* GLOBAL SETTING *********/
@@ -108,7 +107,7 @@ img.keep_center{display: block; margin: 5px auto;  width: 500px; clear: both;}
 .entry .ul .li>p{padding: 0px; margin: 0px;}
 .entry .p:first-child{margin-top: 0px;}
 /* end Table ****/
-
+ 
 
 /* Reference table ****/
 .reference h2{margin-left: 20px; font-size: 1.2rem;}
@@ -328,5 +327,3 @@ html {margin-right: 2000px;}
     padding-right: 20px;  letter-spacing: 1px;
   }
 }
-=======
->>>>>>> 51c2df1bb65c8deda62bbf16918a632a9c14ba4a
