@@ -33,8 +33,8 @@ p{margin: 10px 0px 0px 0px; display: block;}
 div .p{ margin: 10px 0px 0px 0px; clear: both;}
 
 img{padding: 10px auto; width: 100%; left:5px; position: relative; }
-/* END GLOBAL SETTING *********/
 
+/* END GLOBAL SETTING *********/
 
 @media print {
 .note, dl, dt, dd,  table{page-break-inside: avoid;}
