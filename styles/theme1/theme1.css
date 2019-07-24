@@ -1,6 +1,7 @@
-@import "../base/base.css")
+@import "../base/base.css";
 
 /* Additional theme css */
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
 
 /* GLOBAL SETTING *********/
@@ -327,3 +328,5 @@ html {margin-right: 2000px;}
     padding-right: 20px;  letter-spacing: 1px;
   }
 }
+=======
+>>>>>>> 51c2df1bb65c8deda62bbf16918a632a9c14ba4a
