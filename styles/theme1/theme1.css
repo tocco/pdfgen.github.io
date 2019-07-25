@@ -79,6 +79,7 @@ img.go_right{ margin-left: 15px; float: right; margin-bottom: 20px; margin-top: 
 /**** aligned-right *********/
 img.keep_center{display: block; margin: 5px auto;  width: 500px; clear: both;}
 
+
 /* Table ****/
 .table{margin:20px 0px;line-height: 1.3rem; }
 .thead{color: rgba(4, 137, 167, .7);;}
