@@ -81,11 +81,11 @@ img.keep_center{display: block; margin: 5px auto;  width: 500px; clear: both;}
 
 
 /* Table ****/
-.table{margin:20px 0px;line-height: 1.3rem; }
-.thead{color: rgba(4, 137, 167, .7);;}
-.row{border-bottom: solid 1px  #9cc4d3; padding: 10px 15px 10px 3px;}
-.row:first-child{border-top: solid 3px  rgba(0, 131, 185, .2);}
-.row:last-child{border-bottom: solid 3px  rgba(0, 131, 185, .2);}
+.table{margin:20px 0px;line-height: 1.3rem; border: solid 1px rgba(0, 131, 185, .3); }
+.thead{color: rgba(4, 137, 167, 1); background-color: rgba(0, 131, 185, .3);}
+.row{border-bottom: solid 1px   rgba(0, 131, 185, .3); padding: 10px 15px 10px 3px;}
+.row:first-child{border-top: solid 1px  rgba(0, 131, 185, .3);}
+.row:last-child{border-bottom: solid 1px  rgba(0, 131, 185, .3);}
 /* Table label */
 .table--title-label{padding: 0px 0px 3px 0px; margin: 0px; font-style: italic; font-size: .9rem; display: block; }
 .title{font-weight: bold; font-size: 1.2rem; display: block; padding-bottom: 10px;}
@@ -98,10 +98,10 @@ img.keep_center{display: block; margin: 5px auto;  width: 500px; clear: both;}
 .indicator img{width: 50px !important;}
 /* Table Combinations ****/
 .table--pgwide-1{width: 100%;}
-.rowsep-1{border-bottom: solid 1px #9cc4d3;}
+.rowsep-1{border-bottom: solid 1px rgba(0, 131, 185, .3);}
 .rowsep-1:last-child{border-bottom:none;}
 .colsep-0, .rowsep-0{border: 0px;}
-.colsep-1{border-right: solid 1px #9cc4d3;}
+.colsep-1{border-right: solid 1px rgba(0, 131, 185, .3);}
 .colsep-1:last-child{border-right:none;}
 /* end Table ****/
 
