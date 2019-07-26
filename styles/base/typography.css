@@ -18,7 +18,7 @@ h3{font-size: 1.3rem; font-weight: bold; margin:20px 0px 6px 0px;}
 article {margin-bottom: 20px;
 }
 p{margin: 0px; padding: 0px;}
-table{margin: 20px auto; font-size: 0.9rem; text-align: left; border-collapse: collapse; }
+table{margin: 20px auto; font-size: 0.9rem; text-align: left; border-collapse: collapse; width: 100%;}
 th{font-weight: bold; padding: 10px; text-align: left;}
 td{padding: 10px; vertical-align: top;}
 ul{list-style: square; }
