@@ -137,11 +137,11 @@ img.keep_center{display: block; margin: 5px auto;  width: 500px; clear: both;}
 
 
 /* Table ****/
-.table{margin:20px 0px;line-height: 1.3rem; }
-.thead{border-top: solid 3px #ebebeb; border-bottom: solid 1px #ccc; line-height: 1.1rem;  ;}
+.table{margin:20px 0px;line-height: 1.3rem; border: solid 1px #ccc;}
+.thead{background-color: #f1f2f3; line-height: 1.1rem;  ;}
 .row{border-bottom: solid 1px #ccc; padding: 10px 15px 10px 3px;}
-.row:first-child{border-top: solid 3px #ebebeb;}
-.row:last-child{border-bottom: solid 3px #ebebeb;}
+.row:first-child{border-top: solid 1px #ccc;}
+.row:last-child{border-bottom: solid 1px #ccc;}
 /* Table label */
 .table--title-label{padding: 0px 0px 3px 0px; margin: 0px; font-style: italic; font-size: .9rem; display: block; }
 .title{font-weight: bold; font-size: 1.2rem; display: block; padding-bottom: 10px;}
