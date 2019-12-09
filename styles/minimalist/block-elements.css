@@ -222,11 +222,6 @@ nav li>ul li{margin-left: 0px;}
   /* marks: crop cross; */
   margin: 80px 55px;
   counter-reset: footnote;
-  @footnotes {
-    border-top: solid black thin;
-    border-clip: 200px;
-    padding: 0px 10px 0px 12px;
-  }
 }
 
 /* FIRST PAGE- start on right *********/
@@ -273,6 +268,11 @@ nav li>ul li{margin-left: 0px;}
     color: #aaa; font-style: italic;
     padding-left: 20px;  letter-spacing: 1px;
   }
+  @footnotes {
+    border-top: solid black thin;
+    border-clip: 200px;
+    padding: 0px 10px 0px 12px;
+  }
 }
 
 /* RIGHT PAGE *********/
@@ -307,6 +307,11 @@ nav li>ul li{margin-left: 0px;}
     background-color: #fff;
     color: #aaa; font-style: italic;
     padding-right: 20px;  letter-spacing: 1px;
+  }
+  @footnotes {
+    border-top: solid black thin;
+    border-clip: 200px;
+    padding: 0px 10px 0px 12px;
   }
 }
 /* END HEADER AND FOOTER *********/
