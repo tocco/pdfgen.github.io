@@ -236,10 +236,10 @@ nav li>ul li{margin-left: 0px;}
 
 
 /* COVER PAGE *********/
-html, body { height: 100%; width: 100%;}
+html, body { width: 100%;}
 * {font-family: "'Roboto", Helvetica, Arial !important;}
 html {margin-right: 2000px;}
-.coverPageContainer {width: 100%; height: 100%; }
+.coverPageContainer {width: 100%; height: 100%; page-break-after: always;}
 .centeredContainer {height: 100%; width: 100%; display: table; margin:0px; padding: 0px; }
 .centeredContainer .centered {
   display: table-cell; vertical-align: top; }
@@ -252,6 +252,22 @@ html {margin-right: 2000px;}
 
 
 /* HEADER AND FOOTER *********/
+.fn {
+  float: footnote;
+  font-size: 83%;
+}
+
+.fn::footnote-call {
+  content: "[" counter(footnote) "]";
+  font-size: 83%;
+  vertical-align: super;
+  line-height: none;
+}
+
+.fn::footnote-marker {
+  font-weight: bold;
+}
+
 @page {
   font-family: "Roboto", Helvetica, Arial;
   size: a4;
