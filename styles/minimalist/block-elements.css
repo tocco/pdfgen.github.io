@@ -183,10 +183,10 @@ div.blue_note span{font-weight: bold; }
 
 
 /* COVER PAGE *********/
-html, body { height: 100%; width: 100%;}
+html, body { width: 100%;}
 * {font-family: "'Roboto", Helvetica, Arial !important;}
 html {margin-right: 2000px;}
-.coverPageContainer {width: 100%; height: 100%}
+.coverPageContainer {width: 100%; height: 100%; page-break-after: always;}
 .centeredContainer {height: 100%; width: 100%; display: table; margin:0px; padding: 0px; }
 .centeredContainer .centered {
   display: table-cell; vertical-align: middle; }
@@ -222,6 +222,12 @@ nav li>ul li{margin-left: 0px;}
   /* marks: crop cross; */
   margin: 80px 55px;
   counter-reset: footnote;
+  @footnotes {
+    margin-top:10px;
+    border-top: solid black thin;
+    border-clip: 200px;
+    padding: 0px 10px 0px 12px;
+  }
 }
 
 /* FIRST PAGE- start on right *********/
@@ -268,11 +274,6 @@ nav li>ul li{margin-left: 0px;}
     color: #aaa; font-style: italic;
     padding-left: 20px;  letter-spacing: 1px;
   }
-  @footnotes {
-    border-top: solid black thin;
-    border-clip: 200px;
-    padding: 0px 10px 0px 12px;
-  }
 }
 
 /* RIGHT PAGE *********/
@@ -293,25 +294,20 @@ nav li>ul li{margin-left: 0px;}
     text-transform: uppercase; letter-spacing: 1px;
   }
   @bottom-left {
-    font-size:1.2rem; font-weight: bold; border-top: solid 1px #d8d8d8; 
-    margin-left:-15mm;
-    content: counter(page);
-    background-color:#fff;
-    color:  #7c8d99;
-    padding-left:20px;
-  }
+  font-size:1.2rem; font-weight: bold; border-top: solid 1px #d8d8d8;
+  margin-left:-15mm;
+  content: counter(page);
+  background-color:#fff;
+  color:  #7c8d99;
+  padding-left:20px;
+}
   @bottom-right{
-    font-size:.9rem; border-top: solid 1px #ccc; 
+    font-size:.9rem; border-top: solid 1px #ccc;
     margin-right:-15mm;
     content: "Copyright © yyyy-yyyy Business Name.";
     background-color: #fff;
     color: #aaa; font-style: italic;
     padding-right: 20px;  letter-spacing: 1px;
-  }
-  @footnotes {
-    border-top: solid black thin;
-    border-clip: 200px;
-    padding: 0px 10px 0px 12px;
   }
 }
 /* END HEADER AND FOOTER *********/
