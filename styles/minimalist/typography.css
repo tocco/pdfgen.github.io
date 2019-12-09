@@ -28,10 +28,26 @@ table ul{margin: 0px; font-size: 0.9rem;}
 table ul li{padding-left: 5px; margin: 0px;}
 .context{font-weight: bold; font-size: 1.3rem; margin-bottom: 15px;}
 article{clear: both;}
-p{margin: 10px 0px 0px 0px; display: block;}
+p{margin: 10px 0px 0px 0px; display: block; prince-footnote-policy: keep-with-line}
 div .p{ margin: 10px 0px 0px 0px; clear: both;}
 
 img{padding: 10px auto; width: 100%; left:5px; position: relative; }
+
+.fn {
+  float: footnote;
+}
+
+.fn::footnote-call {
+  content: "[" counter(footnote) "]";
+  font-size: 83%;
+  vertical-align: super;
+  line-height: none;
+}
+
+.fn::footnote-marker {
+  font-weight: bold;
+}
+
 /* END GLOBAL Typography setting *********/
 /*---------------------------------------- END DEFAULT STYLE -------------------------------------------  */
 
