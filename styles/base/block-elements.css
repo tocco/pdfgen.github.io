@@ -12,77 +12,11 @@
 }
 
 
-/* STEPS  *********/
-.large_num{list-style:none; margin: 0px; padding: 0px; counter-reset: my-counter; margin-left: 40px; }
-.large_num .step:first-child{margin-top: 35px;}
-.large_num .step{counter-increment: my-counter; margin-bottom: 20px; }
-.large_num .step::before{content: counter(my-counter); position: absolute; left: 40px; margin-right: 0px; border-right:1px dotted #ccc; padding: 3px 8px 3px 0px; font-weight: bold; color: #ccc;font-size: 1.8rem; }
-
-
-/* sub-STEPS  *********/
-.sublist{list-style: none; list-style-position: outside; counter-reset: my-counter;  padding: 0px; margin-left: 30px;}
-.sublist .substep::before{content: counter(my-counter); position: absolute; left: 75px; border: 1px solid #aaa; border-radius: 50%; width: 12px; height: 10px; 
-padding: 6px 5px; font-size: 1rem; text-align: center; line-height: .7;  color: #aaa; }
-.sublist .substep{counter-increment:my-counter;  margin: 6px 0px 6px 0px; }
-.sublist .substep:first-child{margin-top: 15px;}
-/* END STEPS  *********/
-
-/* CHOICE *********/
-.choices{list-style: none; margin-left: 0px;}
-.choices .arrow::before{content:""; background-color: #09AFD6; display: inline-block; position: absolute; left: 80px; width: 10px; height: 2px; margin-right: 0px; margin-top: 12px;}
-.choices .arriw{font-size: 1rem; font-style: italic; overflow: auto;} 
-/* sub choice *****/
-.choices .sub_arrow::before{content:""; background-color: #09AFD6; display: inline-block; position: absolute; left: 80px; width: 10px; height: 2px; margin-right: 0px; margin-top: 12px; }
-.choices .sub_arrow{ font-size: 1rem; font-style: italic; overflow: auto;}
-/* END CHOICE ********/
-
-
-/* CHOICE TABLE*********/
-.choicetable{border-collapse: collapse;  border: solid 1px #ccc; left: -50px; position: relative;}
-.choicetable th{font-weight: bold; padding: 10px; background-color: #fff; border: none;}
-.choicetable tr:nth-child(odd){background-color: #f1f2f3;}
-.choicetable tr:last-child{border-bottom: solid 1px #f1f2f3;}
-.choicetable tr{border: none;}
-.choicetable td{padding: 10px; vertical-align: top; border: none;}
-/* Nested in step */
-.step:first-child>.choicetable{left: -50px; position: relative;}
-.step>.choicetable{left: -115px; position: relative;}
-.step>.fixed_table{left: -150px; position: relative;}
-/* END CHOICE TABLE*********/
-
-
-/*---CONTEXT-------*/
-.context{font-weight: normal; font-size: 1.1rem; border-left: solid 5px #f1f2f3; padding-left: 10px;}
-/*---END CONTEXT-------*/
-
-
-/* STEP EXAMPLE *********/
-div.stepxmp{ margin: 15px 0px 0px 0px; background-color: #f7f7f7; padding: 10px; -webkit-border-radius: 5px; border-radius: 5px; border: solid 1px #ebebeb;}
-/* END STEP EXAMPLE *********/
-
-/* STEP INFORMATION *********/
-div.info{margin: 15px 0px 0px 0px; background-color: #fff; padding: 10px; -webkit-border-radius: 5px; border-radius: 5px; border: dashed 1px #ccc; font-style: italic;}
-
- /* STEP RESULT *********/
-.stepresult{margin: 15px 0px 0px 0px; padding-left: 10px; color: #aaa; border-left: dashed 2px #ccc; font-style: italic;}
-li>div.stepresult{margin: 10px 0px; padding-left: 10px; color: #aaa; border-left: dashed 2px #ccc; font-style: italic;} 
-
-/* STEP RESULT *********/
-div.stepresult{margin: 20px; overflow: auto;}
-/* END RESULT *********/
-
 /* SECTION *********/
 .section {margin: 20px; }
-.sectiontitle{left: -20px; position: relative; height: 10px; line-height: 1.4rem; border-left: solid 20px #eee; padding: 0px 5px;  display: block; clear: both; }
+.sectiontitle{ height: 10px; line-height: 1.4rem;  display: block; clear: both; }
 .sectiontitle>.p{margin-top: 0px; padding-top: 0px;}
-.section>.p{left: 10px; position: relative;}
 /* END SECTION *********/
-
-
-/* SECTION RESULT *********/
-.result{margin: 5px 0px 0px 40px; border: solid 2px #ccc; padding: 10px; -webkit-border-radius: 5px; border-radius: 5px;}
-/* ---vertical style -------
-/* END SECTION RESULT *********/
 
 
 /* FIG *********/
@@ -152,23 +86,6 @@ div.blue_note{padding: 5px; overflow: auto; margin: 40px 15px; border-left: soli
 div.blue_note span{font-weight: bold; }
 /* end Note */
 
-
-/*  shortdescribtion */
-.shortdesc{font-style: italic; font-size:1rem; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; margin: 5px auto 20px auto; line-height: 20px; padding: 10px 0px;}
-
-
-/* COVER PAGE *********/
-html, body { width: 100%;}
-* {font-family: "'Roboto", Helvetica, Arial !important;}
-html {margin-right: 2000px;}
-.coverPageContainer {width: 100%; height: 100%; page-break-after:always}
-.centeredContainer {height: 100%; width: 100%; display: table; margin:0px; padding: 0px; }
-.centeredContainer .centered {
-  display: table-cell; vertical-align: middle; }
-/* Title style */
-.coverPage-title {font-family: "'Roboto", Helvetica, Arial;  padding: 60px ; font-size: 2.6rem; text-align:center; line-height: 3.2rem; }
-.leading-bar{ background-color: #f1f2f3; border-top: solid 1px #eee; border-bottom: solid 1px #eee; width: 100%; }
-/* END COVER PAGE *********/
 
 
 /* TABLE CONTENT *********/
