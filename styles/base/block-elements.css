@@ -121,9 +121,7 @@ nav li>ul li{margin-left: 0px;}
     padding: 0px 10px 0px 12px;
   }
 }
-/* FIRST PAGE- start on right *********/
-@page:first { margin: 0px; border: solid 15px #f1f2f3;
-}
+
 /* BLANK PAGE- start on left *********/
 /*@page :blank {
   @top-center { 
