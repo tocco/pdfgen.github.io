@@ -8,6 +8,7 @@ pre.codeblock {
     white-space: -o-pre-wrap;
     
     display: block;
+    margin:0;
 }       
 
 code {
