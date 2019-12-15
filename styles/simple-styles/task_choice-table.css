@@ -3,7 +3,6 @@
 .choicetable{border-collapse: collapse;  border: solid 1px #ccc; }
 .choicetable th{font-weight: bold; padding: 10px; background-color: #fff; border: none;}
 .choicetable tr:nth-child(odd){background-color: #f1f2f3;}
-.choicetable tr:last-child{border-bottom: solid 1px #f1f2f3;}
 .choicetable tr{border: none;}
 .choicetable td{padding: 10px; vertical-align: top; border: none;}
 /* Nested in step */
