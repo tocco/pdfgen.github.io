@@ -1,6 +1,11 @@
-@import "../base/base.css";
+/* 
+Need to disable for now because it breaks a bunch of styling
+@import "../base/base.css"; */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+
+/* This needs to be removed when base.css issues are fixed and the import is reinstated */
+body, ul, ol, li, h1, h2, div{margin: 0px; padding: 0px; clear: both;}
 
 /* GLOBAL SETTING *********/
 body {
