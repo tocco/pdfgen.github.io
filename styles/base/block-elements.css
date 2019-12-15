@@ -1,22 +1,24 @@
 
-/****  ELEMENT STYLE *****/
-
 /*---------------------------------------- DEFAULT STYLE -------------------------------------------  */
-
-/*DEFINITION STYLES****/
-
 
 /* AVOID PAGE BREAK ELEMENT ****/
 @media print {
 .note, figure, table{page-break-inside: avoid;} 
 }
 
+article {margin-bottom: 20px;clear: both;}
 
 /* SECTION *********/
 .section { }
 .sectiontitle{ height: 10px; line-height: 1.4rem;  display: block; clear: both; }
 .sectiontitle>.p{margin-top: 0px; padding-top: 0px;}
 /* END SECTION *********/
+
+
+/* LISTS *********/
+ul{list-style: square; }
+li{list-style-position: outside; padding: 3px; margin-left: 30px; }
+li p{margin: 0px; padding: 0px;}
 
 
 /* FIG *********/
@@ -37,6 +39,7 @@ div>.fig>figcaption{left: 0px; position: relative;}
 
 
 /* IMAGES *********/
+img{padding: 10px auto; width: 100%; left:5px; position: relative; }
 /**** aligned-left *********/
 img.go_left{ margin-right: 15px; float: left; margin-bottom: 20px; margin-top: 20px; width: 500px; clear: both;}
 /**** center *********/
@@ -64,6 +67,8 @@ td{padding: 10px; vertical-align: top; border: solid 1px #ccc;}
 /* Table label */
 .table--title-label{padding: 0px 0px 3px 0px; margin: 0px; font-style: italic; font-size: .9rem; display: block; }
 /* Table nested <p> and list */
+table ul{margin: 0px; }
+table ul li{padding-left: 5px; margin: 0px;}
 .entry .ul{margin-left: 20px;}
 .entry .ul .li{padding: 0px;}
 .entry .ul .li>p{padding: 0px; margin: 0px;}
@@ -99,7 +104,7 @@ div.blue_note span{font-weight: bold; }
 
 /* TABLE CONTENT *********/
 nav {
-page-break-after: always; padding-top: 40px ;
+    page-break-after: always; padding-top: 40px ;
 }
 nav::before { content: "Contents"; font-size: 2rem; color: #ccc; 
 }
