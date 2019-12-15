@@ -24,10 +24,6 @@ li p{margin: 0px; padding: 0px;}
 
 /* FIG *********/
 .fig{padding: 0px; margin: 0px; font-style: italic; font-size: .9rem; display: block; clear: both; overflow: auto;}
-.fig img{ padding: 10px 0px; left: 5px; position: relative; }
-.fig>figcaption{left: 10px; position: relative;}
-div>.fig img{left: -1px; position: relative;}
-div>.fig>figcaption{left: 0px; position: relative;}
 
 /* FIG Alignment *********/
 .fig-result{margin: 10px 0px 20px 75px; padding: 15px; display: table; width: 600px; }
@@ -40,7 +36,7 @@ div>.fig>figcaption{left: 0px; position: relative;}
 
 
 /* IMAGES *********/
-img{padding: 10px auto; width: 100%; left:5px; position: relative; }
+img{padding: 10px auto; width: 100%;}
 /**** aligned-left *********/
 img.go_left{ margin-right: 15px; float: left; margin-bottom: 20px; margin-top: 20px; width: 500px; clear: both;}
 /**** center *********/
