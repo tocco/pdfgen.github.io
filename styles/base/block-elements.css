@@ -9,9 +9,10 @@
 article {margin-bottom: 20px;clear: both;}
 
 /* SECTION *********/
-.section { }
+.section { margin: 10px 0px 0px 0px;} /* This margin replicates the standard styling for a p */
+.section>.p:first-child{margin-top: 0px;} /* Eliminate top margin for first p if p is the first child, this prevents a double margin */
 .sectiontitle{ display: block; clear: both; }
-.sectiontitle>.p{margin-top: 0px; padding-top: 0px;}
+
 /* END SECTION *********/
 
 
@@ -86,7 +87,6 @@ table ul li{padding-left: 5px; margin: 0px;}
 
 /* Reference table ****/
 .reference h2{margin-left: 20px; font-size: 1.2rem;}
- div>p.ref_desc {border-bottom: dotted 1px #ccc; border-top: dotted 1px #ccc; overflow: auto; margin: 10px 20px;}
 .reference table {border: solid 1px #ccc; margin: 0px; padding: 0px; width: 100%;}
 .reference tbody{border: none;}
 .reference table th{background-color:#ebebeb; color: #404040; padding: 10px;  border: none; line-height: 1; text-align: left;}

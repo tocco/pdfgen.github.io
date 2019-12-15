@@ -30,9 +30,7 @@ h3{font-size: 1.3rem; font-weight: bold; margin:10px 0px}
 .title{display: block; padding-bottom: 10px;}
 
 /*  Paragraph styling */
-p{padding: 0px;margin: 10px 0px 0px 0px; display: block; prince-footnote-policy: keep-with-line;}
-div .p{ margin: 10px 0px 0px 0px; clear: both;}
-
+div.p, p{padding: 0px;margin: 10px 0px 0px 0px; display: block; prince-footnote-policy: keep-with-line;}
 
 /*  Footnotes styling */
 .fn {
