@@ -1,12 +1,24 @@
 
 /*---------------------------------------- DEFAULT STYLE -------------------------------------------  */
+* {
+  box-sizing: border-box;
+  max-width:100%;
+}
+
 
 /* AVOID PAGE BREAK ELEMENT ****/
 @media print {
 .note, figure, table{page-break-inside: avoid;} 
 }
 
-article {margin-bottom: 20px;clear: both;}
+article {
+    margin-bottom: 4rem;
+    clear: both;
+}
+
+article div.body{
+    padding-left:3px; /* This compensates for a tiny visual space in the title */
+}
 
 /* SECTION *********/
 .section { margin: 10px 0px 0px 0px;} /* This margin replicates the standard styling for a p */
@@ -48,7 +60,7 @@ figcaption {
 
 
 /* IMAGES *********/
-img{padding: 10px auto; width: 100%;}
+img{max-width:100%}
 /**** aligned-left *********/
 img.go_left{ margin-right: 15px; float: left; margin-bottom: 20px; margin-top: 20px; width: 500px; clear: both;}
 /**** center *********/
@@ -62,9 +74,10 @@ table{
     margin: 20px 0px; 
     text-align: left; 
     border-collapse: collapse; 
-    width: 100%;
+    max-width: 100%;
     line-height: 1.3rem; 
     border: solid 1px #ccc;
+    table-layout:auto;
 }
 th{font-weight: bold; padding: 10px; text-align: left;}
 td{padding: 10px; vertical-align: top; border: solid 1px #ccc;}
