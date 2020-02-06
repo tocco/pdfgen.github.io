@@ -1,0 +1,61 @@
+
+/* AVOID PAGE BREAK ELEMENT ****/
+@media print {
+    dt, dd{
+        page-break-inside: avoid;
+    } 
+}
+
+/* DEFINATION LIST-----*/
+.dl {
+    padding: 0px; 
+    margin: 0px;
+}
+.dt { 
+    background-color: #F7F7F7;  
+    font-weight: bold;  
+    font-size: 1rem; 
+    padding: 5px 5px 5px 10px !important; 
+    margin:20px 0px 0px 0px !important; 
+    width: 100%; 
+}
+.dd {
+    padding: 0px 5px 0px 15px !important;
+    margin: 0px 0px 0px 50px !important; 
+    border-left: 2px solid #F7F7F7 !important;
+}
+/* END DEFINATION LIST-----*/
+
+/* Nested defination */
+dl.default_nested{padding: 0px; margin: 0px !important; }
+.default_nested dt{
+    width: auto !important; 
+    clear: both; 
+    font-size: .8rem; 
+    line-height: 1.2rem; 
+    margin: 0px !important; 
+    margin:20px 0px 0px 0px !important; 
+    border-radius: 0px 5px 5px 0px; 
+    border-left: 2px solid #F7F7F7 !important;
+    border-right: none;
+ }
+.default_nested dd{
+    clear: both;  
+    margin: 0px !important; 
+    padding: 10px 5px 0px 5px!important;
+    font-size: 1rem;    
+}
+/* end Nested defination */
+
+/* td Nested defination  */
+.entry>dl.nested_dl{width: 100%; margin: 0px !important; }
+.nested_dl dt{ font-size: .8rem; display: block; width: 95%; overflow: auto;}
+.nested_dl dd{ 
+    display: block; 
+    width: 95%; 
+    left: -115px; 
+    position: relative; 
+    padding: 5px 0px 5px 5px !important;
+}
+.nested_dl dd:last-child{margin-bottom: 20px !important;}
+/* end td Nested defination */
