@@ -1,0 +1,14 @@
+
+/* CHOICE TABLE*********/
+.choicetable{border-collapse: collapse;  border: solid 1px #ccc; }
+.choicetable th{font-weight: bold; padding: 10px; background-color: #fff; border: none;}
+.choicetable tr:nth-child(odd){background-color: #f1f2f3;}
+.choicetable tr{border: none;}
+.choicetable td{padding: 10px; vertical-align: top; border: none;}
+/* Nested in step */
+/*
+ * Not sure why someone would want these like this... 
+.step:first-child>.choicetable{left: -50px; position: relative;}
+.step>.choicetable{left: -115px; position: relative;}
+.step>.fixed_table{left: -150px; position: relative;}*/
+/* END CHOICE TABLE*********/

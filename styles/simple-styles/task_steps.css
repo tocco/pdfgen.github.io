@@ -1,0 +1,66 @@
+.step{page-break-inside: avoid;} 
+
+/* STEPS  *********/
+.large_num{
+    list-style:none; 
+    margin: 0px; 
+    margin-left: 25px; 
+    padding: 0px; 
+    counter-reset: my-counter;  
+}
+.large_num .step:first-child{margin-top: 35px;}
+.large_num .step{counter-increment: my-counter; margin-bottom: 20px; }
+.large_num .step::before{
+    content: counter(my-counter);
+    position: absolute;
+    left: 5px;
+    margin-right: 0px;
+    border-right: 1px dotted #ccc;
+    padding: 3px 8px 3px 0px;
+    font-weight: bold;
+    color: #ccc;
+    font-size: 1.8rem;
+    width: 35px;
+    text-align: right;
+}
+
+/* sub-STEPS  *********/
+.sublist{
+    list-style: none; 
+    list-style-position: outside; 
+    counter-reset: my-counter;  
+    padding: 0px; 
+    margin-left: 30px;}
+.sublist .substep::before{
+    content: counter(my-counter); 
+    position: absolute; 
+    left: 55px; 
+    border: 1px solid #aaa; 
+    border-radius: 50%; 
+    width: 12px; 
+    height: 10px; 
+    padding: 6px 5px; 
+    font-size: 1rem; 
+    text-align: center; 
+    line-height: .7;  
+    color: #aaa; 
+}
+.sublist .substep{counter-increment:my-counter;  margin: 6px 0px 6px 0px; }
+.sublist .substep:first-child{margin-top: 15px;}
+/* END STEPS  *********/
+
+
+/* STEP EXAMPLE *********/
+div.stepxmp{ margin: 15px 0px 0px 0px; background-color: #f7f7f7; padding: 10px; -webkit-border-radius: 5px; border-radius: 5px; border: solid 1px #ebebeb;}
+/* END STEP EXAMPLE *********/
+
+/* STEP INFORMATION *********/
+div.info{margin: 15px 0px 0px 0px; background-color: #fff; padding: 10px; -webkit-border-radius: 5px; border-radius: 5px; border: dashed 1px #ccc; font-style: italic;}
+
+ /* STEP RESULT *********/
+.stepresult{margin: 15px 0px 0px 0px; padding-left: 10px; color: #aaa; border-left: dashed 2px #ccc; font-style: italic;}
+li>div.stepresult{margin: 10px 0px; padding-left: 10px; color: #aaa; border-left: dashed 2px #ccc; font-style: italic;} 
+
+/* STEP RESULT *********/
+div.stepresult{margin: 20px; overflow: auto;}
+/* END RESULT *********/
