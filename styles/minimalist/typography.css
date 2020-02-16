@@ -31,7 +31,7 @@ article{clear: both;}
 p{margin: 10px 0px 0px 0px; display: block; prince-footnote-policy: keep-with-line;}
 div .p{ margin: 10px 0px 0px 0px; clear: both;}
 
-img{padding: 10px auto; width: 100%; left:5px; position: relative; }
+img{padding: 10px auto; max-width: 100%; left:5px; position: relative; }
 
 .fn {
   float: footnote;
