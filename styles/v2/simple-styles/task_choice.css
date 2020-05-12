@@ -1,0 +1,44 @@
+/* CHOICE *********/
+.choices {
+  list-style: none;
+  margin-left: 0;
+}
+
+.choices .arrow::before {
+  content: "";
+  background-color: #ccc;
+  display: inline-block;
+  position: absolute;
+  left: 80px;
+  width: 10px;
+  height: 2px;
+  margin-right: 0;
+  margin-top: 12px;
+}
+
+.choices .arriw {
+  font-size: 1rem;
+  font-style: italic;
+  overflow: auto;
+}
+
+.choices .sub_arrow::before {
+  content: "";
+  background-color: #ccc;
+  display: inline-block;
+  position: absolute;
+  left: 80px;
+  width: 10px;
+  height: 2px;
+  margin-right: 0;
+  margin-top: 12px;
+}
+
+.choices .sub_arrow {
+  font-size: 1rem;
+  font-style: italic;
+  overflow: auto;
+}
+
+/* END CHOICE ********/
+

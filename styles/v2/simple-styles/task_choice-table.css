@@ -1,0 +1,26 @@
+/* CHOICE TABLE*********/
+.choicetable {
+  border-collapse: collapse;
+  border: solid 1px #ccc;
+}
+
+.choicetable th {
+  font-weight: bold;
+  padding: 10px;
+  background-color: #fff;
+  border: 0;
+}
+
+.choicetable tr:nth-child(odd) {
+  background-color: #f1f2f3;
+}
+
+.choicetable tr {
+  border: 0;
+}
+
+.choicetable td {
+  padding: 10px;
+  vertical-align: top;
+  border: 0;
+}

@@ -1,0 +1,446 @@
+/*---------------------------------------- DEFAULT STYLE -------------------------------------------  */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+
+/* AVOID PAGE BREAK ELEMENT ****/
+@media print {
+  .note, figure, table {
+    break-inside: avoid;
+  }
+}
+
+article {
+  margin-bottom: 4rem;
+  clear: both;
+}
+
+article div.body {
+  padding-left: 3px; /* This compensates for a tiny visual space in the title */
+}
+
+.section {
+  margin: 10px 0 0 0;
+}
+
+.section > .p:first-child {
+  margin-top: 0;
+}
+
+.sectiontitle {
+  display: block;
+  clear: both;
+}
+
+ul {
+  list-style: square;
+}
+
+li {
+  hanging-punctuation: first;
+  padding: 3px;
+  margin-left: 25px;
+}
+
+li p {
+  margin: 0;
+  padding: 0;
+}
+
+.fig {
+  padding: 0;
+  margin: 10px 0 0;
+  display: block;
+  clear: both;
+  overflow: auto;
+}
+
+.fig > img {
+  margin-top: 20px;
+}
+
+.fig > .p:first-child {
+  margin-top: 0;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: .9rem;
+}
+
+.fig-result {
+  margin: 10px 0 20px 75px;
+  padding: 15px;
+  display: table;
+  width: 600px;
+}
+
+.fig-result > .fig img {
+  width: 300px;
+}
+
+.fig-result > .fig {
+  display: block;
+}
+
+.fig-result > .fig_left {
+  display: block;
+  float: left;
+  margin-bottom: 10px;
+  clear: both;
+}
+
+.fig-result > .fig_right {
+  display: block;
+  float: right;
+  margin-bottom: 10px;
+  clear: both;
+  padding-right: 10px;
+}
+
+.result > .fig_center {
+  display: block;
+  margin: 0 auto 10px auto;
+  clear: both;
+  width: 300px;
+}
+
+img {
+  max-width: 100%;
+}
+
+img.go_left {
+  margin-right: 15px;
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 500px;
+  clear: both;
+}
+
+img.go_right {
+  margin-left: 15px;
+  float: right;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 500px;
+  clear: both;
+}
+
+img.keep_center {
+  display: block;
+  margin: 5px auto;
+  width: 500px;
+  clear: both;
+}
+
+table {
+  margin: 20px 0;
+  text-align: left;
+  border-collapse: collapse;
+  max-width: 100%;
+  line-height: 1.3rem;
+  border: solid 1px #ccc;
+  table-layout: auto;
+}
+
+th {
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+  vertical-align: top;
+  border: solid 1px #ccc;
+}
+
+.thead {
+  background-color: #f1f2f3;
+  line-height: 1.1rem;
+}
+
+.row {
+  border-bottom: solid 1px #ccc;
+  padding: 10px 15px 10px 3px;
+}
+
+.row:first-child {
+  border-top: solid 1px #ccc;
+}
+
+.row:last-child {
+  border-bottom: solid 1px #ccc;
+}
+
+.table--title-label {
+  padding: 0 0 3px;
+  margin: 0;
+  font-style: italic;
+  font-size: .9rem;
+  display: block;
+}
+
+table ul {
+  margin: 0;
+}
+
+table ul li {
+  padding-left: 5px;
+  margin: 0;
+}
+
+.entry .ul {
+  margin-left: 20px;
+}
+
+.entry .ul .li {
+  padding: 0;
+}
+
+.entry .ul .li > p {
+  padding: 0;
+  margin: 0;
+}
+
+.entry .p:first-child {
+  margin-top: 0;
+}
+
+.table--pgwide-1 {
+  width: 100%;
+}
+
+.table--pgwide-0 {
+  width: auto;
+}
+
+.rowsep-1 {
+  border-bottom: solid 1px #ccc;
+}
+
+.rowsep-1:last-child {
+  border-bottom: 0;
+}
+
+.colsep-0, .rowsep-0 {
+  border: 0;
+}
+
+.colsep-1 {
+  border-right: solid 1px #ccc;
+}
+
+.colsep-1:last-child {
+  border-right: 0;
+}
+
+.reference h2 {
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+
+.reference table {
+  border: solid 1px #ccc;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.reference tbody {
+  border: 0;
+}
+
+.reference table th {
+  background-color: #ebebeb;
+  color: #404040;
+  padding: 10px;
+  border: 0;
+  line-height: 1;
+  text-align: left;
+}
+
+.reference table tr:nth-child(even) {
+  background-color: #f1f2f3;
+}
+
+.reference table tr:first-child {
+  border-top: solid 1px #ccc;
+}
+
+.reference table tr td {
+  border: 0;
+  vertical-align: top;
+  padding: 10px;
+}
+
+div.blue_note {
+  padding: 5px;
+  overflow: auto;
+  margin: 40px 15px;
+  border-left: solid 5px #ccc;
+  font-style: italic;
+  font-size: .9rem;
+  margin-left: 0;
+  padding-left: 10px;
+  clear: both;
+}
+
+div.blue_note span {
+  font-weight: bold;
+}
+
+nav {
+  page-break-after: always;
+  padding-top: 40px;
+}
+
+nav::before {
+  content: "Contents";
+  font-size: 2rem;
+  color: #ccc;
+}
+
+nav a::after {
+  content: leader(".") target-counter(attr(href), page);
+  margin-left: 10px;
+}
+
+nav a {
+  color: #404040;
+  text-decoration: none;
+}
+
+nav ul {
+  margin-left: 20px;
+}
+
+nav li {
+  list-style-type: none;
+  padding: 5px 0;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+nav li:first-child {
+  margin-top: 20px;
+}
+
+nav li > ul li:first-child {
+  margin-top: 5px;
+  margin-left: 0;
+}
+
+nav li > ul li {
+  margin-left: 0;
+}
+
+@page {
+  font-family: "Roboto", Helvetica, Arial;
+  size: a4;
+  margin: 80px 55px;
+  counter-reset: footnote;
+  @footnotes {
+    margin-top: 10px;
+    border-top: solid #000 thin;
+    border-clip: 200px;
+    padding: 0 10px 0 12px;
+  }
+}
+
+@page :left {
+  @top-left {
+    content: "map.title";
+    font-size: .9rem;
+    margin-left: -15mm;
+    padding: 20px;
+    color: #7c8d99;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  @top-right {
+    content: "BUSINESS NAME";
+    font-size: .9rem;
+    margin-right: -15mm;
+    padding: 20px;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  @bottom-right {
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-top: solid 1px #d8d8d8;
+    margin-right: -15mm;
+    content: counter(page);
+    background-color: #fff;
+    color: #7c8d99;
+    padding: 20px;
+  }
+  @bottom-left {
+    font-size: .9rem;
+    border-top: solid 1px #ccc;
+    margin-left: -15mm;
+    content: "Copyright © yyyy-yyyy Business Name.";
+    background-color: #fff;
+    color: #aaa;
+    font-style: italic;
+    padding-left: 20px;
+    letter-spacing: 1px;
+  }
+}
+
+@page :right {
+  @top-right {
+    content: "BUSINESS NAME";
+    font-size: .9rem;
+    margin-right: -15mm;
+    padding: 20px;
+    color: #7c8d99;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  @top-left {
+    content: "map.title";
+    font-size: .9rem;
+    margin-left: -15mm;
+    padding: 20px;
+    color: #7c8d99;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  @bottom-left {
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-top: solid 1px #d8d8d8;
+    margin-left: -15mm;
+    content: counter(page);
+    background-color: #fff;
+    color: #7c8d99;
+    padding-left: 20px;
+  }
+  @bottom-right {
+    font-size: .9rem;
+    border-top: solid 1px #ccc;
+    margin-right: -15mm;
+    content: "Copyright © yyyy-yyyy Business Name.";
+    background-color: #fff;
+    color: #aaa;
+    font-style: italic;
+    padding-right: 20px;
+    letter-spacing: 1px;
+  }
+}
+
+/* END HEADER AND FOOTER *********/
+/*---------------------------------------- END DEFAULT STYLE -------------------------------------------  */
+
+
+/*---------------------------------------- BASIC STYLE -------------------------------------------  */
+
+/*---------------------------------------- END BASIC STYLE -------------------------------------------  */

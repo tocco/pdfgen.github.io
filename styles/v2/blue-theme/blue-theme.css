@@ -1,0 +1,453 @@
+@import "../simple-styles/simple-all.css";
+
+/*BLUE THEME*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+
+/* GLOBAL SETTING *********/
+
+h1, h1 span {
+  color: #09AFD6;
+  font-weight: 400;
+}
+
+h2 {
+  color: #09AFD6;
+}
+
+.context {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+span.table--title-label, span.title {
+  text-align: left;
+}
+
+/* END GLOBAL SETTING *********/
+
+
+@media print {
+  .note, dl, dt, dd, table {
+    page-break-inside: avoid;
+  }
+}
+
+/* SECTION *********/
+.sectiontitle {
+  position: relative;
+  border-left: solid 15px rgba(0, 175, 216, .2);
+  padding: 0px 5px;
+  display: block;
+  clear: both;
+  margin: 40px 0 0 0;
+}
+
+.sectiontitle > .p {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.section > .p {
+  position: relative;
+}
+
+/* END SECTION *********/
+
+/* SECTION RESULT *********/
+.result {
+  margin: 5px 0px 10px 0px;
+  border: solid 2px rgba(0, 131, 185, .3);
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* ---vertical style -------
+/* END SECTION RESULT *********/
+
+
+/* FIG *********/
+.fig > figcaption {
+  font-size: .9rem;
+  color: rgba(0, 131, 185, 1);
+}
+
+
+/* Table ****/
+.table {
+  border: solid 1px rgba(0, 131, 185, .3);
+}
+
+.thead {
+  color: rgba(4, 137, 167, 1);
+  background-color: rgba(0, 131, 185, .3);
+}
+
+.row {
+  border-bottom: solid 1px rgba(0, 131, 185, .3);
+}
+
+.row:first-child {
+  border-top: solid 1px rgba(0, 131, 185, .3);
+}
+
+.row:last-child {
+  border-bottom: solid 1px rgba(0, 131, 185, .3);
+}
+
+/* Table image */
+.indicator img {
+  width: 50px !important;
+}
+
+/* end Table ****/
+
+
+/* Note */
+.note {
+  overflow: auto;
+  margin: 20px 0px;
+  border: solid 2px rgba(0, 131, 185, .2);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  padding: 10px;
+  clear: both;
+}
+
+.note span {
+  font-weight: bold;
+  color: rgba(0, 131, 185, .5);
+  padding-left: 26px;
+  padding-right: 2px;
+  padding-bottom: 7px;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjBGQUI1MDNBNzBDMTFFOTk2MTBDOUQxQzA1RTc2MzEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjBGQUI1MDRBNzBDMTFFOTk2MTBDOUQxQzA1RTc2MzEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MEZBQjUwMUE3MEMxMUU5OTYxMEM5RDFDMDVFNzYzMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MEZBQjUwMkE3MEMxMUU5OTYxMEM5RDFDMDVFNzYzMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsUpC6YAAAHqSURBVHjapJS/S8NAFMfvkpQiFcVFGwd/4I9JHEUUQRTpIoqL4lARxCRFOlT/AOngJLSTGNNJHAoiFKogIoI/BzcHUQcnkRYEEYWiUpvzG3+1lSRGffByd+/e++Tx3t1R0uMn/5FgMOh+fnqaJ5SOEMZ2eJ6fWlTVO478UwBNGnxAKzGO5nT9WJHlZkGWpAlGyDw2KhyybqGiFotljQWldAHxHYgvfdtlrEknZFVgjEWwLHMIvaccN+j1el8kSYoA0gLyMNH1DozrWNd++F0IBVAVf0/aYik9B/Q6nU4vA+J/T5DtCS6XT9f1Nmgcpiu3260I+Rh6tqRpm3bcUChUAmgCtP4vI2OtL9nsIcfzfZqm9X6aHTdPmpwsz2QyW0XQvDQg20ShwRE4EAhUYdgFtMuiRHcUboUm4SeoLMt1uVxuG9NGC2iK4zifqqqnjjNWFKUFzTlCplbQS/Sm8zvUFozj1I667QNabeFygr0R/HjWbNM6Y8ZmLC8NpQf4jkHX4DP+OzAhNRbQDY/H40MJurGqtwq2A9eaQFdEURyKRqOPPzXd7lTcQF3QlKHI8MArinPhcJg5OaJUiu8zx1e6qAVswDg4xhwPEjXL+OHjvVDgrPzh5XwwrTGynDZuzp8eY+PGGfEm8irAAEicugW83HbNAAAAAElFTkSuQmCC');
+  background-repeat: no-repeat;
+}
+
+/*  Nested in info */
+
+.info .note span {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: .9rem;
+}
+
+/* end Note */
+
+
+/* DEFINATION LIST-----*/
+.dt {
+  background-color: rgba(0, 131, 185, .1);
+  color: rgba(4, 137, 167, .7);
+}
+
+
+/*---CONTEXT-------*/
+.context {
+  font-weight: normal;
+  font-size: 1.1rem;
+  border-left: solid 5px rgba(0, 131, 185, .5);
+  padding-left: 10px;
+}
+
+/*---END CONTEXT-------*/
+
+
+/* STEP EXAMPLE *********/
+div.stepxmp {
+  margin: 15px 0px 0px 0px;
+  background-color: rgba(0, 131, 185, .1);
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 131, 185, .3);
+}
+
+/* END STEP EXAMPLE *********/
+
+/* STEP INFORMATION *********/
+div.info {
+  margin: 15px 0px 0px 0px;
+  background-color: #fff;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: dashed 1px rgba(0, 131, 185, .5);
+  font-style: italic;
+}
+
+/* STEP RESULT *********/
+.stepresult {
+  margin: 15px 0px 0px 0px;
+  padding-left: 10px;
+  color: rgba(4, 137, 167, .8);
+  border-left: dashed 2px rgba(0, 131, 185, .5);
+  font-style: italic;
+}
+
+li > div.stepresult {
+  margin: 10px 0px;
+  padding-left: 10px;
+  color: rgba(4, 137, 167, .8);
+  border-left: dashed 2px rgba(0, 131, 185, .5);
+  font-style: italic;
+}
+
+/* within DIV *********/
+div.stepresult {
+  margin: 20px;
+  overflow: auto;
+}
+
+/* END RESULT *********/
+
+
+/* RESULT ****/
+.result {
+  padding: 10px;
+  background-color: rgba(0, 131, 185, .1);
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* end RESULT ****/
+
+
+/* STEPS  *********/
+.large_num .step::before {
+  border-right: 1px dotted rgba(0, 131, 185, .8);
+  color: rgba(0, 131, 185, .3);
+}
+
+/* sub-STEPS  *********/
+.sublist .substep::before {
+  background-color: rgba(4, 137, 167, .1);
+  border: solid 2px rgba(0, 131, 185, .1);
+  color: rgba(4, 137, 167, .5);
+}
+
+/* END STEPS  *********/
+
+/* CHOICE *********/
+.choices {
+  list-style: none;
+  margin-left: 0px;
+}
+
+.choices .choice::before {
+  background-color: rgba(0, 131, 185, .5);
+}
+
+/* sub choice *****/
+.choices .sub_arrow::before {
+  background-color: rgba(0, 131, 185, .5);
+}
+
+/* END CHOICE ********/
+
+/* CHOICE TABLE*********/
+.choicetable {
+  border: solid 1px #9cc4d3;
+}
+
+.choicetable th {
+  background-color: #fff;
+  background-color: rgba(0, 131, 185, .7);
+  color: #fff;
+}
+
+.choicetable tr:nth-child(even) {
+  background-color: rgba(0, 131, 185, .1);
+}
+
+/* END CHOICE TABLE*********/
+
+/* TABLE CONTENT *********/
+nav::before {
+  color: #09AFD6;
+}
+
+/* END TABLE CONTENT *********/
+
+
+/* COVER PAGE *********/
+.coverPageContainer {
+  width: 100%;
+  height: 100%;
+  break-after: always;
+}
+
+.centeredContainer {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  display: table;
+}
+
+.centeredContainer .centered {
+  display: table-cell;
+  vertical-align: top;
+}
+
+/* Title style */
+.coverPage-title {
+  font-family: "'Roboto", Helvetica, Arial;
+  padding: 60px;
+  font-size: 2.6rem;
+  text-align: center;
+  line-height: 3.2rem;
+}
+
+.leading-bar {
+  width: 100%;
+  margin-top: 70px;
+  color: #09AFD6;
+}
+
+.cover-image {
+  width: 80%;
+  margin: 40px auto 280px auto;
+  display: block;
+}
+
+.logo {
+  float: right;
+  width: 150px;
+  display: block;
+}
+
+/* END COVER PAGE *********/
+
+
+/* HEADER AND FOOTER *********/
+.fn {
+  float: footnote;
+  font-size: 83%;
+}
+
+.fn::footnote-call {
+  content: "[" counter(footnote) "]";
+  font-size: 83%;
+  vertical-align: super;
+  line-height: none;
+}
+
+.fn::footnote-marker {
+  font-weight: bold;
+}
+
+@page {
+  font-family: "Roboto", Helvetica, Arial;
+  size: a4;
+  /* marks: crop cross; */
+  margin: 80px 55px;
+  counter-reset: footnote;
+  @footnotes {
+    margin-top: 10px;
+    border-top: solid black thin;
+    border-clip: 200px;
+    padding: 0px 10px 0px 12px;
+  }
+}
+
+/* FIRST PAGE- start on right *********/
+/*@page:first { margin: 0px;  border-top: solid 50px  rgba(0, 131, 185, .5); border-bottom: solid 80px  rgba(0, 131, 185, .5);
+}*/
+
+/* BLANK PAGE- start on left *********/
+/*@page :blank {
+  @top-center {
+    content: "This page is intentionally left blank";
+    }*/
+
+/* LEFT PAGE *********/
+@page :left {
+  /* Header ***/
+  @top-left {
+    content: "{map.title}";
+    font-size: .9rem;
+    margin-left: -15mm;
+    padding: 20px;
+    color: #7c8d99;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  @top-right {
+    content: "BUSINESS NAME";
+    font-size: .9rem;
+    margin-right: -15mm;
+    padding: 20px;
+    color: rgba(0, 131, 185, .7);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  @bottom-right {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: -15mm;
+    content: counter(page);
+    background-color: rgba(0, 131, 185, .5);
+    color: #fff;
+    padding: 20px;
+  }
+  @bottom-left {
+    font-size: .9rem;
+    margin-left: -15mm;
+    content: "Copyright © yyyy-yyyy Business Name.";
+    background-color: #fff;
+    color: rgba(0, 131, 185, .7);
+    font-style: italic;
+    padding-left: 20px;
+    letter-spacing: 1px;
+  }
+}
+
+/* RIGHT PAGE *********/
+@page :right {
+  /* Header ***/
+  @top-right {
+    content: "BUSINESS NAME";
+    font-size: .9rem;
+    margin-right: -15mm;
+    padding: 20px;
+    color: rgba(0, 131, 185, .7);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  @top-left {
+    content: "{map.title}";
+    font-size: .9rem;
+    margin-left: -15mm;
+    padding: 20px;
+    color: #7c8d99;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  @bottom-left {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: -15mm;
+    content: counter(page);
+    background-color: rgba(0, 131, 185, .5);
+    color: #fff;
+    padding: 0px 20px;
+  }
+  @bottom-right {
+    font-size: .9rem;
+    margin-right: -15mm;
+    content: "Copyright © yyyy-yyyy Business Name.";
+    background-color: #fff;
+    color: rgba(0, 131, 185, .7);
+    font-style: italic;
+    padding-right: 20px;
+    letter-spacing: 1px;
+  }
+}

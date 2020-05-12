@@ -1,0 +1,114 @@
+/* 
+ * Font: Roboto
+ * headings:
+ *  - H1: normal weight, 2rem
+ *  - H2: bold, 1.5rem
+ *  - H3: bold, 1.3rem
+ * 
+ */
+
+/* google font */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+
+body, ul, ol, li, h1, h2, div {
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+
+body {
+  color: #404040;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  padding: 0 60px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 2.2rem;
+  line-height: 1.35;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin-top: 40px;
+}
+
+.title {
+  display: block;
+}
+
+section > .title {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  font-weight: 400;
+  border-bottom: 1px solid;
+}
+
+.topictitle1 {
+  margin: 0;
+}
+
+.topictitle2 {
+  margin: 40px 0 0 0;
+}
+
+.topictitle4 {
+  color: rgba(0, 175, 216, .8);
+}
+
+.shortdesc {
+  margin: 0;
+}
+
+div.p, p {
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: block;
+  prince-footnote-policy: keep-with-line;
+  widows: 3;
+  orphans: 3;
+}
+
+.fn {
+  float: footnote;
+  font-size: 83%;
+}
+
+.fn::footnote-call {
+  content: "[" counter(footnote) "]";
+  font-size: 83%;
+  vertical-align: super;
+  line-height: none;
+}
+
+.fn::footnote-marker {
+  font-weight: bold;
+}
+
+/* END GLOBAL Typography setting *********/
+/*---------------------------------------- END DEFAULT STYLE -------------------------------------------  */
+
+
+/*---------------------------------------- BASIC STYLE -------------------------------------------  */
+
+
+/*---------------------------------------- END BASIC STYLE -------------------------------------------  */

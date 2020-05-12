@@ -1,0 +1,108 @@
+.step {
+  page-break-inside: avoid;
+}
+
+.large_num {
+  list-style: none;
+  margin: 0;
+  margin-left: 25px;
+  padding: 0;
+  counter-reset: my-counter;
+}
+
+.large_num .step:first-child {
+  margin-top: 35px;
+}
+
+.large_num .step {
+  counter-increment: my-counter;
+  margin-bottom: 20px;
+}
+
+.large_num .step::before {
+  content: counter(my-counter);
+  position: absolute;
+  left: 5px;
+  margin-right: 0;
+  border-right: 1px dotted #ccc;
+  padding: 3px 8px 3px 0;
+  font-weight: bold;
+  color: #ccc;
+  font-size: 1.8rem;
+  width: 35px;
+  text-align: right;
+}
+
+.sublist {
+  list-style: none;
+  list-style-position: outside;
+  counter-reset: my-counter;
+  padding: 0;
+  margin-left: 30px;
+}
+
+.sublist .substep::before {
+  content: counter(my-counter);
+  position: absolute;
+  left: 55px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  width: 12px;
+  height: 10px;
+  padding: 6px 5px;
+  font-size: 1rem;
+  text-align: center;
+  line-height: .7;
+  color: #aaa;
+}
+
+.sublist .substep {
+  counter-increment: my-counter;
+  margin: 6px 0 6px 0;
+}
+
+.sublist .substep:first-child {
+  margin-top: 15px;
+}
+
+div.stepxmp {
+  margin: 15px 0 0;
+  background-color: #f7f7f7;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: solid 1px #ebebeb;
+}
+
+div.info {
+  margin: 15px 0 0;
+  background-color: #fff;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: dashed 1px #ccc;
+  font-style: italic;
+}
+
+.stepresult {
+  margin: 15px 0 0;
+  padding-left: 10px;
+  color: #aaa;
+  border-left: dashed 2px #ccc;
+  font-style: italic;
+}
+
+li > div.stepresult {
+  margin: 10px 0;
+  padding-left: 10px;
+  color: #aaa;
+  border-left: dashed 2px #ccc;
+  font-style: italic;
+}
+
+div.stepresult {
+  margin: 20px;
+  overflow: auto;
+}
+
+/* END RESULT *********/

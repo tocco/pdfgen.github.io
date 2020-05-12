@@ -1,0 +1,76 @@
+/* AVOID PAGE BREAK ELEMENT ****/
+@media print {
+  dt, dd {
+    page-break-inside: avoid;
+  }
+}
+
+.dl {
+  padding: 0;
+  margin: 0;
+}
+
+.dt {
+  background-color: #f7f7f7;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 5px 5px 5px 10px !important;
+  margin: 20px 0 0 0 !important;
+  width: 100%;
+}
+
+.dd {
+  padding: 10px 5px 0 15px !important;
+  margin: 0 0 0 50px !important;
+  border-left: 2px solid #f7f7f7 !important;
+}
+
+dl.default_nested {
+  padding: 0;
+  margin: 0 !important;
+}
+
+.default_nested dt {
+  width: auto !important;
+  clear: both;
+  font-size: .8rem;
+  line-height: 1.2rem;
+  margin: 0 !important;
+  margin: 20px 0 0 0 !important;
+  border-radius: 0 5px 5px 0;
+  border-left: 2px solid #f7f7f7 !important;
+  border-right: 0;
+}
+
+.default_nested dd {
+  clear: both;
+  margin: 0 !important;
+  padding: 10px 5px 0 5px !important;
+  font-size: 1rem;
+}
+
+.entry > dl.nested_dl {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.nested_dl dt {
+  font-size: .8rem;
+  display: block;
+  width: 95%;
+  overflow: auto;
+}
+
+.nested_dl dd {
+  display: block;
+  width: 95%;
+  left: -115px;
+  position: relative;
+  padding: 5px 0 5px 5px !important;
+}
+
+.nested_dl dd:last-child {
+  margin-bottom: 20px !important;
+}
+
+/* end td Nested defination */
