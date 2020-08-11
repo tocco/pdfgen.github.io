@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?81svy6');
+  src:  url('fonts/icomoon.eot?81svy6#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?81svy6') format('truetype'),
+    url('fonts/icomoon.woff?81svy6') format('woff'),
+    url('fonts/icomoon.svg?81svy6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Notification_Restriction:before {
+  content: "\e900";
+}
+.icon-Notification_Troubleshooting:before {
+  content: "\e901";
+}
+.icon-Notification_Attention:before {
+  content: "\e902";
+}
+.icon-Notification_Danger:before {
+  content: "\e903";
+}
+.icon-Notification_Caution:before {
+  content: "\e904";
+}
+.icon-Notification_Fastpath:before {
+  content: "\e905";
+}
+.icon-Notification_Note:before {
+  content: "\e906";
+}
+.icon-Notification_Remember:before {
+  content: "\e907";
+}
+.icon-Notification_Tip:before {
+  content: "\e908";
+}
+.icon-Notification_Warning:before {
+  content: "\e909";
+}
+.icon-Notification_Important:before {
+  content: "\e90a";
+}
