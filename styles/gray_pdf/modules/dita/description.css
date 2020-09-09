@@ -1,0 +1,25 @@
+/* Style figure descriptions and table descriptions. */
+.figdesc,
+.tabledesc,
+.figdesc p,
+.tabledesc p {
+  display: block;
+  clear: both;
+  margin: 0px 0px 1px 0px;
+  float: left;
+}
+
+/* Add margins after figure and table description elements. */
+.figdesc,
+.tabledesc {
+  margin-bottom: 5px;
+}
+
+/* Reduces font-size in figure and table descriptions. 
+.figdesc,
+.tabledesc,
+.figdesc *,
+.tabledesc * {
+  font-size: 14px !important;
+}
+*/

@@ -1,0 +1,9 @@
+/* Add subtle image borders to image elements. */
+.image {
+    border: 5px solid #f4f4f4;
+}
+
+/* Disable image borders by assigning the @outputclass="no_borders" attribute to the image element. */
+.no_borders {
+    border: none;
+}

@@ -1,0 +1,186 @@
+/* Style task topic and troubleshooting topic "parts". */
+.prereq::before,
+.postreq::before,
+.steps::before,
+.steps-unordered::before,
+.stepsection,
+.cause::before,
+.remedy::before,
+.condition::before,
+.context::before,
+.result::before,
+.example::before {
+  display: block;
+  clear: both;
+  color: #242424 !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-size: 20px !important;
+  letter-spacing: 0.025em !important;
+}
+
+/* Fix the placement of cause, remedy, and condition captions. */
+.cause::before,
+.remedy::before {
+  margin-left: -1.2px;
+}
+.condition::before {
+  margin-left: -0.4px;
+}
+
+/* Set padding and margins for task topic and troubleshooting topic "parts". */
+.result,
+.example,
+.context,
+.prereq,
+.postreq,
+.stepsection,
+.steps-unordered::before,
+.steps::before,
+.cause,
+.remedy,
+.condition {
+  margin: 15px 0px 5px 0px !important;
+  padding: 0px 0px 0px 0px !important;
+}
+
+/* Fix the "Procedure" caption margins in steps-unordered elements. */
+.steps-unordered {
+  margin: 0px !important;
+}
+
+/* Set margins between steps. */
+.step ~ .step {
+  margin-top: 10px;
+}
+
+/* Set margins between substeps. */
+.substep,
+.choice {
+  margin-top: 5px;
+}
+
+/* Assert the same styling in stepsection elements and their children elements. */
+.stepsection * {
+  color: inherit !important;
+  background-color: inherit !important;
+  font-style: inherit !important;
+  font-weight: inherit !important;
+  font-size: inherit !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+/* Add a caption before not empty prerequisite elements. */
+.prereq:not(.prereq:empty)::before {
+  content: "Before you begin";
+}
+
+/* Add a caption before not empty postrequisite elements. */
+.postreq:not(.postreq:empty)::before {
+  content: "Next steps";
+}
+
+/* Add a caption before task topics with the @outputclass="process" attribute set on their root elements. */
+article.process .steps::before,
+article.process .steps-unordered::before {
+  content: "Process";
+}
+
+/* Add a caption before steps elements.
+Prevent the process-topic children from inheriting the "Process" caption. */
+article:not(.process) .steps::before,
+article:not(.process) .steps-unordered::before {
+  content: "Procedure";
+}
+
+/* Hide the caption before steps elements if a stepsection element precedes the first step. */
+.stepsection ~ .steps::before,
+.stepsection ~ .steps-unordered::before {
+  display: none;
+}
+
+/* Remove the caption before steps in troubleshooting topics. */
+.remedy .steps::before,
+.remedy .steps-unordered::before {
+  display: none;
+}
+
+/* Add a caption before context elements. */
+.context::before {
+  content: "Context";
+}
+
+/* Add a caption before condition elements. */
+.condition::before {
+  content: "Condition";
+}
+
+/* Add a caption before cause elements. */
+.cause::before {
+  content: "Cause";
+}
+
+/* Add a caption before remedy elements. */
+.remedy::before {
+  content: "Remedy";
+}
+
+/* Add a caption before stepxmp and example elements. */
+.example::before {
+  content: "Example";
+}
+
+/* Add a caption before stepresult and result elements. */
+.result::before {
+  content: "Result";
+}
+
+/* Fix padding for stepsections. */
+.stepsection ~ .steps,
+.stepsection ~ .steps-unordered,
+.stepsection ~ .step {
+  padding-top: 0px;
+}
+
+/* Add a margin between steps and task title if shortdesc is not present or empty. */
+.body ~ .steps,
+.body ~ .steps-unordered,
+.shortdesc:empty ~ .steps,
+.shortdesc:empty ~ .steps-unordered {
+  margin-top: 10px;
+}
+
+/* Display the cause and remedy titles right after the cause and remedy captions.
+Style the cause and remedy titles. */
+.cause > .title,
+.remedy > .title {
+  font-size: 16px;
+  color: #404040 !important;
+  font-style: normal;
+  font-weight: bold;
+  display: inline;
+}
+
+/* Remove padding for the first paragraph in cause, remedy, and condition elements. */
+.cause > .p:first-child,
+.cause > p:first-child,
+.remedy> .p:first-child,
+.remedy> p:first-child,
+.condition> .p:first-child,
+.condition> p:first-child {
+  margin-top: 0px;
+}
+
+/* Add ": " after cause and remedy titles in cause and remedy elements. */
+.cause > .title::after,
+.remedy > .title::after {
+  content: ": ";
+  color: #404040;
+}
+
+/* Removee borders for paragraphs in remedy elements. */
+.remedy .p > .cmd {
+  border: none !important;
+  padding-left: 0px;
+}

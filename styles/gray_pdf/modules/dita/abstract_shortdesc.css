@@ -1,0 +1,12 @@
+/* REQUIRES: paragraph.css */
+
+/* Makes the text placed directly after the shortdesc tag and directly in the abstract tag to be printed in the same line as the shortdesc text. */
+.shortdesc {
+    display: inline !important;
+}
+
+/* Fixes spacing after elements placed before shortdescs. */
+.abstract > *:first-child:not(.shortdesc) {
+    margin-bottom: 5px !important;
+    display: block !important;
+}

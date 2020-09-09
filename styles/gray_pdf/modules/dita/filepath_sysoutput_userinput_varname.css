@@ -1,0 +1,44 @@
+/* Extends: typography.css */
+
+/* Style system output, varname, filepath, and userinput elements.
+Assert consistent styling of their children. */
+.sysoutput,
+.sysoutput *,
+.varname,
+.filepath,
+.userinput,
+.userinput * {
+  font-family: "DejaVu Sans Mono", Monaco, Consolas, "Andale Mono",  monospace !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  word-break: break-word;
+}
+
+/* Style userinput elements.
+Assert consistent styling of their children. */
+.userinput,
+.userinput * {
+  color: #6f6f6f;
+}
+
+/* Style varname elements. */
+.varname {
+  font-weight: bold;
+}
+/* Wrap varname elements in brackets. */
+.varname::before {
+  content: "<";
+}
+.varname::after {
+  content: ">";
+}
+
+/* Style system output and file path elements.
+Assert consistent styling of their children. */
+.systemoutput,
+.filepath,
+.sysoutput *,
+.filepath * {
+  color: #6c6c6c;
+}

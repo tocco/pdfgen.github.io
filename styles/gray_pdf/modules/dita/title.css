@@ -1,0 +1,117 @@
+/* Extends: typography.css */
+
+/* Put every title in a separate line. */
+.title {
+  display: block;
+  clear: both;
+}
+
+/* Style every title in a consistent way.
+Ensure that the titles children are styled in a consistent way. */
+.title,
+.title *,
+.table--title-label,
+.fig--title-label,
+figcaption:not(figcaption > .desc) {
+  font-family: "Roboto", Helvetica, Arial !important;
+  color: #242424 !important;
+  border: none !important;
+  text-align: left !important;
+  font-style: normal !important;
+  font-weight: bold;
+  word-wrap: break-word !important;
+  line-height: 1.2em !important;
+  background-color: transparent !important;
+  padding: 0px !important;
+  margin: 25px 0px 0px 0px;
+}
+
+/* Prevents all sorts of issues with titles that contains other tags. */
+.title * {
+  display: inline !important;
+}
+
+/* Remove margins for image and table titles. */
+.table--title-label,
+.fig--title-label,
+figcaption:not(figcaption > .desc) {
+  margin: 0px;
+}
+
+/* Increase letter spacing for titles. */
+.title,
+.table--title-label,
+.fig--title-label,
+.table > caption > .title {
+  letter-spacing: 0.025em !important;
+}
+
+/* Style topics nested on different levels. */
+.topictitle1,
+.topictitle1 * {
+  margin: 0px !important;
+  font-size: 42px;
+  padding: 0px !important;
+  
+  margin-left: -2.15px !important; /* Fixes the title position. You may need to adjust this value when you change the font size. */
+  
+}
+
+.topictitle2,
+.topictitle2 * {
+  font-size: 32px;
+  
+  margin-left: -1.3px !important; /* Fixes the title position. You may need to adjust this value when you change the font size. */
+  
+}
+
+.topictitle3,
+.topictitle3 * {
+  font-size: 28px;
+  
+  margin-left: -1px !important; /* Fixes the title position. You may need to adjust this value when you change the font size. */
+  
+}
+
+.topictitle4,
+.topictitle4 *,
+.topictitle5,
+.topictitle5 *,
+.topictitle6,
+.topictitle6 *,
+.topictitle7,
+.topictitle7 *,
+.topictitle8,
+.topictitle8 *,
+.topictitle9,
+.topictitle9 *,
+.sectiontitle,
+.sectiontitle * {
+  font-size: 24px;
+  
+  margin-left: -0.7px !important; /* Fixes the title position. You may need to adjust this value when you change the font size. */
+  
+}
+
+/* Style section element titles. */
+.sectiontitle,
+.sectiontitle * {
+  font-weight: normal;
+}
+
+/* Style table titles. */
+.table--title-label,
+.table--title-label *,
+.table > caption > .title,
+.table > caption > .title * {
+  font-size: 16px !important;
+  background-color: transparent !important;
+}
+
+/* Fix the table title and table numbering position. */
+.table > caption > .title,
+.table--title-label {
+  display: inline-block;
+  margin: 0px;
+  padding: 10px 0px 0px 0px;
+}
