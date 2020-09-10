@@ -1,0 +1,45 @@
+/* Position paragraph elements. */
+div.p,
+p,
+.p {
+  display: block;
+  padding: 0px;
+  margin: 5px 0px 0px 0px;
+}
+
+/* Make the first paragraph inline in the following elements. */
+.info > p:first-child,
+.result > p:first-child,
+.example > p:first-child,
+.stepresult > p:first-child,
+.stepxmp > p:first-child,
+.note__title ~ p:first-of-type,
+.cause > .title ~ p,
+.remedy > .title ~ p {
+  display: inline;
+}
+
+/* If a block element is placed in a paragraph, discard its margins. */
+div.p > *:only-child,
+p > *:only-child,
+.p > *:only-child {
+  margin: 0px;
+}
+
+/* Add paragraph-like margins to sections that do not start with paragraphs. */
+.sectiontitle ~ span {
+  margin-top: 5px;
+  display: inline-block;
+}
+
+/* Adds paragraph-like margins to shortdesc that are not p elements. */
+span.shortdesc {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* Prevent large margins when having an empty shortdesc element. */
+.shortdesc:empty ~ .section,
+.abstract:empty ~ .section {
+  margin-top: 5px;
+}

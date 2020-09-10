@@ -1,0 +1,74 @@
+/*  Style footnote elements at the bottom of the page. */
+@page {
+  counter-reset: footnote;
+  @footnotes {
+    margin-top: 10px;
+    border-top: 2px dotted #dcdcdc;
+    border-clip: 250px;
+    padding: 2.5px 0px 2.5px 15px;
+  }
+}
+
+/* Style footnote number preceding the footnote text at the bottom of the page. */
+.fn::footnote-marker {
+  font-weight: bold;
+}
+
+/* Style footnote text at the bottom of the page. */
+.fn {
+  float: footnote;
+  break-inside: avoid;
+}
+
+/* Footnote text inherites parent styling in Prince. Remove inherited formatting. */
+.fn,
+.fn * {
+  font-size: 14px !important;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  color: #404040;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+  border: none;
+  font-family: "Roboto", Helvetica, Arial;
+  letter-spacing: normal;
+}
+/* Assert that italic text is correctly rendered in footnotes. */
+.fn em,
+.fn .i {
+  font-style: italic !important;
+}
+/* Assert that bold text is correctly rendered in footnotes. */
+.fn strong,
+.fn .b {
+  font-weight: bold !important;
+}
+/* Assert that underlined text is correctly rendered in footnotes. */
+.fn u,
+.fn .u {
+  text-decoration: underline !important;
+}
+/* Fix ordered and unordered lists position in footnotes. */
+.fn .ul,
+.fn .ol {
+  margin-left: 22px !important;
+}
+
+/* Style footnote callouts in the document body. */ 
+.fn::footnote-call {
+  content: counter(footnote);
+  vertical-align: super;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: none;
+  color: #1d3557;
+}
+
+/* Keep footnotes in one block - this does not seem to work.
+This is probably a Prince-related issue. */
+p {
+  prince-footnote-policy: keep-with-block;
+}

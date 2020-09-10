@@ -1,0 +1,49 @@
+/* Requires: ordered_list_unordered_list_steps_substeps_choices.css */
+
+/* Uniformly style step element children.
+Style trouble solution elements. */
+.stepresult,
+.info,
+.stepxmp,
+.troubleSolution,
+.choices,
+.substeps {
+  font-style: normal;
+  font-weight: normal;
+  border-left: 2px dotted #dcdcdc;
+  margin: 2.5px 0px 5px 1px;
+  padding: 0px 0px 0.5px 10px;
+}
+
+/* Style trouble solution element. Add a margin between trouble solution elements.
+Span the left border across the cause and remedy elements. */
+.troubleSolution {
+  margin: 0px 0px 25px 0px;
+  border-left: 5px solid #dcdcdc;
+}
+
+/* Style the step element children captions. */
+.stepresult::before,
+.info::before,
+.stepxmp::before {
+  font-weight: bold;
+  font-style: normal;
+  color: #404040;
+  letter-spacing: 0.025em;
+}
+
+/* Add a caption before info elements. 
+.info::before {
+  content: "Info: ";
+}
+*/
+
+/* Add a caption before step example and example elements. */
+.stepxmp::before {
+  content: "Example: ";
+}
+
+/* Add a caption before stepresult and result elements. */
+.stepresult::before{
+  content: "Result: ";
+}

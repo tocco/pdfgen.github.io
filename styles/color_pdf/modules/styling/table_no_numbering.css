@@ -1,0 +1,5 @@
+/* Disable figure numbering. */
+.table--title-label {
+    display: none;
+    content: none;
+}

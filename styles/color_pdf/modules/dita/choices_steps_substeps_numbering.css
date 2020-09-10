@@ -1,0 +1,128 @@
+/* Requires:
+ * typography.css
+ * ordered_list_unordered_list_steps_substeps_choices.css
+ */
+
+/* Style step, substep, and choice elements. */
+li.step::before,
+li.substep::before,
+li.choice::before {
+  margin: 0px 10px 0px -31px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: #dcdcdc;
+
+  width: 1.5rem;
+  height: 1.5rem;
+
+  font-weight: bold;
+  font-size: 16px;
+  color: #404040;
+
+  text-align: center;
+  vertical-align: center;
+}
+
+/* Implement custom steps and choices numbering. */
+ol.steps,
+ul.choices {
+  list-style: none;
+  counter-reset: li;
+}
+.steps > li.step::before {
+  content: counter(li);
+}
+.steps > li.step {
+  counter-increment: li;
+}
+.steps-unordered > li.step::before,
+li.choice::before {
+  content: "▪";
+}
+
+/* Implement custom substeps numbering. */
+ol.substeps {
+  list-style: none;
+  counter-reset: li;
+}
+li.substep::before {
+  content: counter(li, lower-alpha);
+}
+li.substep {
+  counter-increment: li;
+}
+
+/* Fix the position of step element children. */
+.stepresult,
+.info,
+.stepxmp,
+.choices,
+.substeps {
+  font-style: normal;
+  font-weight: normal;
+  border-left: 2px dotted #dcdcdc;
+  margin: 0px 0px 5px -20px;
+  padding: 2.5px 0px 0.5px 20.5px;
+}
+
+/* Fix the position of result and example elements. */
+.result,
+.example {
+  margin: 0px 0px 5px 13px;
+  padding: 2.5px 0px 0.5px 21px;
+}
+
+/* Fix the position of choices and substeps elements. */
+.choices,
+.substeps {
+  padding: 2.5px 0px 0.5px 22px;
+  margin: 0px 0px 5px -20px;
+}
+
+/* Fix the placement of choice element children - verify. */
+.choice > * {
+  margin-left: 5px;
+}
+
+/* Display multiline commands with uniform indentation. */
+.cmd {
+  display: block;
+  clear: both;
+  margin-top: -24px;
+  padding-left: 20px;
+  margin-left: -20px;
+  border-left: 2px dotted #dcdcdc;
+}
+
+/* Fix notes before commands position. */
+.step > .note,
+.substep > .note {
+  margin-top: -24px;
+  margin-bottom: 30px;
+  margin-left: 2px;
+}
+
+/* Place the required label before a step or substep. */
+li.step > strong,
+li.substep > strong {
+ display: block;
+ margin-top: -24px;
+ margin-left: 2px;
+ letter-spacing: 0.025em;
+}
+strong ~ .cmd {
+  margin-top: 0px;
+  margin-bottom: -2px;
+  padding-bottom: 2px;
+}
+
+/* Fix choicetable placement. */
+.choicetable {
+  margin-left: 2px;
+}
+
+/* Fix position of commands with images. */
+.cmd:has(.image) {
+  margin-top: -24px;
+}

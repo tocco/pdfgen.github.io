@@ -1,0 +1,43 @@
+/* Position figure elements. */
+.fig,
+.image {
+  overflow: auto;
+  padding: 0px;
+  margin: 10px 0px 10px 0px;
+}
+
+/* Prevent large images from overflowing. */
+img {
+  max-width: 100%;
+}
+
+/* Set consistent margins for figures and images in task topics. */
+.stepresult > figure,
+.stepresult > image,
+.info > figure,
+.info > image,
+.stepxmp > figure,
+.stepxmp > image,
+.example > figure,
+.example > image,
+.result > figure,
+.result > image {
+  margin: 5px 0px 10px 0px;
+}
+
+/* Remove margins for image elements in figure elements without titles or other elements. */
+.fig > .image:only-child {
+  margin: 0px;
+}
+
+/* Style images in commands. */
+.cmd > .image {
+  display: inline-block;
+  max-height: 16px;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}

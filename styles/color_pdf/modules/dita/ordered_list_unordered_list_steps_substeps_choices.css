@@ -1,0 +1,54 @@
+/* Style unordered lists (including: steps-unordered, choices).
+Align unordered lists with ordered lists. */
+ul {
+  list-style: square;
+  margin-left: -6px;
+}
+
+/* Style list items (including: steps, steps-unordered, choices, substeps). */
+li {
+  list-style-position: outside;
+  margin-left: 33px;
+}
+
+/* Set margins for steps. */
+.step {
+  margin-top: 5px;
+}
+
+/* Set margins for choices and substeps. */
+.substep,
+.choice {
+  margin-top: 2.5px;
+}
+
+/* Set margins for list items. */
+.li,
+.li p,
+.li .p {
+  margin-top: 5px;
+}
+
+/* Add a margin before ordered and unordered lists. */
+.ul,
+.ol {
+  margin-top: 5px;
+}
+
+/* Fix unordered lists position in the document body. */
+.ul:not(.choices, .steps-unordered) {
+  margin-left: 0.5px;
+}
+
+/* Ensure undisturbed dotted border transition between step element children. */
+.choices ~ .stepresult,
+.choices ~ .stepxmp,
+.info ~ .stepxmp,
+.info ~ .stepresult,
+.info ~ .substeps,
+.substeps ~ .stepresult,
+.choices ~ .stepresult,
+.substeps ~ .substeps {
+  margin-top: -3px;
+  padding-top: 3px;
+}
