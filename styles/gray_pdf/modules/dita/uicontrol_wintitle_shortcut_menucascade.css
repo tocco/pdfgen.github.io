@@ -18,8 +18,8 @@
 
 /* Style menucascades. */
 abbr[title] {
-  border-bottom: none !important; /* removes ugly default underline */
-  text-decoration: none !important; /* removes ugly "and then" tooltip text */
+  border-bottom: none; /* removes ugly default underline */
+  text-decoration: none; /* removes ugly "and then" tooltip text */
   content: "→"; /* determines custom "and then" symbol */
   color: #6f6f6f;
 }

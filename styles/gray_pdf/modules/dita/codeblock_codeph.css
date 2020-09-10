@@ -34,20 +34,20 @@ p > .codeph {
 
 /* Assert the same styling in codeblocks and codephs regardless of their children elements. */
 code * {
-  font-size: inherit !important;
-  background-color: inherit !important;
-  font-family: inherit !important;
-  color: inherit !important;
-  text-align: inherit !important;
+  font-size: inherit;
+  background-color: inherit;
+  font-family: inherit;
+  color: inherit; 
+  text-align: inherit;
 }
 
-/* Set consistent margins for figures and images in task topics. */
+/* Set consistent margins for codeblocks in task topics. */
 .stepresult > pre.codeblock,
 .info > pre.codeblock,
 .stepxmp > pre.codeblock,
 .example > pre.codeblock,
 .result > pre.codeblock {
-  margin: 5px 0px 10px 0px !important;
+  margin: 5px 0px 10px 0px;
 }
 
 /* Avoid overflowing text in the following elements: */

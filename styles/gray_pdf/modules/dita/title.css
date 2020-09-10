@@ -6,6 +6,11 @@
   clear: both;
 }
 
+/* Prevents all sorts of issues with titles that contains other tags. */
+.title * {
+  display: inline;
+}
+
 /* Style every title in a consistent way.
 Ensure that the titles children are styled in a consistent way. */
 .title,
@@ -13,22 +18,17 @@ Ensure that the titles children are styled in a consistent way. */
 .table--title-label,
 .fig--title-label,
 figcaption:not(figcaption > .desc) {
-  font-family: "Roboto", Helvetica, Arial !important;
-  color: #242424 !important;
-  border: none !important;
-  text-align: left !important;
-  font-style: normal !important;
+  font-family: "Roboto", Helvetica, Arial;
+  color: #242424;
+  border: none;
+  text-align: left;
+  font-style: normal;
   font-weight: bold;
-  word-wrap: break-word !important;
-  line-height: 1.2em !important;
-  background-color: transparent !important;
-  padding: 0px !important;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  background-color: transparent;
+  padding: 0px;
   margin: 25px 0px 0px 0px;
-}
-
-/* Prevents all sorts of issues with titles that contains other tags. */
-.title * {
-  display: inline !important;
 }
 
 /* Remove margins for image and table titles. */
@@ -43,17 +43,27 @@ figcaption:not(figcaption > .desc) {
 .table--title-label,
 .fig--title-label,
 .table > caption > .title {
-  letter-spacing: 0.025em !important;
+  letter-spacing: 0.025em;
+}
+
+/* Add top margins before chapters (level-1 topics) that do not contain children topics. */
+.topictitle1 {
+  margin-top: 50px;
+}
+
+/* Do not add margins before chapters (level-1 topics) that contain children topics. */
+article:has(.topictitle1, :not(article)) {
+  margin-bottom: 50px;
 }
 
 /* Style topics nested on different levels. */
 .topictitle1,
 .topictitle1 * {
-  margin: 0px !important;
+  margin: 0px;
+  padding: 0px;
   font-size: 42px;
-  padding: 0px !important;
   
-  margin-left: -2.15px !important; /* Fixes the title position. You may need to adjust this value when you change the font size. */
+  margin-left: -2.15px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
   
 }
 
@@ -61,7 +71,7 @@ figcaption:not(figcaption > .desc) {
 .topictitle2 * {
   font-size: 32px;
   
-  margin-left: -1.3px !important; /* Fixes the title position. You may need to adjust this value when you change the font size. */
+  margin-left: -1.3px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
   
 }
 
@@ -69,7 +79,7 @@ figcaption:not(figcaption > .desc) {
 .topictitle3 * {
   font-size: 28px;
   
-  margin-left: -1px !important; /* Fixes the title position. You may need to adjust this value when you change the font size. */
+  margin-left: -1px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
   
 }
 
@@ -89,7 +99,7 @@ figcaption:not(figcaption > .desc) {
 .sectiontitle * {
   font-size: 24px;
   
-  margin-left: -0.7px !important; /* Fixes the title position. You may need to adjust this value when you change the font size. */
+  margin-left: -0.7px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
   
 }
 
@@ -104,8 +114,8 @@ figcaption:not(figcaption > .desc) {
 .table--title-label *,
 .table > caption > .title,
 .table > caption > .title * {
-  font-size: 16px !important;
-  background-color: transparent !important;
+  font-size: 16px;
+  background-color: transparent;
 }
 
 /* Fix the table title and table numbering position. */

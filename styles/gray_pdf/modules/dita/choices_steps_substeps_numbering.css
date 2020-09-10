@@ -119,7 +119,7 @@ strong ~ .cmd {
 
 /* Fix choicetable placement. */
 .choicetable {
-  margin-left: 2px !important;
+  margin-left: 2px;
 }
 
 /* Fix position of commands with images. */

@@ -13,8 +13,8 @@ nav > ul:first-child::before {
     font-weight: bold;
     display: block;
     clear: both;
-    margin: 0px 0px 25px -1.5px !important;
-    letter-spacing: 0.025em !important;
+    margin: 0px 0px 25px -1.5px;
+    letter-spacing: 0.025em;
 }
 
 /* Set padding, margins, and letter spacing for the whole TOC. */
@@ -118,8 +118,12 @@ nav ul ul ul ul ul {
     content: none;
 }
 
-
 /* You can assign the @outputclass="no_toc" to the root element of a map to hide the table of contents. */
 body.no_toc > nav {
     display: none;
 }
+
+/* Avoid overflowing text in the following elements: */
+a {
+    word-wrap: break-word;
+  }

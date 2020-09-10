@@ -3,7 +3,7 @@
     -webkit-box-shadow: 5px 5px 15px -5px rgba(64,64,64,0.5);
     -moz-box-shadow: 5px 5px 15px -5px rgba(64,64,64,0.5);
     box-shadow: 5px 5px 15px -5px rgba(64,64,64,0.5);
-    margin: 10px 15px 15px 0px !important;
+    margin: 10px 15px 15px 0px;
 }
 
 /* Disable image borders by assigning the @outputclass="no_shadows" attribute to the image element. */

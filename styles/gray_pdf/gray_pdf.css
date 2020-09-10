@@ -18,9 +18,32 @@ You can modify the template in different ways, including:
 @import url("modules/layout/orientation_size.css");
 @import url("modules/layout/cover.css");
 @import url("modules/layout/breaks.css");
-/*@import url("modules/layout/blanks.css"); */
+/*@import url("modules/layout/blanks.css");*/
 
+@import url("modules/layout/definition_list_two_columns.css");
 @import url("modules/layout/columns.css");
+
+/* DITA *******************************************************************/
+@import url("modules/dita/footnote.css");
+@import url("modules/dita/paragraph.css");
+@import url("modules/dita/filepath_sysoutput_userinput_varname.css"); 
+@import url("modules/dita/uicontrol_wintitle_shortcut_menucascade.css");
+@import url("modules/dita/abstract_shortdesc.css");
+@import url("modules/dita/note.css");
+@import url("modules/dita/links.css");
+@import url("modules/dita/choicetable_table.css");
+@import url("modules/dita/codeblock_codeph.css");
+@import url("modules/dita/figure_image.css"); 
+@import url("modules/dita/description.css");
+@import url("modules/dita/definition_list.css");
+@import url("modules/dita/cite_long_quote_quote.css");
+@import url("modules/dita/title.css");
+@import url("modules/dita/section.css");
+@import url("modules/dita/ordered_list_unordered_list_steps_substeps_choices.css");
+@import url("modules/dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
+@import url("modules/dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
+@import url("modules/dita/choices_steps_substeps_numbering.css");
+@import url("modules/dita/hide_empty_dita_elements.css");
 
 /* STYLING ****************************************************************/
 @import url("modules/styling/typography.css");
@@ -36,29 +59,6 @@ You can modify the template in different ways, including:
 @import url("modules/styling/table_no_numbering.css");
 @import url("modules/styling/image_borders.css");
 /*@import url("modules/styling/image_shadows.css"); */
-@import url("modules/styling/definition_list_two_columns.css");
-
-/* DITA *******************************************************************/
-@import url("modules/dita/abstract_shortdesc.css");
-@import url("modules/dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
-@import url("modules/dita/choicetable_table.css");
-@import url("modules/dita/footnote.css");
-@import url("modules/dita/definition_list.css");
-@import url("modules/dita/description.css");
-@import url("modules/dita/figure_image.css"); 
-@import url("modules/dita/note.css");
-@import url("modules/dita/paragraph.css");
-@import url("modules/dita/section.css");
-@import url("modules/dita/title.css");
-@import url("modules/dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
-@import url("modules/dita/ordered_list_unordered_list_steps_substeps_choices.css");
-@import url("modules/dita/cite_long_quote_quote.css");
-@import url("modules/dita/codeblock_codeph.css");
-@import url("modules/dita/choices_steps_substeps_numbering.css");
-@import url("modules/dita/filepath_sysoutput_userinput_varname.css"); 
-@import url("modules/dita/links.css");
-@import url("modules/dita/uicontrol_wintitle_shortcut_menucascade.css");
-
 @import url("modules/layout/formatting.css");
 
 
@@ -70,7 +70,11 @@ You can modify the template in different ways, including:
  * landscape        - [orientation_size.css] Assign to the root element of a topic or a map to set A4 landscape page size with regular margins.
  * landscape_small  - [orientation_size.css] Assign to the root element of a topic or a map to set A4 landscape page size with small margins.
  * landscape_large  - [orientation_size.css] Assign to the root element of a topic or a map to set A4 landscape page size with large margins.
- * no_toc           - [orientation_size.css] Assign to the root element of a map to remove the table of contents from the output.
+ * two_column       - [columns.css] 
+ * three_column     - [columns.css] 
+ * four_column      - [columns.css] 
+ * no_column        - [columns.css] 
+ * no_toc           - [table_of_contents.css] Assign to the root element of a map to remove the table of contents from the output.
  * break_before     - [breaks.css] Assign to an element to insert a page break before the element.
  * break_inside     - [breaks.css] Assign to an element to make the element break over multiple pages.
  * break_avoid      - [breaks.css] Assign to an element to make the element avoid breaking over multiple pages.

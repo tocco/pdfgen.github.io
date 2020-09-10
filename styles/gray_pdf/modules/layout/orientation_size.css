@@ -345,7 +345,7 @@ nav > ul:first-of-type {
     }
 }
 
-/* Fix Prince-related rendering issues. */
+/* Fix Prince-related rendering issues.
 body, 
 ul, 
 ol, 
@@ -356,15 +356,10 @@ div{
     margin: 0px; 
     padding: 0px; 
     clear: both;
-  }
+} */
 
-/* Prevent items from overflowing the page. */
+/* Prevent items from overflowing the page.  */
 * {
     box-sizing: border-box;
     max-width:100%;
-  }
-
-/* Hide empty elements. */
-*:empty:not(img){
-    display: none;
-  }
+}

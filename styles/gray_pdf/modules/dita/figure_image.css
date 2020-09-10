@@ -22,7 +22,7 @@ img {
 .example > image,
 .result > figure,
 .result > image {
-  margin: 5px 0px 10px 0px !important;
+  margin: 5px 0px 10px 0px;
 }
 
 /* Remove margins for image elements in figure elements without titles or other elements. */

@@ -1,15 +1,11 @@
+/* Do not break pages before chapters (level-1 topics) that do not contain children topics. */
+.topictitle1 {
+  page-break-before: avoid;
+}
+
 /* Insert a page-break before chapters (level-1 topics) that contain children topics. */
 .topictitle1:has(article) {
   page-break-before: always;
-  padding: 0px;
-  margin: 0px;
-}
-
-/* Set margins for chapters (level-1 topics) that do not contain children topics. 
-Do not break pages before such topics. */
-.topictitle1 {
-  margin-top: 25px !important;
-  page-break-before: avoid;
 }
 
 /* Break the following elements over multiple pages: */
@@ -44,13 +40,6 @@ dd,
 .postreq,
 article {
   break-inside: avoid;
-}
-
-/* Avoid overflowing text in the following elements: */
-.codeph,
-.codeblock,
-a {
-  word-wrap: break-word;
 }
 
 /* You can assign the @outputclass="break_before" attribute to force a page-break before a given element. */

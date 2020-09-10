@@ -8,8 +8,8 @@ dl {
 /* Add a border on the left of definition terms and definition descriptions. */
 dt,
 dd {
-  border-left: solid 5px #dcdcdc !important;
-  padding: 0px 10px 0px 10px !important;
+  border-left: solid 5px #dcdcdc;
+  padding: 0px 10px 0px 10px;
 }
 
 /* Style titles in definition lists.
@@ -19,8 +19,8 @@ dt * {
   color: #242424 !important;
   font-weight: bold !important;
   font-style: normal !important;
-  font-size: 16px !important;
-  letter-spacing: 0.025em !important;
+  font-size: 16px;
+  letter-spacing: 0.025em;
 }
 
 /* Style definition descriptions. */

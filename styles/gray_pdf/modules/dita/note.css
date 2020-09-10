@@ -128,13 +128,13 @@
   content: "\e903";
 }
 
-/* Set consistent margins for figures and images in task topics. */
+/* Set consistent margins for notes in task topics. */
 .stepresult > .note,
 .info > .note,
 .stepxmp > .note,
 .example > .note,
 .result > .note {
-  margin: 5px 0px 10px 0px !important;
+  margin: 5px 0px 10px 0px;
 }
 
 /* Fixes notes preceding commands position.

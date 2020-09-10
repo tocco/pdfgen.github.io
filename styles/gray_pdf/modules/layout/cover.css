@@ -21,7 +21,7 @@
 /* Style the cover page.
 Assert that the cover page size and orientation is never changed. */
 @page cover_page {
-  size: A4 portrait !important; /* Changing this property requires you to adjust padding for children elements. Please, see the comments below. */
+  size: A4 portrait; /* Changing this property requires you to adjust padding for children elements. Please, see the comments below. */
   margin: 0px;
   padding: 0px;
 }
@@ -37,7 +37,7 @@ NOTE: You may need to adjust the padding property for cover page size and orient
 
 /* Apply the typography settings to the cover page. */
 .cover-page-container * {
-  font-family: "'Roboto", Helvetica, Arial !important;
+  font-family: "'Roboto", Helvetica, Arial;
 }
 
 /* Define the space where the title can be placed.
@@ -65,7 +65,7 @@ NOTE: You may need to adjust the height property for cover page size and orienta
   height: 923px; /* Should match the height property in the .cover-page-content selector. */
   margin-top: 25%; /* Should match the margin-bottom property in the .cover-page-content selector. */
   word-wrap: normal; /* Should you need to wrap long words, set to break-word */
-  letter-spacing: 0.025em !important;
+  letter-spacing: 0.025em;
 }
 
 /* Style the bottom area of the cover. */
@@ -87,8 +87,8 @@ NOTE: You may need to adjust the padding, margin, bottom, right, height, and wid
   display: block;
   clear: both;
   position: absolute;
-  padding: 0px !important;
-  margin: 0px !important;
+  padding: 0px;
+  margin: 0px;
   bottom: 25px;
   right: 15mm;
   height: 150px;
