@@ -1,14 +1,17 @@
 /* Paste the following HTML code into the HTML Cover Page tab in the PDF Generator: ****************
-    <h1 class="cover-page-container">
-      <div class="cover-page-content">
-          <div class="title-text">{map.title}</div>
-          <div class="bottom-stripe">
-              <div class="logo-container">
-                <img class="logo" src="data:image/png;base64,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"/>
-              </div>
-          </div>  
-      </div>
-    </h1>
+<h1 class="cover-page-container">
+    <div class="cover-page-content">
+        <div class="title-text">{map.title}</div>
+            <div class="bottom-stripe">
+                <div class="logo-container">
+                    <div class="logo">
+                        <img src="https://github.com/Jorsek/pdfgen.github.io/blob/master/styles/gray_pdf/media/logo_placeholder.png?raw=true"/>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</h1>
 ********************************************************************************************/
 
 /* Differentiate the cover page from the TOC and the document body. */
