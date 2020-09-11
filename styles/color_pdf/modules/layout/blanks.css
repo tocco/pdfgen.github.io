@@ -1,6 +1,6 @@
 /* Starts each chapter (level-1 topic) on the right page. Insert a blank page before a chapter if needed. */
 body > nav ~ article.nested0 {
-    page-break-before: right;
+    page-break-before: left;
 }
 
 /* Style blank pages. */
