@@ -13,16 +13,25 @@
   column-count: 4;
 }
 
-/* Set the no-column (default) layout for topics and maps with the @outputclass="no_column" attribute assigned on their root tags. */
+/* Set the no-column (default) layout for topics and maps with the @outputclass="no_column" attribute assigned on their root tags. 
 .no_column {
   column-span: all;
-}
+}*/
 
 /* Prevent topic titles, abstracts, and short descriptions from being split into several columns. */
 .topic > .title,
-.topic > .body > .shortdesc,
-.topic .abstract,
-.sectiontitle {
+.sectiontitle,
+.prereq::before,
+.postreq::before,
+.steps::before,
+.steps-unordered::before,
+.stepsection,
+.cause::before,
+.remedy::before,
+.condition::before,
+.context::before,
+.result::before,
+.example::before {
   column-span: all;
 }
 
@@ -30,6 +39,5 @@
 .two_column,
 .three_column,
 .four_column {
-  text-align: justify;
   column-fill: balance;
 }
