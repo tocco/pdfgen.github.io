@@ -1,93 +1,43 @@
-/* README ******************************************************************
-This template consists of CSS modules divided into the following groups:
- * LAYOUT - Determines the page orientation, size, layout, text alignment, cover, and breaks. If needed, enables you to manipulate text alignment and size.
- * STYLING - Determines the style of elements not connected or loosly connected with DITA like the table of contents or headers and footers.
- * DITA - Determines the style of DITA elements like steps, codeblocks, uicontrols, or topic titles.
-
-You can modify the template in different ways, including:
- * Commenting-out or removing @imports with modules that you don't want to use.
-   Important: Do not change the order of the imports.
- * Applying your own CSS code under the @imports.
-   Remember: The CSS code that you insert under the @imports will overwrite the code in the @imports.
- * Not Recommended: Compiling the template into a single CSS file and applying modifications directly to the monolithic code.
-   Tip: To compile the template into a single CSS file, reach out to a Customer Success Manager or use https://github.com/rafalkaron/importaint
- */
-
 /* LAYOUT *****************************************************************/
-
-@import url("modules/layout/orientation_size.css");
-@import url("modules/layout/cover.css");
-@import url("modules/layout/breaks.css");
-/*@import url("modules/layout/blanks.css");*/
-
-@import url("modules/layout/definition_list_two_columns.css");
-@import url("modules/layout/columns.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/layout/orientation_size.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/layout/cover.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/layout/breaks.css");
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/layout/blanks.css#DISABLED"); */
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/layout/definition_list_two_columns.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/layout/columns.css");
 
 /* DITA *******************************************************************/
-@import url("modules/dita/footnote.css");
-@import url("modules/dita/paragraph.css");
-@import url("modules/dita/filepath_sysoutput_userinput_varname.css"); 
-@import url("modules/dita/uicontrol_wintitle_shortcut_menucascade.css");
-@import url("modules/dita/abstract_shortdesc.css");
-@import url("modules/dita/note.css");
-@import url("modules/dita/links.css");
-@import url("modules/dita/choicetable_table.css");
-@import url("modules/dita/codeblock_codeph.css");
-@import url("modules/dita/figure_image.css"); 
-@import url("modules/dita/description.css");
-@import url("modules/dita/definition_list.css");
-@import url("modules/dita/cite_long_quote_quote.css");
-@import url("modules/dita/title.css");
-@import url("modules/dita/section.css");
-@import url("modules/dita/ordered_list_unordered_list_steps_substeps_choices.css");
-@import url("modules/dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
-@import url("modules/dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
-@import url("modules/dita/choices_steps_substeps_numbering.css");
-@import url("modules/dita/hide_empty_dita_elements.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/footnote.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/paragraph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/filepath_sysoutput_userinput_varname.css"); 
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/uicontrol_wintitle_shortcut_menucascade.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/abstract_shortdesc.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/note.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/links.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/choicetable_table.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/codeblock_codeph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/figure_image.css"); 
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/description.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/definition_list.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/cite_long_quote_quote.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/title.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/section.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/ordered_list_unordered_list_steps_substeps_choices.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/choices_steps_substeps_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/dita/hide_empty_dita_elements.css");
 
 /* STYLING ****************************************************************/
-@import url("modules/styling/typography.css");
-
-@import url("modules/styling/table_of_contents.css");
-@import url("modules/styling/header_footer.css");
-/* @import url("modules/styling/table_of_contents_page_numbering.css"); */
-/* @import url("modules/styling/header_footer_alternate.css");*/
-/* @import url("modules/styling/table_of_contents_page_numbering_alternate.css"); */
-
-/* @import url("modules/styling/chapter_numbering.css"); */
-@import url("modules/styling/figure_no_numbering.css");
-@import url("modules/styling/table_no_numbering.css");
-@import url("modules/styling/image_borders.css");
-/*@import url("modules/styling/image_shadows.css"); */
-@import url("modules/layout/formatting.css");
-
-
-/* @OUTPUTCLASS ATTRIBUTE VALUES *******************************************
- DITA outputclass attribute values that you can use in DITA source.
- * portrait         - [orientation_size.css] Assign to the root element of a topic or a map to set A4 portrait page size with regular margins.
- * portrait_small   - [orientation_size.css] Assign to the root element of a topic or a map to set A4 portrait page size with small margins.
- * portrait_large   - [orientation_size.css] Assign to the root element of a topic or a map to set A4 portrait page size with large margins.
- * landscape        - [orientation_size.css] Assign to the root element of a topic or a map to set A4 landscape page size with regular margins.
- * landscape_small  - [orientation_size.css] Assign to the root element of a topic or a map to set A4 landscape page size with small margins.
- * landscape_large  - [orientation_size.css] Assign to the root element of a topic or a map to set A4 landscape page size with large margins.
- * two_column       - [columns.css] 
- * three_column     - [columns.css] 
- * four_column      - [columns.css] 
- * no_column        - [columns.css] 
- * no_toc           - [table_of_contents.css] Assign to the root element of a map to remove the table of contents from the output.
- * break_before     - [breaks.css] Assign to an element to insert a page break before the element.
- * break_inside     - [breaks.css] Assign to an element to make the element break over multiple pages.
- * break_avoid      - [breaks.css] Assign to an element to make the element avoid breaking over multiple pages.
- * text_justify     - [formatting.css] Assign to an element to justify text in the element.
- * text_left        - [formatting.css] Assign to an element to align the text to the left in the element.
- * text_right       - [formatting.css] Assign to an element to align the text to the right in the element.
- * text_smaller     - [formatting.css] Assign to an element to make the element text super-small.
- * text_small       - [formatting.css] Assign to an element to make the element text small.
- * text_normal      - [formatting.css] Assign to an element to make the element text default.
- * text_large       - [formatting.css] Assign to an element to make the element text large.
- * text_larger      - [formatting.css] Assign to an element to make the element text super-large.
- * no_borders       - [image_borders.css] Assign to an image element to remove the image borders.
- * no_shadows       - [image_shadows.css] Assign to an image element to remove the image shadows.
- * process          - [cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css] Assign to the root element of a task topic to precede the steps element with the "Process" caption instead of the "Procedure" caption.
- */
-
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/styling/typography.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/styling/table_of_contents.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/styling/header_footer.css");
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/styling/table_of_contents_page_numbering.css#DISABLED"); */
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/styling/header_footer_alternate.css#DISABLED");*/
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/styling/table_of_contents_page_numbering_alternate.css#DISABLED"); */
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/styling/chapter_numbering.css#DISABLED"); */
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/styling/figure_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/styling/table_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/styling/image_borders.css");
+/*@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/styling/image_shadows.css#DISABLED"); */
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/color_pdf/modules/styling/formatting.css");
