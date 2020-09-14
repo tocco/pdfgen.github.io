@@ -1,4 +1,0 @@
-/* Hide empty elements. */
-*:empty:not(img){
-    display: none;
-  }
