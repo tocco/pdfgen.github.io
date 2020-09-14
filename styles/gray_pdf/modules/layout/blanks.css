@@ -3,6 +3,11 @@ body > nav ~ article.nested0 {
     page-break-before: left;
 }
 
+/* Add a blank page after the cover page. */
+nav {
+    page-break-before: right;
+}
+
 /* Style blank pages. */
 @page toc:blank {
     @top-right {
