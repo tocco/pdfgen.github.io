@@ -47,12 +47,7 @@ article {
   page-break-before: always;
 }
 
-/* You can assign the @outputclass="break_inside" attribute to force an element to break over multiplle pages. */
-.break_inside {
-  break-inside: auto;
-}
-
-/*  You can assign the @outputclass="break_avoid" attribute to prevent an element from breaking over multiple pages. */
-.break_avoid {
-  break-inside: avoid;
+/* You can assign the @outputclass="break_after" attribute to force a page-break after a given element. */
+.break_after {
+  page-break-after: always;
 }
