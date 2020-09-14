@@ -3,7 +3,7 @@
 @import url("modules/layout/cover.css");
 @import url("modules/layout/breaks.css");
 /* @import url("modules/layout/blanks.css#DISABLED"); */
-@import url("modules/layout/definition_list_two_columns.css");
+/* @import url("modules/layout/definition_list_two_columns.css#DISABLED"); */
 @import url("modules/layout/columns.css");
 
 /* DITA *******************************************************************/
@@ -26,7 +26,6 @@
 @import url("modules/dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
 @import url("modules/dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
 @import url("modules/dita/choices_steps_substeps_numbering.css");
-@import url("modules/dita/hide_empty_dita_elements.css");
 
 /* STYLING ****************************************************************/
 @import url("modules/styling/typography.css");
@@ -40,4 +39,5 @@
 @import url("modules/styling/table_no_numbering.css");
 @import url("modules/styling/image_borders.css");
 /*@import url("modules/styling/image_shadows.css#DISABLED"); */
+@import url("modules/styling/hide_empty_elements.css");
 @import url("modules/styling/formatting.css");
