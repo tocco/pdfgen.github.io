@@ -15,23 +15,23 @@ nav {
        background-color: #fff;
        margin: 0;
        content:"";
-       border: none;
    }
    @top-left {
+       background-image: none;
        background-color: #fff;
        margin: 0;
        content: "";
    }
    @bottom-right {
        background-image: none;
-       border: none;
+       border-top: none;
        background-color: #fff;
        margin: 0;
        content: "";
    }
    @bottom-left {
        background-image: none;
-       border: none;
+       border-top: none;
        background-color: #fff;
        margin: 0;
        content: "";
@@ -43,23 +43,23 @@ nav {
         background-color: #fff;
         margin: 0;
         content:"";
-        border: none;
     }
     @top-left {
+        background-image: none;
         background-color: #fff;
         margin: 0;
         content: "";
     }
     @bottom-right {
         background-image: none;
-        border: none;
+        border-top: none;
         background-color: #fff;
         margin: 0;
         content: "";
     }
     @bottom-left {
         background-image: none;
-        border: none;
+        border-top: none;
         background-color: #fff;
         margin: 0;
         content: "";
