@@ -15,6 +15,7 @@ nav {
        background-color: #fff;
        margin: 0;
        content:"";
+       border: none;
    }
    @top-left {
        background-color: #fff;
@@ -23,14 +24,14 @@ nav {
    }
    @bottom-right {
        background-image: none;
-       border-top: none;
+       border: none;
        background-color: #fff;
        margin: 0;
        content: "";
    }
    @bottom-left {
        background-image: none;
-       border-top: none;
+       border: none;
        background-color: #fff;
        margin: 0;
        content: "";
@@ -42,6 +43,7 @@ nav {
         background-color: #fff;
         margin: 0;
         content:"";
+        border: none;
     }
     @top-left {
         background-color: #fff;
@@ -50,14 +52,14 @@ nav {
     }
     @bottom-right {
         background-image: none;
-        border-top: none;
+        border: none;
         background-color: #fff;
         margin: 0;
         content: "";
     }
     @bottom-left {
         background-image: none;
-        border-top: none;
+        border: none;
         background-color: #fff;
         margin: 0;
         content: "";
