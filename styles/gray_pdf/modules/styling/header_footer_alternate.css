@@ -45,8 +45,11 @@
 @page:left{
     @top-right{
         content: "Company Name";
-        letter-spacing: 0.025em;
-    }
+        line-height: 1em;
+        font-weight: bold;
+        color: #6f6f6f;
+        font-size: 18px;
+        letter-spacing: 0.025em;    }
     @top-left{
         font-size: 18px;
         color: #6f6f6f;
@@ -84,8 +87,11 @@
 @page:right{
     @top-left{
         content: "Company Name";
-        letter-spacing: 0.025em;
-    }
+        line-height: 1em;
+        font-weight: bold;
+        color: #6f6f6f;
+        font-size: 18px;
+        letter-spacing: 0.025em;    }
     @top-right{
         font-size: 18px;
         color: #6f6f6f;
