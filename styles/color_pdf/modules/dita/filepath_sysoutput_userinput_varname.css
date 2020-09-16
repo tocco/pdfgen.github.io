@@ -2,8 +2,8 @@
 
 /* Style system output, varname, filepath, and userinput elements.
 Assert consistent styling of their children. */
-.sysoutput,
-.sysoutput *,
+.systemoutput,
+.systemoutput *,
 .varname,
 .filepath,
 .userinput,
@@ -22,18 +22,6 @@ Assert consistent styling of their children. */
   color: #457b9d;
 }
 
-/* Style varname elements. */
-.varname {
-  font-weight: bold;
-}
-/* Wrap varname elements in brackets. */
-.varname::before {
-  content: "<";
-}
-.varname::after {
-  content: ">";
-}
-
 /* Style system output and file path elements.
 Assert consistent styling of their children. */
 .systemoutput,
@@ -42,3 +30,19 @@ Assert consistent styling of their children. */
 .filepath * {
   color: #e63946;
 }
+
+/* Inherit colors from parent elements. */
+.varname {
+  color: inherit;
+}
+/* Wrap varname elements in brackets. */
+.varname::before {
+  content: "<";
+}
+.varname::after {
+  content: ">";
+}
+/* Style varname elements. 
+.varname {
+  font-weight: bold;
+}*/
