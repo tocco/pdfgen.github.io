@@ -1,0 +1,2084 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400");/* LAYOUT *****************************************************************/
+/* COPYCAT - Remove Prince Code - START */
+/* Set the default layout for the whole document, including the:
+ * Cover page
+ * Table of contents
+ * Document body */
+@page {
+  size: A4;
+  margin: 80px 55px;
+}
+@page:right {
+  @top-right {
+  padding-right: 15mm;
+  margin-right:-15mm; 
+  }
+  @top-left {
+  margin-left:-15mm;
+  padding-left: 15mm;
+  }
+  @bottom-left {
+  margin-left:-15mm;
+  padding-left: 15mm;
+  }
+  @bottom-right {
+  margin-right:-15mm;
+  padding-right: 15mm;
+  }
+}
+@page:left {
+  @top-right {
+  margin-right:-15mm;
+  padding-right: 15mm;
+  }
+  @top-left {
+  margin-left:-15mm; 
+  padding-left: 15mm;
+  }
+  @bottom-left {
+  margin-left: -15mm;
+  padding-left: 15mm;
+  }
+  @bottom-right {
+  margin-right:-15mm;
+  padding-right: 15mm;
+  }
+}
+/* Set large portrait margins for topics and maps with the @outputclass="portrait_large" attribute assigned on their root tags. */
+.portrait_large {
+  page: portrait_large;
+  prince-page-group: start;
+  page-break-before: always;
+}
+@page portrait_large {
+  margin: 95px 70px;
+}
+@page portrait_large:right {
+  @top-right {
+  padding-right: 20mm;
+  margin-right: -20mm;
+  }
+  @top-left {
+  padding-left: 20mm;
+  margin-left: -20mm;
+  }
+  @bottom-left {
+  padding-left: 20mm;
+  margin-left: -20mm;
+  }
+  @bottom-right {
+  padding-right: 20mm;
+  margin-right: -20mm;
+  }
+}
+@page portrait_large:left {
+  @top-right {
+  padding-right: 20mm;
+  margin-right: -20mm;
+  }
+  @top-left {
+  padding-left: 20mm;
+  margin-left: -20mm;  
+  }
+  @bottom-left {
+  padding-left: 20mm;
+  margin-left: -20mm;  
+  }
+  @bottom-right {
+  padding-right: 20mm;
+  margin-right: -20mm;
+  }
+}
+/* Set default/normal portrait margins for topics and maps with the @outputclass="portrait" or @outputclass="portrait_normal" attributes assigned on their root tags. */
+.portrait, .portrait_normal {
+  page: portrait;
+  prince-page-group: start;
+  page-break-before: always;
+}
+@page portrait:right {
+  @top-right {
+  padding-right: 15mm;
+  margin-right:-15mm; 
+  }
+  @top-left {
+  margin-left:-15mm;
+  padding-left: 15mm;
+  }
+  @bottom-left {
+  margin-left:-15mm;
+  padding-left: 15mm;
+  }
+  @bottom-right {
+  margin-right:-15mm;
+  padding-right: 15mm;
+  }
+}
+@page portrait:left {
+  @top-right {
+  margin-right:-15mm;
+  padding-right: 15mm;
+  }
+  @top-left {
+  margin-left:-15mm; 
+  padding-left: 15mm;
+  }
+  @bottom-left {
+  margin-left: -15mm;
+  padding-left: 15mm;
+  }
+  @bottom-right {
+  margin-right:-15mm;
+  padding-right: 15mm;
+  }
+}
+/* Set small portrait margins for topics and maps with the @outputclass="portrait_small" attribute assigned on their root tags. */
+.portrait_small {
+  page: portrait_small;
+  prince-page-group: start;
+  page-break-before: always;
+}
+@page portrait_small {
+  margin: 65px 40px;
+}
+@page portrait_small:right {
+  @top-right {
+  padding-right: 15mm;
+  }
+  @top-left {
+  padding-left: 15mm;
+  }
+  @bottom-left {
+  padding-left: 15mm;
+  }
+  @bottom-right {
+  padding-right: 15mm;
+  }
+}
+@page portrait_small:left {
+  @top-right {
+  padding-right: 15mm;
+  }
+  @top-left {
+  padding-left: 15mm;
+  }
+  @bottom-left {
+  padding-left: 15mm;
+  }
+  @bottom-right {
+  padding-right: 15mm;
+  }
+}
+/* Set large landscape margins for topics and maps with the @outputclass="landscape_large" attribute assigned on their root tags. */
+.landscape_large {
+  page: landscape_large;
+  prince-page-group: start;
+  page-break-before: always;
+}
+@page landscape_large {
+  size: A4 landscape;
+  margin: 95px 70px;
+}
+@page landscape_large:right {
+  @top-right {
+  padding-right: 20mm;
+  margin-right: -20mm;
+  }
+  @top-left {
+  padding-left: 20mm;
+  margin-left: -20mm;
+  }
+  @bottom-left {
+  padding-left: 20mm;
+  margin-left: -20mm;
+  }
+  @bottom-right {
+  padding-right: 20mm;
+  margin-right: -20mm;
+  }
+}
+@page landscape_large:left {
+  @top-right {
+  padding-right: 20mm;
+  margin-right: -20mm;  
+  }
+  @top-left {
+  padding-left: 20mm;
+  margin-left: -20mm;  
+  }
+  @bottom-left {
+  padding-left: 20mm;
+  margin-left: -20mm;  
+  }
+  @bottom-right {
+  padding-right: 20mm;
+  margin-right: -20mm;
+  }
+}
+/* Set default/normal landscape margins for topics and maps with the @outputclass="landscape" or @outputclass="landscape_normal" attributes assigned on their root tags. */
+.landscape, .landscape_normal {
+  page: landscape;
+  prince-page-group: start;
+  page-break-before: always;
+  }
+@page landscape {
+  size: landscape;
+  margin: 80px 55px;
+  }
+@page landscape:right {
+  @top-right {
+  padding-right: 15mm;
+  }
+  @top-left {
+  padding-left: 15mm;
+  }
+  @bottom-left {
+  padding-left: 15mm;
+  }
+  @bottom-right {
+  padding-right: 15mm;
+  }
+}
+@page landscape:left {
+  @top-right {
+  padding-right: 15mm;
+  }
+  @top-left {
+  padding-left: 15mm;
+  }
+  @bottom-left {
+  padding-left: 15mm;
+  }
+  @bottom-right {
+  padding-right: 15mm;
+  }
+}
+/* Set small landscape margins for topics and maps with the @outputclass="landscape_small" attribute assigned on their root tags. */
+.landscape_small {
+  page: landscape_small;
+  prince-page-group: start;
+  page-break-before: always;
+}
+@page landscape_small {
+  size: landscape;
+  margin: 65px 40px;
+}
+@page landscape_small:right {
+  @top-right {
+  padding-right: 15mm;
+  }
+  @top-left {
+  padding-left: 15mm;
+  }
+  @bottom-left {
+  padding-left: 15mm;
+  }
+  @bottom-right {
+  padding-right: 15mm;
+  }
+}
+@page landscape_small:left {
+  @top-right {
+  padding-right: 15mm;
+  }
+  @top-left {
+  padding-left: 15mm;
+  }
+  @bottom-left {
+  padding-left: 15mm;
+  }
+  @bottom-right {
+  padding-right: 15mm;
+  }
+}
+/* TOC */
+nav > ul:first-of-type {
+  page: toc;
+  prince-page-group: start;
+}
+@page toc {
+  size: A4;
+  margin: 80px 55px;
+}
+@page toc:left {
+  @top-right {
+  margin-right:-15mm;
+  padding-right: 15mm;
+  }
+  @top-left {
+  margin-left:-15mm; 
+  padding-left: 15mm;
+  }
+  @bottom-left {
+  margin-left: -15mm;
+  padding-left: 15mm;
+  }
+  @bottom-right {
+  margin-right:-15mm;
+  padding-right: 15mm;
+  }
+}
+@page toc:right {
+  @top-right {
+  padding-right: 15mm;
+  margin-right:-15mm; 
+  }
+  @top-left {
+  margin-left:-15mm;
+  padding-left: 15mm;
+  }
+  @bottom-left {
+  margin-left:-15mm;
+  padding-left: 15mm;
+  }
+  @bottom-right {
+  margin-right:-15mm;
+  padding-right: 15mm;
+  }
+}
+/* Fix Prince-related rendering issues.
+body, 
+ul, 
+ol, 
+li, 
+h1, 
+h2, 
+div{
+  margin: 0px; 
+  padding: 0px; 
+  clear: both;
+} */
+/* Prevent items from overflowing the page.  */
+* {
+  box-sizing: border-box;
+  max-width:100%;
+}
+/* Paste the following HTML code into the HTML Cover Page tab in the PDF Generator: ****************
+<!-- COPYCAT - Debrand Cover Page Logo - START -->
+  <h1 class="cover-page-container">
+  <div class="cover-page-content">
+  <div class="title-text">{map.title}</div>
+  <div class="bottom-stripe">
+  <div class="logo-container">
+  <img class="logo" src="data:image/png;base64,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"/>
+  </div>
+  </div>  
+  </div>
+  </h1>
+<!-- COPYCAT - Debrand Cover Page Logo - END -->
+********************************************************************************************/
+/* Differentiate the cover page from the TOC and the document body. */
+.cover-page-container {
+  prince-page-group: start;
+  page: cover_page;
+  counter-reset: page 0;
+}
+/* Style the cover page.
+Assert that the cover page size and orientation is never changed. */
+@page cover_page {
+  size: A4 portrait; /* Changing this property requires you to adjust padding for children elements. Please, see the comments below. */
+  margin: 0px;
+  padding: 0px;
+}
+/* Make the cover-page-container (h1) fills up the whole cover page.
+NOTE: You may need to adjust the padding property for cover page size and orientation different than A4 portrait. */
+.cover-page-container {
+  display: block;
+  clear: both;
+  background-color: #09AFD6;
+  padding: 0px 0px 1002px 0px;
+}
+/* Apply the typography settings to the cover page. */
+.cover-page-container * {
+  font-family: "Roboto", Helvetica, Arial;
+}
+/* Define the space where the title can be placed.
+NOTE: You may need to adjust the padding, height, and margin properties for cover page size and orientation different than A4 portrait. */
+.cover-page-content {
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  padding: 0mm 15mm 0mm 15mm;
+  margin-bottom: 25%; /* Should match the margin-top property in the .title-text selector. */
+  height: 923px; /* Should match the height property in the .title-text selector. */
+}
+/* Style the cover page title. 
+NOTE: You may need to adjust the height property for cover page size and orientation different than A4 portrait. */
+.title-text {
+  display: block;
+  clear: both;
+  color: #fff;
+  font-style: normal;
+  font-weight: bold;
+  text-align: left;
+  font-size: 80px;
+  line-height: 90px;
+  height: 923px; /* Should match the height property in the .cover-page-content selector. */
+  margin-top: 25%; /* Should match the margin-bottom property in the .cover-page-content selector. */
+  word-wrap: normal; /* Should you need to wrap long words, set to break-word */
+  letter-spacing: 0.025em;
+}
+/* Style the bottom area of the cover. */
+.bottom-stripe {
+  position: absolute;
+  bottom: 0px;
+  display: block;
+  clear: both;
+  background-color: #fff;
+  height: 200px;
+  width: 100%;
+  margin: 0mm 0mm 0mm -15mm;
+  padding: 0mm 15mm 0mm 15mm;
+}
+/* Define the space where a logo can be placed. 
+NOTE: You may need to adjust the padding, margin, bottom, right, height, and width properties for a cover page size and orientation different than A4 portrait. */
+.logo-container {
+  display: block;
+  clear: both;
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  bottom: 25px;
+  right: 15mm;
+  height: 150px;
+  width: 350px;
+}
+/* Define where the actual logo is placed in the <div class="logo-container"> */
+.logo {
+  display: block;
+  float: right;
+}
+/* Fix Prince-related rendering issues. */
+body, 
+ul, 
+ol, 
+li, 
+h1, 
+h2, 
+div {
+  margin: 0px; 
+  padding: 0px; 
+  clear: both;
+}
+/* Prevent items from overflowing the page. */
+* {
+  box-sizing: border-box;
+  max-width:100%;
+}
+/* Do not break pages before chapters (level-1 topics) that do not contain children topics. */
+.topictitle1 {
+  page-break-before: avoid;
+}
+/* Insert a page-break before chapters (level-1 topics) that contain children topics. */
+.topictitle1:has(article) {
+  page-break-before: always;
+}
+/* Break the following elements over multiple pages: */
+table,
+code,
+pre.codeblock,
+.entry,
+.xref,
+.sysoutput,
+.varname,
+.filepath,
+.userinput {
+  break-inside: auto;
+}
+/* Avoid breaking the following elements over multiple pages: */
+.note,
+dt,
+dd,
+.title,
+.codeph,
+.fig,
+.abstract,
+.shortdesc,
+.info,
+.stepxmp,
+.example,
+.result,
+.stepresult,
+.context,
+.prereq
+.postreq,
+article {
+  break-inside: avoid;
+}
+/* You can assign the @outputclass="break_before" attribute to force a page-break before a given element. */
+.break_before {
+  page-break-before: always;
+}
+/* You can assign the @outputclass="break_after" attribute to force a page-break after a given element. */
+.break_after {
+  page-break-after: always;
+}
+/* !importaint: removed a commented-out import */
+/* COPYCAT - Remove Prince Code - END */
+/* !importaint: removed a commented-out import */
+/* Set the two-column layout for topics and maps with the @outputclass="two_column" attribute assigned on their root tags. */
+.two_column {
+  column-count: 2;
+}
+/* Set the three-column layout for topics and maps wuth the @outputclass="three_column" attribute assigned on their root tags. */
+.three_column {
+  column-count: 3;
+}
+/* Set the four-column layout for topics and maps with the @outputclass="four_column" attribute assigned on their root tags. */
+.four_column {
+  column-count: 4;
+}
+/* Set the no-column (default) layout for topics and maps with the @outputclass="no_column" attribute assigned on their root tags. 
+.no_column {
+  column-span: all;
+}*/
+/* Prevent topic titles, abstracts, and short descriptions from being split into several columns. */
+.topic > .title,
+.sectiontitle,
+.prereq::before,
+.postreq::before,
+.steps::before,
+.steps-unordered::before,
+.stepsection,
+.cause::before,
+.remedy::before,
+.condition::before,
+.context::before,
+.result::before,
+.example::before {
+  column-span: all;
+}
+/* Style all column layouts. */
+.two_column,
+.three_column,
+.four_column {
+  column-fill: balance;
+}
+/* DITA *******************************************************************/
+/*  Style footnote elements at the bottom of the page. */
+@page {
+  counter-reset: footnote;
+  @footnotes {
+  margin-top: 10px;
+  border-top: 2px dotted #dcdcdc;
+  border-clip: 250px;
+  padding: 2.5px 0px 2.5px 15px;
+  }
+}
+/* Style footnote number preceding the footnote text at the bottom of the page. */
+.fn::footnote-marker {
+  font-weight: bold;
+}
+/* Style footnote text at the bottom of the page. */
+.fn {
+  float: footnote;
+  break-inside: avoid;
+}
+/* Footnote text inherites parent styling in Prince. Remove inherited formatting. */
+.fn,
+.fn * {
+  font-size: 14px !important;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  color: #404040;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+  border: none;
+  font-family: "Roboto", Helvetica, Arial;
+  letter-spacing: normal;
+}
+/* Assert that italic text is correctly rendered in footnotes. */
+.fn em,
+.fn .i {
+  font-style: italic !important;
+}
+/* Assert that bold text is correctly rendered in footnotes. */
+.fn strong,
+.fn .b {
+  font-weight: bold !important;
+}
+/* Assert that underlined text is correctly rendered in footnotes. */
+.fn u,
+.fn .u {
+  text-decoration: underline !important;
+}
+/* Fix ordered and unordered lists position in footnotes. */
+.fn .ul,
+.fn .ol {
+  margin-left: 22px !important;
+}
+/* Style footnote callouts in the document body. */ 
+.fn::footnote-call {
+  content: counter(footnote);
+  vertical-align: super;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: none;
+  color: #003749;
+}
+/* Keep footnotes in one block - this does not seem to work.
+This is probably a Prince-related issue. */
+p {
+  prince-footnote-policy: keep-with-block;
+}
+/* Position paragraph elements. */
+div.p,
+p,
+.p {
+  display: block;
+  padding: 0px;
+  margin: 5px 0px 0px 0px;
+}
+/* Make the first paragraph inline in the following elements. */
+.info > p:first-child,
+.result > p:first-child,
+.example > p:first-child,
+.stepresult > p:first-child,
+.stepxmp > p:first-child,
+.note__title ~ p:first-of-type,
+.cause > .title ~ p,
+.remedy > .title ~ p {
+  display: inline;
+}
+/* If a block element is placed in a paragraph, discard its margins. */
+div.p > *:only-child,
+p > *:only-child,
+.p > *:only-child {
+  margin: 0px;
+}
+/* Add paragraph-like margins to sections that do not start with paragraphs. */
+.sectiontitle ~ span {
+  margin-top: 5px;
+  display: inline-block;
+}
+/* Adds paragraph-like margins to shortdesc that are not p elements. */
+span.shortdesc {
+  display: inline-block;
+  margin-top: 5px;
+}
+/* Prevent large margins when having an empty shortdesc element. */
+.shortdesc:empty ~ .section,
+.abstract:empty ~ .section {
+  margin-top: 5px;
+}
+/* Extends: typography.css */
+/* Style system output, varname, filepath, and userinput elements.
+Assert consistent styling of their children. */
+.sysoutput,
+.sysoutput *,
+.varname,
+.filepath,
+.userinput,
+.userinput * {
+  font-family: "DejaVu Sans Mono", Monaco, Consolas, "Andale Mono",  monospace !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  word-break: break-word;
+}
+/* Style userinput elements.
+Assert consistent styling of their children. */
+.userinput,
+.userinput * {
+  color: #09afd6;
+}
+/* Style varname elements. */
+.varname {
+  font-weight: bold;
+}
+/* Wrap varname elements in brackets. */
+.varname::before {
+  content: "<";
+}
+.varname::after {
+  content: ">";
+}
+/* Style system output and file path elements.
+Assert consistent styling of their children. */
+.systemoutput,
+.filepath,
+.sysoutput *,
+.filepath * {
+  color: #D95700;
+} 
+/* Style uicontrol elements. */
+.uicontrol {
+  font-weight: bold;
+  color: #09afd6;
+}
+/* Style wintitle elements. */
+.wintitle {
+  font-weight: bold;
+}
+/* Style keyboard keys/shortcuts. */
+.shortcut {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  color: #09afd6;
+}
+/* Style menucascades. */
+abbr[title] {
+  border-bottom: none; /* removes ugly default underline */
+  text-decoration: none; /* removes ugly "and then" tooltip text */
+  content: "→"; /* determines custom "and then" symbol */
+  color: #09afd6;
+}
+/* REQUIRES: paragraph.css */
+/* Makes the text placed directly after the shortdesc tag and directly in the abstract tag to be printed in the same line as the shortdesc text. */
+.shortdesc {
+  display: inline;
+}
+/* Fixes spacing after elements placed before shortdescs. */
+.abstract > *:first-child:not(.shortdesc) {
+  margin-bottom: 5px;
+  display: block;
+}
+/* Import icons/font. */
+@font-face {
+  font-family: icomoon;
+  src: url("https://jorsek.github.io/pdfgen.github.io/fonts/note_icons/fonts/icomoon.ttf") format("truetype");
+}
+/* Style any note type. */
+.note {
+  clear: both;
+  display: inline-block; /* block breaks notes before commands in steps and substeps. */
+  border-left: 5px solid #404040;
+  background-color: #dcdcdc;
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+  width: 100%;
+}
+/* Style note captions (the text and optional image preceding the note contents). */
+.note__title {
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  vertical-align: top;
+  display: inline-block;
+  letter-spacing: 0.025em;
+/* Style PNG icons preceding note captions
+  background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjBGQUI1MDNBNzBDMTFFOTk2MTBDOUQxQzA1RTc2MzEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjBGQUI1MDRBNzBDMTFFOTk2MTBDOUQxQzA1RTc2MzEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MEZBQjUwMUE3MEMxMUU5OTYxMEM5RDFDMDVFNzYzMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MEZBQjUwMkE3MEMxMUU5OTYxMEM5RDFDMDVFNzYzMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsUpC6YAAAHqSURBVHjapJS/S8NAFMfvkpQiFcVFGwd/4I9JHEUUQRTpIoqL4lARxCRFOlT/AOngJLSTGNNJHAoiFKogIoI/BzcHUQcnkRYEEYWiUpvzG3+1lSRGffByd+/e++Tx3t1R0uMn/5FgMOh+fnqaJ5SOEMZ2eJ6fWlTVO478UwBNGnxAKzGO5nT9WJHlZkGWpAlGyDw2KhyybqGiFotljQWldAHxHYgvfdtlrEknZFVgjEWwLHMIvaccN+j1el8kSYoA0gLyMNH1DozrWNd++F0IBVAVf0/aYik9B/Q6nU4vA+J/T5DtCS6XT9f1Nmgcpiu3260I+Rh6tqRpm3bcUChUAmgCtP4vI2OtL9nsIcfzfZqm9X6aHTdPmpwsz2QyW0XQvDQg20ShwRE4EAhUYdgFtMuiRHcUboUm4SeoLMt1uVxuG9NGC2iK4zifqqqnjjNWFKUFzTlCplbQS/Sm8zvUFozj1I667QNabeFygr0R/HjWbNM6Y8ZmLC8NpQf4jkHX4DP+OzAhNRbQDY/H40MJurGqtwq2A9eaQFdEURyKRqOPPzXd7lTcQF3QlKHI8MArinPhcJg5OaJUiu8zx1e6qAVswDg4xhwPEjXL+OHjvVDgrPzh5XwwrTGynDZuzp8eY+PGGfEm8irAAEicugW83HbNAAAAAElFTkSuQmCC');
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  width: 16px; 
+  height: 16px;
+  padding-left: 20.5px;
+  */
+}
+/* Style the font containing icons preceding note captions. */
+.note__title::before {
+  display: inline-block;
+  font-family: icomoon;
+  font-size: 13px;
+  padding-right: 3.5px;
+}
+/* Style the note element contents with the @type="note", @type="", and @type="trouble" attributes assigned. */
+.note_note,
+.note_trouble {
+  border-color: #09afd6;
+  background-color: #29b4d328;
+}
+.note_note>.note__title,
+.note_trouble>.note__title {
+  color: #09afd6;
+}
+.note_note > .note__title::before {
+  content: "\e906";
+}
+.note_trouble > .note__title::before {
+  content: "\e901";
+}
+/* Style the note element contents with the @type="tip" and @type="fastpath" attributes assigned. */
+.note_tip,
+.note_fastpath {
+  border-color: #3f6c51;
+  background-color: #3f6c512c;
+}
+.note_tip>.note__title,
+.note_fastpath>.note__title {
+  color: #3f6c51;
+}
+.note_tip > .note__title::before {
+  content: "\e908";
+}
+.note_fastpath > .note__title::before {
+  content: "\e905";
+}
+/* Style the note element contents with the @type="important", @type="remember", and @type="restriction" attributes assigned. */
+.note_important,
+.note_remember,
+.note_restriction {
+  border-color: #ffa600;
+  background-color: #ffc25131;
+}
+.note_important>.note__title, 
+.note_remember>.note__title, 
+.note_restriction>.note__title {
+  color: #ffa600;
+}
+.note_important > .note__title::before {
+  content: "\e90a";
+}
+.note_remember > .note__title::before {
+  content: "\e907";
+}
+.note_restriction > .note__title::before {
+  content: "\e900";
+}
+/* Style the note element contents with the @type="attention" attributes assigned. */
+.note_attention,
+.note_caution,
+.note_warning,
+.note_danger {
+  border-color: #d95700;
+  background-color: #d9570027;
+}
+/* Style the note element contents with the @type="attention", @type="caution", @type="warning", and @type="danger" attributes assigned. */
+.note_attention>.note__title,
+.note_caution>.note__title,
+.note_warning>.note__title,
+.note_danger>.note__title {
+  color: #d95700;
+}
+.note_danger {
+  text-transform: uppercase;
+}
+.note_attention > .note__title::before {
+  content: "\e902";
+}
+.note_caution > .note__title::before {
+  content: "\e904";
+}
+.note_warning > .note__title::before {
+  content: "\e909";
+}
+.note_danger > .note__title::before {
+  content: "\e903";
+}
+/* Set consistent margins for notes in task topics. */
+.stepresult > .note,
+.info > .note,
+.stepxmp > .note,
+.example > .note,
+.result > .note {
+  margin: 5px 0px 10px 0px;
+}
+/* Fixes notes preceding commands position.
+Reduces margins for notes in list items. */
+.step > .note,
+.substep > .note,
+.li > .note {
+  margin: 5px 0px 5px 0px;
+}
+/* Style inline cross-references. */
+.xref {
+  color: #003749;
+  text-decoration: none;
+}
+/* Avoid overflowing text in the following elements: */
+a {
+  word-wrap: break-word;
+}
+/* Ensure that tables and choicetables span across the whole space available. */
+table {
+  width: 100%;
+  margin: 5px 0px 5px 0px;
+  table-layout: auto;
+}
+/* Remove the table and choicetable borders completely. */
+table,
+table * {
+  border-collapse: collapse;
+  border: none;
+  text-align: left;
+}
+/* Style the table and choicetable headers. 
+Assert the same styling in table and choicetable headers and their children elements. */
+table > thead > tr,
+table > thead > tr > th {
+  font-weight: bold;
+  color: #fff;
+  background-color: #003749;
+  padding: 10px;
+  letter-spacing: 0.5px;
+}
+table > thead > tr > th > .fn::footnote-call {
+  font-weight: bold;
+  color: #fff;
+  background-color: #003749;
+  letter-spacing: 0.5px;
+}
+table > thead > tr > th * {
+  font-weight: bold;
+  color: #fff;
+  background-color: #003749;
+}
+/* Style uneven table and choicetable rows. */
+table > tbody > tr:nth-child(odd),
+table > tbody > tr:nth-child(odd) > td {
+  background-color: #f4f4f4;
+  padding: 10px;
+  vertical-align: top;
+}
+/* Style even table and choicetable rows. */
+table > tbody > tr,
+table > tbody > tr > td {
+  background-color: #fff;
+  padding: 10px;
+  vertical-align: top;
+}
+/* Add a top-border for tables that do not contain thead elements. */
+table {
+  border-top: 3px solid #003749;
+  border-bottom: 3px solid #003749
+}
+table:has(thead) {
+  border-top: none;
+}
+/* Style the code inside codeblock and codeph elements. */
+code {
+  font-family: "DejaVu Sans Mono", Monaco, Consolas, "Andale Mono",  monospace;
+  color: #404040;
+  font-size: 14px;
+  background-color: #f4f4f4;
+}
+/* Style codeblock elements. */
+.codeblock > code {
+  white-space: pre-wrap;
+  display: block;
+  clear: both;
+  width: 100%;
+  margin: 0px;
+  padding: 10px;
+  border-left: solid 5px #dcdcdc;
+}
+/* Reduce margins before codeblocks. */
+pre.codeblock {
+  margin: 10px 0px 10px 0px;
+  padding: 0px;
+  }
+/* Style codeph elements. */
+.codeph,
+p > .codeph {
+  display: inline-block;
+  padding: 0em 0.25em;
+  text-align: left;
+  width: auto;
+}
+/* Assert the same styling in codeblocks and codephs regardless of their children elements. */
+code * {
+  font-size: inherit;
+  background-color: inherit;
+  font-family: inherit;
+  color: inherit; 
+  text-align: inherit;
+}
+/* Set consistent margins for codeblocks in task topics. */
+.stepresult > pre.codeblock,
+.info > pre.codeblock,
+.stepxmp > pre.codeblock,
+.example > pre.codeblock,
+.result > pre.codeblock {
+  margin: 5px 0px 10px 0px;
+}
+/* Avoid overflowing text in the following elements: */
+.codeph,
+.codeblock {
+  word-wrap: break-word;
+}
+/* Position figure elements. */
+.fig,
+.image {
+  overflow: auto;
+  padding: 0px;
+  margin: 10px 0px 10px 0px;
+}
+/* Prevent large images from overflowing. */
+img {
+  max-width: 100%;
+}
+/* Set consistent margins for figures and images in task topics. */
+.stepresult > figure,
+.stepresult > image,
+.info > figure,
+.info > image,
+.stepxmp > figure,
+.stepxmp > image,
+.example > figure,
+.example > image,
+.result > figure,
+.result > image {
+  margin: 5px 0px 10px 0px;
+}
+/* Remove margins for image elements in figure elements without titles or other elements. */
+.fig > .image:only-child {
+  margin: 0px;
+}
+/* Style images in commands. */
+.cmd > .image {
+  display: inline-block;
+  max-height: 16px;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+} 
+/* Style figure descriptions and table descriptions. */
+.figdesc,
+.tabledesc,
+.figdesc p,
+.tabledesc p {
+  display: block;
+  clear: both;
+  margin: 0px 0px 1px 0px;
+  float: left;
+}
+/* Add margins after figure and table description elements.
+.figdesc,
+.tabledesc {
+  margin-bottom: 5px;
+} */
+/* Reduces font-size in figure and table descriptions. 
+.figdesc,
+.tabledesc,
+.figdesc *,
+.tabledesc * {
+  font-size: 14px !important;
+}
+*/
+/* Position the definition list. */
+dl {
+  display: block;
+  clear: both;
+  margin: 10px 0px 10px 0px;
+}
+/* Add a border on the left of definition terms and definition descriptions. */
+dt,
+dd {
+  border-left: solid 5px #dcdcdc;
+  padding: 0px 10px 0px 10px;
+}
+/* Style titles in definition lists.
+Assert the same styling in definition titles and their children elements. */
+dt,
+dt * {
+  color: #003749 !important;
+  font-weight: bold !important;
+  font-style: normal !important;
+  font-size: 16px;
+  letter-spacing: 0.025em;
+}
+/* Style definition descriptions. */
+dd {
+  margin: 0px;
+  margin-bottom: 20px;
+  margin-top: -2px; /* This ensures correct border transition. */
+}
+/* Style cite elements. */
+.cite {
+  color: #003749;
+  font-style: normal;
+  font-weight: normal;
+}
+/* Style long quote elements. */
+.lq {
+  font-size: 14px;
+  border-left: 5px solid #dcdcdc;
+  margin: 10px 0px 10px 0px;
+  padding-left: 10px;
+}
+.lq * {
+  font-size: 14px;
+}
+/* Style quote elements.
+q {
+}
+*/
+/* Extends: typography.css */
+/* Put every title in a separate line. */
+.title {
+  display: block;
+  clear: both;
+}
+/* Prevents all sorts of issues with titles that contains other tags. */
+.title * {
+  display: inline;
+}
+/* Style every title in a consistent way.
+Ensure that the titles children are styled in a consistent way. */
+.title,
+.title *,
+.table--title-label,
+.fig--title-label,
+figcaption:not(figcaption > .desc) {
+  font-family: "Roboto", Helvetica, Arial;
+  color: #003749;
+  border: none;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  background-color: transparent;
+  padding: 0px;
+  margin: 25px 0px 0px 0px;
+}
+/* Remove margins for image and table titles. */
+.table--title-label,
+.fig--title-label,
+figcaption:not(figcaption > .desc) {
+  margin: 0px;
+}
+/* Increase letter spacing for titles. */
+.title,
+.table--title-label,
+.fig--title-label,
+.table > caption > .title {
+  letter-spacing: 0.025em;
+}
+/* Add top margins before chapters (level-1 topics) that do not contain children topics. */
+.topictitle1 {
+  margin-top: 50px;
+}
+/* Do not add margins before chapters (level-1 topics) that contain children topics. */
+article:has(.topictitle1, :not(article)) {
+  margin-bottom: 50px;
+}
+/* Style topics nested on different levels. */
+.topictitle1,
+.topictitle1 * {
+  margin: 0px;
+  padding: 0px;
+  font-size: 42px;
+  /* COPYCAT - Remove Prince Code - START */
+  margin-left: -2.15px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
+  /* COPYCAT - Remove Prince Code - END */
+}
+.topictitle2,
+.topictitle2 * {
+  font-size: 32px;
+  /* COPYCAT - Remove Prince Code - START */
+  margin-left: -1.3px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
+  /* COPYCAT - Remove Prince Code - END */
+}
+.topictitle3,
+.topictitle3 * {
+  font-size: 28px;
+  /* COPYCAT - Remove Prince Code - START */
+  margin-left: -1px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
+  /* COPYCAT - Remove Prince Code - END */
+}
+.topictitle4,
+.topictitle4 *,
+.topictitle5,
+.topictitle5 *,
+.topictitle6,
+.topictitle6 *,
+.topictitle7,
+.topictitle7 *,
+.topictitle8,
+.topictitle8 *,
+.topictitle9,
+.topictitle9 *,
+.sectiontitle,
+.sectiontitle * {
+  font-size: 24px;
+  /* COPYCAT - Remove Prince Code - START */
+  margin-left: -0.7px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
+  /* COPYCAT - Remove Prince Code - END */
+}
+/* Style section element titles. */
+.sectiontitle,
+.sectiontitle * {
+  font-weight: normal;
+}
+/* Style table titles. */
+.table--title-label,
+.table--title-label *,
+.table > caption > .title,
+.table > caption > .title * {
+  font-size: 16px;
+  background-color: transparent;
+}
+/* Fix the table title and table numbering position. */
+.table > caption > .title,
+.table--title-label {
+  display: inline-block;
+  margin: 0px;
+  padding: 10px 0px 0px 0px;
+}
+/* Position section elements. */
+.section {
+  margin: 25px 0px 0px 0px;
+}
+.sectiontitle {
+  margin: 0px;
+  padding: 0px;
+}
+/* Reduce margins before sections after remedy titles. */
+.remedy > .title ~ section {
+  margin-top: 5px;
+}
+/* Style unordered lists (including: steps-unordered, choices).
+Align unordered lists with ordered lists. */
+ul {
+  list-style: square;
+  margin-left: -6px;
+}
+/* Style list items (including: steps, steps-unordered, choices, substeps). */
+li {
+  list-style-position: outside;
+  margin-left: 33px;
+}
+/* Set margins for steps. */
+.step {
+  margin-top: 5px;
+}
+/* Set margins for choices and substeps. */
+.substep,
+.choice {
+  margin-top: 2.5px;
+}
+/* Set margins for list items. */
+.li,
+.li p,
+.li .p {
+  margin-top: 5px;
+}
+/* Add a margin before ordered and unordered lists. */
+.ul,
+.ol {
+  margin-top: 5px;
+}
+/* Fix unordered lists position in the document body. */
+.ul:not(.choices, .steps-unordered) {
+  margin-left: 0.5px;
+}
+/* Ensure undisturbed dotted border transition between step element children. */
+.choices ~ .stepresult,
+.choices ~ .stepxmp,
+.info ~ .stepxmp,
+.info ~ .stepresult,
+.info ~ .substeps,
+.substeps ~ .stepresult,
+.choices ~ .stepresult,
+.substeps ~ .substeps {
+  margin-top: -3px;
+  padding-top: 3px;
+}
+/* Style task topic and troubleshooting topic "parts". */
+.prereq::before,
+.postreq::before,
+.steps::before,
+.steps-unordered::before,
+.stepsection,
+.cause::before,
+.remedy::before,
+.condition::before,
+.context::before,
+.result::before,
+.example::before {
+  display: block;
+  clear: both;
+  color: #003749;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.025em;
+}
+/* Fix the placement of cause, remedy, and condition captions. */
+.cause::before,
+.remedy::before {
+  margin-left: -1.2px;
+}
+.condition::before {
+  margin-left: -0.4px;
+}
+/* Set padding and margins for task topic and troubleshooting topic "parts". */
+.result,
+.example,
+.context,
+.prereq,
+.postreq,
+.stepsection,
+.steps-unordered::before,
+.steps::before,
+.cause,
+.remedy,
+.condition {
+  margin: 15px 0px 5px 0px !important;
+  padding: 0px !important;
+}
+/* Fix the "Procedure" caption margins in steps-unordered elements. */
+.steps-unordered {
+  margin: 0px !important;
+}
+/* Set margins between steps. */
+.step ~ .step {
+  margin-top: 10px;
+}
+/* Set margins between substeps. */
+.substep,
+.choice {
+  margin-top: 5px;
+}
+/* Assert the same styling in stepsection elements and their children elements. */
+.stepsection * {
+  color: inherit;
+  background-color: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+/* Add a caption before not empty prerequisite elements. */
+.prereq:not(.prereq:empty)::before {
+  content: "Before you begin";
+}
+/* Add a caption before not empty postrequisite elements. */
+.postreq:not(.postreq:empty)::before {
+  content: "Next steps";
+}
+/* Add a caption before task topics with the @outputclass="process" attribute set on their root elements. */
+article.process .steps::before,
+article.process .steps-unordered::before {
+  content: "Process";
+}
+/* Add a caption before steps elements.
+Prevent the process-topic children from inheriting the "Process" caption. */
+article:not(.process) .steps::before,
+article:not(.process) .steps-unordered::before {
+  content: "Procedure";
+}
+/* Hide the caption before steps elements if a stepsection element precedes the first step. */
+.stepsection ~ .steps::before,
+.stepsection ~ .steps-unordered::before {
+  display: none;
+}
+/* Remove the caption before steps in troubleshooting topics. */
+.remedy .steps::before,
+.remedy .steps-unordered::before {
+  display: none;
+}
+/* Add a caption before context elements. */
+.context::before {
+  content: "Context";
+}
+/* Add a caption before condition elements. */
+.condition::before {
+  content: "Condition";
+}
+/* Add a caption before cause elements. */
+.cause::before {
+  content: "Cause";
+}
+/* Add a caption before remedy elements. */
+.remedy::before {
+  content: "Remedy";
+}
+/* Add a caption before stepxmp and example elements. */
+.example::before {
+  content: "Example";
+}
+/* Add a caption before stepresult and result elements. */
+.result::before {
+  content: "Result";
+}
+/* Fix padding for stepsections. */
+.stepsection ~ .steps,
+.stepsection ~ .steps-unordered,
+.stepsection ~ .step {
+  padding-top: 0px;
+}
+/* Add a margin between steps and task title if shortdesc is not present or empty. */
+.body ~ .steps,
+.body ~ .steps-unordered,
+.shortdesc:empty ~ .steps,
+.shortdesc:empty ~ .steps-unordered {
+  margin-top: 10px;
+}
+/* Display the cause and remedy titles right after the cause and remedy captions.
+Style the cause and remedy titles. */
+.cause > .title,
+.remedy > .title {
+  font-size: 16px;
+  color: #404040;
+  font-style: normal;
+  font-weight: bold;
+  display: inline;
+}
+/* Remove padding for the first paragraph in cause, remedy, and condition elements. */
+.cause > .p:first-child,
+.cause > p:first-child,
+.remedy> .p:first-child,
+.remedy> p:first-child,
+.condition> .p:first-child,
+.condition> p:first-child {
+  margin-top: 0px;
+}
+/* Add ": " after cause and remedy titles in cause and remedy elements. */
+.cause > .title::after,
+.remedy > .title::after {
+  content: ": ";
+  color: #404040;
+}
+/* Removee borders for paragraphs in remedy elements. */
+.remedy .p > .cmd {
+  border: none;
+  padding-left: 0px;
+}
+/* Requires: ordered_list_unordered_list_steps_substeps_choices.css */
+/* Uniformly style step element children.
+Style trouble solution elements. */
+.stepresult,
+.info,
+.stepxmp,
+.troubleSolution,
+.choices,
+.substeps {
+  font-style: normal;
+  font-weight: normal;
+  border-left: 2px dotted #dcdcdc;
+  margin: 2.5px 0px 5px 1px;
+  padding: 0px 0px 0.5px 10px;
+}
+/* Style trouble solution element. Add a margin between trouble solution elements.
+Span the left border across the cause and remedy elements. */
+.troubleSolution {
+  margin: 0px 0px 25px 0px;
+  border-left: 5px solid #dcdcdc;
+}
+/* Style the step element children captions. */
+.stepresult::before,
+.info::before,
+.stepxmp::before {
+  font-weight: bold;
+  font-style: normal;
+  color: #404040;
+  letter-spacing: 0.025em;
+}
+/* Add a caption before info elements. 
+.info::before {
+  content: "Info: ";
+}
+*/
+/* Add a caption before step example and example elements. */
+.stepxmp::before {
+  content: "Example: ";
+}
+/* Add a caption before stepresult and result elements. */
+.stepresult::before{
+  content: "Result: ";
+}
+/* Requires:
+ * typography.css
+ * ordered_list_unordered_list_steps_substeps_choices.css
+ */
+/* Style step, substep, and choice elements. */
+li.step::before,
+li.substep::before,
+li.choice::before {
+  margin: 0px 10px 0px -31px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: #dcdcdc;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-weight: bold;
+  font-size: 16px;
+  color: #404040;
+  text-align: center;
+  vertical-align: center;
+}
+/* Implement custom steps and choices numbering. */
+ol.steps,
+ul.choices {
+  list-style: none;
+  counter-reset: li;
+}
+.steps > li.step::before {
+  content: counter(li);
+}
+.steps > li.step {
+  counter-increment: li;
+}
+.steps-unordered > li.step::before,
+li.choice::before {
+  content: "▪";
+}
+/* Implement custom substeps numbering. */
+ol.substeps {
+  list-style: none;
+  counter-reset: li;
+}
+li.substep::before {
+  content: counter(li, lower-alpha);
+}
+li.substep {
+  counter-increment: li;
+}
+/* Fix the position of step element children. */
+.stepresult,
+.info,
+.stepxmp,
+.choices,
+.substeps {
+  font-style: normal;
+  font-weight: normal;
+  border-left: 2px dotted #dcdcdc;
+  margin: 0px 0px 5px -20px;
+  padding: 2.5px 0px 0.5px 20.5px;
+}
+/* Fix the position of result and example elements. */
+.result,
+.example {
+  margin: 0px 0px 5px 13px;
+  padding: 2.5px 0px 0.5px 21px;
+}
+/* Fix the position of choices and substeps elements. */
+.choices,
+.substeps {
+  padding: 2.5px 0px 0.5px 22px;
+  margin: 0px 0px 5px -20px;
+}
+/* Fix the placement of choice element children - verify. */
+.choice > * {
+  margin-left: 5px;
+}
+/* Display multiline commands with uniform indentation. */
+.cmd {
+  display: block;
+  clear: both;
+  margin-top: -24px;
+  padding-left: 20px;
+  margin-left: -20px;
+  border-left: 2px dotted #dcdcdc;
+}
+/* Fix notes before commands position. */
+.step > .note,
+.substep > .note {
+  margin-top: -24px;
+  margin-bottom: 30px;
+  margin-left: 2px;
+}
+/* Place the required label before a step or substep. */
+li.step > strong,
+li.substep > strong {
+ display: block;
+ margin-top: -24px;
+ margin-left: 2px;
+ letter-spacing: 0.025em;
+}
+strong ~ .cmd {
+  margin-top: 0px;
+  margin-bottom: -2px;
+  padding-bottom: 2px;
+}
+/* Fix choicetable placement. */
+.choicetable {
+  margin-left: 2px;
+}
+/* Fix position of commands with images. */
+.cmd:has(.image) {
+  margin-top: -24px;
+}
+/* STYLING ****************************************************************/
+/* Import the Roboto Google font. */
+/* Set the Roboto font globally. */
+@page {
+  font-family: "Roboto", Helvetica, Arial;
+}
+/* Set the Roboto font properties for the document body. */
+body,
+article,
+article * {
+  color: #404040;
+  font-family: "Roboto", Helvetica, Arial;
+  font-weight: normal;
+  line-height: 1.5em;
+  font-style: normal;
+  text-align: left;
+  font-size: 16px;
+}
+/* Set how the strong elements are displayed.
+Asserts that their children elements are uniformly styled. */
+strong,
+strong * {
+  font-weight: bold;
+}
+/* Set how the emphasized elements are displayed.
+Asserts that their children elements are uniformly styled. */
+em,
+em *,
+.i,
+.i * {
+  font-style: italic;
+}
+/* COPYCAT - Invert Colors */
+/* COPYCAT - Remove Prince Code - START */
+/* Remove the map title that appears before the Table of Contents (TOC). */
+body > .topictitle1 {
+  display: none;
+}
+/* Add a custom TOC heading. */
+nav > ul:first-child::before { 
+  content: "Contents";
+  font-size: 42px;
+  color: #003749;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  display: block;
+  clear: both;
+  margin: 0px 0px 25px -1.5px;
+  letter-spacing: 0.025em;
+}
+/* Set padding, margins, and letter spacing for the whole TOC. */
+nav {
+  letter-spacing: 0.025em;
+  page-break-after: always;
+}
+/* Style the font for the entire TOC. */
+nav * {
+  font-style: normal;
+  color: #404040; 
+  text-decoration: none;
+}
+/* Style "<topic_title>.....................<page>". */
+nav a::after {
+  content: leader(".") target-counter(attr(href), page); 
+  margin-left: 0px;
+  font-weight: normal;
+  font-size: 16px;
+}
+/* Set margins and padding for the TOC links. */
+nav ul { 
+  margin: 2.5px 0px 0px 0px;
+  padding: 0px;
+}
+.topichead {
+  font-weight: bold;
+  font-style: normal;
+}
+/* Level-1 (chapter). */
+nav ul li {
+  list-style-type: none;
+  padding: inherit;
+  padding: 2px 0px 2px 0px; 
+  font-size: 16px;
+  margin-left: 0px;
+  }
+/* Style level-1 (chapter) topics that have children. */
+nav > ul:has(ul) > li {
+  padding-top: 15px;
+}
+nav > ul:has(ul) > li:first-child {
+  padding-top: 10px;
+}
+nav > ul:has(ul) > li > a {
+  color: #003749;
+  font-size: 22px;
+  font-weight: bold;
+}
+nav > ul:has(ul) > li, 
+nav > ul:has(ul) > li:before {
+  color: #003749;
+  font-weight: bold;
+  font-size: 22px;
+}
+nav > ul:has(ul) > li > a::after {
+  color: #003749;
+  font-weight: bold;
+}  
+/* Style level-1 (chapter) topics that do not have children. */
+nav > ul > li > a,
+nav > ul > li:before {
+  font-weight: normal;
+  font-size: 18px;
+  color: #404040;
+}
+/* Level-2 (subchapter) and deeper. */
+nav ul li ul li {
+  padding-left: 32px;
+}
+nav > ul > li > ul > li {
+  padding-top: 5px;
+}
+nav ul li ul li, 
+nav ul li ul li:before {
+  font-weight: bold;
+}
+nav > ul > li > ul > li {
+  font-weight: bold;
+  font-size: 18px;
+}
+nav > ul > li > ul > li > a::after {
+  font-weight: bold;
+}
+/* Level-3 and deeper. */
+nav ul li ul li ul li, 
+nav ul li ul li ul li:before {
+  font-weight: normal;
+}
+/* Level-5 and deeper (hidden). */
+nav ul ul ul ul ul {
+  content: none;
+}
+/* You can assign the @outputclass="no_toc" to the root element of a map to hide the table of contents. */
+body.no_toc > nav {
+  display: none;
+}
+/* Avoid overflowing text in the following elements: */
+a {
+  word-wrap: break-word;
+  }
+/* REQUIRES: orientation_size.css */
+/* TOC */
+@page toc:left{
+  @bottom-left{
+  /* COPYCAT - Debrand Footer Text - START */
+  content: "Copyright © 2004-2020 Jorsek Inc.";
+  /* COPYCAT - Debrand Footer Text - END */
+  letter-spacing: 0.025em;
+  color: #fff;
+  border: none;
+  background-color: #09afd6;
+  font-size:18px;
+  font-style: normal;
+  font-weight: bold;
+  
+}
+  @bottom-right {
+  content: "";
+  letter-spacing: 0.025em;
+  border: none;
+  background-color: #09afd6;
+  }
+}
+@page toc:right{
+  @bottom-left{
+  /* COPYCAT - Debrand Footer Text - START */
+  content: "Copyright © 2004-2020 Jorsek Inc.";
+  /* COPYCAT - Debrand Footer Text - END */
+  letter-spacing: 0.025em;
+  font-size:18px;
+  color: #fff;
+  border: none;
+  background-color: #09afd6;
+  font-style: normal;
+  font-weight: bold;
+  
+}
+  @bottom-right{
+  content: "";
+  letter-spacing: 0.025em;
+  border: none;
+  background-color: #09afd6;
+  }
+}
+/* BODY */
+@page:left{
+  @top-right{
+  /* COPYCAT - Debrand Header - START */
+  content: "";
+  background-image: url('data:image/png;base64,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')
+;
+  background-size: 32px;
+  width: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* COPYCAT - Debrand Header - END */
+  letter-spacing: 0.025em;
+  line-height: 1em;
+  font-weight: bold;
+  color: #09afd6;
+  font-size: 18px;
+  }
+  @top-left{
+  font-size: 18px;
+  color: #09afd6;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: none;
+  content: "{map.title}";
+  letter-spacing: 0.025em;
+  line-height: 1em;
+  }
+  @bottom-left{
+  content: "";
+  letter-spacing: 0.025em;
+  color: #fff;
+  font-style: normal;
+  border: none;
+  background-color: #09afd6;
+  font-size: 18px;
+  font-weight: bold;
+  }
+  @bottom-right {
+  font-size: 18px;
+  border: none;
+  background-color: #09afd6;
+  font-style: normal;
+  font-weight: normal;  
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  content: counter(page);
+  }
+}
+@page:right{
+  @top-right{
+  /* COPYCAT - Debrand Header - START */
+  content: "";
+  background-image: url('data:image/png;base64,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')
+;
+  background-size: 32px;
+  width: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* COPYCAT - Debrand Header - END */
+  letter-spacing: 0.025em;
+  line-height: 1em;
+  font-weight: bold;
+  color: #09afd6;
+  font-size: 18px;
+  }
+  @top-left{
+  font-size: 18px;
+  color: #09afd6;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: none;
+  content: "{map.title}";
+  letter-spacing: 0.025em;
+  line-height: 1em;
+  }
+  @bottom-left{
+  content: "";
+  letter-spacing: 0.025em;
+  color: #fff;
+  font-style: normal;
+  border: none;
+  background-color: #09afd6;
+  font-size: 18px;
+  font-weight: bold;
+  }
+  @bottom-right {
+  font-size: 18px;
+  border: none;
+  background-color: #09afd6;
+  font-style: normal;
+  font-weight: normal;  
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  content: counter(page);
+  letter-spacing: 0.025em;
+  }
+}
+/* COPYCAT - Remove Header Image Fixes - START */
+/* Margins fix for the header image. 
+Adjust these properties if you use a custom image in the header. 
+Remove or comment-out these properties if you don't use an image in the header. */
+@page:right {
+  @top-right {
+  padding-right: 31mm; 
+  }
+}
+@page:left {
+  @top-right {
+  padding-right: 31mm; 
+  }
+}
+@page portrait_large:right {
+  @top-right {
+  padding-right: 41mm; 
+  }
+}
+@page portrait_large:left {
+  @top-right {
+  padding-right: 41mm; 
+  }
+}
+@page portrait:right {
+  @top-right {
+  padding-right: 31mm; 
+  }
+}
+@page portrait:left {
+  @top-right {
+  padding-right: 31mm; 
+  }
+}
+@page portrait_small:right {
+  @top-right {
+  padding-right: 31mm; 
+  }
+}
+@page portrait_small:left {
+  @top-right {
+  padding-right: 31mm; 
+  }
+}
+@page landscape_large:right {
+  @top-right {
+  padding-right: 41mm; 
+  }
+}
+@page landscape_large:left {
+  @top-right {
+  padding-right: 41mm; 
+  }
+}
+@page landscape:right {
+  @top-right {
+  padding-right: 31mm; 
+  }
+}
+@page landscape:left {
+  @top-right {
+  padding-right: 31mm; 
+  }
+}
+@page landscape_small:right {
+  @top-right {
+  padding-right: 31mm; 
+  }
+}
+@page landscape_small:left {
+  @top-right {
+  padding-right: 31mm; 
+  }
+}
+@page toc:right {
+  @top-right {
+  padding-right: 31mm; 
+  }
+}
+@page toc:left {
+  @top-right {
+  padding-right: 31mm; 
+  }
+}
+/* COPYCAT - Remove Header Image Fixes - END */
+/* !importaint: removed a commented-out import */
+/* !importaint: removed a commented-out import*/
+/* !importaint: removed a commented-out import */
+/* COPYCAT - Remove Prince Code - END */
+/* !importaint: removed a commented-out import */
+/* Disables figure numbering. */
+.fig--title-label {
+  display: none;
+  content: none;
+}
+/* Disable figure numbering. */
+.table--title-label {
+  display: none;
+  content: none;
+}
+/* Add subtle image borders to image elements. */
+.image {
+  border: 5px solid #f4f4f4;
+}
+/* Disable image borders by assigning the @outputclass="no_borders" attribute to the image element. */
+.no_borders {
+  border: none;
+}
+/*!importaint: removed a commented-out import */
+/* Hide empty elements. */
+*:empty:not(img){
+  display: none;
+  }
+/* Justify text in the elements with the @outputclass="justify" attribute assigned. */
+.text_justify,
+.text_justify * {
+  text-align: justify !important;
+}
+/* Align text to the left in the elements with the @outputclass="left" attribute assigned. */
+.text_left,
+.text_left * {
+  text-align: left !important;
+}
+/* Align text to the right in the elements with the @outputclass="right" attribute assigned. */
+.text_right,
+.text_right * {
+  text-align: right !important;
+}
+/* Make text small in the elements with the @outputclass="text_smaller" attribute assigned. */
+.text_smaller,
+.text_smaller * {
+  font-size: 12px !important;
+}
+/* Make text small in the elements with the @outputclass="text_small" attribute assigned. */
+.text_small,
+.text_small * {
+  font-size: 14px !important;
+}
+/* Make text regularly sized in the elements with the @outputclass="text_normal" attribute assigned. */
+.text_default,
+.text_default * {
+  font-size: 16px !important;
+}
+/* Make text large in the elements with the @outputclass="text_large" attribute assigned. */
+.text_large,
+.text_large * {
+  font-size: 18px !important;
+}
+/* Make text large in the elements with the @outputclass="text_larger" attribute assigned. */
+.text_larger,
+.text_larger * {
+  font-size: 20px !important;
+}
+/* COPYCAT - Internal Comment - START */
+/* @OUTPUTCLASS ATTRIBUTE VALUES *******************************************
+ * portrait  [orientation_size.css]
+ * portrait_small  [orientation_size.css]
+ * portrait_large  [orientation_size.css]
+ * landscape  [orientation_size.css]
+ * landscape_small  [orientation_size.css]
+ * landscape_large  [orientation_size.css]
+ * two_column  [columns.css]
+ * three_column  [columns.css]
+ * four_column  [columns.css]
+ * no_toc  [table_of_contents.css]
+ * break_before  [breaks.css]
+ * break_inside  [breaks.css]
+ * break_avoid  [breaks.css]
+ * text_justify  [formatting.css]
+ * text_left  [formatting.css]
+ * text_right  [formatting.css]
+ * text_smaller  [formatting.css]
+ * text_small  [formatting.css]
+ * text_normal  [formatting.css]
+ * text_large  [formatting.css]
+ * text_larger  [formatting.css]
+ * no_borders  [image_borders.css]
+ * no_shadows  [image_shadows.css]
+ * process  [cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css]
+ */
+/* COLORS ******************************************************************
+GENERAL
+#fff  - white
+#f4f4f4  - gelato-white
+#dcdcdc  - off-white
+#404040  - dark-gray
+#09afd6  - blue
+#003749  - navy
+#d95700  - orange
+NOTES
+#09afd6  - note, trouble border and font
+#29b4d328  - note, trouble background
+#3f6c51  - tip, fastpath border and font
+#3f6c512c  - tip, fastpath background
+#ffa600  - important, remember, restriction border and font
+#ffc25131  - important, remember, restriction background
+#d95700  - attention, caution, warning, danger border and font
+#d9570027  - attention, caution, warning, danger background 
+*/
+/* COPYCAT - Internal Comment - END */

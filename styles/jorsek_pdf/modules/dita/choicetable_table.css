@@ -1,0 +1,60 @@
+/* Ensure that tables and choicetables span across the whole space available. */
+table {
+  width: 100%;
+  margin: 5px 0px 5px 0px;
+  table-layout: auto;
+}
+/* Remove the table and choicetable borders completely. */
+table,
+table * {
+  border-collapse: collapse;
+  border: none;
+  text-align: left;
+}
+
+/* Style the table and choicetable headers. 
+Assert the same styling in table and choicetable headers and their children elements. */
+table > thead > tr,
+table > thead > tr > th {
+  font-weight: bold;
+  color: #fff;
+  background-color: #003749;
+  padding: 10px;
+  letter-spacing: 0.5px;
+}
+table > thead > tr > th > .fn::footnote-call {
+  font-weight: bold;
+  color: #fff;
+  background-color: #003749;
+  letter-spacing: 0.5px;
+}
+table > thead > tr > th * {
+  font-weight: bold;
+  color: #fff;
+  background-color: #003749;
+}
+
+/* Style uneven table and choicetable rows. */
+table > tbody > tr:nth-child(odd),
+table > tbody > tr:nth-child(odd) > td {
+  background-color: #f4f4f4;
+  padding: 10px;
+  vertical-align: top;
+}
+
+/* Style even table and choicetable rows. */
+table > tbody > tr,
+table > tbody > tr > td {
+  background-color: #fff;
+  padding: 10px;
+  vertical-align: top;
+}
+
+/* Add a top-border for tables that do not contain thead elements. */
+table {
+  border-top: 3px solid #003749;
+  border-bottom: 3px solid #003749
+}
+table:has(thead) {
+  border-top: none;
+}

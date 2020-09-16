@@ -1,0 +1,96 @@
+/* LAYOUT *****************************************************************/
+/* COPYCAT - Remove Prince Code - START */
+@import url("modules/layout/orientation_size.css");
+@import url("modules/layout/cover.css");
+@import url("modules/layout/breaks.css");
+/* @import url("modules/layout/blanks.css"); */
+/* COPYCAT - Remove Prince Code - END */
+/* @import url("modules/layout/definition_list_two_columns.css"); */
+@import url("modules/layout/columns.css");
+
+/* DITA *******************************************************************/
+@import url("modules/dita/footnote.css");
+@import url("modules/dita/paragraph.css");
+@import url("modules/dita/filepath_sysoutput_userinput_varname.css"); 
+@import url("modules/dita/uicontrol_wintitle_shortcut_menucascade.css");
+@import url("modules/dita/abstract_shortdesc.css");
+@import url("modules/dita/note.css");
+@import url("modules/dita/links.css");
+@import url("modules/dita/choicetable_table.css");
+@import url("modules/dita/codeblock_codeph.css");
+@import url("modules/dita/figure_image.css"); 
+@import url("modules/dita/description.css");
+@import url("modules/dita/definition_list.css");
+@import url("modules/dita/cite_long_quote_quote.css");
+@import url("modules/dita/title.css");
+@import url("modules/dita/section.css");
+@import url("modules/dita/ordered_list_unordered_list_steps_substeps_choices.css");
+@import url("modules/dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
+@import url("modules/dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
+@import url("modules/dita/choices_steps_substeps_numbering.css");
+
+/* STYLING ****************************************************************/
+@import url("modules/styling/typography.css");
+/* COPYCAT - Remove Prince Code - START */
+@import url("modules/styling/table_of_contents.css");
+@import url("modules/styling/header_footer.css");
+/* @import url("modules/styling/table_of_contents_page_numbering.css"); */
+/* @import url("modules/styling/header_footer_alternate.css");*/
+/* @import url("modules/styling/table_of_contents_page_numbering_alternate.css"); */
+/* COPYCAT - Remove Prince Code - END */
+/* @import url("modules/styling/chapter_numbering.css"); */
+@import url("modules/styling/figure_no_numbering.css");
+@import url("modules/styling/table_no_numbering.css");
+@import url("modules/styling/image_borders.css");
+/*@import url("modules/styling/image_shadows.css"); */
+@import url("modules/styling/hide_empty_elements.css");
+@import url("modules/styling/formatting.css");
+
+/* COPYCAT - Internal Comment - START */
+/* @OUTPUTCLASS ATTRIBUTE VALUES *******************************************
+ * portrait         [orientation_size.css]
+ * portrait_small   [orientation_size.css]
+ * portrait_large   [orientation_size.css]
+ * landscape        [orientation_size.css]
+ * landscape_small  [orientation_size.css]
+ * landscape_large  [orientation_size.css]
+ * two_column       [columns.css]
+ * three_column     [columns.css]
+ * four_column      [columns.css]
+ * no_toc           [table_of_contents.css]
+ * break_before     [breaks.css]
+ * break_inside     [breaks.css]
+ * break_avoid      [breaks.css]
+ * text_justify     [formatting.css]
+ * text_left        [formatting.css]
+ * text_right       [formatting.css]
+ * text_smaller     [formatting.css]
+ * text_small       [formatting.css]
+ * text_normal      [formatting.css]
+ * text_large       [formatting.css]
+ * text_larger      [formatting.css]
+ * no_borders       [image_borders.css]
+ * no_shadows       [image_shadows.css]
+ * process          [cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css]
+ */
+
+/* COLORS ******************************************************************
+GENERAL
+#fff        - white
+#f4f4f4     - gelato-white
+#dcdcdc     - off-white
+#404040     - dark-gray
+#09afd6     - blue
+#003749     - navy
+#d95700     - orange
+NOTES
+#09afd6     - note, trouble border and font
+#29b4d328   - note, trouble background
+#3f6c51     - tip, fastpath border and font
+#3f6c512c   - tip, fastpath background
+#ffa600     - important, remember, restriction border and font
+#ffc25131   - important, remember, restriction background
+#d95700     - attention, caution, warning, danger border and font
+#d9570027   - attention, caution, warning, danger background 
+*/
+/* COPYCAT - Internal Comment - END */

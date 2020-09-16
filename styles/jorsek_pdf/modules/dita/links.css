@@ -1,0 +1,10 @@
+/* Style inline cross-references. */
+.xref {
+  color: #003749;
+  text-decoration: none;
+}
+
+/* Avoid overflowing text in the following elements: */
+a {
+  word-wrap: break-word;
+}

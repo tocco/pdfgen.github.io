@@ -1,0 +1,5 @@
+/* Puts every definition list in two columns. */
+dl {
+  column-count: 2;
+  column-fill: balance;
+}

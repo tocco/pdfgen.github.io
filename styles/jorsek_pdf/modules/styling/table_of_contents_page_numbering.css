@@ -1,0 +1,16 @@
+/* IMPORTANT: Use with "header_footer.css" */
+@page toc:left {
+    @bottom-right {
+        content: counter(page, upper-roman);
+    }
+}
+@page toc:right {
+    @bottom-right {
+        content: counter(page, upper-roman);
+    }
+}
+
+/* Reset numbering after the cover-page. */
+.cover-page-container {
+    counter-reset: page 0;
+}
