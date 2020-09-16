@@ -57,8 +57,11 @@
         background-position: center;
         background-repeat: no-repeat;
         /* COPYCAT - Debrand Header - END */
-        letter-spacing: 0.025em;
-    }
+        line-height: 1em;
+        font-weight: bold;
+        color: #09afd6;
+        font-size: 18px;
+        letter-spacing: 0.025em;    }
     @top-left{
         font-size: 18px;
         color: #09afd6;
@@ -104,8 +107,11 @@
         background-position: center;
         background-repeat: no-repeat;
         /* COPYCAT - Debrand Header - END */
-        letter-spacing: 0.025em;
-    }
+        line-height: 1em;
+        font-weight: bold;
+        color: #09afd6;
+        font-size: 18px;
+        letter-spacing: 0.025em;    }
     @top-right{
         font-size: 18px;
         color: #09afd6;
