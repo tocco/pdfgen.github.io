@@ -9,4 +9,16 @@
 .abstract > *:first-child:not(.shortdesc) {
     margin-bottom: 5px;
     display: block;
+} 
+
+/* Prevent large margins when having an empty shortdesc element. */
+.shortdesc:empty ~ .section,
+.abstract:empty ~ .section {
+  margin-top: 5px;
+}
+
+/* Adds paragraph-like margins to shortdesc that are not p elements. */
+span.shortdesc {
+    display: inline-block;
+    margin-top: 5px;
 }
