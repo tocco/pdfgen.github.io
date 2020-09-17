@@ -18,7 +18,7 @@
 }
 
 /* Adds paragraph-like margins to shortdesc that are not p elements. */
-span.shortdesc {
-    display: inline-block;
+.shortdesc {
+    display: block;
     margin-top: 5px;
 }
