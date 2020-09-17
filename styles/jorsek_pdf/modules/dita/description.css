@@ -9,11 +9,10 @@
   float: left;
 }
 
-/* Add margins after figure and table description elements.
-.figdesc,
+/* Add margins after table description elements. */
 .tabledesc {
   margin-bottom: 5px;
-} */
+}
 
 /* Reduces font-size in figure and table descriptions. 
 .figdesc,
