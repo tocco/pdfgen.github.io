@@ -11,11 +11,11 @@
     display: block;
 } 
 
-/* Prevent large margins when having an empty shortdesc element. */
-.shortdesc:empty ~ .section,
-.abstract:empty ~ .section {
+/* Prevent large margins when having an empty shortdesc element. 
+.shortdesc:empty ~ .section:first-of-type,
+.abstract:empty ~ .section:first-of-type {
   margin-top: 5px;
-}
+}*/
 
 /* Adds paragraph-like margins to shortdesc that are not p elements. */
 .shortdesc {
