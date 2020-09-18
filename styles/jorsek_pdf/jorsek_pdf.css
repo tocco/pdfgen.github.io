@@ -1,50 +1,49 @@
 /* LAYOUT *****************************************************************/
 /* COPYCAT - Remove Prince Code - START */
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//layout/orientation_size.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//layout/cover.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//layout/breaks.css");
-/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//layout/blanks.css"); */
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/layout/orientation_size.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/layout/cover.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/layout/breaks.css");
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/layout/blanks.css#DISABLED"); */
 /* COPYCAT - Remove Prince Code - END */
-/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//layout/definition_list_two_columns.css"); */
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//layout/columns.css");
-
-/* DITA *******************************************************************/
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/footnote.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/paragraph.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/filepath_sysoutput_userinput_varname.css"); 
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/uicontrol_wintitle_shortcut_menucascade.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/abstract_shortdesc.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/note.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/links.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/choicetable_table.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/codeblock_codeph.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/figure_image.css"); 
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/description.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/definition_list.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/cite_long_quote_quote.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/title.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/section.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/ordered_list_unordered_list_steps_substeps_choices.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//dita/choices_steps_substeps_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/layout/columns.css");
 
 /* STYLING ****************************************************************/
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//styling/typography.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/styling/typography.css");
 /* COPYCAT - Remove Prince Code - START */
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//styling/table_of_contents.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//styling/header_footer.css");
-/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//styling/table_of_contents_page_numbering.css"); */
-/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//styling/header_footer_alternate.css");*/
-/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//styling/table_of_contents_page_numbering_alternate.css"); */
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/styling/table_of_contents.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/styling/header_footer.css");
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/styling/table_of_contents_page_numbering.css#DISABLED"); */
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/styling/header_footer_alternate.css#DISABLED");*/
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/styling/table_of_contents_page_numbering_alternate.css#DISABLED"); */
 /* COPYCAT - Remove Prince Code - END */
-/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//styling/chapter_numbering.css"); */
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//styling/figure_no_numbering.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//styling/table_no_numbering.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//styling/image_borders.css");
-/*@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//styling/image_shadows.css"); */
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//styling/hide_empty_elements.css");
-@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules//styling/formatting.css");
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/styling/chapter_numbering.css#DISABLED"); */
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/styling/figure_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/styling/table_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/styling/image_borders.css");
+/*@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/styling/image_shadows.css#DISABLED"); */
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/styling/hide_empty_elements.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/styling/formatting.css");
+
+/* DITA *******************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/footnote.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/paragraph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/filepath_sysoutput_userinput_varname.css"); 
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/uicontrol_wintitle_shortcut_menucascade.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/abstract_shortdesc.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/note.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/links.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/choicetable_table.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/codeblock_codeph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/figure_image.css"); 
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/description.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/definition_list.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/cite_long_quote_quote.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/title.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/section.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/ordered_list_unordered_list_steps_substeps_choices.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles/jorsek_pdf/modules/dita/choices_steps_substeps_numbering.css");
 
 /* COPYCAT - Internal Comment - START */
 /* @OUTPUTCLASS ATTRIBUTE VALUES *******************************************

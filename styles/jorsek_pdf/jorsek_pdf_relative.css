@@ -3,10 +3,26 @@
 @import url("modules/layout/orientation_size.css");
 @import url("modules/layout/cover.css");
 @import url("modules/layout/breaks.css");
-/* @import url("modules/layout/blanks.css"); */
+/* @import url("modules/layout/blanks.css#DISABLED"); */
 /* COPYCAT - Remove Prince Code - END */
-/* @import url("modules/layout/definition_list_two_columns.css"); */
 @import url("modules/layout/columns.css");
+
+/* STYLING ****************************************************************/
+@import url("modules/styling/typography.css");
+/* COPYCAT - Remove Prince Code - START */
+@import url("modules/styling/table_of_contents.css");
+@import url("modules/styling/header_footer.css");
+/* @import url("modules/styling/table_of_contents_page_numbering.css#DISABLED"); */
+/* @import url("modules/styling/header_footer_alternate.css#DISABLED");*/
+/* @import url("modules/styling/table_of_contents_page_numbering_alternate.css#DISABLED"); */
+/* COPYCAT - Remove Prince Code - END */
+/* @import url("modules/styling/chapter_numbering.css#DISABLED"); */
+@import url("modules/styling/figure_no_numbering.css");
+@import url("modules/styling/table_no_numbering.css");
+@import url("modules/styling/image_borders.css");
+/*@import url("modules/styling/image_shadows.css#DISABLED"); */
+@import url("modules/styling/hide_empty_elements.css");
+@import url("modules/styling/formatting.css");
 
 /* DITA *******************************************************************/
 @import url("modules/dita/footnote.css");
@@ -28,23 +44,6 @@
 @import url("modules/dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
 @import url("modules/dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
 @import url("modules/dita/choices_steps_substeps_numbering.css");
-
-/* STYLING ****************************************************************/
-@import url("modules/styling/typography.css");
-/* COPYCAT - Remove Prince Code - START */
-@import url("modules/styling/table_of_contents.css");
-@import url("modules/styling/header_footer.css");
-/* @import url("modules/styling/table_of_contents_page_numbering.css"); */
-/* @import url("modules/styling/header_footer_alternate.css");*/
-/* @import url("modules/styling/table_of_contents_page_numbering_alternate.css"); */
-/* COPYCAT - Remove Prince Code - END */
-/* @import url("modules/styling/chapter_numbering.css"); */
-@import url("modules/styling/figure_no_numbering.css");
-@import url("modules/styling/table_no_numbering.css");
-@import url("modules/styling/image_borders.css");
-/*@import url("modules/styling/image_shadows.css"); */
-@import url("modules/styling/hide_empty_elements.css");
-@import url("modules/styling/formatting.css");
 
 /* COPYCAT - Internal Comment - START */
 /* @OUTPUTCLASS ATTRIBUTE VALUES *******************************************
