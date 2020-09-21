@@ -40,4 +40,5 @@
 .three_column,
 .four_column {
   column-fill: balance;
+  margin-top: 10px;
 }
