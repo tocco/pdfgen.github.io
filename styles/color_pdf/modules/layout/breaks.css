@@ -17,7 +17,8 @@ pre.codeblock,
 .sysoutput,
 .varname,
 .filepath,
-.userinput {
+.userinput,
+.dd {
   break-inside: auto;
 }
 
@@ -40,6 +41,17 @@ dd,
 .postreq,
 article {
   break-inside: avoid;
+}
+
+/* Keep definition titles and definition descriptions together. */
+.dt {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.dd {
+  page-break-before: avoid;
+  break-before: avoid;
 }
 
 /* You can assign the @outputclass="break_before" attribute to force a page-break before a given element. */
