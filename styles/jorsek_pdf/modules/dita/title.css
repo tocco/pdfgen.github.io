@@ -62,25 +62,17 @@ article:has(.topictitle1, :not(article)) {
   margin: 0px;
   padding: 0px;
   font-size: 42px;
-  /* COPYCAT - Remove Prince Code - START */
-  margin-left: -2.15px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
-  /* COPYCAT - Remove Prince Code - END */
+
 }
 
 .topictitle2,
 .topictitle2 * {
   font-size: 32px;
-  /* COPYCAT - Remove Prince Code - START */
-  margin-left: -1.3px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
-  /* COPYCAT - Remove Prince Code - END */
 }
 
 .topictitle3,
 .topictitle3 * {
   font-size: 28px;
-  /* COPYCAT - Remove Prince Code - START */
-  margin-left: -1px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
-  /* COPYCAT - Remove Prince Code - END */
 }
 
 .topictitle4,
@@ -98,9 +90,6 @@ article:has(.topictitle1, :not(article)) {
 .sectiontitle,
 .sectiontitle * {
   font-size: 24px;
-  /* COPYCAT - Remove Prince Code - START */
-  margin-left: -0.7px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
-  /* COPYCAT - Remove Prince Code - END */
 }
 
 /* Style section element titles. */
@@ -125,3 +114,11 @@ article:has(.topictitle1, :not(article)) {
   margin: 0px;
   padding: 10px 0px 0px 0px;
 }
+
+/* COPYCAT - Remove Prince Code - START */
+/* Fix titles placement. */
+.topic > .title,
+.sectiontitle {
+    margin-left: -0.05em;
+}
+/* COPYCAT - Remove Prince Code - END */
