@@ -481,7 +481,8 @@ pre.codeblock,
 .sysoutput,
 .varname,
 .filepath,
-.userinput {
+.userinput,
+.dd {
   break-inside: auto;
 }
 /* Avoid breaking the following elements over multiple pages: */
@@ -504,6 +505,15 @@ dd,
 article {
   break-inside: avoid;
 }
+/* Keep definition titles and definition descriptions together. */
+.dt {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.dd {
+  page-break-before: avoid;
+  break-before: avoid;
+}
 /* You can assign the @outputclass="break_before" attribute to force a page-break before a given element. */
 .break_before {
   page-break-before: always;
@@ -514,7 +524,6 @@ article {
 }
 /* !importaint: removed a commented-out import */
 /* COPYCAT - Remove Prince Code - END */
-/* !importaint: removed a commented-out import */
 /* Set the two-column layout for topics and maps with the @outputclass="two_column" attribute assigned on their root tags. */
 .two_column {
   column-count: 2;
@@ -552,1041 +561,7 @@ article {
 .three_column,
 .four_column {
   column-fill: balance;
-}
-/* DITA *******************************************************************/
-/*  Style footnote elements at the bottom of the page. */
-@page {
-  counter-reset: footnote;
-  @footnotes {
   margin-top: 10px;
-  border-top: 2px dotted #dcdcdc;
-  border-clip: 250px;
-  padding: 2.5px 0px 2.5px 15px;
-  }
-}
-/* Style footnote number preceding the footnote text at the bottom of the page. */
-.fn::footnote-marker {
-  font-weight: bold;
-}
-/* Style footnote text at the bottom of the page. */
-.fn {
-  float: footnote;
-  break-inside: avoid;
-}
-/* Footnote text inherites parent styling in Prince. Remove inherited formatting. */
-.fn,
-.fn * {
-  font-size: 14px !important;
-  background-color: transparent;
-  padding: 0px;
-  margin: 0px;
-  color: #404040;
-  font-style: normal;
-  font-weight: normal;
-  text-align: left;
-  text-decoration: none;
-  border: none;
-  font-family: "Roboto", Helvetica, Arial;
-  letter-spacing: normal;
-}
-/* Assert that italic text is correctly rendered in footnotes. */
-.fn em,
-.fn .i {
-  font-style: italic !important;
-}
-/* Assert that bold text is correctly rendered in footnotes. */
-.fn strong,
-.fn .b {
-  font-weight: bold !important;
-}
-/* Assert that underlined text is correctly rendered in footnotes. */
-.fn u,
-.fn .u {
-  text-decoration: underline !important;
-}
-/* Fix ordered and unordered lists position in footnotes. */
-.fn .ul,
-.fn .ol {
-  margin-left: 22px !important;
-}
-/* Style footnote callouts in the document body. */ 
-.fn::footnote-call {
-  content: counter(footnote);
-  vertical-align: super;
-  font-weight: bold;
-  font-size: 10px;
-  line-height: none;
-  color: #003749;
-}
-/* Keep footnotes in one block - this does not seem to work.
-This is probably a Prince-related issue. */
-p {
-  prince-footnote-policy: keep-with-block;
-}
-/* Position paragraph elements. */
-div.p,
-p,
-.p {
-  display: block;
-  padding: 0px;
-  margin: 5px 0px 0px 0px;
-}
-/* Make the first paragraph inline in the following elements. */
-.info > p:first-child,
-.result > p:first-child,
-.example > p:first-child,
-.stepresult > p:first-child,
-.stepxmp > p:first-child,
-.note__title ~ p:first-of-type,
-.cause > .title ~ p,
-.remedy > .title ~ p {
-  display: inline;
-}
-/* If a block element is placed in a paragraph, discard its margins. */
-div.p > *:only-child,
-p > *:only-child,
-.p > *:only-child {
-  margin: 0px;
-}
-/* Add paragraph-like margins to sections that do not start with paragraphs. */
-.sectiontitle ~ span {
-  margin-top: 5px;
-  display: inline-block;
-}
-/* Adds paragraph-like margins to shortdesc that are not p elements. */
-span.shortdesc {
-  display: inline-block;
-  margin-top: 5px;
-}
-/* Prevent large margins when having an empty shortdesc element. */
-.shortdesc:empty ~ .section,
-.abstract:empty ~ .section {
-  margin-top: 5px;
-}
-/* Extends: typography.css */
-/* Style system output, varname, filepath, and userinput elements.
-Assert consistent styling of their children. */
-.sysoutput,
-.sysoutput *,
-.varname,
-.filepath,
-.userinput,
-.userinput * {
-  font-family: "DejaVu Sans Mono", Monaco, Consolas, "Andale Mono",  monospace !important;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: normal;
-  word-break: break-word;
-}
-/* Style userinput elements.
-Assert consistent styling of their children. */
-.userinput,
-.userinput * {
-  color: #09afd6;
-}
-/* Style varname elements. */
-.varname {
-  font-weight: bold;
-}
-/* Wrap varname elements in brackets. */
-.varname::before {
-  content: "<";
-}
-.varname::after {
-  content: ">";
-}
-/* Style system output and file path elements.
-Assert consistent styling of their children. */
-.systemoutput,
-.filepath,
-.sysoutput *,
-.filepath * {
-  color: #D95700;
-} 
-/* Style uicontrol elements. */
-.uicontrol {
-  font-weight: bold;
-  color: #09afd6;
-}
-/* Style wintitle elements. */
-.wintitle {
-  font-weight: bold;
-}
-/* Style keyboard keys/shortcuts. */
-.shortcut {
-  font-variant: small-caps;
-  text-transform: lowercase;
-  color: #09afd6;
-}
-/* Style menucascades. */
-abbr[title] {
-  border-bottom: none; /* removes ugly default underline */
-  text-decoration: none; /* removes ugly "and then" tooltip text */
-  content: "→"; /* determines custom "and then" symbol */
-  color: #09afd6;
-}
-/* REQUIRES: paragraph.css */
-/* Makes the text placed directly after the shortdesc tag and directly in the abstract tag to be printed in the same line as the shortdesc text. */
-.shortdesc {
-  display: inline;
-}
-/* Fixes spacing after elements placed before shortdescs. */
-.abstract > *:first-child:not(.shortdesc) {
-  margin-bottom: 5px;
-  display: block;
-}
-/* Import icons/font. */
-@font-face {
-  font-family: icomoon;
-  src: url("https://jorsek.github.io/pdfgen.github.io/fonts/note_icons/fonts/icomoon.ttf") format("truetype");
-}
-/* Style any note type. */
-.note {
-  clear: both;
-  display: inline-block; /* block breaks notes before commands in steps and substeps. */
-  border-left: 5px solid #404040;
-  background-color: #dcdcdc;
-  margin: 10px 0px 10px 0px;
-  padding: 10px;
-  width: 100%;
-}
-/* Style note captions (the text and optional image preceding the note contents). */
-.note__title {
-  font-weight: bold;
-  font-style: normal;
-  text-transform: uppercase;
-  vertical-align: top;
-  display: inline-block;
-  letter-spacing: 0.025em;
-/* Style PNG icons preceding note captions
-  background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjBGQUI1MDNBNzBDMTFFOTk2MTBDOUQxQzA1RTc2MzEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjBGQUI1MDRBNzBDMTFFOTk2MTBDOUQxQzA1RTc2MzEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MEZBQjUwMUE3MEMxMUU5OTYxMEM5RDFDMDVFNzYzMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MEZBQjUwMkE3MEMxMUU5OTYxMEM5RDFDMDVFNzYzMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsUpC6YAAAHqSURBVHjapJS/S8NAFMfvkpQiFcVFGwd/4I9JHEUUQRTpIoqL4lARxCRFOlT/AOngJLSTGNNJHAoiFKogIoI/BzcHUQcnkRYEEYWiUpvzG3+1lSRGffByd+/e++Tx3t1R0uMn/5FgMOh+fnqaJ5SOEMZ2eJ6fWlTVO478UwBNGnxAKzGO5nT9WJHlZkGWpAlGyDw2KhyybqGiFotljQWldAHxHYgvfdtlrEknZFVgjEWwLHMIvaccN+j1el8kSYoA0gLyMNH1DozrWNd++F0IBVAVf0/aYik9B/Q6nU4vA+J/T5DtCS6XT9f1Nmgcpiu3260I+Rh6tqRpm3bcUChUAmgCtP4vI2OtL9nsIcfzfZqm9X6aHTdPmpwsz2QyW0XQvDQg20ShwRE4EAhUYdgFtMuiRHcUboUm4SeoLMt1uVxuG9NGC2iK4zifqqqnjjNWFKUFzTlCplbQS/Sm8zvUFozj1I667QNabeFygr0R/HjWbNM6Y8ZmLC8NpQf4jkHX4DP+OzAhNRbQDY/H40MJurGqtwq2A9eaQFdEURyKRqOPPzXd7lTcQF3QlKHI8MArinPhcJg5OaJUiu8zx1e6qAVswDg4xhwPEjXL+OHjvVDgrPzh5XwwrTGynDZuzp8eY+PGGfEm8irAAEicugW83HbNAAAAAElFTkSuQmCC');
-  background-size: 16px 16px;
-  background-repeat: no-repeat;
-  width: 16px; 
-  height: 16px;
-  padding-left: 20.5px;
-  */
-}
-/* Style the font containing icons preceding note captions. */
-.note__title::before {
-  display: inline-block;
-  font-family: icomoon;
-  font-size: 13px;
-  padding-right: 3.5px;
-}
-/* Style the note element contents with the @type="note", @type="", and @type="trouble" attributes assigned. */
-.note_note,
-.note_trouble {
-  border-color: #09afd6;
-  background-color: #29b4d328;
-}
-.note_note>.note__title,
-.note_trouble>.note__title {
-  color: #09afd6;
-}
-.note_note > .note__title::before {
-  content: "\e906";
-}
-.note_trouble > .note__title::before {
-  content: "\e901";
-}
-/* Style the note element contents with the @type="tip" and @type="fastpath" attributes assigned. */
-.note_tip,
-.note_fastpath {
-  border-color: #3f6c51;
-  background-color: #3f6c512c;
-}
-.note_tip>.note__title,
-.note_fastpath>.note__title {
-  color: #3f6c51;
-}
-.note_tip > .note__title::before {
-  content: "\e908";
-}
-.note_fastpath > .note__title::before {
-  content: "\e905";
-}
-/* Style the note element contents with the @type="important", @type="remember", and @type="restriction" attributes assigned. */
-.note_important,
-.note_remember,
-.note_restriction {
-  border-color: #ffa600;
-  background-color: #ffc25131;
-}
-.note_important>.note__title, 
-.note_remember>.note__title, 
-.note_restriction>.note__title {
-  color: #ffa600;
-}
-.note_important > .note__title::before {
-  content: "\e90a";
-}
-.note_remember > .note__title::before {
-  content: "\e907";
-}
-.note_restriction > .note__title::before {
-  content: "\e900";
-}
-/* Style the note element contents with the @type="attention" attributes assigned. */
-.note_attention,
-.note_caution,
-.note_warning,
-.note_danger {
-  border-color: #d95700;
-  background-color: #d9570027;
-}
-/* Style the note element contents with the @type="attention", @type="caution", @type="warning", and @type="danger" attributes assigned. */
-.note_attention>.note__title,
-.note_caution>.note__title,
-.note_warning>.note__title,
-.note_danger>.note__title {
-  color: #d95700;
-}
-.note_danger {
-  text-transform: uppercase;
-}
-.note_attention > .note__title::before {
-  content: "\e902";
-}
-.note_caution > .note__title::before {
-  content: "\e904";
-}
-.note_warning > .note__title::before {
-  content: "\e909";
-}
-.note_danger > .note__title::before {
-  content: "\e903";
-}
-/* Set consistent margins for notes in task topics. */
-.stepresult > .note,
-.info > .note,
-.stepxmp > .note,
-.example > .note,
-.result > .note {
-  margin: 5px 0px 10px 0px;
-}
-/* Fixes notes preceding commands position.
-Reduces margins for notes in list items. */
-.step > .note,
-.substep > .note,
-.li > .note {
-  margin: 5px 0px 5px 0px;
-}
-/* Style inline cross-references. */
-.xref {
-  color: #003749;
-  text-decoration: none;
-}
-/* Avoid overflowing text in the following elements: */
-a {
-  word-wrap: break-word;
-}
-/* Ensure that tables and choicetables span across the whole space available. */
-table {
-  width: 100%;
-  margin: 5px 0px 5px 0px;
-  table-layout: auto;
-}
-/* Remove the table and choicetable borders completely. */
-table,
-table * {
-  border-collapse: collapse;
-  border: none;
-  text-align: left;
-}
-/* Style the table and choicetable headers. 
-Assert the same styling in table and choicetable headers and their children elements. */
-table > thead > tr,
-table > thead > tr > th {
-  font-weight: bold;
-  color: #fff;
-  background-color: #003749;
-  padding: 10px;
-  letter-spacing: 0.5px;
-}
-table > thead > tr > th > .fn::footnote-call {
-  font-weight: bold;
-  color: #fff;
-  background-color: #003749;
-  letter-spacing: 0.5px;
-}
-table > thead > tr > th * {
-  font-weight: bold;
-  color: #fff;
-  background-color: #003749;
-}
-/* Style uneven table and choicetable rows. */
-table > tbody > tr:nth-child(odd),
-table > tbody > tr:nth-child(odd) > td {
-  background-color: #f4f4f4;
-  padding: 10px;
-  vertical-align: top;
-}
-/* Style even table and choicetable rows. */
-table > tbody > tr,
-table > tbody > tr > td {
-  background-color: #fff;
-  padding: 10px;
-  vertical-align: top;
-}
-/* Add a top-border for tables that do not contain thead elements. */
-table {
-  border-top: 3px solid #003749;
-  border-bottom: 3px solid #003749
-}
-table:has(thead) {
-  border-top: none;
-}
-/* Style the code inside codeblock and codeph elements. */
-code {
-  font-family: "DejaVu Sans Mono", Monaco, Consolas, "Andale Mono",  monospace;
-  color: #404040;
-  font-size: 14px;
-  background-color: #f4f4f4;
-}
-/* Style codeblock elements. */
-.codeblock > code {
-  white-space: pre-wrap;
-  display: block;
-  clear: both;
-  width: 100%;
-  margin: 0px;
-  padding: 10px;
-  border-left: solid 5px #dcdcdc;
-}
-/* Reduce margins before codeblocks. */
-pre.codeblock {
-  margin: 10px 0px 10px 0px;
-  padding: 0px;
-  }
-/* Style codeph elements. */
-.codeph,
-p > .codeph {
-  display: inline-block;
-  padding: 0em 0.25em;
-  text-align: left;
-  width: auto;
-}
-/* Assert the same styling in codeblocks and codephs regardless of their children elements. */
-code * {
-  font-size: inherit;
-  background-color: inherit;
-  font-family: inherit;
-  color: inherit; 
-  text-align: inherit;
-}
-/* Set consistent margins for codeblocks in task topics. */
-.stepresult > pre.codeblock,
-.info > pre.codeblock,
-.stepxmp > pre.codeblock,
-.example > pre.codeblock,
-.result > pre.codeblock {
-  margin: 5px 0px 10px 0px;
-}
-/* Avoid overflowing text in the following elements: */
-.codeph,
-.codeblock {
-  word-wrap: break-word;
-}
-/* Position figure elements. */
-.fig,
-.image {
-  overflow: auto;
-  padding: 0px;
-  margin: 10px 0px 10px 0px;
-}
-/* Prevent large images from overflowing. */
-img {
-  max-width: 100%;
-}
-/* Set consistent margins for figures and images in task topics. */
-.stepresult > figure,
-.stepresult > image,
-.info > figure,
-.info > image,
-.stepxmp > figure,
-.stepxmp > image,
-.example > figure,
-.example > image,
-.result > figure,
-.result > image {
-  margin: 5px 0px 10px 0px;
-}
-/* Remove margins for image elements in figure elements without titles or other elements. */
-.fig > .image:only-child {
-  margin: 0px;
-}
-/* Style images in commands. */
-.cmd > .image {
-  display: inline-block;
-  max-height: 16px;
-  border: none;
-  padding: 0px;
-  margin: 0px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-} 
-/* Style figure descriptions and table descriptions. */
-.figdesc,
-.tabledesc,
-.figdesc p,
-.tabledesc p {
-  display: block;
-  clear: both;
-  margin: 0px 0px 1px 0px;
-  float: left;
-}
-/* Add margins after figure and table description elements.
-.figdesc,
-.tabledesc {
-  margin-bottom: 5px;
-} */
-/* Reduces font-size in figure and table descriptions. 
-.figdesc,
-.tabledesc,
-.figdesc *,
-.tabledesc * {
-  font-size: 14px !important;
-}
-*/
-/* Position the definition list. */
-dl {
-  display: block;
-  clear: both;
-  margin: 10px 0px 10px 0px;
-}
-/* Add a border on the left of definition terms and definition descriptions. */
-dt,
-dd {
-  border-left: solid 5px #dcdcdc;
-  padding: 0px 10px 0px 10px;
-}
-/* Style titles in definition lists.
-Assert the same styling in definition titles and their children elements. */
-dt,
-dt * {
-  color: #003749 !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  font-size: 16px;
-  letter-spacing: 0.025em;
-}
-/* Style definition descriptions. */
-dd {
-  margin: 0px;
-  margin-bottom: 20px;
-  margin-top: -2px; /* This ensures correct border transition. */
-}
-/* Style cite elements. */
-.cite {
-  color: #003749;
-  font-style: normal;
-  font-weight: normal;
-}
-/* Style long quote elements. */
-.lq {
-  font-size: 14px;
-  border-left: 5px solid #dcdcdc;
-  margin: 10px 0px 10px 0px;
-  padding-left: 10px;
-}
-.lq * {
-  font-size: 14px;
-}
-/* Style quote elements.
-q {
-}
-*/
-/* Extends: typography.css */
-/* Put every title in a separate line. */
-.title {
-  display: block;
-  clear: both;
-}
-/* Prevents all sorts of issues with titles that contains other tags. */
-.title * {
-  display: inline;
-}
-/* Style every title in a consistent way.
-Ensure that the titles children are styled in a consistent way. */
-.title,
-.title *,
-.table--title-label,
-.fig--title-label,
-figcaption:not(figcaption > .desc) {
-  font-family: "Roboto", Helvetica, Arial;
-  color: #003749;
-  border: none;
-  text-align: left;
-  font-style: normal;
-  font-weight: bold;
-  word-wrap: break-word;
-  line-height: 1.2em;
-  background-color: transparent;
-  padding: 0px;
-  margin: 25px 0px 0px 0px;
-}
-/* Remove margins for image and table titles. */
-.table--title-label,
-.fig--title-label,
-figcaption:not(figcaption > .desc) {
-  margin: 0px;
-}
-/* Increase letter spacing for titles. */
-.title,
-.table--title-label,
-.fig--title-label,
-.table > caption > .title {
-  letter-spacing: 0.025em;
-}
-/* Add top margins before chapters (level-1 topics) that do not contain children topics. */
-.topictitle1 {
-  margin-top: 50px;
-}
-/* Do not add margins before chapters (level-1 topics) that contain children topics. */
-article:has(.topictitle1, :not(article)) {
-  margin-bottom: 50px;
-}
-/* Style topics nested on different levels. */
-.topictitle1,
-.topictitle1 * {
-  margin: 0px;
-  padding: 0px;
-  font-size: 42px;
-  /* COPYCAT - Remove Prince Code - START */
-  margin-left: -2.15px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
-  /* COPYCAT - Remove Prince Code - END */
-}
-.topictitle2,
-.topictitle2 * {
-  font-size: 32px;
-  /* COPYCAT - Remove Prince Code - START */
-  margin-left: -1.3px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
-  /* COPYCAT - Remove Prince Code - END */
-}
-.topictitle3,
-.topictitle3 * {
-  font-size: 28px;
-  /* COPYCAT - Remove Prince Code - START */
-  margin-left: -1px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
-  /* COPYCAT - Remove Prince Code - END */
-}
-.topictitle4,
-.topictitle4 *,
-.topictitle5,
-.topictitle5 *,
-.topictitle6,
-.topictitle6 *,
-.topictitle7,
-.topictitle7 *,
-.topictitle8,
-.topictitle8 *,
-.topictitle9,
-.topictitle9 *,
-.sectiontitle,
-.sectiontitle * {
-  font-size: 24px;
-  /* COPYCAT - Remove Prince Code - START */
-  margin-left: -0.7px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
-  /* COPYCAT - Remove Prince Code - END */
-}
-/* Style section element titles. */
-.sectiontitle,
-.sectiontitle * {
-  font-weight: normal;
-}
-/* Style table titles. */
-.table--title-label,
-.table--title-label *,
-.table > caption > .title,
-.table > caption > .title * {
-  font-size: 16px;
-  background-color: transparent;
-}
-/* Fix the table title and table numbering position. */
-.table > caption > .title,
-.table--title-label {
-  display: inline-block;
-  margin: 0px;
-  padding: 10px 0px 0px 0px;
-}
-/* Position section elements. */
-.section {
-  margin: 25px 0px 0px 0px;
-}
-.sectiontitle {
-  margin: 0px;
-  padding: 0px;
-}
-/* Reduce margins before sections after remedy titles. */
-.remedy > .title ~ section {
-  margin-top: 5px;
-}
-/* Style unordered lists (including: steps-unordered, choices).
-Align unordered lists with ordered lists. */
-ul {
-  list-style: square;
-  margin-left: -6px;
-}
-/* Style list items (including: steps, steps-unordered, choices, substeps). */
-li {
-  list-style-position: outside;
-  margin-left: 33px;
-}
-/* Set margins for steps. */
-.step {
-  margin-top: 5px;
-}
-/* Set margins for choices and substeps. */
-.substep,
-.choice {
-  margin-top: 2.5px;
-}
-/* Set margins for list items. */
-.li,
-.li p,
-.li .p {
-  margin-top: 5px;
-}
-/* Add a margin before ordered and unordered lists. */
-.ul,
-.ol {
-  margin-top: 5px;
-}
-/* Fix unordered lists position in the document body. */
-.ul:not(.choices, .steps-unordered) {
-  margin-left: 0.5px;
-}
-/* Ensure undisturbed dotted border transition between step element children. */
-.choices ~ .stepresult,
-.choices ~ .stepxmp,
-.info ~ .stepxmp,
-.info ~ .stepresult,
-.info ~ .substeps,
-.substeps ~ .stepresult,
-.choices ~ .stepresult,
-.substeps ~ .substeps {
-  margin-top: -3px;
-  padding-top: 3px;
-}
-/* Style task topic and troubleshooting topic "parts". */
-.prereq::before,
-.postreq::before,
-.steps::before,
-.steps-unordered::before,
-.stepsection,
-.cause::before,
-.remedy::before,
-.condition::before,
-.context::before,
-.result::before,
-.example::before {
-  display: block;
-  clear: both;
-  color: #003749;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 0.025em;
-}
-/* Fix the placement of cause, remedy, and condition captions. */
-.cause::before,
-.remedy::before {
-  margin-left: -1.2px;
-}
-.condition::before {
-  margin-left: -0.4px;
-}
-/* Set padding and margins for task topic and troubleshooting topic "parts". */
-.result,
-.example,
-.context,
-.prereq,
-.postreq,
-.stepsection,
-.steps-unordered::before,
-.steps::before,
-.cause,
-.remedy,
-.condition {
-  margin: 15px 0px 5px 0px !important;
-  padding: 0px !important;
-}
-/* Fix the "Procedure" caption margins in steps-unordered elements. */
-.steps-unordered {
-  margin: 0px !important;
-}
-/* Set margins between steps. */
-.step ~ .step {
-  margin-top: 10px;
-}
-/* Set margins between substeps. */
-.substep,
-.choice {
-  margin-top: 5px;
-}
-/* Assert the same styling in stepsection elements and their children elements. */
-.stepsection * {
-  color: inherit;
-  background-color: inherit;
-  font-style: inherit;
-  font-weight: inherit;
-  font-size: inherit;
-  margin: 0px;
-  padding: 0px;
-}
-/* Add a caption before not empty prerequisite elements. */
-.prereq:not(.prereq:empty)::before {
-  content: "Before you begin";
-}
-/* Add a caption before not empty postrequisite elements. */
-.postreq:not(.postreq:empty)::before {
-  content: "Next steps";
-}
-/* Add a caption before task topics with the @outputclass="process" attribute set on their root elements. */
-article.process .steps::before,
-article.process .steps-unordered::before {
-  content: "Process";
-}
-/* Add a caption before steps elements.
-Prevent the process-topic children from inheriting the "Process" caption. */
-article:not(.process) .steps::before,
-article:not(.process) .steps-unordered::before {
-  content: "Procedure";
-}
-/* Hide the caption before steps elements if a stepsection element precedes the first step. */
-.stepsection ~ .steps::before,
-.stepsection ~ .steps-unordered::before {
-  display: none;
-}
-/* Remove the caption before steps in troubleshooting topics. */
-.remedy .steps::before,
-.remedy .steps-unordered::before {
-  display: none;
-}
-/* Add a caption before context elements. */
-.context::before {
-  content: "Context";
-}
-/* Add a caption before condition elements. */
-.condition::before {
-  content: "Condition";
-}
-/* Add a caption before cause elements. */
-.cause::before {
-  content: "Cause";
-}
-/* Add a caption before remedy elements. */
-.remedy::before {
-  content: "Remedy";
-}
-/* Add a caption before stepxmp and example elements. */
-.example::before {
-  content: "Example";
-}
-/* Add a caption before stepresult and result elements. */
-.result::before {
-  content: "Result";
-}
-/* Fix padding for stepsections. */
-.stepsection ~ .steps,
-.stepsection ~ .steps-unordered,
-.stepsection ~ .step {
-  padding-top: 0px;
-}
-/* Add a margin between steps and task title if shortdesc is not present or empty. */
-.body ~ .steps,
-.body ~ .steps-unordered,
-.shortdesc:empty ~ .steps,
-.shortdesc:empty ~ .steps-unordered {
-  margin-top: 10px;
-}
-/* Display the cause and remedy titles right after the cause and remedy captions.
-Style the cause and remedy titles. */
-.cause > .title,
-.remedy > .title {
-  font-size: 16px;
-  color: #404040;
-  font-style: normal;
-  font-weight: bold;
-  display: inline;
-}
-/* Remove padding for the first paragraph in cause, remedy, and condition elements. */
-.cause > .p:first-child,
-.cause > p:first-child,
-.remedy> .p:first-child,
-.remedy> p:first-child,
-.condition> .p:first-child,
-.condition> p:first-child {
-  margin-top: 0px;
-}
-/* Add ": " after cause and remedy titles in cause and remedy elements. */
-.cause > .title::after,
-.remedy > .title::after {
-  content: ": ";
-  color: #404040;
-}
-/* Removee borders for paragraphs in remedy elements. */
-.remedy .p > .cmd {
-  border: none;
-  padding-left: 0px;
-}
-/* Requires: ordered_list_unordered_list_steps_substeps_choices.css */
-/* Uniformly style step element children.
-Style trouble solution elements. */
-.stepresult,
-.info,
-.stepxmp,
-.troubleSolution,
-.choices,
-.substeps {
-  font-style: normal;
-  font-weight: normal;
-  border-left: 2px dotted #dcdcdc;
-  margin: 2.5px 0px 5px 1px;
-  padding: 0px 0px 0.5px 10px;
-}
-/* Style trouble solution element. Add a margin between trouble solution elements.
-Span the left border across the cause and remedy elements. */
-.troubleSolution {
-  margin: 0px 0px 25px 0px;
-  border-left: 5px solid #dcdcdc;
-}
-/* Style the step element children captions. */
-.stepresult::before,
-.info::before,
-.stepxmp::before {
-  font-weight: bold;
-  font-style: normal;
-  color: #404040;
-  letter-spacing: 0.025em;
-}
-/* Add a caption before info elements. 
-.info::before {
-  content: "Info: ";
-}
-*/
-/* Add a caption before step example and example elements. */
-.stepxmp::before {
-  content: "Example: ";
-}
-/* Add a caption before stepresult and result elements. */
-.stepresult::before{
-  content: "Result: ";
-}
-/* Requires:
- * typography.css
- * ordered_list_unordered_list_steps_substeps_choices.css
- */
-/* Style step, substep, and choice elements. */
-li.step::before,
-li.substep::before,
-li.choice::before {
-  margin: 0px 10px 0px -31px;
-  display: inline-block;
-  box-sizing: border-box;
-  border-radius: 50%;
-  background-color: #dcdcdc;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-weight: bold;
-  font-size: 16px;
-  color: #404040;
-  text-align: center;
-  vertical-align: center;
-}
-/* Implement custom steps and choices numbering. */
-ol.steps,
-ul.choices {
-  list-style: none;
-  counter-reset: li;
-}
-.steps > li.step::before {
-  content: counter(li);
-}
-.steps > li.step {
-  counter-increment: li;
-}
-.steps-unordered > li.step::before,
-li.choice::before {
-  content: "▪";
-}
-/* Implement custom substeps numbering. */
-ol.substeps {
-  list-style: none;
-  counter-reset: li;
-}
-li.substep::before {
-  content: counter(li, lower-alpha);
-}
-li.substep {
-  counter-increment: li;
-}
-/* Fix the position of step element children. */
-.stepresult,
-.info,
-.stepxmp,
-.choices,
-.substeps {
-  font-style: normal;
-  font-weight: normal;
-  border-left: 2px dotted #dcdcdc;
-  margin: 0px 0px 5px -20px;
-  padding: 2.5px 0px 0.5px 20.5px;
-}
-/* Fix the position of result and example elements. */
-.result,
-.example {
-  margin: 0px 0px 5px 13px;
-  padding: 2.5px 0px 0.5px 21px;
-}
-/* Fix the position of choices and substeps elements. */
-.choices,
-.substeps {
-  padding: 2.5px 0px 0.5px 22px;
-  margin: 0px 0px 5px -20px;
-}
-/* Fix the placement of choice element children - verify. */
-.choice > * {
-  margin-left: 5px;
-}
-/* Display multiline commands with uniform indentation. */
-.cmd {
-  display: block;
-  clear: both;
-  margin-top: -24px;
-  padding-left: 20px;
-  margin-left: -20px;
-  border-left: 2px dotted #dcdcdc;
-}
-/* Fix notes before commands position. */
-.step > .note,
-.substep > .note {
-  margin-top: -24px;
-  margin-bottom: 30px;
-  margin-left: 2px;
-}
-/* Place the required label before a step or substep. */
-li.step > strong,
-li.substep > strong {
- display: block;
- margin-top: -24px;
- margin-left: 2px;
- letter-spacing: 0.025em;
-}
-strong ~ .cmd {
-  margin-top: 0px;
-  margin-bottom: -2px;
-  padding-bottom: 2px;
-}
-/* Fix choicetable placement. */
-.choicetable {
-  margin-left: 2px;
-}
-/* Fix position of commands with images. */
-.cmd:has(.image) {
-  margin-top: -24px;
 }
 /* STYLING ****************************************************************/
 /* Import the Roboto Google font. */
@@ -2034,6 +1009,1060 @@ Remove or comment-out these properties if you don't use an image in the header. 
 .text_larger,
 .text_larger * {
   font-size: 20px !important;
+}
+/* DITA *******************************************************************/
+/*  Style footnote elements at the bottom of the page. */
+@page {
+  counter-reset: footnote;
+  @footnotes {
+  margin-top: 10px;
+  border-top: 2px dotted #dcdcdc;
+  border-clip: 250px;
+  padding: 2.5px 0px 2.5px 15px;
+  }
+}
+/* Style footnote number preceding the footnote text at the bottom of the page. */
+.fn::footnote-marker {
+  font-weight: bold;
+}
+/* Style footnote text at the bottom of the page. */
+.fn {
+  float: footnote;
+  break-inside: avoid;
+}
+/* Footnote text inherites parent styling in Prince. Remove inherited formatting. */
+.fn,
+.fn * {
+  font-size: 14px !important;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  color: #404040;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+  border: none;
+  font-family: "Roboto", Helvetica, Arial;
+  letter-spacing: normal;
+}
+/* Assert that italic text is correctly rendered in footnotes. */
+.fn em,
+.fn .i {
+  font-style: italic !important;
+}
+/* Assert that bold text is correctly rendered in footnotes. */
+.fn strong,
+.fn .b {
+  font-weight: bold !important;
+}
+/* Assert that underlined text is correctly rendered in footnotes. */
+.fn u,
+.fn .u {
+  text-decoration: underline !important;
+}
+/* Fix ordered and unordered lists position in footnotes. */
+.fn .ul,
+.fn .ol {
+  margin-left: 22px !important;
+}
+/* Style footnote callouts in the document body. */ 
+.fn::footnote-call {
+  content: counter(footnote);
+  vertical-align: super;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: none;
+  color: #003749;
+}
+/* Keep footnotes in one block - this does not seem to work.
+This is probably a Prince-related issue. */
+p {
+  prince-footnote-policy: keep-with-block;
+}
+/* Position paragraph elements. */
+div.p,
+p,
+.p {
+  display: block;
+  padding: 0px;
+  margin: 5px 0px 0px 0px;
+}
+/* Make the first paragraph inline in the following elements. 
+NOTE: May cause issues with the following structure:
+<note> text_string
+<p> another text_string </p> */
+.info > p:first-child,
+.result > p:first-child,
+.example > p:first-child,
+.stepresult > p:first-child,
+.stepxmp > p:first-child,
+.note__title ~ p:first-of-type,
+.cause > .title ~ p,
+.remedy > .title ~ p {
+  display: inline;
+}
+/* If a block element is placed in a paragraph, discard its margins. */
+div.p > *:only-child,
+p > *:only-child,
+.p > *:only-child {
+  margin: 0px;
+}
+/* Extends: typography.css */
+/* Style system output, varname, filepath, and userinput elements.
+Assert consistent styling of their children. */
+.systemoutput,
+.systemoutput *,
+.varname,
+.filepath,
+.userinput,
+.userinput * {
+  font-family: "DejaVu Sans Mono", Monaco, Consolas, "Andale Mono",  monospace !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  word-break: break-word;
+}
+/* Style userinput elements.
+Assert consistent styling of their children. */
+.userinput,
+.userinput * {
+  color: #09afd6;
+}
+/* Style system output and file path elements.
+Assert consistent styling of their children. */
+.systemoutput,
+.filepath,
+.sysoutput *,
+.filepath * {
+  color: #D95700;
+}
+/* Inherit colors from parent elements. */
+.varname {
+  color: inherit;
+}
+/* Wrap varname elements in brackets. */
+.varname::before {
+  content: "<";
+}
+.varname::after {
+  content: ">";
+}
+/* Style varname elements. 
+.varname {
+  font-weight: bold;
+}*/ 
+/* Style uicontrol elements. */
+.uicontrol {
+  font-weight: bold;
+  color: #09afd6;
+}
+/* Style wintitle elements. */
+.wintitle {
+  font-weight: bold;
+}
+/* Style keyboard keys/shortcuts. */
+.shortcut {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  color: #09afd6;
+}
+/* Style menucascades. */
+abbr[title] {
+  border-bottom: none; /* removes ugly default underline */
+  text-decoration: none; /* removes ugly "and then" tooltip text */
+  content: "→"; /* determines custom "and then" symbol */
+  color: #09afd6;
+}
+/* REQUIRES: paragraph.css */
+/* Makes the text placed directly after the shortdesc tag and directly in the abstract tag to be printed in the same line as the shortdesc text. */
+.shortdesc {
+  display: inline;
+}
+/* Fixes spacing after elements placed before shortdescs. */
+.abstract > *:first-child:not(.shortdesc) {
+  margin-bottom: 5px;
+  display: block;
+} 
+/* Prevent large margins when having an empty shortdesc element. 
+.shortdesc:empty ~ .section:first-of-type,
+.abstract:empty ~ .section:first-of-type {
+  margin-top: 5px;
+}*/
+/* Adds paragraph-like margins to shortdesc that are not p elements. */
+.shortdesc {
+  display: block;
+  margin-top: 5px;
+}
+/* Import icons/font. */
+@font-face {
+  font-family: icomoon;
+  src: url("https://jorsek.github.io/pdfgen.github.io/fonts/note_icons/fonts/icomoon.ttf") format("truetype");
+}
+/* Style any note type. */
+.note {
+  clear: both;
+  display: inline-block; /* block breaks notes before commands in steps and substeps. */
+  border-left: 5px solid #404040;
+  background-color: #dcdcdc;
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+  width: 100%;
+}
+/* Style note captions (the text and optional image preceding the note contents). */
+.note__title {
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  vertical-align: top;
+  display: inline-block;
+  letter-spacing: 0.025em;
+/* Style PNG icons preceding note captions
+  background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjBGQUI1MDNBNzBDMTFFOTk2MTBDOUQxQzA1RTc2MzEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjBGQUI1MDRBNzBDMTFFOTk2MTBDOUQxQzA1RTc2MzEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MEZBQjUwMUE3MEMxMUU5OTYxMEM5RDFDMDVFNzYzMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MEZBQjUwMkE3MEMxMUU5OTYxMEM5RDFDMDVFNzYzMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsUpC6YAAAHqSURBVHjapJS/S8NAFMfvkpQiFcVFGwd/4I9JHEUUQRTpIoqL4lARxCRFOlT/AOngJLSTGNNJHAoiFKogIoI/BzcHUQcnkRYEEYWiUpvzG3+1lSRGffByd+/e++Tx3t1R0uMn/5FgMOh+fnqaJ5SOEMZ2eJ6fWlTVO478UwBNGnxAKzGO5nT9WJHlZkGWpAlGyDw2KhyybqGiFotljQWldAHxHYgvfdtlrEknZFVgjEWwLHMIvaccN+j1el8kSYoA0gLyMNH1DozrWNd++F0IBVAVf0/aYik9B/Q6nU4vA+J/T5DtCS6XT9f1Nmgcpiu3260I+Rh6tqRpm3bcUChUAmgCtP4vI2OtL9nsIcfzfZqm9X6aHTdPmpwsz2QyW0XQvDQg20ShwRE4EAhUYdgFtMuiRHcUboUm4SeoLMt1uVxuG9NGC2iK4zifqqqnjjNWFKUFzTlCplbQS/Sm8zvUFozj1I667QNabeFygr0R/HjWbNM6Y8ZmLC8NpQf4jkHX4DP+OzAhNRbQDY/H40MJurGqtwq2A9eaQFdEURyKRqOPPzXd7lTcQF3QlKHI8MArinPhcJg5OaJUiu8zx1e6qAVswDg4xhwPEjXL+OHjvVDgrPzh5XwwrTGynDZuzp8eY+PGGfEm8irAAEicugW83HbNAAAAAElFTkSuQmCC');
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  width: 16px; 
+  height: 16px;
+  padding-left: 20.5px;
+  */
+}
+/* Style the font containing icons preceding note captions. */
+.note__title::before {
+  display: inline-block;
+  font-family: icomoon;
+  font-size: 13px;
+  padding-right: 3.5px;
+}
+/* Style the note element contents with the @type="note", @type="", and @type="trouble" attributes assigned. */
+.note_note,
+.note_trouble {
+  border-color: #09afd6;
+  background-color: #29b4d328;
+}
+.note_note>.note__title,
+.note_trouble>.note__title {
+  color: #09afd6;
+}
+.note_note > .note__title::before {
+  content: "\e906";
+}
+.note_trouble > .note__title::before {
+  content: "\e901";
+}
+/* Style the note element contents with the @type="tip" and @type="fastpath" attributes assigned. */
+.note_tip,
+.note_fastpath {
+  border-color: #3f6c51;
+  background-color: #3f6c512c;
+}
+.note_tip>.note__title,
+.note_fastpath>.note__title {
+  color: #3f6c51;
+}
+.note_tip > .note__title::before {
+  content: "\e908";
+}
+.note_fastpath > .note__title::before {
+  content: "\e905";
+}
+/* Style the note element contents with the @type="important", @type="remember", and @type="restriction" attributes assigned. */
+.note_important,
+.note_remember,
+.note_restriction {
+  border-color: #ffa600;
+  background-color: #ffc25131;
+}
+.note_important>.note__title, 
+.note_remember>.note__title, 
+.note_restriction>.note__title {
+  color: #ffa600;
+}
+.note_important > .note__title::before {
+  content: "\e90a";
+}
+.note_remember > .note__title::before {
+  content: "\e907";
+}
+.note_restriction > .note__title::before {
+  content: "\e900";
+}
+/* Style the note element contents with the @type="attention" attributes assigned. */
+.note_attention,
+.note_caution,
+.note_warning,
+.note_danger {
+  border-color: #d95700;
+  background-color: #d9570027;
+}
+/* Style the note element contents with the @type="attention", @type="caution", @type="warning", and @type="danger" attributes assigned. */
+.note_attention>.note__title,
+.note_caution>.note__title,
+.note_warning>.note__title,
+.note_danger>.note__title {
+  color: #d95700;
+}
+.note_danger {
+  text-transform: uppercase;
+}
+.note_attention > .note__title::before {
+  content: "\e902";
+}
+.note_caution > .note__title::before {
+  content: "\e904";
+}
+.note_warning > .note__title::before {
+  content: "\e909";
+}
+.note_danger > .note__title::before {
+  content: "\e903";
+}
+/* Set consistent margins for notes in task topics. */
+.stepresult > .note,
+.info > .note,
+.stepxmp > .note,
+.example > .note,
+.result > .note {
+  margin: 5px 0px 10px 0px;
+}
+/* Fixes notes preceding commands position.
+Reduces margins for notes in list items. */
+.step > .note,
+.substep > .note,
+.li > .note {
+  margin: 5px 0px 5px 0px;
+}
+/* Style inline cross-references. */
+.xref {
+  color: #003749;
+  text-decoration: none;
+}
+/* Avoid overflowing text in the following elements: */
+a {
+  word-wrap: break-word;
+}
+/* Ensure that tables and choicetables span across the whole space available. */
+table {
+  width: 100%;
+  margin: 5px 0px 5px 0px;
+  table-layout: auto;
+}
+/* Remove the table and choicetable borders completely. */
+table,
+table * {
+  border-collapse: collapse;
+  border: none;
+  text-align: left;
+}
+/* Style the table and choicetable headers. 
+Assert the same styling in table and choicetable headers and their children elements. */
+table > thead > tr,
+table > thead > tr > th {
+  font-weight: bold;
+  color: #fff;
+  background-color: #003749;
+  padding: 10px;
+  letter-spacing: 0.5px;
+}
+table > thead > tr > th > .fn::footnote-call {
+  font-weight: bold;
+  color: #fff;
+  background-color: #003749;
+  letter-spacing: 0.5px;
+}
+table > thead > tr > th * {
+  font-weight: bold;
+  color: #fff;
+  background-color: #003749;
+}
+/* Style uneven table and choicetable rows. */
+table > tbody > tr:nth-child(odd),
+table > tbody > tr:nth-child(odd) > td {
+  background-color: #f4f4f4;
+  padding: 10px;
+  vertical-align: top;
+}
+/* Style even table and choicetable rows. */
+table > tbody > tr,
+table > tbody > tr > td {
+  background-color: #fff;
+  padding: 10px;
+  vertical-align: top;
+}
+/* Add a top-border for tables that do not contain thead elements. */
+table {
+  border-top: 3px solid #003749;
+  border-bottom: 3px solid #003749
+}
+table:has(thead) {
+  border-top: none;
+}
+/* Style the code inside codeblock and codeph elements. */
+code {
+  font-family: "DejaVu Sans Mono", Monaco, Consolas, "Andale Mono",  monospace;
+  color: #404040;
+  font-size: 14px;
+  background-color: #f4f4f4;
+}
+/* Style codeblock elements. */
+.codeblock > code {
+  white-space: pre-wrap;
+  display: block;
+  clear: both;
+  width: 100%;
+  margin: 0px;
+  padding: 10px;
+  border-left: solid 5px #dcdcdc;
+}
+/* Reduce margins before codeblocks. */
+pre.codeblock {
+  margin: 10px 0px 10px 0px;
+  padding: 0px;
+  }
+/* Style codeph elements. */
+.codeph,
+p > .codeph {
+  display: inline-block;
+  padding: 0em 0.25em;
+  text-align: left;
+  width: auto;
+}
+/* Assert the same styling in codeblocks and codephs regardless of their children elements. */
+code * {
+  font-size: inherit;
+  background-color: inherit;
+  font-family: inherit;
+  color: inherit; 
+  text-align: inherit;
+}
+/* Set consistent margins for codeblocks in task topics. */
+.stepresult > pre.codeblock,
+.info > pre.codeblock,
+.stepxmp > pre.codeblock,
+.example > pre.codeblock,
+.result > pre.codeblock {
+  margin: 5px 0px 10px 0px;
+}
+/* Avoid overflowing text in the following elements: */
+.codeph,
+.codeblock {
+  word-wrap: break-word;
+}
+/* Position figure elements. */
+.fig,
+.image {
+  overflow: auto;
+  padding: 0px;
+  margin: 10px 0px 10px 0px;
+}
+/* Prevent large images from overflowing. */
+img {
+  max-width: 100%;
+}
+/* Set consistent margins for figures and images in task topics. */
+.stepresult > figure,
+.stepresult > image,
+.info > figure,
+.info > image,
+.stepxmp > figure,
+.stepxmp > image,
+.example > figure,
+.example > image,
+.result > figure,
+.result > image {
+  margin: 5px 0px 10px 0px;
+}
+/* Remove margins for image elements in figure elements without titles or other elements. */
+.fig > .image:only-child {
+  margin: 0px;
+}
+/* Style images in commands. */
+.cmd > .image {
+  display: inline-block;
+  max-height: 16px;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+} 
+/* Style figure descriptions and table descriptions. */
+.figdesc,
+.tabledesc,
+.figdesc p,
+.tabledesc p {
+  display: block;
+  clear: both;
+  margin: 0px 0px 1px 0px;
+  float: left;
+}
+/* Add margins after table description elements. */
+.tabledesc {
+  margin-bottom: 5px;
+}
+/* Reduces font-size in figure and table descriptions. 
+.figdesc,
+.tabledesc,
+.figdesc *,
+.tabledesc * {
+  font-size: 14px !important;
+}
+*/
+/* Position the definition list. */
+dl {
+  display: block;
+  clear: both;
+  margin: 10px 0px 0px 0px;
+}
+/* Add a border on the left of definition terms and definition descriptions. */
+dt,
+dd {
+  border-left: solid 5px #dcdcdc;
+  padding: 0px 10px 0px 10px;
+}
+/* Style titles in definition lists.
+Assert the same styling in definition titles and their children elements. */
+dt,
+dt * {
+  color: #003749 !important;
+  font-weight: bold !important;
+  font-style: normal !important;
+  font-size: 16px;
+  letter-spacing: 0.025em;
+}
+/* Style definition descriptions. */
+dd {
+  margin: 0px;
+  margin-bottom: 20px;
+  margin-top: -2px; /* This ensures correct border transition. */
+}
+/* Ensure correct border transition. */
+.dd > pre.codeblock {
+  margin: 0px;
+  padding: 10px 0px 10px 0px;
+  }
+.dd > p,
+.dd> .p {
+  margin: 0px;
+  padding: 5px 0px 0px 0px;
+}
+/* Style cite elements. */
+.cite {
+  color: #003749;
+  font-style: normal;
+  font-weight: normal;
+}
+/* Style long quote elements. */
+.lq {
+  font-size: 14px;
+  border-left: 5px solid #dcdcdc;
+  margin: 10px 0px 10px 0px;
+  padding-left: 10px;
+}
+.lq * {
+  font-size: 14px;
+}
+/* Style quote elements.
+q {
+}
+*/
+/* Extends: typography.css */
+/* Put every title in a separate line. */
+.title {
+  display: block;
+  clear: both;
+}
+/* Prevents all sorts of issues with titles that contains other tags. */
+.title * {
+  display: inline;
+}
+/* Style every title in a consistent way.
+Ensure that the titles children are styled in a consistent way. */
+.title,
+.title *,
+.table--title-label,
+.fig--title-label,
+figcaption:not(figcaption > .desc) {
+  font-family: "Roboto", Helvetica, Arial;
+  color: #003749;
+  border: none;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  background-color: transparent;
+  padding: 0px;
+  margin: 25px 0px 0px 0px;
+}
+/* Remove margins for image and table titles. */
+.table--title-label,
+.fig--title-label,
+figcaption:not(figcaption > .desc) {
+  margin: 0px;
+}
+/* Increase letter spacing for titles. */
+.title,
+.table--title-label,
+.fig--title-label,
+.table > caption > .title {
+  letter-spacing: 0.025em;
+}
+/* Add top margins before chapters (level-1 topics) that do not contain children topics. */
+.topictitle1 {
+  margin-top: 50px;
+}
+/* Do not add margins before chapters (level-1 topics) that contain children topics. */
+article:has(.topictitle1, :not(article)) {
+  margin-bottom: 50px;
+}
+/* Style topics nested on different levels. */
+.topictitle1,
+.topictitle1 * {
+  margin: 0px;
+  padding: 0px;
+  font-size: 42px;
+}
+.topictitle2,
+.topictitle2 * {
+  font-size: 32px;
+}
+.topictitle3,
+.topictitle3 * {
+  font-size: 28px;
+}
+.topictitle4,
+.topictitle4 *,
+.topictitle5,
+.topictitle5 *,
+.topictitle6,
+.topictitle6 *,
+.topictitle7,
+.topictitle7 *,
+.topictitle8,
+.topictitle8 *,
+.topictitle9,
+.topictitle9 *,
+.sectiontitle,
+.sectiontitle * {
+  font-size: 24px;
+}
+/* Style section element titles. */
+.sectiontitle,
+.sectiontitle * {
+  font-weight: normal;
+}
+/* Style table titles. */
+.table--title-label,
+.table--title-label *,
+.table > caption > .title,
+.table > caption > .title * {
+  font-size: 16px;
+  background-color: transparent;
+}
+/* Fix the table title and table numbering position. */
+.table > caption > .title,
+.table--title-label {
+  display: inline-block;
+  margin: 0px;
+  padding: 10px 0px 0px 0px;
+}
+/* COPYCAT - Remove Prince Code - START */
+/* Fix titles placement. */
+.topic > .title,
+.sectiontitle {
+  margin-left: -0.05em;
+}
+/* COPYCAT - Remove Prince Code - END */
+/* Position section elements. */
+.section {
+  margin: 25px 0px 0px 0px;
+}
+.sectiontitle {
+  margin: 0px;
+  padding: 0px;
+}
+/* Reduce margins before sections after remedy titles. */
+.remedy > .title ~ section {
+  margin-top: 5px;
+}
+/* Add paragraph-like margins to sections that do not start with paragraphs. */
+.sectiontitle ~ span {
+  margin-top: 5px;
+  display: inline-block;
+}
+/* Style unordered lists (including: steps-unordered, choices).
+Align unordered lists with ordered lists. */
+ul {
+  list-style: square;
+  margin-left: -6px;
+}
+/* Style list items (including: steps, steps-unordered, choices, substeps). */
+li {
+  list-style-position: outside;
+  margin-left: 33px;
+}
+/* Set margins for steps. */
+.step {
+  margin-top: 5px;
+}
+/* Set margins for choices and substeps. */
+.substep,
+.choice {
+  margin-top: 2.5px;
+}
+/* Set margins for list items. */
+.li,
+.li p,
+.li .p {
+  margin-top: 5px;
+}
+/* Add a margin before ordered and unordered lists. */
+.ul,
+.ol {
+  margin-top: 5px;
+}
+/* Fix unordered lists position in the document body. */
+.ul:not(.choices, .steps-unordered) {
+  margin-left: 0.5px;
+}
+/* Ensure undisturbed dotted border transition between step element children. */
+.choices ~ .stepresult,
+.choices ~ .stepxmp,
+.info ~ .stepxmp,
+.info ~ .stepresult,
+.info ~ .substeps,
+.substeps ~ .stepresult,
+.choices ~ .stepresult,
+.substeps ~ .substeps {
+  margin-top: -3px;
+  padding-top: 3px;
+}
+/* Style task topic and troubleshooting topic "parts". */
+.prereq::before,
+.postreq::before,
+.steps::before,
+.steps-unordered::before,
+.stepsection,
+.cause::before,
+.remedy::before,
+.condition::before,
+.context::before,
+.result::before,
+.example::before {
+  display: block;
+  clear: both;
+  color: #003749;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.025em;
+}
+/* Fix the placement of cause, remedy, and condition captions. */
+.cause::before,
+.remedy::before {
+  margin-left: -1.2px;
+}
+.condition::before {
+  margin-left: -0.4px;
+}
+/* Set padding and margins for task topic and troubleshooting topic "parts". */
+.result,
+.example,
+.context,
+.prereq,
+.postreq,
+.stepsection,
+.steps-unordered::before,
+.steps::before,
+.cause,
+.remedy,
+.condition {
+  margin: 15px 0px 5px 0px !important;
+  padding: 0px !important;
+}
+/* Fix the "Procedure" caption margins in steps-unordered elements. */
+.steps-unordered {
+  margin: 0px !important;
+}
+/* Set margins between steps. */
+.step ~ .step {
+  margin-top: 10px;
+}
+/* Set margins between substeps. */
+.substep,
+.choice {
+  margin-top: 5px;
+}
+/* Assert the same styling in stepsection elements and their children elements. */
+.stepsection * {
+  color: inherit;
+  background-color: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+/* Add a caption before not empty prerequisite elements. */
+.prereq:not(.prereq:empty)::before {
+  content: "Before you begin";
+}
+/* Add a caption before not empty postrequisite elements. */
+.postreq:not(.postreq:empty)::before {
+  content: "Next steps";
+}
+/* Add a caption before task topics with the @outputclass="process" attribute set on their root elements. */
+article.process .steps::before,
+article.process .steps-unordered::before {
+  content: "Process";
+}
+/* Add a caption before steps elements.
+Prevent the process-topic children from inheriting the "Process" caption. */
+article:not(.process) .steps::before,
+article:not(.process) .steps-unordered::before {
+  content: "Procedure";
+}
+/* Hide the caption before steps elements if a stepsection element precedes the first step. */
+.stepsection ~ .steps::before,
+.stepsection ~ .steps-unordered::before {
+  display: none;
+}
+/* Remove the caption before steps in troubleshooting topics. */
+.remedy .steps::before,
+.remedy .steps-unordered::before {
+  display: none;
+}
+/* Add a caption before context elements. */
+.context::before {
+  content: "Context";
+}
+/* Add a caption before condition elements. */
+.condition::before {
+  content: "Condition";
+}
+/* Add a caption before cause elements. */
+.cause::before {
+  content: "Cause";
+}
+/* Add a caption before remedy elements. */
+.remedy::before {
+  content: "Remedy";
+}
+/* Add a caption before stepxmp and example elements. */
+.example::before {
+  content: "Example";
+}
+/* Add a caption before stepresult and result elements. */
+.result::before {
+  content: "Result";
+}
+/* Fix padding for stepsections. */
+.stepsection ~ .steps,
+.stepsection ~ .steps-unordered,
+.stepsection ~ .step {
+  padding-top: 0px;
+}
+/* Add a margin between steps and task title if shortdesc is not present or empty. */
+.body ~ .steps,
+.body ~ .steps-unordered,
+.shortdesc:empty ~ .steps,
+.shortdesc:empty ~ .steps-unordered {
+  margin-top: 10px;
+}
+/* Display the cause and remedy titles right after the cause and remedy captions.
+Style the cause and remedy titles. */
+.cause > .title,
+.remedy > .title {
+  font-size: 16px;
+  color: #404040;
+  font-style: normal;
+  font-weight: bold;
+  display: inline;
+}
+/* Remove padding for the first paragraph in cause, remedy, and condition elements. */
+.cause > .p:first-child,
+.cause > p:first-child,
+.remedy> .p:first-child,
+.remedy> p:first-child,
+.condition> .p:first-child,
+.condition> p:first-child {
+  margin-top: 0px;
+}
+/* Add ": " after cause and remedy titles in cause and remedy elements. */
+.cause > .title::after,
+.remedy > .title::after {
+  content: ": ";
+  color: #404040;
+}
+/* Removee borders for paragraphs in remedy elements. */
+.remedy .p > .cmd {
+  border: none;
+  padding-left: 0px;
+}
+/* Requires: ordered_list_unordered_list_steps_substeps_choices.css */
+/* Uniformly style step element children.
+Style trouble solution elements. */
+.stepresult,
+.info,
+.stepxmp,
+.troubleSolution,
+.choices,
+.substeps {
+  font-style: normal;
+  font-weight: normal;
+  border-left: 2px dotted #dcdcdc;
+  margin: 2.5px 0px 5px 1px;
+  padding: 0px 0px 0.5px 10px;
+}
+/* Style trouble solution element. Add a margin between trouble solution elements.
+Span the left border across the cause and remedy elements. */
+.troubleSolution {
+  margin: 0px 0px 25px 0px;
+  border-left: 5px solid #dcdcdc;
+}
+/* Style the step element children captions. */
+.stepresult::before,
+.info::before,
+.stepxmp::before {
+  font-weight: bold;
+  font-style: normal;
+  color: #404040;
+  letter-spacing: 0.025em;
+}
+/* Add a caption before info elements. 
+.info::before {
+  content: "Info: ";
+}
+*/
+/* Add a caption before step example and example elements. */
+.stepxmp::before {
+  content: "Example: ";
+}
+/* Add a caption before stepresult and result elements. */
+.stepresult::before{
+  content: "Result: ";
+}
+/* Requires:
+ * typography.css
+ * ordered_list_unordered_list_steps_substeps_choices.css
+ */
+/* Style step, substep, and choice elements. */
+li.step::before,
+li.substep::before,
+li.choice::before {
+  margin: 0px 10px 0px -31px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: #dcdcdc;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-weight: bold;
+  font-size: 16px;
+  color: #404040;
+  text-align: center;
+  vertical-align: center;
+}
+/* Implement custom steps and choices numbering. */
+ol.steps,
+ul.choices {
+  list-style: none;
+  counter-reset: li;
+}
+.steps > li.step::before {
+  content: counter(li);
+}
+.steps > li.step {
+  counter-increment: li;
+}
+.steps-unordered > li.step::before,
+li.choice::before {
+  content: "▪";
+}
+/* Implement custom substeps numbering. */
+ol.substeps {
+  list-style: none;
+  counter-reset: li;
+}
+li.substep::before {
+  content: counter(li, lower-alpha);
+}
+li.substep {
+  counter-increment: li;
+}
+/* Fix the position of step element children. */
+.stepresult,
+.info,
+.stepxmp,
+.choices,
+.substeps {
+  font-style: normal;
+  font-weight: normal;
+  border-left: 2px dotted #dcdcdc;
+  margin: 0px 0px 5px -20px;
+  padding: 2.5px 0px 0.5px 20.5px;
+}
+/* Fix the position of result and example elements. */
+.result,
+.example {
+  margin: 0px 0px 5px 13px;
+  padding: 2.5px 0px 0.5px 21px;
+}
+/* Fix the position of choices and substeps elements. */
+.choices,
+.substeps {
+  padding: 2.5px 0px 0.5px 22px;
+  margin: 0px 0px 5px -20px;
+}
+/* Fix the placement of choice element children - verify. */
+.choice > .note,
+.choice > pre.codeblock,
+.choice > .image,
+.choice > .fig,
+.choice > table,
+.choice > .p,
+.choice > p,
+.choice > .lq,
+.choice > dl {
+  margin-left: 5px;
+}
+/* Display multiline commands with uniform indentation. */
+.cmd {
+  display: block;
+  clear: both;
+  margin-top: -24px;
+  padding-left: 20px;
+  margin-left: -20px;
+  border-left: 2px dotted #dcdcdc;
+}
+/* Fix notes before commands position. */
+.step > .note,
+.substep > .note {
+  margin-top: -24px;
+  margin-bottom: 30px;
+  margin-left: 2px;
+}
+/* Place the required label before a step or substep. */
+li.step > strong,
+li.substep > strong {
+ display: block;
+ margin-top: -24px;
+ margin-left: 2px;
+ letter-spacing: 0.025em;
+}
+strong ~ .cmd {
+  margin-top: 0px;
+  margin-bottom: -2px;
+  padding-bottom: 2px;
+}
+/* Fix choicetable placement. */
+.choicetable {
+  margin-left: 2px;
+}
+/* Fix position of commands with images. */
+.cmd:has(.image) {
+  margin-top: -24px;
 }
 /* COPYCAT - Internal Comment - START */
 /* @OUTPUTCLASS ATTRIBUTE VALUES *******************************************

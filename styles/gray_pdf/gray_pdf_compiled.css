@@ -1,18 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400");/* README ******************************************************************
-This template consists of CSS modules divided into the following groups:
- * LAYOUT - Determines the page orientation, size, layout, text alignment, cover, and breaks. If needed, enables you to manipulate text alignment and size.
- * STYLING - Determines the style of elements not connected or loosly connected with DITA like the table of contents or headers and footers.
- * DITA - Determines the style of DITA elements like steps, codeblocks, uicontrols, or topic titles.
-You can modify the template in different ways, including:
- * Commenting-out or removing @imports with modules that you don't want to use.
-  Important: Do not change the order of the imports.
- * Applying your own CSS code under the @imports.
-  Remember: The CSS code that you insert under the @imports will overwrite the code in the @imports.
- * Not Recommended: Compiling the template into a single CSS file and applying modifications directly to the monolithic code.
-  Tip: To compile the template into a single CSS file, reach out to a Customer Success Manager or use https://github.com/rafalkaron/importaint
- */
-/* LAYOUT *****************************************************************/
-
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400");/* LAYOUT *****************************************************************/
 /* Set the default layout for the whole document, including the:
  * Cover page
  * Table of contents
@@ -366,16 +352,19 @@ div{
   max-width:100%;
 }
 /* Paste the following HTML code into the HTML Cover Page tab in the PDF Generator: ****************
-  <h1 class="cover-page-container">
+<h1 class="cover-page-container">
   <div class="cover-page-content">
   <div class="title-text">{map.title}</div>
   <div class="bottom-stripe">
   <div class="logo-container">
-  <img class="logo" src="data:image/png;base64,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"/>
+  <div class="logo">
+  <img src="https://github.com/Jorsek/pdfgen.github.io/blob/master/styles/gray_pdf/media/logo_placeholder.png?raw=true"/>
+  </div>
   </div>
   </div>  
   </div>
-  </h1>
+  </div>
+</h1>
 ********************************************************************************************/
 /* Differentiate the cover page from the TOC and the document body. */
 .cover-page-container {
@@ -492,7 +481,8 @@ pre.codeblock,
 .sysoutput,
 .varname,
 .filepath,
-.userinput {
+.userinput,
+.dd {
   break-inside: auto;
 }
 /* Avoid breaking the following elements over multiple pages: */
@@ -515,25 +505,24 @@ dd,
 article {
   break-inside: avoid;
 }
+/* Keep definition titles and definition descriptions together. */
+.dt {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.dd {
+  page-break-before: avoid;
+  break-before: avoid;
+}
 /* You can assign the @outputclass="break_before" attribute to force a page-break before a given element. */
 .break_before {
   page-break-before: always;
 }
-/* You can assign the @outputclass="break_inside" attribute to force an element to break over multiplle pages. */
-.break_inside {
-  break-inside: auto;
+/* You can assign the @outputclass="break_after" attribute to force a page-break after a given element. */
+.break_after {
+  page-break-after: always;
 }
-/*  You can assign the @outputclass="break_avoid" attribute to prevent an element from breaking over multiple pages. */
-.break_avoid {
-  break-inside: avoid;
-}
-/*!importaint: removed a commented-out import*/
-
-/* Puts every definition list in two columns. */
-dl {
-  column-count: 2;
-  column-fill: balance;
-}
+/* !importaint: removed a commented-out import */
 /* Set the two-column layout for topics and maps with the @outputclass="two_column" attribute assigned on their root tags. */
 .two_column {
   column-count: 2;
@@ -546,23 +535,372 @@ dl {
 .four_column {
   column-count: 4;
 }
-/* Set the no-column (default) layout for topics and maps with the @outputclass="no_column" attribute assigned on their root tags. */
+/* Set the no-column (default) layout for topics and maps with the @outputclass="no_column" attribute assigned on their root tags. 
 .no_column {
   column-span: all;
-}
+}*/
 /* Prevent topic titles, abstracts, and short descriptions from being split into several columns. */
 .topic > .title,
-.topic > .body > .shortdesc,
-.topic .abstract,
-.sectiontitle {
+.sectiontitle,
+.prereq::before,
+.postreq::before,
+.steps::before,
+.steps-unordered::before,
+.stepsection,
+.cause::before,
+.remedy::before,
+.condition::before,
+.context::before,
+.result::before,
+.example::before {
   column-span: all;
 }
 /* Style all column layouts. */
 .two_column,
 .three_column,
 .four_column {
-  text-align: justify;
   column-fill: balance;
+  margin-top: 10px;
+}
+/* STYLING ****************************************************************/
+/* Import the Roboto Google font. */
+/* Set the Roboto font globally. */
+@page {
+  font-family: "Roboto", Helvetica, Arial;
+}
+/* Set the Roboto font properties for the document body. */
+body,
+article,
+article * {
+  color: #404040;
+  font-family: "Roboto", Helvetica, Arial;
+  font-weight: normal;
+  line-height: 1.5em;
+  font-style: normal;
+  text-align: left;
+  font-size: 16px;
+}
+/* Set how the strong elements are displayed.
+Asserts that their children elements are uniformly styled. */
+strong,
+strong * {
+  font-weight: bold;
+}
+/* Set how the emphasized elements are displayed.
+Asserts that their children elements are uniformly styled. */
+em,
+em *,
+.i,
+.i * {
+  font-style: italic;
+}
+/* COPYCAT - Invert Colors */
+/* Remove the map title that appears before the Table of Contents (TOC). */
+body > .topictitle1 {
+  display: none;
+}
+/* Add a custom TOC heading. */
+nav > ul:first-child::before { 
+  content: "Contents";
+  font-size: 42px;
+  color: #242424;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  display: block;
+  clear: both;
+  margin: 0px 0px 25px -1.5px;
+  letter-spacing: 0.025em;
+}
+/* Set padding, margins, and letter spacing for the whole TOC. */
+nav {
+  letter-spacing: 0.025em;
+  page-break-after: always;
+}
+/* Style the font for the entire TOC. */
+nav * {
+  font-style: normal;
+  color: #404040; 
+  text-decoration: none;
+}
+/* Style "<topic_title>.....................<page>". */
+nav a::after {
+  content: leader(".") target-counter(attr(href), page); 
+  margin-left: 0px;
+  font-weight: normal;
+  font-size: 16px;
+}
+/* Set margins and padding for the TOC links. */
+nav ul { 
+  margin: 2.5px 0px 0px 0px;
+  padding: 0px;
+}
+.topichead {
+  font-weight: bold;
+  font-style: normal;
+}
+/* Level-1 (chapter). */
+nav ul li {
+  list-style-type: none;
+  padding: inherit;
+  padding: 2px 0px 2px 0px; 
+  font-size: 16px;
+  margin-left: 0px;
+  }
+/* Style level-1 (chapter) topics that have children. */
+nav > ul:has(ul) > li {
+  padding-top: 15px;
+}
+nav > ul:has(ul) > li:first-child {
+  padding-top: 10px;
+}
+nav > ul:has(ul) > li > a {
+  color: #242424;
+  font-size: 22px;
+  font-weight: bold;
+}
+nav > ul:has(ul) > li, 
+nav > ul:has(ul) > li:before {
+  color: #242424;
+  font-weight: bold;
+  font-size: 22px;
+}
+nav > ul:has(ul) > li > a::after {
+  color: #242424;
+  font-weight: bold;
+}  
+/* Style level-1 (chapter) topics that do not have children. */
+nav > ul > li > a,
+nav > ul > li:before {
+  font-weight: normal;
+  font-size: 18px;
+  color: #404040;
+}
+/* Level-2 (subchapter) and deeper. */
+nav ul li ul li {
+  padding-left: 32px;
+}
+nav > ul > li > ul > li {
+  padding-top: 5px;
+}
+nav ul li ul li, 
+nav ul li ul li:before {
+  font-weight: bold;
+}
+nav > ul > li > ul > li {
+  font-weight: bold;
+  font-size: 18px;
+}
+nav > ul > li > ul > li > a::after {
+  font-weight: bold;
+}
+/* Level-3 and deeper. */
+nav ul li ul li ul li, 
+nav ul li ul li ul li:before {
+  font-weight: normal;
+}
+/* Level-5 and deeper (hidden). */
+nav ul ul ul ul ul {
+  content: none;
+}
+/* You can assign the @outputclass="no_toc" to the root element of a map to hide the table of contents. */
+body.no_toc > nav {
+  display: none;
+}
+/* Avoid overflowing text in the following elements: */
+a {
+  word-wrap: break-word;
+  }
+/* REQUIRES: orientation_size.css */
+/* TOC */
+@page toc:left{
+  @bottom-left{
+  content: "Copyright © 2020-2020 Company Name";
+  letter-spacing: 0.025em;
+  color: #fff;
+  border: none;
+  background-color: #6f6f6f;
+  font-size:18px;
+  font-style: normal;
+  font-weight: bold;
+  
+}
+  @bottom-right {
+  content: "";
+  letter-spacing: 0.025em;
+  border: none;
+  background-color: #6f6f6f;
+  }
+}
+@page toc:right{
+  @bottom-left{
+  content: "Copyright © 2020-2020 Company Name";
+  letter-spacing: 0.025em;
+  font-size:18px;
+  color: #fff;
+  border: none;
+  background-color: #6f6f6f;
+  font-style: normal;
+  font-weight: bold;
+  
+}
+  @bottom-right{
+  content: "";
+  letter-spacing: 0.025em;
+  border: none;
+  background-color: #6f6f6f;
+  }
+}
+/* BODY */
+@page:left{
+  @top-right{
+  content: "Company Name";
+  letter-spacing: 0.025em;
+  line-height: 1em;
+  font-weight: bold;
+  color: #6f6f6f;
+  font-size: 18px;
+  }
+  @top-left{
+  font-size: 18px;
+  color: #6f6f6f;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: none;
+  content: "{map.title}";
+  letter-spacing: 0.025em;
+  line-height: 1em;
+  }
+  @bottom-left{
+  content: "";
+  letter-spacing: 0.025em;
+  color: #fff;
+  font-style: normal;
+  border: none;
+  background-color: #6f6f6f;
+  font-size: 18px;
+  font-weight: bold;
+  }
+  @bottom-right {
+  font-size: 18px;
+  border: none;
+  background-color: #6f6f6f;
+  font-style: normal;
+  font-weight: normal;  
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  content: counter(page);
+  }
+}
+@page:right{
+  @top-right{
+  content: "Company Name";
+  letter-spacing: 0.025em;
+  line-height: 1em;
+  font-weight: bold;
+  color: #6f6f6f;
+  font-size: 18px;
+  }
+  @top-left{
+  font-size: 18px;
+  color: #6f6f6f;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: none;
+  content: "{map.title}";
+  letter-spacing: 0.025em;
+  line-height: 1em;
+  }
+  @bottom-left{
+  content: "";
+  letter-spacing: 0.025em;
+  color: #fff;
+  font-style: normal;
+  border: none;
+  background-color: #6f6f6f;
+  font-size: 18px;
+  font-weight: bold;
+  }
+  @bottom-right {
+  font-size: 18px;
+  border: none;
+  background-color: #6f6f6f;
+  font-style: normal;
+  font-weight: normal;  
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  content: counter(page);
+  letter-spacing: 0.025em;
+  }
+}
+/* !importaint: removed a commented-out import */
+/* !importaint: removed a commented-out import*/
+/* !importaint: removed a commented-out import */
+/* !importaint: removed a commented-out import */
+/* Disables figure numbering. */
+.fig--title-label {
+  display: none;
+  content: none;
+}
+/* Disable figure numbering. */
+.table--title-label {
+  display: none;
+  content: none;
+}
+/* Add subtle image borders to image elements. */
+.image {
+  border: 5px solid #f4f4f4;
+}
+/* Disable image borders by assigning the @outputclass="no_borders" attribute to the image element. */
+.no_borders {
+  border: none;
+}
+/*!importaint: removed a commented-out import */
+/* Hide empty elements. */
+*:empty:not(img){
+  display: none;
+  }
+/* Justify text in the elements with the @outputclass="justify" attribute assigned. */
+.text_justify,
+.text_justify * {
+  text-align: justify !important;
+}
+/* Align text to the left in the elements with the @outputclass="left" attribute assigned. */
+.text_left,
+.text_left * {
+  text-align: left !important;
+}
+/* Align text to the right in the elements with the @outputclass="right" attribute assigned. */
+.text_right,
+.text_right * {
+  text-align: right !important;
+}
+/* Make text small in the elements with the @outputclass="text_smaller" attribute assigned. */
+.text_smaller,
+.text_smaller * {
+  font-size: 12px !important;
+}
+/* Make text small in the elements with the @outputclass="text_small" attribute assigned. */
+.text_small,
+.text_small * {
+  font-size: 14px !important;
+}
+/* Make text regularly sized in the elements with the @outputclass="text_normal" attribute assigned. */
+.text_default,
+.text_default * {
+  font-size: 16px !important;
+}
+/* Make text large in the elements with the @outputclass="text_large" attribute assigned. */
+.text_large,
+.text_large * {
+  font-size: 18px !important;
+}
+/* Make text large in the elements with the @outputclass="text_larger" attribute assigned. */
+.text_larger,
+.text_larger * {
+  font-size: 20px !important;
 }
 /* DITA *******************************************************************/
 /*  Style footnote elements at the bottom of the page. */
@@ -642,7 +980,10 @@ p,
   padding: 0px;
   margin: 5px 0px 0px 0px;
 }
-/* Make the first paragraph inline in the following elements. */
+/* Make the first paragraph inline in the following elements. 
+NOTE: May cause issues with the following structure:
+<note> text_string
+<p> another text_string </p> */
 .info > p:first-child,
 .result > p:first-child,
 .example > p:first-child,
@@ -659,26 +1000,11 @@ p > *:only-child,
 .p > *:only-child {
   margin: 0px;
 }
-/* Add paragraph-like margins to sections that do not start with paragraphs. */
-.sectiontitle ~ span {
-  margin-top: 5px;
-  display: inline-block;
-}
-/* Adds paragraph-like margins to shortdesc that are not p elements. */
-span.shortdesc {
-  display: inline-block;
-  margin-top: 5px;
-}
-/* Prevent large margins when having an empty shortdesc element. */
-.shortdesc:empty ~ .section,
-.abstract:empty ~ .section {
-  margin-top: 5px;
-}
 /* Extends: typography.css */
 /* Style system output, varname, filepath, and userinput elements.
 Assert consistent styling of their children. */
-.sysoutput,
-.sysoutput *,
+.systemoutput,
+.systemoutput *,
 .varname,
 .filepath,
 .userinput,
@@ -695,9 +1021,17 @@ Assert consistent styling of their children. */
 .userinput * {
   color: #6f6f6f;
 }
-/* Style varname elements. */
+/* Style system output and file path elements.
+Assert consistent styling of their children. */
+.systemoutput,
+.filepath,
+.sysoutput *,
+.filepath * {
+  color: #6c6c6c;
+}
+/* Inherit colors from parent elements. */
 .varname {
-  font-weight: bold;
+  color: inherit;
 }
 /* Wrap varname elements in brackets. */
 .varname::before {
@@ -706,14 +1040,10 @@ Assert consistent styling of their children. */
 .varname::after {
   content: ">";
 }
-/* Style system output and file path elements.
-Assert consistent styling of their children. */
-.systemoutput,
-.filepath,
-.sysoutput *,
-.filepath * {
-  color: #6c6c6c;
-} 
+/* Style varname elements. 
+.varname {
+  font-weight: bold;
+}*/ 
 /* Style uicontrol elements. */
 .uicontrol {
   font-weight: bold;
@@ -745,6 +1075,16 @@ abbr[title] {
 .abstract > *:first-child:not(.shortdesc) {
   margin-bottom: 5px;
   display: block;
+} 
+/* Prevent large margins when having an empty shortdesc element. 
+.shortdesc:empty ~ .section:first-of-type,
+.abstract:empty ~ .section:first-of-type {
+  margin-top: 5px;
+}*/
+/* Adds paragraph-like margins to shortdesc that are not p elements. */
+.shortdesc {
+  display: block;
+  margin-top: 5px;
 }
 /* Import icons/font. */
 @font-face {
@@ -883,7 +1223,6 @@ Reduces margins for notes in list items. */
 .li > .note {
   margin: 5px 0px 5px 0px;
 }
-
 /* Style inline cross-references. */
 .xref {
   color: #242424;
@@ -1049,11 +1388,10 @@ img {
   margin: 0px 0px 1px 0px;
   float: left;
 }
-/* Add margins after figure and table description elements.
-.figdesc,
+/* Add margins after table description elements. */
 .tabledesc {
   margin-bottom: 5px;
-} */
+}
 /* Reduces font-size in figure and table descriptions. 
 .figdesc,
 .tabledesc,
@@ -1066,7 +1404,7 @@ img {
 dl {
   display: block;
   clear: both;
-  margin: 10px 0px 10px 0px;
+  margin: 10px 0px 0px 0px;
 }
 /* Add a border on the left of definition terms and definition descriptions. */
 dt,
@@ -1089,6 +1427,16 @@ dd {
   margin: 0px;
   margin-bottom: 20px;
   margin-top: -2px; /* This ensures correct border transition. */
+}
+/* Ensure correct border transition. */
+.dd > pre.codeblock {
+  margin: 0px;
+  padding: 10px 0px 10px 0px;
+  }
+.dd > p,
+.dd> .p {
+  margin: 0px;
+  padding: 5px 0px 0px 0px;
 }
 /* Style cite elements. */
 .cite {
@@ -1166,23 +1514,14 @@ article:has(.topictitle1, :not(article)) {
   margin: 0px;
   padding: 0px;
   font-size: 42px;
-  
-  margin-left: -2.15px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
-  
 }
 .topictitle2,
 .topictitle2 * {
   font-size: 32px;
-  
-  margin-left: -1.3px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
-  
 }
 .topictitle3,
 .topictitle3 * {
   font-size: 28px;
-  
-  margin-left: -1px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
-  
 }
 .topictitle4,
 .topictitle4 *,
@@ -1199,9 +1538,6 @@ article:has(.topictitle1, :not(article)) {
 .sectiontitle,
 .sectiontitle * {
   font-size: 24px;
-  
-  margin-left: -0.7px; /* Fixes the title position. You may need to adjust this value when you change the font size. */
-  
 }
 /* Style section element titles. */
 .sectiontitle,
@@ -1223,6 +1559,11 @@ article:has(.topictitle1, :not(article)) {
   margin: 0px;
   padding: 10px 0px 0px 0px;
 }
+/* Fix titles placement. */
+.topic > .title,
+.sectiontitle {
+  margin-left: -0.05em;
+}
 /* Position section elements. */
 .section {
   margin: 25px 0px 0px 0px;
@@ -1234,6 +1575,11 @@ article:has(.topictitle1, :not(article)) {
 /* Reduce margins before sections after remedy titles. */
 .remedy > .title ~ section {
   margin-top: 5px;
+}
+/* Add paragraph-like margins to sections that do not start with paragraphs. */
+.sectiontitle ~ span {
+  margin-top: 5px;
+  display: inline-block;
 }
 /* Style unordered lists (including: steps-unordered, choices).
 Align unordered lists with ordered lists. */
@@ -1560,7 +1906,15 @@ li.substep {
   margin: 0px 0px 5px -20px;
 }
 /* Fix the placement of choice element children - verify. */
-.choice > * {
+.choice > .note,
+.choice > pre.codeblock,
+.choice > .image,
+.choice > .fig,
+.choice > table,
+.choice > .p,
+.choice > p,
+.choice > .lq,
+.choice > dl {
   margin-left: 5px;
 }
 /* Display multiline commands with uniform indentation. */
@@ -1600,374 +1954,3 @@ strong ~ .cmd {
 .cmd:has(.image) {
   margin-top: -24px;
 }
-/* Hide empty elements. */
-*:empty:not(img){
-  display: none;
-  }
-/* STYLING ****************************************************************/
-/* Import the Roboto Google font. */
-/* Set the Roboto font globally. */
-@page {
-  font-family: "Roboto", Helvetica, Arial;
-}
-/* Set the Roboto font properties for the document body. */
-body,
-article,
-article * {
-  color: #404040;
-  font-family: "Roboto", Helvetica, Arial;
-  font-weight: normal;
-  line-height: 1.5em;
-  font-style: normal;
-  text-align: left;
-  font-size: 16px;
-}
-/* Set how the strong elements are displayed.
-Asserts that their children elements are uniformly styled. */
-strong,
-strong * {
-  font-weight: bold;
-}
-/* Set how the emphasized elements are displayed.
-Asserts that their children elements are uniformly styled. */
-em,
-em *,
-.i,
-.i * {
-  font-style: italic;
-}
-/* COPYCAT - Invert Colors */
-
-/* Remove the map title that appears before the Table of Contents (TOC). */
-body > .topictitle1 {
-  display: none;
-}
-/* Add a custom TOC heading. */
-nav > ul:first-child::before { 
-  content: "Contents";
-  font-size: 42px;
-  color: #242424;
-  text-align: left;
-  font-style: normal;
-  font-weight: bold;
-  display: block;
-  clear: both;
-  margin: 0px 0px 25px -1.5px;
-  letter-spacing: 0.025em;
-}
-/* Set padding, margins, and letter spacing for the whole TOC. */
-nav {
-  letter-spacing: 0.025em;
-  page-break-after: always;
-}
-/* Style the font for the entire TOC. */
-nav * {
-  font-style: normal;
-  color: #404040; 
-  text-decoration: none;
-}
-/* Style "<topic_title>.....................<page>". */
-nav a::after {
-  content: leader(".") target-counter(attr(href), page); 
-  margin-left: 0px;
-  font-weight: normal;
-  font-size: 16px;
-}
-/* Set margins and padding for the TOC links. */
-nav ul { 
-  margin: 2.5px 0px 0px 0px;
-  padding: 0px;
-}
-.topichead {
-  font-weight: bold;
-  font-style: normal;
-}
-/* Level-1 (chapter). */
-nav ul li {
-  list-style-type: none;
-  padding: inherit;
-  padding: 2px 0px 2px 0px; 
-  font-size: 16px;
-  margin-left: 0px;
-  }
-/* Style level-1 (chapter) topics that have children. */
-nav > ul:has(ul) > li {
-  padding-top: 15px;
-}
-nav > ul:has(ul) > li:first-child {
-  padding-top: 10px;
-}
-nav > ul:has(ul) > li > a {
-  color: #242424;
-  font-size: 22px;
-  font-weight: bold;
-}
-nav > ul:has(ul) > li, 
-nav > ul:has(ul) > li:before {
-  color: #242424;
-  font-weight: bold;
-  font-size: 22px;
-}
-nav > ul:has(ul) > li > a::after {
-  color: #242424;
-  font-weight: bold;
-}  
-/* Style level-1 (chapter) topics that do not have children. */
-nav > ul > li > a,
-nav > ul > li:before {
-  font-weight: normal;
-  font-size: 18px;
-  color: #404040;
-}
-/* Level-2 (subchapter) and deeper. */
-nav ul li ul li {
-  padding-left: 32px;
-}
-nav > ul > li > ul > li {
-  padding-top: 5px;
-}
-nav ul li ul li, 
-nav ul li ul li:before {
-  font-weight: bold;
-}
-nav > ul > li > ul > li {
-  font-weight: bold;
-  font-size: 18px;
-}
-nav > ul > li > ul > li > a::after {
-  font-weight: bold;
-}
-/* Level-3 and deeper. */
-nav ul li ul li ul li, 
-nav ul li ul li ul li:before {
-  font-weight: normal;
-}
-/* Level-5 and deeper (hidden). */
-nav ul ul ul ul ul {
-  content: none;
-}
-/* You can assign the @outputclass="no_toc" to the root element of a map to hide the table of contents. */
-body.no_toc > nav {
-  display: none;
-}
-/* Avoid overflowing text in the following elements: */
-a {
-  word-wrap: break-word;
-  }
-/* REQUIRES: orientation_size.css */
-/* TOC */
-@page toc:left{
-  @bottom-left{
-  content: "Copyright © 2020-2020 Company Name";
-  letter-spacing: 0.025em;
-  color: #fff;
-  border: none;
-  background-color: #6f6f6f;
-  font-size:18px;
-  font-style: normal;
-  font-weight: bold;
-  
-}
-  @bottom-right {
-  content: "";
-  letter-spacing: 0.025em;
-  border: none;
-  background-color: #6f6f6f;
-  }
-}
-@page toc:right{
-  @bottom-left{
-  content: "Copyright © 2020-2020 Company Name";
-  letter-spacing: 0.025em;
-  font-size:18px;
-  color: #fff;
-  border: none;
-  background-color: #6f6f6f;
-  font-style: normal;
-  font-weight: bold;
-  
-}
-  @bottom-right{
-  content: "";
-  letter-spacing: 0.025em;
-  border: none;
-  background-color: #6f6f6f;
-  }
-}
-/* BODY */
-@page:left{
-  @top-right{
-  content: "Company Name";
-  letter-spacing: 0.025em;
-  line-height: 1em;
-  font-weight: bold;
-  color: #6f6f6f;
-  font-size: 18px;
-  }
-  @top-left{
-  font-size: 18px;
-  color: #6f6f6f;
-  font-style: normal;
-  font-weight: bold;
-  text-transform: none;
-  content: "{map.title}";
-  letter-spacing: 0.025em;
-  line-height: 1em;
-  }
-  @bottom-left{
-  content: "";
-  letter-spacing: 0.025em;
-  color: #fff;
-  font-style: normal;
-  border: none;
-  background-color: #6f6f6f;
-  font-size: 18px;
-  font-weight: bold;
-  }
-  @bottom-right {
-  font-size: 18px;
-  border: none;
-  background-color: #6f6f6f;
-  font-style: normal;
-  font-weight: normal;  
-  font-size: 18px;
-  color: #fff;
-  font-weight: bold;
-  content: counter(page);
-  }
-}
-@page:right{
-  @top-right{
-  content: "Company Name";
-  letter-spacing: 0.025em;
-  line-height: 1em;
-  font-weight: bold;
-  color: #6f6f6f;
-  font-size: 18px;
-  }
-  @top-left{
-  font-size: 18px;
-  color: #6f6f6f;
-  font-style: normal;
-  font-weight: bold;
-  text-transform: none;
-  content: "{map.title}";
-  letter-spacing: 0.025em;
-  line-height: 1em;
-  }
-  @bottom-left{
-  content: "";
-  letter-spacing: 0.025em;
-  color: #fff;
-  font-style: normal;
-  border: none;
-  background-color: #6f6f6f;
-  font-size: 18px;
-  font-weight: bold;
-  }
-  @bottom-right {
-  font-size: 18px;
-  border: none;
-  background-color: #6f6f6f;
-  font-style: normal;
-  font-weight: normal;  
-  font-size: 18px;
-  color: #fff;
-  font-weight: bold;
-  content: counter(page);
-  letter-spacing: 0.025em;
-  }
-}
-
-/* !importaint: removed a commented-out import */
-/* !importaint: removed a commented-out import*/
-/* !importaint: removed a commented-out import */
-
-/* !importaint: removed a commented-out import */
-/* Disables figure numbering. */
-.fig--title-label {
-  display: none;
-  content: none;
-}
-/* Disable figure numbering. */
-.table--title-label {
-  display: none;
-  content: none;
-}
-/* Add subtle image borders to image elements. */
-.image {
-  border: 5px solid #f4f4f4;
-}
-/* Disable image borders by assigning the @outputclass="no_borders" attribute to the image element. */
-.no_borders {
-  border: none;
-}
-/*!importaint: removed a commented-out import */
-/* Justify text in the elements with the @outputclass="justify" attribute assigned. */
-.text_justify,
-.text_justify * {
-  text-align: justify !important;
-}
-/* Align text to the left in the elements with the @outputclass="left" attribute assigned. */
-.text_left,
-.text_left * {
-  text-align: left !important;
-}
-/* Align text to the right in the elements with the @outputclass="right" attribute assigned. */
-.text_right,
-.text_right * {
-  text-align: right !important;
-}
-/* Make text small in the elements with the @outputclass="text_smaller" attribute assigned. */
-.text_smaller,
-.text_smaller * {
-  font-size: 12px !important;
-}
-/* Make text small in the elements with the @outputclass="text_small" attribute assigned. */
-.text_small,
-.text_small * {
-  font-size: 14px !important;
-}
-/* Make text regularly sized in the elements with the @outputclass="text_normal" attribute assigned. */
-.text_default,
-.text_default * {
-  font-size: 16px !important;
-}
-/* Make text large in the elements with the @outputclass="text_large" attribute assigned. */
-.text_large,
-.text_large * {
-  font-size: 18px !important;
-}
-/* Make text large in the elements with the @outputclass="text_larger" attribute assigned. */
-.text_larger,
-.text_larger * {
-  font-size: 20px !important;
-}
-/* @OUTPUTCLASS ATTRIBUTE VALUES *******************************************
- DITA outputclass attribute values that you can use in DITA source.
- * portrait  - [orientation_size.css] Assign to the root element of a topic or a map to set A4 portrait page size with regular margins.
- * portrait_small  - [orientation_size.css] Assign to the root element of a topic or a map to set A4 portrait page size with small margins.
- * portrait_large  - [orientation_size.css] Assign to the root element of a topic or a map to set A4 portrait page size with large margins.
- * landscape  - [orientation_size.css] Assign to the root element of a topic or a map to set A4 landscape page size with regular margins.
- * landscape_small  - [orientation_size.css] Assign to the root element of a topic or a map to set A4 landscape page size with small margins.
- * landscape_large  - [orientation_size.css] Assign to the root element of a topic or a map to set A4 landscape page size with large margins.
- * two_column  - [columns.css] 
- * three_column  - [columns.css] 
- * four_column  - [columns.css] 
- * no_column  - [columns.css] 
- * no_toc  - [table_of_contents.css] Assign to the root element of a map to remove the table of contents from the output.
- * break_before  - [breaks.css] Assign to an element to insert a page break before the element.
- * break_inside  - [breaks.css] Assign to an element to make the element break over multiple pages.
- * break_avoid  - [breaks.css] Assign to an element to make the element avoid breaking over multiple pages.
- * text_justify  - [formatting.css] Assign to an element to justify text in the element.
- * text_left  - [formatting.css] Assign to an element to align the text to the left in the element.
- * text_right  - [formatting.css] Assign to an element to align the text to the right in the element.
- * text_smaller  - [formatting.css] Assign to an element to make the element text super-small.
- * text_small  - [formatting.css] Assign to an element to make the element text small.
- * text_normal  - [formatting.css] Assign to an element to make the element text default.
- * text_large  - [formatting.css] Assign to an element to make the element text large.
- * text_larger  - [formatting.css] Assign to an element to make the element text super-large.
- * no_borders  - [image_borders.css] Assign to an image element to remove the image borders.
- * no_shadows  - [image_shadows.css] Assign to an image element to remove the image shadows.
- * process  - [cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css] Assign to the root element of a task topic to precede the steps element with the "Process" caption instead of the "Procedure" caption.
- */
