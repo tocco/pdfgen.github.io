@@ -81,7 +81,15 @@ li.substep {
 }
 
 /* Fix the placement of choice element children - verify. */
-.choice > * {
+.choice > .note,
+.choice > pre.codeblock,
+.choice > .image,
+.choice > .fig,
+.choice > table,
+.choice > .p,
+.choice > p,
+.choice > .lq,
+.choice > dl {
   margin-left: 5px;
 }
 
