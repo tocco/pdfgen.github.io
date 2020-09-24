@@ -363,3 +363,16 @@ div{
     box-sizing: border-box;
     max-width:100%;
 }
+
+/* Fix Prince-related rendering issues. */
+body, 
+ul, 
+ol, 
+li, 
+h1, 
+h2, 
+div {
+    margin: 0px; 
+    padding: 0px; 
+    clear: both;
+}

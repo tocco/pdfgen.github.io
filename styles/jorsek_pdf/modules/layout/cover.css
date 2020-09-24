@@ -102,22 +102,3 @@ NOTE: You may need to adjust the padding, margin, bottom, right, height, and wid
   display: block;
   float: right;
 }
-
-/* Fix Prince-related rendering issues. */
-body, 
-ul, 
-ol, 
-li, 
-h1, 
-h2, 
-div {
-    margin: 0px; 
-    padding: 0px; 
-    clear: both;
-}
-
-/* Prevent items from overflowing the page. */
-* {
-    box-sizing: border-box;
-    max-width:100%;
-}

@@ -40,7 +40,7 @@ NOTE: You may need to adjust the padding property for cover page size and orient
 
 /* Apply the typography settings to the cover page. */
 .cover-page-container * {
-  font-family: "'Roboto", Helvetica, Arial;
+  font-family: "Roboto", Helvetica, Arial;
 }
 
 /* Define the space where the title can be placed.
@@ -102,23 +102,4 @@ NOTE: You may need to adjust the padding, margin, bottom, right, height, and wid
 .logo {
   display: block;
   float: right;
-}
-
-/* Fix Prince-related rendering issues. */
-body, 
-ul, 
-ol, 
-li, 
-h1, 
-h2, 
-div {
-    margin: 0px; 
-    padding: 0px; 
-    clear: both;
-}
-
-/* Prevent items from overflowing the page. */
-* {
-    box-sizing: border-box;
-    max-width:100%;
 }
