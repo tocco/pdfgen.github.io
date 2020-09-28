@@ -173,3 +173,31 @@ Style the cause and remedy titles. */
   border: none;
   padding-left: 0px;
 }
+
+/* Assert the same styling in stepsection elements and their children elements. */
+.stepsection > .ph,
+.stepsection > .uicontrol,
+.stepsection > .wintitle,
+.stepsection > .codeph {
+  color: inherit;
+  background-color: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Assert the same styling in stepsection elements and common inline elements. */
+.stepsection > .ph,
+.stepsection > .uicontrol,
+.stepsection > .wintitle,
+.stepsection > .codeph {
+  color: inherit;
+  background-color: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  margin: 0px;
+  padding: 0px;
+}
