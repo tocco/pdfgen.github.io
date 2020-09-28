@@ -60,17 +60,6 @@
   margin-top: 5px;
 }
 
-/* Assert the same styling in stepsection elements and their children elements. */
-.stepsection * {
-  color: inherit;
-  background-color: inherit;
-  font-style: inherit;
-  font-weight: inherit;
-  font-size: inherit;
-  margin: 0px;
-  padding: 0px;
-}
-
 /* Add a caption before not empty prerequisite elements. */
 .prereq:not(.prereq:empty)::before {
   content: "Before you begin";
