@@ -1,0 +1,45 @@
+/* LAYOUT *****************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/layout/cover.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/layout/orientation_size.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/layout/breaks.css");
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/layout/blanks.css#DISABLED"); */
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/layout/columns.css");
+
+/* STYLING ****************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/typography.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/table_of_contents.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/header_footer.css");
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/table_of_contents_page_numbering.css#DISABLED"); */
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/header_footer_alternate.css#DISABLED"); */
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/table_of_contents_page_numbering_alternate.css#DISABLED"); */
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/chapter_numbering.css#DISABLED"); */
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/figure_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/table_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/image_borders.css");
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/image_shadows.css#DISABLED"); */
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/hide_empty_elements.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/formatting.css");
+
+/* DITA *******************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/footnote.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/paragraph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/filepath_sysoutput_userinput_varname.css"); 
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/uicontrol_wintitle_shortcut_menucascade.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/abstract_shortdesc.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/note.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/xref_related_links.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/codeblock_codeph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/figure_image.css"); 
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/description.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/definition_list.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/cite_long_quote_quote.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/title.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/section.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/ordered_list_unordered_list_step_substep_choice.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/choices_steps_substeps_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/dita/choicetable_table.css");
+
+/* Palette ******************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/palette/gray.css");
