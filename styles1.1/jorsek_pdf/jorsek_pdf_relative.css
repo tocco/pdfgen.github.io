@@ -6,7 +6,7 @@
 @import url("../_modules/layout/columns.css");
 
 /* STYLING ****************************************************************/
-//@import url("../_modules/styling/typography.css");
+@import url("../_modules/styling/typography.css");
 @import url("../_modules/styling/table_of_contents.css");
 @import url("../_modules/styling/header_footer_jorsek.css");
 /* @import url("../_modules/styling/table_of_contents_page_numbering.css#DISABLED"); */

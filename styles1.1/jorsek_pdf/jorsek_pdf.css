@@ -6,7 +6,7 @@
 @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/layout/columns.css");
 
 /* STYLING ****************************************************************/
-//@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/typography.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/typography.css");
 @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/table_of_contents.css");
 @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/header_footer_jorsek.css");
 /* @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/_modules/styling/table_of_contents_page_numbering.css#DISABLED"); */
