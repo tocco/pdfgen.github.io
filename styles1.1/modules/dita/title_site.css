@@ -1,0 +1,116 @@
+/* NOTE: The important properties are needed to overwrite the default site styling. Also, selectors like ".topictitle1" or ".title" do not seem to work. */
+
+/* Style titles on different levels */
+h1.topictitle1,
+h1.topictitle1 * {
+  font-size: 48px !important;
+  border-bottom: none;
+  margin: 0px 0px 20px 0px;
+  padding: 0px;
+  font-weight: bold;
+
+  font-family: "Roboto", Helvetica, Arial;
+  color: #000;
+  border: none;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  background-color: transparent;
+  padding: 0px;
+}
+
+h2.title.sectiontitle,
+h2.title.sectiontitle * {
+  font-weight: bold;
+
+  font-family: "Roboto", Helvetica, Arial;
+  color: #000;
+  border: none;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  background-color: transparent;
+  padding: 0px;
+}
+
+h2.topictitle2,
+h2.topictitle2 *,
+h2.title.sectiontitle,
+h2.title.sectiontitle * {
+  font-size: 28px !important;
+
+  font-family: "Roboto", Helvetica, Arial;
+  color: #000;
+  border: none;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  background-color: transparent;
+  padding: 0px;
+}
+h3.topictitle3,
+h3.topictitle3 * {
+  font-size: 28px;
+
+  font-family: "Roboto", Helvetica, Arial;
+  color: #000;
+  border: none;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  background-color: transparent;
+  padding: 0px;
+}
+h4.topictitle4,
+h4.topictitle4 *,
+h5.topictitle5,
+h5.topictitle5 *,
+h6.topictitle6,
+h6.topictitle6 *
+ {
+  font-size: 24px;
+
+  font-family: "Roboto", Helvetica, Arial;
+  color: #000;
+  border: none;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  background-color: transparent;
+  padding: 0px;
+}
+
+/* Style figure and table captions. */
+figcaption,
+.fig--title-label,
+span.table--title-label,
+span.title {
+  font-weight: bold !important;
+}
+
+/* Style table titles. */
+.table--title-label,
+.table--title-label *,
+.table > caption > .title,
+.table > caption > .title * {
+  font-size: 16px;
+  background-color: transparent;
+}
+
+/* Fix the table title and table numbering position. */
+.table > caption > .title,
+.table--title-label {
+  display: inline-block;
+  margin: 0px;
+  padding: 10px 0px 0px 0px;
+}

@@ -1,0 +1,5 @@
+/* Hide empty elements. */
+.body *:empty:not(img),
+article *:empty:not(img){
+    display: none;
+  }

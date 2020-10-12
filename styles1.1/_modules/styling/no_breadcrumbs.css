@@ -1,4 +1,0 @@
-/* Hide site breadcrumbs. */
-.MuiCardContent-root > .MuiToolbar-gutters {
-    display: none;
-}
