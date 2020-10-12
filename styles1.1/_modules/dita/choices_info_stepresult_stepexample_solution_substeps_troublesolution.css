@@ -55,6 +55,7 @@ Span the left border across the cause and remedy elements. */
 .info ~ .stepresult,
 .info ~ .substeps,
 .info ~ .info,
+.substeps ~ .info,
 .substeps ~ .stepresult,
 .choices ~ .stepresult,
 .substeps ~ .substeps {
