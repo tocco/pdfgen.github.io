@@ -21,16 +21,18 @@ article,
 
 /* Set how the strong elements are displayed.
 Asserts that their children elements are uniformly styled. */
-strong,
-strong * {
+strong.b,
+strong.b * {
   font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 /* Set how the emphasized elements are displayed.
 Asserts that their children elements are uniformly styled. */
-em,
-em *,
-.i,
-.i * {
+em.i,
+em.i * {
   font-style: italic;
+  font-family: inherit;
+  font-size: inherit;
 }
