@@ -226,3 +226,67 @@ Remove or comment-out these properties if you don't use an image in the header. 
         padding-right: 31mm; 
     }
 }
+
+@page toc_portrait_large:right {
+    @top-right {
+        padding-right: 41mm; 
+    }
+}
+@page toc_portrait_large:left {
+    @top-right {
+            padding-right: 41mm; 
+        }
+}
+
+@page toc_portrait:right {
+    @top-right {
+        padding-right: 31mm; 
+    }
+}
+@page toc_portrait:left {
+    @top-right {
+        padding-right: 31mm; 
+    }
+}
+
+@page toc_portrait_small:right {
+    @top-right {
+        padding-right: 31mm; 
+    }
+}
+@page toc_portrait_small:left {
+    @top-right {
+        padding-right: 31mm; 
+    }
+}
+
+@page toc_landscape_large:right {
+    @top-right {
+        padding-right: 41mm; 
+    }
+}
+@page toc_landscape_large:left {
+    @top-right {
+        padding-right: 41mm; 
+    }
+}
+@page toc_landscape:right {
+    @top-right {
+        padding-right: 31mm; 
+    }
+}
+@page toc_landscape:left {
+    @top-right {
+        padding-right: 31mm; 
+    }
+}
+@page toc_landscape_small:right {
+    @top-right {
+        padding-right: 31mm; 
+    }
+}
+@page toc_landscape_small:left {
+    @top-right {
+        padding-right: 31mm; 
+    }
+}
