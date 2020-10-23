@@ -377,6 +377,12 @@ span.title,
   color: #003749;
 }
 
+/* title-zendesk.css ====================================================*/
+h1.article-title,
+h1.article-title * {
+  color: #003749;
+}
+
 /* uicontrol_wintitle_shortcut_menucascade.css =======================*/
 .uicontrol {
   color: #09afd6;
