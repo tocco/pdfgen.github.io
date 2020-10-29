@@ -5,6 +5,7 @@
 }
 
 /* Disable image borders by assigning the @outputclass="no_borders" attribute to the image element. */
-.no_borders {
+.image.no_borders,
+.body img.no_borders {
     border: none;
 }
