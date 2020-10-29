@@ -6,12 +6,16 @@
 /* Style any note type. */
 .note {
   clear: both;
-  display: inline-block; /* block breaks notes before commands in steps and substeps. */
+  display: block;
   border-left: 5px solid #404040;
   background-color: #dcdcdc;
   margin: 10px 0px 10px 0px;
   padding: 10px;
   width: 100%;
+}
+
+.note ~ .cmd {
+  display: inline-block; /* block breaks notes before commands in steps and substeps. */
 }
 
 /* Style note captions (the text and optional image preceding the note contents). */
