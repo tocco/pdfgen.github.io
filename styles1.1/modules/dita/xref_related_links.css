@@ -29,3 +29,13 @@ a {
 .linklist {
   margin: 0px;
 }
+
+/* Correctly display links to steps. */
+.taskbody a[href*="step"] {
+  content: "step " target-counter(attr(href), li);
+}
+
+/* Correctly display links to substeps. */
+.taskbody a[href*="substep"] {
+  content: "substep " target-counter(attr(href), li, lower-alpha);
+}
