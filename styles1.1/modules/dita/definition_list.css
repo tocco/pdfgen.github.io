@@ -40,3 +40,15 @@ Assert the same styling in definition titles and their children elements. */
   margin: 0px;
   padding: 5px 0px 0px 0px;
 }
+
+/* Reduce spacing between consecutive definition descriptions. */
+.dd + .dd {
+  margin-top: -20px;
+}
+
+/* Fix paragraphs in definition descriptions. */
+.dd > .p:first-child,
+.dd > p:first-child {
+  margin-top: 0px;
+  padding-top: 0px;
+}
