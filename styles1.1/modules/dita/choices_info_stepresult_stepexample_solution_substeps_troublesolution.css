@@ -62,3 +62,14 @@ Span the left border across the cause and remedy elements. */
   margin-top: -3px;
   padding-top: 3px;
 }
+
+/* Remove the left border for steps in single-step procedures. */
+.taskbody > div.step > .cmd,
+.taskbody > div.step > .info,
+.taskbody > div.step > .stepresult,
+.taskbody > div.step > .stepxmp,
+.taskbody > div.step > .troubleSolution,
+.taskbody > div.step > .choices,
+.taskbody > div.step > .substeps {
+  border-left: none;
+}
