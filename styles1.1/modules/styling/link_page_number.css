@@ -10,6 +10,7 @@ article a[href*="glossentry"]::after {
 
 /* Remove page number labels for external links. */
 article a[href*="https:"]::after,
+article a[href*="http:"]::after,
 article a[href*="mailto:"]::after {
     content:"";
 }
