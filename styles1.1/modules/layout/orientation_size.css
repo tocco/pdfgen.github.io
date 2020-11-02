@@ -627,7 +627,7 @@ div {
 /* Fix issues with descriptions in step children elements */
 .figdesc,
 .tabledesc,
-.figdesc p,
-.tabledesc p {
+.figdesc > p,
+.tabledesc > p {
   float: left;
 }
