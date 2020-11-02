@@ -7,10 +7,10 @@
 }
 
 /* Fix margins for paragraphs in descriptions */
-.figdesc p:first-child,
-.tabledesc p:first-child,
-.figdesc .p:first-child,
-.tabledesc .p:first-child {
+.figdesc > p:first-child,
+.tabledesc > p:first-child,
+.figdesc > .p:first-child,
+.tabledesc > .p:first-child {
   margin-top: 0px;
 }
 
