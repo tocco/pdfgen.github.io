@@ -97,6 +97,11 @@
   border-color: #f4f4f4;
 }
 
+/* link_page_number.css ===================================================*/
+article a[href]::after {
+  color: #404040;
+}
+
 /* table_of_contents.css ===============================================*/
 nav > ul:first-child::before {
   color: #1d3557;
