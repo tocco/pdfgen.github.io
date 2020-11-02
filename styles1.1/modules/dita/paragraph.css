@@ -7,12 +7,12 @@ p,
 }
 
 /* Make the first paragraph inline in the following elements. */
+/*.note__title ~ p:first-of-type,*/
 .info > p:first-child,
 .result > p:first-child,
 .example > p:first-child,
 .stepresult > p:first-child,
 .stepxmp > p:first-child,
-.note__title ~ p:first-of-type,
 .td > p:first-child,
 .cause > .title ~ p,
 .remedy > .title ~ p {
