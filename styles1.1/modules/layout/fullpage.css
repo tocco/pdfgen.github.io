@@ -1,0 +1,54 @@
+/* Set the fullpage layout */
+.fullpage,
+.fullpage + .shortdesc,
+.fullpage + .abstract {
+    page: fullpage;
+}
+@page fullpage {
+    background-color: #000;
+    @top-right {
+        content: none;
+    }
+    @top-left {
+        content: none;
+    }
+    @bottom-left {
+        content: none;
+    }
+    @bottom-right {
+        content: none;
+    }
+}
+
+/* Place abstracts and shortdesc when not followed by any content. */
+.fullpage + .shortdesc,
+.fullpage + .abstract {
+    margin: 15px 0 0 20mm;
+}
+
+/* Style fullpage titles. */
+.title.fullpage {
+    display: block;
+    font-size: 74px;
+    line-height: 82px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 45mm;
+    margin-left: 15mm;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #fff;
+    color: #fff;
+}
+
+/* Style shortdesc and abstracts following fullpage titles. */
+.fullpage + .shortdesc,
+.fullpage + .shortdesc *,
+.fullpage + .abstract,
+.fullpage + .abstract * {
+    color: #fff;
+    background-color: transparent;
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5rem;
+}
