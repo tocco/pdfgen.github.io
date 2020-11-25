@@ -1,10 +1,10 @@
-/* Set the fullpage layout */
-.fullpage,
-.fullpage + .shortdesc,
-.fullpage + .abstract {
-    page: fullpage;
+/* Set the fullpage_title layout */
+.fullpage_title,
+.fullpage_title + .shortdesc,
+.fullpage_title + .abstract {
+    page: fullpage_title;
 }
-@page fullpage {
+@page fullpage_title {
     background-color: #000;
     @top-right {
         content: none;
@@ -21,13 +21,13 @@
 }
 
 /* Place abstracts and shortdesc when not followed by any content. */
-.fullpage + .shortdesc,
-.fullpage + .abstract {
+.fullpage_title + .shortdesc,
+.fullpage_title + .abstract {
     margin: 15px 0 0 15mm;
 }
 
-/* Style fullpage titles. */
-h1.title.fullpage {
+/* Style fullpage_title titles. */
+h1.title.fullpage_title {
     display: block;
     font-size: 74px;
     line-height: 82px;
@@ -40,11 +40,11 @@ h1.title.fullpage {
     color: #fff;
 }
 
-/* Style shortdesc and abstracts following fullpage titles. */
-.fullpage + .shortdesc,
-.fullpage + .shortdesc *,
-.fullpage + .abstract,
-.fullpage + .abstract * {
+/* Style shortdesc and abstracts following fullpage_title titles. */
+.fullpage_title + .shortdesc,
+.fullpage_title + .shortdesc *,
+.fullpage_title + .abstract,
+.fullpage_title + .abstract * {
     color: #fff;
     background-color: transparent;
     text-align: right;
