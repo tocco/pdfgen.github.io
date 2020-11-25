@@ -13,6 +13,21 @@
   background-color: #fff;
 }
 
+/* fullpage.css */
+@page fullpage {
+  background-color: #6f6f6f;
+}
+.title.fullpage {
+  border-color: #fff;
+  color: #fff;
+}
+.fullpage + .shortdesc,
+.fullpage + .shortdesc *,
+.fullpage + .abstract,
+.fullpage + .abstract * {
+  color: #fff;
+}
+
 /*=====================================================================
                                 STYLING 
 ======================================================================*/
