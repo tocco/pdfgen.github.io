@@ -56,10 +56,3 @@ img {
 .fig:has(.imagecenter) * {
     text-align: center;
 }
-
-/* Remove additional spacing before and after image elements with the @placement="break" attribute assigned. */
-br {
-    display: block;
-    margin: 0;
-    padding: 0;
-}
