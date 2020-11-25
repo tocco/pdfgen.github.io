@@ -27,7 +27,7 @@
 }
 
 /* Style fullpage titles. */
-.title.fullpage {
+h1.title.fullpage {
     display: block;
     font-size: 74px;
     line-height: 82px;
