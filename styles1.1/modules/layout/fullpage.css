@@ -23,7 +23,7 @@
 /* Place abstracts and shortdesc when not followed by any content. */
 .fullpage + .shortdesc,
 .fullpage + .abstract {
-    margin: 15px 0 0 20mm;
+    margin: 15px 0 0 15mm;
 }
 
 /* Style fullpage titles. */
