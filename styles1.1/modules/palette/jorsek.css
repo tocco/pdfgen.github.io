@@ -273,7 +273,8 @@ code {
 /* filepath_sysoutput_userinput_varname.css ==========================*/
 .userinput,
 .userinput * {
-  color: #09afd6;
+  color: #003749;
+  background-color: #f4f4f4;
 }
 .systemoutput,
 .filepath,
@@ -405,11 +406,11 @@ h1.article-title * {
 
 /* uicontrol_wintitle_shortcut_menucascade.css =======================*/
 .uicontrol {
-  color: #09afd6;
+  color: #003749;
 }
 .shortcut {
-  color: #09afd6;
+  color: #003749;
 }
 abbr[title] {
-  color: #09afd6;
+  color: #003749;
 }
