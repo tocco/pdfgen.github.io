@@ -16,10 +16,6 @@
   width: 99%;
 }
 
-.note ~ .cmd {
-    display: inline-block; /* block breaks notes before commands in steps and substeps. */
-}
-
 /* Style note captions (the text and optional image preceding the note contents). */
 .note__title {
   font-weight: bold;
@@ -140,13 +136,5 @@
 .stepxmp > .note,
 .example > .note,
 .result > .note {
-  margin: 5px 0px 5px 0px;
-}
-
-/* Fixes notes preceding commands position.
-Reduces margins for notes in list items. */
-.step > .note,
-.substep > .note,
-.li > .note {
   margin: 5px 0px 5px 0px;
 }
