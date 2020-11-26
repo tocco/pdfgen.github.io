@@ -135,6 +135,7 @@
 .info > .note,
 .stepxmp > .note,
 .example > .note,
-.result > .note {
+.result > .note,
+.li:not(.step, .substep, .choice) > .note {
   margin: 5px 0px 5px 0px;
 }
