@@ -1,0 +1,26 @@
+/* Style FAQ topics */
+article.topic.faq {
+    border-left: solid 5px #000;
+    padding: 0px 10px 0px 10px;
+    margin: 0;
+}
+
+  /* Style FAQ questions (titles) */
+article.topic.faq > .title.question {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0;
+    margin: 25px 0 0 0;
+}
+
+/* Add labels before FAQ questions
+    article.topic.faq > .title.question::before {
+    content: "Q: ";
+    font-weight: bold;
+}*/
+
+/* Add labels before FAQ answers
+div.body.answer > *:first-child::before {
+    content: "A: ";
+    font-weight: bold;
+}*/
