@@ -65,8 +65,8 @@ br {
 }
 
 /* Disable margins, borders, and shadows for inline images. */
-.image.inline,
-.body img.inline {
+.image.imageinline,
+.body img.imageinline {
     margin: 0;
     box-shadow: none;
     border: none;
