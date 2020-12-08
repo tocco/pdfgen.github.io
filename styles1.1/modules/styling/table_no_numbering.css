@@ -1,7 +1,5 @@
 /* Disable table numbering. */
-table--title-label,
-span.table--title-label,
-span.title {
+span.table--title-label {
     display: none;
     content: none;
 }
