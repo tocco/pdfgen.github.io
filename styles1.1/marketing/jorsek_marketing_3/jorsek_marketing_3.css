@@ -1,0 +1,455 @@
+/* LAYOUT *****************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/orientation_size.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/breaks.css");
+
+/* STYLING ****************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/table_of_contents.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/figure_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/table_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/hide_empty_elements.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/formatting.css");
+
+/* DITA *******************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/footnote.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/paragraph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/filepath_sysoutput_userinput_varname.css"); 
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/uicontrol_wintitle_shortcut_menucascade.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/abstract_shortdesc.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/note.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/xref_related_links.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/codeblock_codeph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/description.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/definition_list.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/title.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/section.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/ordered_list_unordered_list_step_substep_choice.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choices_steps_substeps_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choicetable_table.css");
+
+/* Palette ******************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/palette/jorsek.css");
+
+/*** Typography - START */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@page {
+    font-family: 'Open Sans', sans-serif;
+}
+body,
+article,
+.body * {
+  /*color: #29333D;*/
+  font-family: 'Open Sans', sans-serif;  
+  font-weight: normal;
+  line-height: 1.5em;
+  font-style: normal;
+  text-align: left;
+  font-size: 16px;
+}
+strong.b,
+strong.b * {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+em.i,
+em.i * {
+  font-style: italic;
+  font-family: inherit;
+  font-size: inherit;
+}
+/*** Typography - END */
+
+/*** Cover Page - START */
+.cover-page-container {
+  prince-page-group: start;
+  page: cover_page;
+  counter-reset: page 0;
+}
+@page cover_page {
+  size: A4 portrait;
+  background-color: #09AFD6;
+  margin: 0px;
+  padding: 0px;
+}
+
+div.cover-page-content {
+    width: 100%;
+}
+div.title-text {
+  color:  #fff;
+  background: transparent ;
+  font-size: 54px;
+  font-weight: bold;
+  margin-top: 60mm;
+  line-height: 65px;
+  padding: 0 15mm 0 60mm;
+  text-align: left;
+  text-transform: uppercase;
+}
+div#logo-container {
+    position: absolute;
+    bottom: 45mm;
+    left: 60mm;
+    padding-top: 15mm;
+    padding-right: 60mm;
+    border-top: 1mm solid #fff;
+}
+img#logo {
+    width: 250px;
+    float: left;
+    display: block;
+}
+/*** Cover Page - END */
+
+/*** Orientation and Size - START */
+nav,
+.title,
+.p {
+    padding-left: 260px;
+}
+/* BODY */
+@page:left{
+    @top-right{
+        content: "";
+    }
+    @top-left{
+        content: "";
+    }
+    @bottom-left{
+        content: "easyDITA";
+        color: #09AFD6;        
+        font-weight: bold;
+        font-size: 20px;
+        border: none;
+        background-color: transparent;
+    }
+    @bottom-right {
+        border: none;
+        background-color: transparent;
+        font-style: normal;
+        font-weight: normal;        
+        font-size: 12px;
+        color: rgb(77, 83, 90);
+        font-weight: 100;
+        content: counter(page);
+    }
+    @bottom {
+        content: "{map.title}";
+        color: rgb(77, 83, 90);
+        font-weight: 100;
+        font-size: 12px;
+    }
+}
+@page:right{
+    @top-right{
+        content: "";
+    }
+    @top-left{
+        content: "";
+    }
+    @bottom-left{
+        content: "easyDITA";
+        color: #09AFD6;        
+        font-weight: bold;
+        font-size: 20px;
+        border: none;
+        background-color: transparent;
+    }
+    @bottom-right {
+        border: none;
+        background-color: transparent;
+        font-style: normal;
+        font-weight: normal;        
+        font-size: 12px;
+        color: rgb(77, 83, 90);
+        font-weight: 100;
+        content: counter(page);
+    }
+    @bottom {
+        content: "{map.title}";
+        color: rgb(77, 83, 90);
+        font-weight: 100;
+        font-size: 12px;
+    }
+}
+/* TOC */
+@page toc:left{
+    @top-right{
+        content: "";
+    }
+    @top-left{
+        content: "";
+    }
+    @bottom-left{
+        content: "easyDITA";
+        color: #09AFD6;        
+        font-weight: bold;
+        font-size: 20px;
+        border: none;
+        background-color: transparent;
+    }
+    @bottom-right {
+        border: none;
+        background-color: transparent;
+        font-style: normal;
+        font-weight: normal;        
+        font-size: 12px;
+        color: rgb(77, 83, 90);
+        font-weight: 100;
+        content: counter(page);
+    }
+    @bottom {
+        content: "{map.title}";
+        color: rgb(77, 83, 90);
+        font-weight: 100;
+        font-size: 12px;
+    }
+}
+
+@page toc:right{
+    @top-right{
+        content: "";
+    }
+    @top-left{
+        content: "";
+    }
+    @bottom-left{
+        content: "easyDITA";
+        color: #09AFD6;        
+        font-weight: bold;
+        font-size: 20px;
+        border: none;
+        background-color: transparent;
+    }
+    @bottom-right {
+        border: none;
+        background-color: transparent;
+        font-style: normal;
+        font-weight: normal;        
+        font-size: 12px;
+        color: rgb(77, 83, 90);
+        font-weight: 100;
+        content: counter(page);
+    }
+    @bottom {
+        content: "{map.title}";
+        color: rgb(77, 83, 90);
+        font-weight: 100;
+        font-size: 12px;
+    }
+}
+/*** Orientation and Size - END */
+
+/*** Breaks - START */
+.topictitle1,
+.topictitle2 {
+    page-break-before: always;
+}
+/*** Breaks - END */
+
+/*** Table of Contents - START */
+nav > ul:first-child::before { 
+    display: none;
+}
+
+/* Style "<topic_title>.....................<page>". */
+nav a::after {
+    content: "";
+}
+nav a::before {
+    content: target-counter(attr(href), page, decimal-leading-zero);
+    float: left;
+    height: 22px;
+}
+
+/* Style level-1 (chapter) topics that have children. */
+nav > ul:has(ul) > li {
+    padding-top: 15px;
+}
+nav > ul:has(ul) > li:first-child {
+    padding-top: 10px;
+}
+nav > ul:has(ul) > li > a {
+    font-weight: bold;
+    font-size: 28px;
+    color: #09AFD6;
+}
+nav > ul:has(ul) > li, 
+nav > ul:has(ul) > li:before {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* Style level-1 (chapter) topics that do not have children. */
+nav > ul > li {
+    margin-top: 25px;
+}
+nav > ul > li > a,
+nav > ul > li:before {
+    color: #09AFD6;
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: bold;
+    display: block
+}
+nav > ul > li > a::before {
+    height: 35px;
+    padding-right: 20px;
+    float: left;
+    display: block;
+}
+
+/* Level-2 (subchapter) and deeper. */
+nav ul li ul li {
+    padding-left: 0px;
+    font-weight: normal;
+    float: left;
+    display: block;
+
+}
+nav ul li ul li a::before {
+    padding-right: 33px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+/*** Table of Contents - END */
+
+/*** Titles - START */
+.title {
+    margin-top: 10px;
+}
+h1.topictitle1,
+h1.topictitle1 * {
+    font-size: 32x;
+    line-height: 36px;
+}
+.topictitle2,
+.topictitle2 * {
+  font-size: 24px;
+}
+.topictitle3,
+.topictitle3 * {
+  font-size: 20px;
+}
+.topictitle4,
+.topictitle4 *,
+.topictitle5,
+.topictitle5 *,
+.topictitle6,
+.topictitle6 *,
+.topictitle7,
+.topictitle7 *,
+.topictitle8,
+.topictitle8 *,
+.topictitle9,
+.topictitle9 * {
+  font-size: 16px;
+}
+.sectiontitle,
+.sectiontitle * {
+    color: #09AFD6;
+    font-weight: bold;
+}
+.sectiontitle {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+/*** Titles - END */
+
+/*** Elements - START */
+.p {
+    margin-top: 10px;
+}
+.xref {
+    border-bottom: 1px #09AFD6 solid;
+}
+.lq {
+    border: none;
+    padding: 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.lq .quote_author {
+    display: block;
+    text-align: left;
+    font-size: 12px !important;
+    font-weight: 100;
+    color: rgb(77, 83, 90);
+    padding-left: 0 !important;
+}
+/*** Elements - END */
+
+/*** Formatting - START */
+.fullpage {
+    padding: 0;
+    margin-top: -25px;
+}
+.fullpage_title {
+    padding-left: 260px;
+    font-size: 54px;
+    display: block;
+    padding-top: 50px;
+}
+.fullwidth {
+    display: block;
+    margin-bottom: 25px;
+}
+.text_large {
+    line-height: 110%;
+}
+.blue_accent,
+.blue_accent * {
+    color: #09AFD6;
+    border-color: #09AFD6;
+}
+.green_accent,
+.green_accent * {
+    color: #b2e07e ;
+    border-color: #b2e07e ;
+}
+.orange_accent,
+.orange_accent * {
+    color: #fdb602;
+    border-color: #fdb602;
+}
+.red_accent,
+.red_accent {
+    color: #d95700;
+    border-color: #d95700;
+}
+
+/*** Formatting - END */
+
+/*** Quote, cite, long quote - START */
+.cite, .lq, span.q {
+    display: block;
+    margin: 10px 0 0 0;
+}
+
+.cite {
+    font-style: normal;
+    font-weight: normal;
+    color: #404040;
+    border: solid 1px #404040;
+    padding: 5px 30px 5px 30px;
+}
+
+.lq {
+    border-left: 10px solid #09afd6;
+    padding-left: 30px;
+}
+
+span.q {
+    color: #545454;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+/* If a block element is placed in a paragraph, discard the paragraph margins. */
+.p:has(.note:only-child, .codeblock:first-child, .fig:first-child, .image:first-child, .lq:first-child, span.q:first-child, .cite:first-child, table:first-child, dl:first-child) {
+  margin: 0;
+}
+/*** Quote, cite, long quote - END */

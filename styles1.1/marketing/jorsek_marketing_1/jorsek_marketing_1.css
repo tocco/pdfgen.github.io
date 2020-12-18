@@ -1,0 +1,291 @@
+/* LAYOUT *****************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/orientation_size.css");
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/breaks.css"); */
+
+/* STYLING ****************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/table_of_contents.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/figure_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/table_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/hide_empty_elements.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/formatting.css");
+
+/* DITA *******************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/footnote.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/paragraph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/filepath_sysoutput_userinput_varname.css"); 
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/uicontrol_wintitle_shortcut_menucascade.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/abstract_shortdesc.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/note.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/xref_related_links.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/codeblock_codeph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/figure_image.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/description.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/definition_list.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/title.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/section.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/ordered_list_unordered_list_step_substep_choice.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choices_steps_substeps_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choicetable_table.css");
+/* Palette ******************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/palette/jorsek.css");
+
+/*** Typography - START */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@page {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body,
+article,
+.body * {
+  /*color: #29333D;*/
+  font-family: 'Open Sans', sans-serif;  
+  font-weight: normal;
+  line-height: 1.5em;
+  font-style: normal;
+  text-align: left;
+  font-size: 16px;
+}
+
+strong.b,
+strong.b * {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em.i,
+em.i * {
+  font-style: italic;
+  font-family: inherit;
+  font-size: inherit;
+}
+/*** Typography - END */
+
+/*** Cover Page - START */
+/* Differentiate the cover page from the TOC and the document body. */
+.cover-page-container {
+  prince-page-group: start;
+  page: cover_page;
+  counter-reset: page 0;
+    background-color: #fff;
+}
+@page cover_page {
+  size: A4 portrait;
+}
+
+div.cover-page-content {
+    width: 73%;
+}
+div#logo-container {
+    width:200px;
+    float: left;
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+div.title-text {
+  color:  #29333D;
+  font-size: 54px;
+  font-weight: normal;
+  margin-left: 10px;
+  margin-top: 15px;
+  line-height: 65px;
+}
+
+div.cover-text {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 25px;
+}
+div.cover-text,
+div.cover-text * {
+    color: #8599AD;
+}
+/*** Cover Page - END */
+
+
+
+/*** Chapter Numbering - START */
+html {
+  counter-reset: section_level1;
+}
+article > .topictitle1:before {
+  counter-increment: section_level1;
+  content: counter(section_level1) ". ";
+}
+article > .topictitle1 {
+  counter-reset: section_level2;
+}
+.topictitle2::before {
+  counter-increment: section_level2;
+  content: counter(section_level1) "." counter(section_level2) ". ";
+}
+.topictitle2 {
+  counter-reset: section_level3;
+}
+.topictitle3::before {
+  counter-increment: section_level3;
+  content: counter(section_level1) "." counter(section_level2) "." counter(section_level3) ". ";
+}
+.topictitle3 {
+  counter-reset: section_level4;
+}
+.topictitle4::before {
+  counter-increment: section_level4;
+  content: counter(section_level1) "." counter(section_level2) "." counter(section_level3) "." counter(section_level4) ". ";
+}
+.topictitle4 {
+  counter-reset: section_level5;
+}
+.topictitle5::before {
+  counter-increment: section_level5;
+  content: counter(section_level1) "." counter(section_level2) "." counter(section_level3) "." counter(section_level4) "." counter(section_level5) ". ";
+}
+/*** Chapter Numbering - END */
+
+
+/* Increase margins before ordered and unordered lists */
+.ul, .ol {
+    margin-top: 15px;
+}
+
+/* Default bullets */
+.ul {
+    list-style-type: disc;
+}
+
+/* Square bullets for outputclass="square" */
+.ul.square {
+    list-style-type: square;
+}
+
+/* reset margins for list items */
+.li {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* increase left-margins for unordered list items. */
+.ul > .li {
+    margin-left: 10px;
+}
+
+/*** Links - START */
+.xref,
+.link,
+.cover-text a {
+  color: #006EFF;
+  text-decoration: underline;
+}
+/*** Links - END */
+
+/*** Titles - START */
+.title {
+    margin-top: 10px;
+    color: #29333D;
+}
+.topictitle1,
+.topictitle1 * {
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+.topictitle2,
+.topictitle2 * {
+  font-size: 28px;
+}
+.topictitle3,
+.topictitle3 * {
+  font-size: 24px;
+}
+.topictitle4,
+.topictitle4 *,
+.topictitle5,
+.topictitle5 *,
+.topictitle6,
+.topictitle6 *,
+.topictitle7,
+.topictitle7 *,
+.topictitle8,
+.topictitle8 *,
+.topictitle9,
+.topictitle9 *,
+.sectiontitle,
+.sectiontitle * {
+  font-size: 18px;
+}
+.sectiontitle,
+.sectiontitle * {
+  font-weight: normal;
+}
+/*** Titles - END */
+
+.field_blank {
+    content: leader(".");
+    margin-left: 0px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.field_blank_line {
+    content: leader("_");
+    margin-left: 0px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.p {
+    margin-top: 15px;
+}
+
+.li > .p {
+    margin-top: 5px;
+}
+
+/*** @outputclass="credits" attribute - START */
+.credits,
+.credits * {
+    font-style: italic;
+    color: #8599AD;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+/*** @outputclass="credits" attribute - END */
+
+
+/*** Quote, cite, long quote - START */
+.cite, .lq, span.q {
+    display: block;
+    margin: 15px 0 0 0;
+}
+
+.cite {
+    font-style: normal;
+    font-weight: normal;
+    color: #404040;
+    border: solid 1px #404040;
+    padding: 5px 30px 5px 30px;
+}
+
+.lq {
+    border-left: 10px solid #09afd6;
+    padding-left: 30px;
+}
+
+span.q {
+    color: #545454;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+/* If a block element is placed in a paragraph, discard the paragraph margins. */
+.p:has(.note:only-child, .codeblock:first-child, .fig:first-child, .image:first-child, .lq:first-child, span.q:first-child, .cite:first-child, table:first-child, dl:first-child) {
+  margin: 0;
+}
+
+/*** Quote, cite, long quote - END */

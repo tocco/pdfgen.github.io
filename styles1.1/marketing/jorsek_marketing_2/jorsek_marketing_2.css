@@ -1,0 +1,410 @@
+/* LAYOUT *****************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/orientation_size.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/breaks.css");
+
+/* STYLING ****************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/table_of_contents.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/figure_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/table_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/hide_empty_elements.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/formatting.css");
+
+/* DITA *******************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/footnote.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/paragraph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/filepath_sysoutput_userinput_varname.css"); 
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/uicontrol_wintitle_shortcut_menucascade.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/abstract_shortdesc.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/note.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/xref_related_links.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/codeblock_codeph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/figure_image.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/description.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/definition_list.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/title.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/section.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/ordered_list_unordered_list_step_substep_choice.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choices_steps_substeps_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choicetable_table.css");
+
+/* Palette ******************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/palette/jorsek.css");
+
+/*** Typography - START */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@page {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body,
+article,
+.body * {
+  font-family: 'Open Sans', sans-serif;  
+  font-weight: normal;
+  line-height: 1.5em;
+  font-style: normal;
+  text-align: left;
+  font-size: 16px;
+}
+
+strong.b,
+strong.b * {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em.i,
+em.i * {
+  font-style: italic;
+  font-family: inherit;
+  font-size: inherit;
+}
+/*** Typography - END */
+
+/*** Cover Page - START */
+.cover-page-container {
+  prince-page-group: start;
+  page: cover_page;
+  counter-reset: page 0;
+}
+@page cover_page {
+  size: A4 portrait;
+  background-color: #09AFD6;
+  margin: 0px;
+  padding: 0px;
+}
+
+div.cover-page-content {
+    width: 100%;
+}
+div.title-text {
+  color:  #fff;
+  background: transparent ;
+  font-size: 54px;
+  font-weight: bold;
+  margin-top: 60mm;
+  line-height: 65px;
+  padding: 0 15mm;
+  text-align: center;
+}
+div#logo-container {
+    width:350px;
+    position: absolute;
+    bottom: 15mm;
+    right: 15mm;
+}
+/*** Cover Page - END */
+
+/*** Table of Contents - START */
+nav > ul > li > a,
+nav > ul > li > a::after {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+nav > ul:first-child::before { 
+    content: "Content";
+    font-size: 38px;
+    color: #003749;
+    display: block;
+    clear: both;
+    margin: 0px 0px 60px -1.5px;
+}
+/*** Table of Contents - END */
+
+/*** Orientation and Size - START */
+article {
+    width: 95%;
+}
+
+@page toc:left{
+        @top-right{
+        content: "Jorsek Inc. The Makers of easyDITA";
+        line-height: 1em;
+        color: gray;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    @bottom-left{
+        content: none;
+        background-color: transparent;
+}
+    @bottom-right {
+        background-color: transparent;     
+        font-size: 12px;
+        color: gray;
+        content: counter(page);
+        font-weight: 300;
+    }
+}
+@page toc:right{
+        @top-right{
+        content: "Jorsek Inc. The Makers of easyDITA";
+        line-height: 1em;
+        color: gray;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    @bottom-left{
+        content: none;
+        background-color: transparent;
+}
+    @bottom-right{
+        background-color: transparent;     
+        font-size: 12px;
+        color: gray;
+        content: counter(page);
+        font-weight: 300;
+
+    }
+}
+/* BODY */
+@page:left{
+    @top-right{
+        content: "Jorsek Inc. The Makers of easyDITA";
+        line-height: 1em;
+        color: gray;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    @top-left{
+        content: none;
+    }
+    @bottom-left{
+        content: none;
+        background-color: transparent;
+    }
+    @bottom-right {
+        background-color: transparent;     
+        font-size: 12px;
+        color: gray;
+        content: counter(page);
+        font-weight: 300;
+    }
+}
+@page:right{
+    @top-right{
+        content: "Jorsek Inc. The Makers of easyDITA";
+        line-height: 1em;
+        color: gray;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    @top-left{
+        content: none;
+    }
+    @bottom-left{
+        content: none;
+        background-color: transparent;
+    }
+    @bottom-right {
+        background-color: transparent;     
+        font-size: 12px;
+        color: gray;
+        content: counter(page);
+        font-weight: 300;
+    }
+}
+/*** Orientation and Size - END */
+
+
+/* Breaks - START */
+.topictitle1 {
+  page-break-before: always;
+}
+/* Breaks - END */
+
+/* Numbering - START */
+.cover-page-container {
+    counter-reset: page 1 pages;
+}
+/* Numbering - END */
+
+
+
+/*** Titles - START */
+.topictitle1 {
+    font-size: 38px;
+    margin-bottom: 50px;
+    color: #003749;
+}
+.topictitle2 {
+  font-size: 34px;
+}
+.topictitle3 {
+  font-size: 28px;
+}
+.topictitle4,
+.topictitle5,
+.topictitle6,
+.topictitle7,
+.topictitle8,
+.topictitle9 {
+  font-size: 24px;
+}
+
+.sectiontitle,
+.sectiontitle * {
+    font-weight: bold;
+    color: #003749;
+    background-color: #fff;
+    margin-bottom: 0px !important;
+    font-size: 18px;
+}
+.sectiontitle + .p {
+    margin-top: 15px;
+}
+
+.title2 > .image {
+    width: 100%;
+    margin-right: -20mm;
+    margin-left: -20mm;
+    margin-bottom: -25mm;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.title2 {
+    font-weight: 400;
+}
+.title2 > .image.abs_left {
+    position: absolute;
+    left: 0px;
+}
+/*** Titles - START */
+
+/*** @outputclass attributes - START */
+.emphasis1 {
+    font-weight: bold;
+    color: #09afd6  ;
+}
+
+.emphasis2 {
+    display: block;
+    color: #09afd6;
+}
+/*** @outputclass attributes - END */
+
+.p {
+    margin-top: 25px;
+}
+
+/*** Footnotes - START */
+@page {
+  counter-reset: footnote;
+  @footnotes {
+    margin-top: 10px;
+    margin-bottom: -60px;
+    border: none;
+  }
+}
+
+.fn::footnote-marker {
+  font-weight: 300;
+  font-style: italic;
+}
+.fn,
+.fn * {
+  font-size: 10px !important;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  color: gray;
+  font-style: italic;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: normal;
+}
+.fn::footnote-call {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 10px;
+}
+/*** Footnotes - END */
+
+
+
+
+/* A Wild customization - I do not recommend it 
+section.section.sticky_note {
+    margin-top: -10px !important;
+    margin-bottom: 25px !important;
+    margin-left: -20mm !important;
+    margin-right: -20mm !important;
+}
+.sticky {
+    padding: 10px;
+    background-color: #4285F4;
+    color: #fff;
+    float: left;
+    font-weight: bold;
+    text-align: center;
+    width: 20%;
+    height: 90px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.sticky_circle {
+    float: left;
+    font-weight: bold;
+    color: #4285F4;
+    background-color: #fff;
+    font-size: 24px;
+    border: 2px solid #4285F4;
+    text-align: center;
+    vertical-align: middle;
+    width: 15%;
+    height: 90px;
+    padding-top: 20px;
+}
+.sticky_para {
+    float: left;
+    width: 65%;
+    padding-left: 10px;
+    height: 90px;
+    margin-bottom: 25px;
+    line-height: 22px;
+}
+.sticky_note + .section {
+    margin-top: 25px;
+}
+*/
+
+/*** Quote, cite, long quote - START */
+.cite, .lq, span.q {
+    display: block;
+    margin: 25px 0 0 0;
+}
+
+.cite {
+    font-style: normal;
+    font-weight: normal;
+    color: #404040;
+    border: solid 1px #404040;
+    padding: 5px 30px 5px 30px;
+}
+
+.lq {
+    border-left: 10px solid #09afd6;
+    padding-left: 30px;
+}
+
+span.q {
+    color: #545454;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+/* If a block element is placed in a paragraph, discard the paragraph margins. */
+.p:has(.note:only-child, .codeblock:first-child, .fig:first-child, .image:first-child, .lq:first-child, span.q:first-child, .cite:first-child, table:first-child, dl:first-child) {
+  margin: 0;
+}
+
+/*** Quote, cite, long quote - END */
