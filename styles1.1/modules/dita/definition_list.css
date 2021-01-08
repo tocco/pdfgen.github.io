@@ -31,14 +31,11 @@ Assert the same styling in definition titles and their children elements. */
 }
 
 /* Ensure correct border transition. */
-.dd > pre.codeblock {
+dt.dt {
+    padding-bottom: 5px;
+}
+dd.dd > *:first-child {
   margin: 0px;
-  padding: 10px 0px 10px 0px;
-  }
-.dd > p,
-.dd > .p {
-  margin: 0px;
-  padding: 5px 0px 0px 0px;
 }
 
 /* Reduce spacing between consecutive definition descriptions. */
