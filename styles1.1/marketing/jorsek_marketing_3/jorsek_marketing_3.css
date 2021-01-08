@@ -68,11 +68,16 @@ em.i * {
   counter-reset: page 0;
 }
 @page cover_page {
-  size: A4 portrait;
-  background-color: #09AFD6;
-  margin: 0px;
-  padding: 0px;
-}
+    size: A4 portrait;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    background-image: url("https://jorsek.github.io/pdfgen.github.io/styles1.1/marketing/jorsek_marketing_3/media/marketing_3_cover_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
 
 div.cover-page-content {
     width: 100%;
