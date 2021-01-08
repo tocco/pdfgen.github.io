@@ -35,7 +35,7 @@ dt.dt {
     padding-bottom: 5px;
 }
 dd.dd > *:first-child {
-  margin: 0px;
+  margin-top: 0px;
 }
 
 /* Reduce spacing between consecutive definition descriptions. */
