@@ -88,7 +88,7 @@ div.cover-page-content {
 }
 div.title-text {
   color:  #fff;
-  background: transparent ;
+  background: #335c67;
   font-size: 54px;
   font-weight: bold;
   margin-top: 60mm;
@@ -97,9 +97,9 @@ div.title-text {
   text-align: center;
 }
 div#logo-container {
-    width:350px;
+    width:75px;
     position: absolute;
-    bottom: 15mm;
+    bottom: 0mm;
     right: 15mm;
 }
 /*** Cover Page - END */
@@ -114,7 +114,7 @@ nav > ul > li > a::after {
 nav > ul:first-child::before { 
     content: "Content";
     font-size: 38px;
-    color: #003749;
+    color: #335c67;
     display: block;
     clear: both;
     margin: 0px 0px 60px -1.5px;
@@ -235,7 +235,7 @@ article {
 .topictitle1 {
     font-size: 38px;
     margin-bottom: 50px;
-    color: #003749;
+    color: #335c67;
 }
 .topictitle2 {
   font-size: 34px;
@@ -255,7 +255,7 @@ article {
 .sectiontitle,
 .sectiontitle * {
     font-weight: bold;
-    color: #003749;
+    color: #335c67;
     background-color: #fff;
     margin-bottom: 0px !important;
     font-size: 18px;
@@ -285,12 +285,12 @@ article {
 /*** @outputclass attributes - START */
 .emphasis1 {
     font-weight: bold;
-    color: #09afd6  ;
+    color: #9e2a2b  ;
 }
 
 .emphasis2 {
     display: block;
-    color: #09afd6;
+    color: #fff3b0;
 }
 /*** @outputclass attributes - END */
 
@@ -397,7 +397,7 @@ section.section.sticky_note {
 }
 
 .lq {
-    border-left: 10px solid #09afd6;
+    border-left: 10px solid #335c67;
     padding-left: 30px;
 }
 
