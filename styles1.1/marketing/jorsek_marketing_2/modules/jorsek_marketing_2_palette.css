@@ -316,24 +316,19 @@
   }
   
   /* note.css ==========================================================*/
-  .note {
-    border-color: #404040;
-    background-color: #dcdcdc;
-    color: #404040;
-  }
   .note_note,
   .note_trouble {
-    border-color: #09afd6;
-    background-color: #29b4d328;
+    border-color: #335c67;
+    background-color: #335c6728;
   }
   .note_note > .note__title,
   .note_trouble > .note__title {
-    color: #09afd6;
+    color: #335c67;
   }
   .note_tip,
   .note_fastpath {
-    border-color: #3f6c51;
-    background-color: #3f6c512c;
+    border-color: #335c67;
+    background-color: #335c6728;
   }
   .note_tip > .note__title,
   .note_fastpath > .note__title {
@@ -342,20 +337,20 @@
   .note_important,
   .note_remember,
   .note_restriction {
-    border-color: #ffa600;
-    background-color: #ffc25131;
+    border-color: #fff3b0;
+    background-color: #fff3b027;
   }
   .note_important > .note__title,
   .note_remember > .note__title,
   .note_restriction > .note__title {
-    color: #ffa600;
+    color: #fff3b0;
   }
   .note_attention,
   .note_caution,
   .note_warning,
   .note_danger {
     border-color: #9e2a2b;
-    background-color: #9e2a2b27;
+    background-color: #9e2a2c27;
   }
   .note_attention > .note__title,
   .note_caution > .note__title,
