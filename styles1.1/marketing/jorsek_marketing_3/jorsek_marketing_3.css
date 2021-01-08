@@ -471,3 +471,52 @@ span.q {
   margin: 0;
 }
 /*** Quote, cite, long quote - END */
+
+/* Remove notes transparency */
+.note {
+    border-color: #404040;
+    background-color: #dcdcdc;
+    color: #404040;
+  }
+  .note_note,
+  .note_trouble {
+    border-color: #09afd6;
+    background-color: #ddebee;
+  }
+  .note_note > .note__title,
+  .note_trouble > .note__title {
+    color: #09afd6;
+  }
+  .note_tip,
+  .note_fastpath {
+    border-color: #3f6c51;
+    background-color: #afbbb4;
+  }
+  .note_tip > .note__title,
+  .note_fastpath > .note__title {
+    color: #3f6c51;
+  }
+  .note_important,
+  .note_remember,
+  .note_restriction {
+    border-color: #ffa600;
+    background-color: #fff0d5;
+  }
+  .note_important > .note__title,
+  .note_remember > .note__title,
+  .note_restriction > .note__title {
+    color: #ffa600;
+  }
+  .note_attention,
+  .note_caution,
+  .note_warning,
+  .note_danger {
+    border-color: #d95700;
+    background-color: #ebddd3;
+  }
+  .note_attention > .note__title,
+  .note_caution > .note__title,
+  .note_warning > .note__title,
+  .note_danger > .note__title {
+    color: #d95700;
+  }
