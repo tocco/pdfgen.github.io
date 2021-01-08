@@ -65,6 +65,18 @@ em.i * {
 /*** Typography - END */
 
 /*** Cover Page - START */
+@page cover_page {
+    size: A4 portrait;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    background-image: url("https://jorsek.github.io/pdfgen.github.io/styles1.1/marketing/jorsek_marketing_2/media/marketing_2_cover_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+
 .cover-page-container {
   prince-page-group: start;
   page: cover_page;
