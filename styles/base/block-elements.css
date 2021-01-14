@@ -121,6 +121,19 @@ div.blue_note{padding: 5px; overflow: auto; margin: 40px 15px; border-left: soli
 div.blue_note span{font-weight: bold; }
 /* end Note */
 
+/* Related Links */
+ul li.linklist {
+    display: block;
+}
+
+ul li.linklist:after {
+    content: " on page " target-counter(attr(href), page);
+}
+
+section.related-links {
+    margin-top: 1em;
+}
+/* End Related Links */
 
 
 /* TABLE CONTENT *********/
