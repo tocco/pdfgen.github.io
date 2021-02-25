@@ -1,6 +1,6 @@
 /* Ensure that tables and choicetables span across the whole space available. */
 table {
-  width: 99%; /* 100% shows a vertical scrollbar on sites. */
+  width: 100%; /* 100% shows a vertical scrollbar on sites. */
   margin: 5px 0px 5px 0px;
   table-layout: auto;
 }
