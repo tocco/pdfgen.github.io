@@ -14,3 +14,9 @@ article a[href*="http:"]::after,
 article a[href*="mailto:"]::after {
     content:"";
 }
+
+/* Remove page number labels for step and substep links. */
+article a[href*="step"]::after,
+article a[href*="substep"]::after {
+    content:"";
+}
