@@ -13,6 +13,7 @@ p,
 .stepresult > p:first-child,
 .stepxmp > p:first-child,
 .td > p:first-child,
+.choice >  p:first-child,
 .cause > .title + p,
 .remedy > .title + p {
   display: inline;
