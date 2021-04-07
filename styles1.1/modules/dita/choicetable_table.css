@@ -59,15 +59,19 @@ tr > td {
 }
 
 /* Support text alignment in tables */
-table .align-right {
+table .align-right,
+table .align-right * {
     text-align: right !important;
 }
-table .align-center { 
+table .align-center,
+table .align-center * { 
     text-align: center !important;
 }
-table .align-left {
+table .align-left,
+table .align-left * {
     text-align: left !important;
 }
-table .align-justify {
+table .align-justify,
+table .align-justify * {
     text-align: justify !important;
 }
