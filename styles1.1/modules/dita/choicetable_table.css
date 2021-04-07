@@ -57,3 +57,17 @@ tr > td {
   background-color: #F4F4F4;
   vertical-align: top;
 }
+
+/* Support text alignment in tables */
+table .align-right {
+    text-align: right !important;
+}
+table .align-center { 
+    text-align: center !important;
+}
+table .align-left {
+    text-align: left !important;
+}
+table .align-justify {
+    text-align: justify !important;
+}
