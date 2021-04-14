@@ -6,6 +6,7 @@
 /* Insert a page-break before chapters (level-1 topics) that contain children topics. */
 .topictitle1:has(article) {
   page-break-before: always;
+  break-inside: avoid;
 }
 
 /* Break the following elements over multiple pages: */
@@ -82,4 +83,7 @@ article > .title + article.topic {
 /* Assign the @outputclass="break_topics" attribute to the root map element to break-inside topics. */
 body.break_topics article {
   break-inside: auto;
+}
+body.break_topics article:has(.topictitle1) {
+  break-inside: avoid;
 }
