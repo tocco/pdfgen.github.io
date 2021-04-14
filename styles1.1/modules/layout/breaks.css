@@ -55,6 +55,19 @@ article {
   break-before: avoid;
 }
 
+/* Avoid excessive page-breaks after topicheads with navtitles and topics with titles only */
+article > .title + article.topic {
+  break-inside: auto;
+}
+
+/* Assign the @outputclass="break_topics" attribute to the root map element to break-inside topics. */
+body.break_topics article {
+  break-inside: auto;
+}
+body.break_topics article:has(.topictitle1) {
+  break-inside: avoid;
+}
+
 /* You can assign the @outputclass="break_before" attribute to force a page-break before a given element. */
 .break_before {
   page-break-before: always;
@@ -73,17 +86,4 @@ article {
 /* You can assign the @outputclass="break_inside" attribute to break an element over multiple pages. */
 .break_inside {
   break-inside: auto;
-}
-
-/* Avoid excessive page-breaks after topicheads with navtitles and topics with titles only */
-article > .title + article.topic {
-  break-inside: auto;
-}
-
-/* Assign the @outputclass="break_topics" attribute to the root map element to break-inside topics. */
-body.break_topics article {
-  break-inside: auto;
-}
-body.break_topics article:has(.topictitle1) {
-  break-inside: avoid;
 }
