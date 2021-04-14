@@ -46,3 +46,59 @@
 
 /* Palette ******************************************************************/
 @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/palette/jorsek.css");
+
+/* Do not count the "Document History" topic. */
+.doc_history::before {
+    display: none;
+    counter-reset: section_level1;
+}
+
+/* Increase the number of orphans and widows */
+p, 
+div {
+    orphans: 2;
+    widows: 2;
+}
+
+/* Assign the @outputclass="rfx" attribute to the root map element to reduce the size of sectiontitles. */
+body.rfx .sectiontitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Override: Break the following elements over multiple pages: */
+table,
+code,
+.entry,
+.xref,
+.sysoutput,
+.varname,
+.filepath,
+.userinput,
+.stepxmp,
+.stepresult,
+.info,
+.dd,
+.result,
+choices {
+    break-inside: auto;
+}
+
+/* Override: Avoid breaking the following elements over multiple pages: */
+.note,
+.dt,
+.title,
+.codeph,
+.userinput,
+.sysoutput,
+.fig,
+.abstract,
+.shortdesc,
+.example,
+.context,
+.prereq
+.postreq,
+article,
+.dlentry {
+    break-inside: avoid;
+}
