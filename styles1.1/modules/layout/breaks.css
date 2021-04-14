@@ -82,5 +82,4 @@ article > .title + article.topic {
 /* Assign the @outputclass="break_topics" attribute to the root map element to break-inside topics. */
 body.break_topics article {
   break-inside: auto;
-  padding-bottom: 15px;
 }
