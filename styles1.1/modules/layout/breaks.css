@@ -68,3 +68,8 @@ article {
 .break_avoid {
   break-inside: avoid;
 }
+
+/* You can assign the @outputclass="break_inside" attribute to break an element over multiple pages. */
+.break_inside {
+  break-inside: auto;
+}
