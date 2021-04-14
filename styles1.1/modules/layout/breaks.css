@@ -73,3 +73,8 @@ article {
 .break_inside {
   break-inside: auto;
 }
+
+/* Avoid excessive page-breaks after topicheads with navtitles and topics with titles only */
+article > .title + article.topic {
+  break-inside: auto;
+}
