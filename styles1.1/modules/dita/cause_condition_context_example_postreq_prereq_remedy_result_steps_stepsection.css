@@ -197,3 +197,9 @@ Style the cause and remedy titles. */
   padding: 0px;
   margin: 30px 0px 5px 0px;
 }
+
+/* Fix single-step troubleshooting remedies */
+.remedy > div.step:only-child {
+  margin-left: 20px;
+  padding: 25px 0 0 0;
+}
