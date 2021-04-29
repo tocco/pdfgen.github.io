@@ -126,4 +126,9 @@ body.no_toc > nav {
 /* Avoid overflowing text in the following elements: */
 a {
     word-wrap: break-word;
-  }
+}
+
+/* Hide ditavalrefs from the TOC */
+.ditavalref {
+    display: none;
+}
