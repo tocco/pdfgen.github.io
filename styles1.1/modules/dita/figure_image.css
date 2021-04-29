@@ -47,14 +47,17 @@ img {
 .imageleft,
 .fig:has(.imageleft) * {
     text-align: left;
+    float: left;
 }
 .imageright,
 .fig:has(.imageright) * {
     text-align: right;
+    float: right;
 }
 .imagecenter,
 .fig:has(.imagecenter) * {
     text-align: center;
+    float: center;
 }
 
 /* Remove additional spacing before and after image elements with the @placement="break" attribute assigned. */
