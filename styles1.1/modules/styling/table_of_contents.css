@@ -132,3 +132,44 @@ a {
 .ditavalref {
     display: none;
 }
+
+/* Style chapter-level Tables of Contents (TOCs)*/
+div.mini-toc-wrapper::before {
+    display: block;
+    content: "Chapter Contents";
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 5px -1.5px;
+    letter-spacing: 0.025em;
+}
+div.mini-toc-wrapper {
+    display: block;
+    margin: 15px 0 25px 0;
+    letter-spacing: 0.025em;
+}
+/* Set margins for nested topics */
+div.mini-toc-wrapper ul ul {
+    margin: 0 0 0 32px;
+    padding: 0px;
+}
+/* Remove bullets */
+div.mini-toc-wrapper li {
+    list-style-type: none;
+}
+/* Style linktext */
+div.mini-toc-wrapper a,
+div.mini-toc-wrapper a * {
+    text-decoration: none;
+    color: #000;
+    font-weight: inherit;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: inherit;
+}
+/* Add dots and pages */
+div.mini-toc-wrapper a::after {
+    content: leader(".") target-counter(attr(href), page); 
+    margin-left: 0px;
+    font-weight: normal;
+    font-size: 16px;
+}

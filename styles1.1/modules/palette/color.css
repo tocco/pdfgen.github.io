@@ -144,6 +144,15 @@ nav > ul > li:before {
   color: #404040;
 }
 
+div.mini-toc-wrapper a,
+div.mini-toc-wrapper a * {
+    color: #404040;
+}
+
+div.mini-toc-wrapper::before {
+    color: #1d3557;
+}
+
 /*** typography.css ==================================================*/
 body,
 article,
