@@ -232,6 +232,7 @@ div.mini-toc-wrapper ul ul {
 }
 div.mini-toc-wrapper li {
   list-style-type: none;
+  padding-right: 0;
 }
 div.mini-toc-wrapper a,
 div.mini-toc-wrapper a * {
