@@ -134,7 +134,7 @@ a {
 }
 
 /* Style chapter-level Tables of Contents (TOCs)*/
-div.mini-toc-wrapper::before {
+div.mini-toc-wrapper > ul::before {
     display: block;
     content: "Chapter Contents";
     font-size: 20px;
@@ -142,6 +142,10 @@ div.mini-toc-wrapper::before {
     margin: 0 0 5px -1.5px;
     letter-spacing: 0.025em;
 }
+div.mini-toc-wrapper > ul:empty:before {
+    display: none;
+}
+
 div.mini-toc-wrapper {
     display: block;
     margin: 15px 0 25px 0;

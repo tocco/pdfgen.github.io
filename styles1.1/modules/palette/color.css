@@ -149,7 +149,7 @@ div.mini-toc-wrapper a * {
     color: #404040;
 }
 
-div.mini-toc-wrapper::before {
+div.mini-toc-wrapper > ul::before {
     color: #1d3557;
 }
 
