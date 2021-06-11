@@ -28,3 +28,15 @@ section.related-links {
 li.linklist {
     margin-left: 35px;
 }
+
+/* Style Related links and relationship tables captions */
+.linklist > strong,
+.linklist > strong * {
+  display: block;
+  clear: both;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.025em;
+  color: #000;
+}

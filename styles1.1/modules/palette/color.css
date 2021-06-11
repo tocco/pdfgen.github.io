@@ -322,7 +322,10 @@ div.fn {
 .related-links::before{
   color: #1d3557;
 }
-
+.linklist > strong,
+.linklist > strong * {
+  color: #1d3557;
+}
 /* note.css ==========================================================*/
 .note {
   border-color: #404040;

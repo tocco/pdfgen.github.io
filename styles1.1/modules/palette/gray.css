@@ -322,6 +322,10 @@ div.fn {
 .related-links::before{
   color: #242424;
 }
+.linklist > strong,
+.linklist > strong * {
+  color: #242424;
+}
 
 /* note.css ==========================================================*/
 .note {
