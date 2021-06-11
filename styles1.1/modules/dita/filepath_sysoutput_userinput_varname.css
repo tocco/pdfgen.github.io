@@ -40,3 +40,8 @@ Assert consistent styling of their children. */
 .varname::after {
   content: ">";
 }
+
+/* Add padding to userinput */
+.userinput {
+  padding: 0em 0.25em;
+}
