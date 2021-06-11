@@ -203,3 +203,9 @@ Style the cause and remedy titles. */
   margin-left: 20px;
   padding: 25px 0 0 0;
 }
+
+/* Fix example placement */
+div.example {
+  margin-top: 15px;
+  margin-left: 0;
+}
