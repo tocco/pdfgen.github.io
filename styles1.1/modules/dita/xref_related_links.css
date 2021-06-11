@@ -40,3 +40,6 @@ li.linklist {
   letter-spacing: 0.025em;
   color: #000;
 }
+.linklist > strong {
+  margin-top: 15px;
+}
