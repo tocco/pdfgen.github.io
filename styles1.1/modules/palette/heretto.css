@@ -1,0 +1,501 @@
+:root {
+  --font-color: #292929;
+  --font-color-light: #ffffff;
+
+  --primary-dark-blue: #142fb2;
+  --primary-light-blue: #2792F3;
+  --primary-red: #FF5014;
+  --primary-green: #47CC4C;
+
+  --secondary-blue: #237ECF;
+  --secondary-gunmetal: #40556C;
+  --secondary-red: #D95700;
+  --secondary-yellow: #FDB801;
+
+  --pastel-blue: #e1f1ff;
+  --pastel-green: #e9ffeb;
+  --pastel-yellow: #fff9e9;
+  --pastel-red: #ffede1;
+
+  --gray-darker: #545454;
+  --gray-dark: #777777;
+  --gray-light: #D8D8D8;
+  --gray-lighter: #f4f4f4;
+
+  --radius: 0.15rem;
+}
+
+/*=====================================================================
+                              LAYOUT 
+======================================================================*/
+
+/* cover_responsive.css */
+.cover-page-container {
+  background: linear-gradient(145deg, var(--primary-light-blue), var(--primary-green));
+}
+body.internalAsset > .cover-page-container {
+  background: linear-gradient(145deg, var(--secondary-red), var(--secondary-yellow));
+}
+body.ndaAsset > .cover-page-container {
+  background: linear-gradient(145deg, var(--primary-dark-blue), var(--primary-green));
+}
+.title-text {
+color: var(--font-color-light);
+}
+.bottom-stripe {
+background-color: var(--font-color-light);
+}
+
+/* fullpage_title.css */
+@page fullpage_title {
+background-color: var(--secondary-blue);
+}
+.title.fullpage_title {
+border-color: var(--font-color-light);
+color: var(--font-color-light);
+font-family: 'Montserrat', sans-serif;
+font-size: 48pt;
+}
+.fullpage_title + .shortdesc,
+.fullpage_title + .shortdesc *,
+.fullpage_title + .abstract,
+.fullpage_title + .abstract * {
+color: var(--font-color-light);
+}
+
+h1.title.fullpage_title * {
+  color: var(--font-color-light);
+  font-size: inherit;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* faq_topic.css */
+article.topic.faq {
+border-color: var(--primary-light-blue);
+}
+
+/*=====================================================================
+                              STYLING 
+======================================================================*/
+
+/* header_footer.css and header_footer_alternate.css =================*/
+@page toc:left {
+@top-left {
+  color: var(--secondary-blue);
+  background-color: transparent;
+}
+@top-right {
+  color: var(--secondary-blue);
+}
+@bottom-left {
+  color: var(--font-color-light);
+  background: var(--secondary-blue);
+  }
+@bottom-right {
+  color: var(--font-color-light);
+  background: var(--secondary-blue);
+  }
+}
+@page toc:right {
+@top-left {
+  color: var(--secondary-blue);
+  background-color: transparent;
+}
+@top-right {
+  color: var(--secondary-blue);
+}
+@bottom-left {
+  color: var(--font-color-light);
+  background: var(--secondary-blue);
+}
+@bottom-right {
+  color: var(--font-color-light);
+  background: var(--secondary-blue);
+}
+}
+@page:left{
+@top-left {
+  color: var(--secondary-blue);
+  background-color: transparent;
+}
+@top-right {
+  color: var(--secondary-blue);
+  background-color: transparent;
+}
+@bottom-left {
+  color: var(--font-color-light);
+  background: var(--secondary-blue);
+}
+@bottom-right {
+  color: var(--font-color-light);
+  background: var(--secondary-blue);
+}
+}
+@page:right{
+@top-left {
+  color: var(--secondary-blue);
+  background-color: transparent;
+}
+@top-right {
+  color: var(--secondary-blue);
+  background-color: transparent;
+}
+@bottom-left {
+  color: var(--font-color-light);
+  background-color: var(--secondary-blue);
+}
+@bottom-right {
+  color: var(--font-color-light);
+  background-color: var(--secondary-blue);
+}
+}
+
+/* image_borders.css ===================================================*/
+.image,
+.body img {
+border-color: var(--gray-lighter);
+}
+
+/* link_page_number.css ===================================================*/
+article a[href]::after {
+color: var(--font-color);
+}
+
+/* table_of_contents.css ===============================================*/
+nav > ul:first-child::before {
+color: var(--secondary-gunmetal);
+}
+nav * {
+color: var(--font-color);
+}
+nav > ul:has(ul) > li > a {
+color: var(--font-color);
+}
+nav > ul:has(ul) > li,
+nav > ul:has(ul) > li:before {
+color: var(--font-color);
+}
+nav > ul:has(ul) > li > a::after {
+color: var(--font-color);
+}
+nav > ul > li > a,
+nav > ul > li:before {
+color: var(--font-color);
+}
+
+div.mini-toc-wrapper a,
+div.mini-toc-wrapper a * {
+color: var(--font-color);
+}
+
+div.mini-toc-wrapper > ul::before {
+ color: var(--secondary-blue);
+}
+
+/*** typography.css ==================================================*/
+body,
+article,
+.body * {
+color: var(--font-color);
+}
+
+/* ====================================================================
+                              DITA 
+======================================================================*/
+
+/* cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css */
+.prereq::before,
+.postreq::before,
+.steps::before,
+.steps-unordered::before,
+.stepsection,
+.cause::before,
+.remedy::before,
+.condition::before,
+.context::before,
+.result::before,
+.example::before {
+color: var(--secondary-gunmetal);
+}
+.cause > .title,
+.remedy > .title {
+color: var(--secondary-gunmetal);
+}
+.cause > .title::after,
+.remedy > .title::after {
+color: var(--secondary-gunmetal);
+}
+.stepsection > .ph,
+.stepsection > .ph *,
+.stepsection > .uicontrol,
+.stepsection > .wintitle,
+.stepsection > .codeph,
+.stepsection > .b,
+.stepsection > .i,
+.stepsection > .u,
+.stepsection > .term {
+color: inherit;
+background-color: transparent;
+}
+
+/* choices_info_stepresult_stepexample_solution_substeps_troublesolution.css */
+.stepresult,
+.info,
+.stepxmp,
+.troubleSolution,
+.choices,
+.substeps,
+.troubleSolution {
+border-color: var(--gray-light);
+}
+.stepresult::before,
+.info::before,
+.stepxmp::before {
+color: var(--secondary-gunmetal);
+letter-spacing: 0;
+
+}
+
+/* choices_steps_substeps_numbering.css ==============================*/
+li.step::before,
+li.substep::before,
+li.choice::before {
+background-color: var(--gray-light);
+color: var(--font-color);
+}
+.stepresult,
+.info,
+.stepxmp,
+.choices,
+.substeps {
+border-color: var(--gray-light);
+}
+.cmd {
+border-color: var(--gray-light);
+}
+
+li.step > strong,
+li.substep > strong {
+  color: var(--secondary-gunmetal);
+}
+
+/* choicetable_table.css =============================================*/
+table {
+border-color: var(--secondary-gunmetal) !important; /* Needed for SSG. */
+}
+tr,
+th,
+th * {
+color: var(--font-color-light) !important; /* Needed for both SSG and PDF Gen */
+background-color: var(--secondary-gunmetal);
+}
+th,
+th *,
+th > .fn::footnote-call {
+color: var(--font-color-light);
+background-color: var(--secondary-gunmetal);
+}
+tr:nth-child(odd) > td {
+background-color: var(--font-color-light);
+}
+tr > td {
+background-color: var(--gray-lighter);
+}
+
+
+/* cite_long_quote_quote.css =========================================*/
+.cite {
+color: var(--font-color);
+font-style: italic;
+}
+.lq {
+border-color: var(--gray-light);
+}
+
+/* codeblock_codeph.css ==============================================*/
+code {
+color: var(--secondary-gunmetal);
+background-color: var(--gray-lighter);
+}
+.codeblock > code {
+border-color: var(--gray-light);
+}
+
+/* definition_list.css ===============================================*/
+.dt,
+.dd {
+border-color: var(--gray-light);
+}
+.dt,
+.dt * {
+color: var(--secondary-gunmetal) !important; /* Needed for both SSG and PDF Gen */
+}
+
+/* filepath_sysoutput_userinput_varname.css ==========================*/
+.userinput,
+.userinput * {
+color: var(--gray-darker);
+background-color: var(--pastel-green);
+}
+.systemoutput,
+.filepath,
+.sysoutput *,
+.filepath * {
+color: var(--gray-darker);
+}
+
+.filepath, 
+filepath * {
+background-color: var(--pastel-yellow);
+}
+
+.systemoutput,
+.systemoutput * {
+  background-color: var(--pastel-blue);
+}
+
+.varname,
+.varname * {
+  color: var(--secondary-red)
+}
+
+/* footnote.css =======================================================*/
+@page {
+counter-reset: footnote;
+@footnotes {
+  border-color: var(--gray-light);
+}
+}
+.fn,
+.fn * {
+color: var(--font-color);
+}
+.fn::footnote-call {
+color: var(--primary-light-blue);
+}
+div.fn {
+border-top: 1px solid var(--gray-light);
+}
+
+/* xref_related_links.css ============================================*/
+.xref,
+.xref *,
+.link,
+.link * {
+color: var(--primary-light-blue);
+}
+.related-links::before{
+color: var(--secondary-gunmetal);
+}
+.linklist > strong,
+.linklist > strong * {
+color: var(--secondary-gunmetal);
+}
+
+/* note.css ==========================================================*/
+.note {
+border-color: var(--gray-dark);
+background-color: var(--gray-light);
+color: var(--font-color);
+}
+.note_note,
+.note_trouble {
+border-color: var(--secondary-blue);
+background-color: var(--pastel-blue);
+}
+.note_note > .note__title,
+.note_trouble > .note__title {
+color: var(--secondary-blue);
+}
+.note_tip,
+.note_fastpath {
+border-color: var(--primary-green);
+background-color: var(--pastel-green);
+}
+.note_tip > .note__title,
+.note_fastpath > .note__title {
+color: var(--primary-green);
+}
+.note_important,
+.note_remember,
+.note_restriction {
+border-color: var(--secondary-yellow);
+background-color: var(--pastel-yellow);
+}
+.note_important > .note__title,
+.note_remember > .note__title,
+.note_restriction > .note__title {
+color: var(--secondary-yellow);
+}
+.note_attention,
+.note_caution,
+.note_warning,
+.note_danger {
+border-color: var(--secondary-red);
+background-color: var(--pastel-red);
+}
+.note_attention > .note__title,
+.note_caution > .note__title,
+.note_warning > .note__title,
+.note_danger > .note__title {
+color: var(--secondary-red);
+}
+
+/* title.css =========================================================*/
+.title,
+.title *,
+.table--title-label,
+.fig--title-label,
+figcaption:not(figcaption > .desc) {
+color: var(--secondary-gunmetal);
+}
+
+/* title-site.css ====================================================*/
+h1.topictitle1,
+h1.topictitle1 *,
+h2.title.sectiontitle,
+h2.title.sectiontitle *,
+h2.topictitle2,
+h2.topictitle2 *,
+h2.title.sectiontitle,
+h2.title.sectiontitle *,
+h3.topictitle3,
+h3.topictitle3 *,
+h4.topictitle4,
+h4.topictitle4 *,
+h5.topictitle5,
+h5.topictitle5 *,
+h6.topictitle6,
+h6.topictitle6 *,
+figcaption,
+.fig--title-label,
+span.table--title-label,
+span.title,
+.table--title-label,
+.table--title-label *,
+.table > caption > .title,
+.table > caption > .title *,
+.table > caption > .title,
+.table--title-label {
+color: var(--secondary-gunmetal);
+}
+
+/* title-zendesk.css ====================================================*/
+h1.article-title,
+h1.article-title * {
+color: var(--secondary-gunmetal);
+}
+
+/* uicontrol_wintitle_shortcut_menucascade.css =======================*/
+.uicontrol {
+color: var(--primary-dark-blue);
+}
+.shortcut {
+color: var(--primary-dark-blue);
+}
+abbr[title] {
+color: var(--font-color);
+}
+.wintitle {
+  color: var(--gray-darker);
+}

@@ -1,0 +1,570 @@
+/* LAYOUT *****************************************************************/
+/*@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/cover_responsive.css");*/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/orientation_size.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/breaks.css");
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/blanks.css#DISABLED"); */
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/columns.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/fullpage.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/faq_topic.css");
+
+/* STYLING ****************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/typography.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/table_of_contents.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/header_footer_jorsek.css");
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/table_of_contents_page_numbering.css#DISABLED"); */
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/header_footer_alternate_jorsek.css#DISABLED"); */
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/table_of_contents_page_numbering_alternate.css#DISABLED"); */
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/chapter_numbering.css#DISABLED"); */
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/figure_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/table_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/image_borders.css");
+/* @import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/image_shadows.css#DISABLED"); */
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/link_page_number.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/hide_empty_elements.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/formatting.css");
+
+/* DITA *******************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/footnote.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/paragraph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/filepath_sysoutput_userinput_varname.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/uicontrol_wintitle_shortcut_menucascade.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/abstract_shortdesc.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/note.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/xref_related_links.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/codeblock_codeph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/figure_image.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/description.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/definition_list.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/cite_long_quote_quote.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/title.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/section.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/ordered_list_unordered_list_step_substep_choice.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choices_steps_substeps_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choicetable_table.css");
+
+/* Palette ******************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/palette/heretto.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+
+/* JORSEK CUSTOMIZATIONS AND FIXES **********************************************************/
+
+/* Do not count the "Document History" topic. */
+.doc_history::before {
+  display: none;
+  counter-reset: section_level1;
+}
+
+/* Increase the number of orphans and widows */
+p,
+div {
+  orphans: 2;
+  widows: 2;
+}
+
+/* Assign the @outputclass="rfx" attribute to the root map element to reduce the size of sectiontitles. */
+body.rfx .sectiontitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Override: Break the following elements over multiple pages: */
+table,
+code,
+.entry,
+.xref,
+.sysoutput,
+.varname,
+.filepath,
+.userinput,
+.stepxmp,
+.stepresult,
+.info,
+.dd,
+.result,
+choices {
+  break-inside: auto;
+}
+
+/* Override: Avoid breaking the following elements over multiple pages: */
+.note,
+.dt,
+.title,
+.codeph,
+.userinput,
+.sysoutput,
+.fig,
+.abstract,
+.shortdesc,
+.example,
+.context,
+.prereq .postreq,
+article,
+.dlentry {
+  break-inside: avoid;
+}
+
+/* ID-31 - Fix dotted borders */
+.cmd ~ .info,
+.cmd ~ .stepresult,
+.cmd ~ .stepxmp,
+.cmd ~ .choices,
+.cmd ~ .substeps {
+  margin-top: -2px;
+  padding-top: 4px;
+}
+
+/* Fix list items that start with a codeblock */
+li.li > pre.codeblock:first-child > code,
+li.li > .p:first-child > pre.codeblock:first-child > code {
+  display: inline-block;
+}
+
+/* Fix list items that start with a note */
+li.li > div.note:first-child,
+li.li > .p:first-child > div.note:first-child {
+  display: inline-block;
+}
+
+/* HERETTO CUSTOMIZATIONS *******************************************************************/
+
+/* layout/breaks.css **********/
+
+/* Break inside topics that are first children of container topics */
+article.topic > .title + p.shortdesc + article,
+article.topic > .title + div.abstract + article {
+  break-inside: auto;
+}
+
+/* layout/cover_responsive.css *********
+div.logo > img:nth-child(2),
+div.logo > img:nth-child(3) {
+  display: none;
+}*/
+
+/* Differentiate the cover page from the TOC and the document body. */
+.cover-page-container {
+  prince-page-group: start;
+  page: cover_page;
+  counter-reset: page 0;
+}
+
+/* Style the cover page.
+  Assert that the cover page size and orientation is never changed. */
+@page cover_page {
+  size: A4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cut the top-right corner */
+.cover-page-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 225px solid white;
+  border-left: 225px solid transparent;
+  width: 0;
+}
+
+/* Add borders to the cover */
+.cover-page-container {
+  border: 7.5mm solid #fff;
+}
+
+/* Make the cover-page-container (h1) fills up the whole cover page. */
+.cover-page-container {
+  width: 100%;
+  height: 100%;
+  page-break-after: always;
+}
+
+/* Apply the typography settings to the cover page. */
+.cover-page-container * {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Define the space where the title can be placed. */
+.cover-page-content {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 0mm 7.5mm 0mm 7.5mm;
+  margin-bottom: 28%; /* Should match the margin-top property in the .title-text selector. */
+}
+
+/* Style the cover page title. */
+.title-text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-align: left;
+  font-size: 54pt; /* was 48 and 54 */
+  line-height: 1.15em;
+  height: 1250px; /* Increase, if needed 760 full*/
+  margin-top: 28%;
+  word-wrap: normal; /* Should you need to wrap long words, set to break-word */
+  letter-spacing: 0;
+}
+
+/* Style the bottom area of the cover. */
+.bottom-stripe {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 200px;
+  margin: 0;
+}
+
+/* Define where the actual logo is placed */
+.logo {
+  position: absolute;
+  right: 15mm;
+  bottom: 16mm;
+  width: 350px;
+}
+
+/* styling/typography.css **********/
+body,
+article,
+.body * {
+  color: var(--font-color);
+}
+
+/* styling/table_of_contents.css **********/
+nav > ul:first-child::before {
+  /* font-family: 'Montserrat', sans-serif;*/
+  letter-spacing: 0;
+}
+
+div.mini-toc-wrapper > ul > li > a,
+div.mini-toc-wrapper > ul > li > a *,
+div.mini-toc-wrapper > ul > li > a::after {
+  font-weight: bold;
+}
+
+div.mini-toc-wrapper > ul > li ul,
+div.mini-toc-wrapper > ul > li ul *,
+div.mini-toc-wrapper > ul > li ul li a::after {
+  font-weight: normal;
+}
+
+div.mini-toc-wrapper > ul::before {
+  letter-spacing: 0;
+}
+
+/* Add dots and pages */
+div.mini-toc-wrapper a::after {
+  content: leader(".") target-counter(attr(href), page);
+  margin-left: 0px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+/* styling/header_footer_jorsek.css **********/
+/* TOC */
+@page toc:left {
+  @bottom-left {
+    content: "Copyright © 2021 Heretto Inc.";
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0;
+  }
+  @bottom-right {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0;
+  }
+  @top-right {
+    background-image: url("https://jorsek.github.io/pdfgen.github.io/styles1.1/media/Heretto_H.png");
+  }
+}
+@page toc:right {
+  @bottom-left {
+    content: "Copyright © 2021 Heretto Inc.";
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0;
+  }
+  @bottom-right {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0;
+  }
+  @top-right {
+    background-image: url("https://jorsek.github.io/pdfgen.github.io/styles1.1/media/Heretto_H.png");
+  }
+}
+
+/* BODY */
+@page: left{
+  @top-right {
+    font-family: "Montserrat", sans-serif;
+    background-image: url("https://jorsek.github.io/pdfgen.github.io/styles1.1/media/Heretto_H.png");
+  }
+  @top-left {
+    content: "{map.title}";
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0;
+  }
+  @bottom-left {
+    font-family: "Montserrat", sans-serif;
+  }
+  @bottom-right {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0;
+  }
+};
+@page: right{
+  @top-right {
+    font-family: "Montserrat", sans-serif;
+    background-image: url("https://jorsek.github.io/pdfgen.github.io/styles1.1/media/Heretto_H.png");
+  }
+  @top-left {
+    content: "{map.title}";
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0;
+  }
+  @bottom-left {
+    font-family: "Montserrat", sans-serif;
+  }
+  @bottom-right {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0;
+  }
+};
+
+/* dita/title.css **********/
+
+/* Style every title in a consistent way.
+Ensure that the titles children are styled in a consistent way. */
+.title,
+.title *,
+.table--title-label,
+.fig--title-label,
+figcaption:not(figcaption > .desc) {
+  /*font-family: 'Montserrat', sans-serif;*/
+  line-height: 1.15em;
+}
+
+/* Reset letter spacing for titles. */
+.title,
+.table--title-label,
+.fig--title-label,
+.table > caption > .title {
+  letter-spacing: 0;
+}
+
+/* Style topics nested on different levels. */
+.topictitle1,
+.topictitle1 * {
+  font-size: 40px;
+}
+.topictitle2,
+.topictitle2 * {
+  font-size: 32px;
+}
+.topictitle3,
+.topictitle3 * {
+  font-size: 28px;
+}
+.topictitle4,
+.topictitle4 *,
+.topictitle5,
+.topictitle5 *,
+.topictitle6,
+.topictitle6 *,
+.topictitle7,
+.topictitle7 *,
+.topictitle8,
+.topictitle8 *,
+.topictitle9,
+.topictitle9 *,
+.sectiontitle,
+.sectiontitle * {
+  font-size: 24px;
+}
+
+/* Style section element titles. */
+.sectiontitle,
+.sectiontitle * {
+  font-weight: normal;
+}
+
+/* dita/filepath_sysoutput_userinput_varname.css **********/
+
+.systemoutput,
+.systemoutput *,
+.varname,
+.filepath,
+.userinput,
+.userinput * {
+  font-family: "Roboto Mono", sans-serif !important;
+  border-radius: var(--radius);
+  padding: 0em 0.25em;
+}
+
+.varname {
+  padding: 0;
+}
+
+/* Wrap varname elements in brackets. */
+.varname::before {
+  content: "{";
+}
+.varname::after {
+  content: "}";
+}
+
+/* dita/note **********/
+.note__title {
+  /*font-family: 'Montserrat', sans-serif;*/
+  letter-spacing: 0;
+}
+
+/* Make the first paragraph in a note inline */
+.note > p:first-of-type {
+  display: inline;
+}
+.note > p:first-of-type ~ p {
+  display: block;
+}
+
+/* dita/codeblock_codeph.css **********/
+/*@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');*/
+code {
+  font-family: "Roboto Mono", sans-serif !important;
+}
+
+/* dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css ****/
+
+/* Style task topic and troubleshooting topic "parts". */
+.prereq::before,
+.postreq::before,
+.steps::before,
+.steps-unordered::before,
+.stepsection,
+.cause::before,
+.remedy::before,
+.condition::before,
+.context::before,
+.result::before,
+.example::before {
+  /*font-family: 'Montserrat', sans-serif;*/
+  letter-spacing: 0;
+}
+
+/* Round corners **********/
+.note,
+.table,
+.lq,
+code,
+.image,
+.image.no_borders,
+.userinput,
+.troubleSolution {
+  border-radius: var(--radius);
+}
+.dt {
+  border-top-left-radius: var(--radius);
+}
+.dd {
+  border-bottom-left-radius: var(--radius);
+}
+
+/* RESET LETTER SPACING **********/
+.prereq::before,
+.postreq::before,
+.steps::before,
+.steps-unordered::before,
+.stepsection,
+.cause::before,
+.remedy::before,
+.condition::before,
+.context::before,
+.result::before,
+.example::before,
+.stepresult::before,
+.info::before,
+.stepxmp::before,
+li.step > strong,
+li.substep > strong,
+tr,
+th,
+th *,
+.dt,
+.dt *,
+.fn,
+.fn *,
+.note__title,
+.title,
+.table--title-label,
+.fig--title-label,
+.table > caption > .title,
+.linklist > strong,
+.linklist > strong *,
+.title-text {
+  letter-spacing: 0;
+}
+
+/* TOC */
+@page toc:left {
+  @bottom-left {
+    letter-spacing: 0;
+  }
+  @bottom-right {
+    letter-spacing: 0;
+  }
+  @top-left {
+    letter-spacing: 0;
+  }
+  @top-right {
+    letter-spacing: 0;
+  }
+}
+@page toc:right {
+  @bottom-left {
+    letter-spacing: 0;
+  }
+  @bottom-right {
+    letter-spacing: 0;
+  }
+  @top-left {
+    letter-spacing: 0;
+  }
+  @top-right {
+    letter-spacing: 0;
+  }
+}
+
+/* BODY */
+@page: left{
+  @bottom-left {
+    letter-spacing: 0;
+  }
+  @bottom-right {
+    letter-spacing: 0;
+  }
+  @top-left {
+    letter-spacing: 0;
+  }
+  @top-right {
+    letter-spacing: 0;
+  }
+};
+
+@page: right{
+  @bottom-left {
+    letter-spacing: 0;
+  }
+  @bottom-right {
+    letter-spacing: 0;
+  }
+  @top-left {
+    letter-spacing: 0;
+  }
+  @top-right {
+    letter-spacing: 0;
+  }
+};
