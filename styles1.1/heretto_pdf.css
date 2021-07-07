@@ -268,72 +268,72 @@ div.mini-toc-wrapper a::after {
 
 /* styling/header_footer_jorsek.css **********/
 /* TOC */
-@page toc:left {
-  @bottom-left {
-    content: "Copyright © 2021 Heretto Inc.";
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0;
-  }
+@page toc:left{
+  @bottom-left{
+      content: "Copyright © 2021 Heretto Inc.";
+      font-family: 'Montserrat', sans-serif;        
+      letter-spacing: 0;
+}
   @bottom-right {
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0;
   }
   @top-right {
-    background-image: url("https://jorsek.github.io/pdfgen.github.io/styles1.1/media/Heretto_H.png");
+      background-image: url('https://jorsek.github.io/pdfgen.github.io/styles1.1/media/Heretto_H.png');
   }
 }
-@page toc:right {
-  @bottom-left {
-    content: "Copyright © 2021 Heretto Inc.";
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0;
-  }
-  @bottom-right {
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0;
+@page toc:right{
+  @bottom-left{
+      content: "Copyright © 2021 Heretto Inc.";
+      font-family: 'Montserrat', sans-serif;        
+      letter-spacing: 0;
+}
+  @bottom-right{
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0;
   }
   @top-right {
-    background-image: url("https://jorsek.github.io/pdfgen.github.io/styles1.1/media/Heretto_H.png");
+      background-image: url('https://jorsek.github.io/pdfgen.github.io/styles1.1/media/Heretto_H.png');
   }
 }
 
 /* BODY */
 @page:left{
-  @top-right {
-    font-family: "Montserrat", sans-serif;
-    background-image: url("https://jorsek.github.io/pdfgen.github.io/styles1.1/media/Heretto_H.png");
+  @top-right{
+      font-family: 'Montserrat', sans-serif;
+      background-image: url('https://jorsek.github.io/pdfgen.github.io/styles1.1/media/Heretto_H.png');
   }
-  @top-left {
-    content: "{map.title}";
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0;
+  @top-left{        
+      content: "{map.title}";
+      font-family: 'Montserrat', sans-serif;        
+      letter-spacing: 0;
   }
-  @bottom-left {
-    font-family: "Montserrat", sans-serif;
+  @bottom-left{
+      font-family: 'Montserrat', sans-serif;
   }
   @bottom-right {
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0;
   }
-};
+}
 @page:right{
-  @top-right {
-    font-family: "Montserrat", sans-serif;
-    background-image: url("https://jorsek.github.io/pdfgen.github.io/styles1.1/media/Heretto_H.png");
+  @top-right{
+      font-family: 'Montserrat', sans-serif;
+      background-image: url('https://jorsek.github.io/pdfgen.github.io/styles1.1/media/Heretto_H.png');
   }
-  @top-left {
-    content: "{map.title}";
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0;
+  @top-left{
+      content: "{map.title}";
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0;
   }
-  @bottom-left {
-    font-family: "Montserrat", sans-serif;
+  @bottom-left{
+      font-family: 'Montserrat', sans-serif;
   }
   @bottom-right {
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0;
   }
-};
+}
 
 /* dita/title.css **********/
 
