@@ -296,7 +296,67 @@ div.mini-toc-wrapper a::after {
       background-image: url('https://jorsek.github.io/pdfgen.github.io/styles1.1/media/Heretto_H.png');
   }
 }
+@page toc_portrait_small:left{
+  @bottom-left{
+      content: "Copyright © 2021 Heretto Inc.";
+    }
+}
+@page toc_portrait_small:right{
+  @bottom-left{
+      content: "Copyright © 2021 Heretto Inc.";
+    }
+}
+@page toc_portrait_large:left{
+  @bottom-left{
+      content: "Copyright © 2021 Heretto Inc.";
+    }
+}
+@page toc_portrait_large:right{
+  @bottom-left{
+      content: "Copyright © 2021 Heretto Inc.";
+    }
+}
+@page toc_portrait:left{
+  @bottom-left{
+      content: "Copyright © 2021 Heretto Inc.";
+    }
+}
+@page toc_portrait:right{
+  @bottom-left{
+      content: "Copyright © 2021 Heretto Inc.";
+    }
+}
 
+@page toc_landscape_small:left{
+  @bottom-left{
+      content: "Copyright © 2021 Heretto Inc.";
+    }
+}
+@page toc_landscape_small:right{
+  @bottom-left{
+      content: "Copyright © 2021 Heretto Inc.";
+    }
+}
+@page toc_landscape_large:left{
+  @bottom-left{
+      content: "Copyright © 2021 Heretto Inc.";
+    }
+}
+@page toc_landscape_large:right{
+  @bottom-left{
+      content: "Copyright © 2021 Heretto Inc.";
+    }
+}
+@page toc_landscape:left{
+  @bottom-left{
+      content: "Copyright © 2021 Heretto Inc.";
+    }
+}
+@page toc_landscape:right{
+  @bottom-left{
+      content: "Copyright © 2021 Heretto Inc.";
+    }
+}
 /* BODY */
 @page:left{
   @top-right{
