@@ -483,13 +483,10 @@ figcaption:not(figcaption > .desc) {
   letter-spacing: 0;
 }
 
-/* Make the first paragraph in a note inline 
-.note > p:first-of-type {
+/* Make the first paragraph in a note inline */
+div.note > span.note__title + p {
   display: inline;
 }
-.note > p:first-of-type ~ p {
-  display: block;
-}*/
 
 /* dita/codeblock_codeph.css **********/
 /*@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');*/
