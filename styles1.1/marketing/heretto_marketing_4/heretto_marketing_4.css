@@ -82,28 +82,6 @@ color: var(--font-color-light);
 background-color: var(--font-color-light);
 }*/
 
-/* fullpage_title.css */
-@page fullpage_title {
-background-color: var(--secondary-blue);
-}
-.title.fullpage_title {
-border-color: var(--font-color-light);
-color: var(--font-color-light);
-font-family: 'Montserrat', sans-serif;
-font-size: 48pt;
-}
-.fullpage_title + .shortdesc,
-.fullpage_title + .shortdesc *,
-.fullpage_title + .abstract,
-.fullpage_title + .abstract * {
-color: var(--font-color-light);
-}
-
-h1.title.fullpage_title * {
-  color: var(--font-color-light);
-  font-size: inherit;
-  font-family: 'Montserrat', sans-serif;
-}
 
 /* faq_topic.css */
 article.topic.faq {

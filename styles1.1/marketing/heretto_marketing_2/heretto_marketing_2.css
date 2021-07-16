@@ -71,22 +71,7 @@
   .bottom-stripe {
     background-color: #fff;
   }
-  
-  /* fullpage_title.css */
-  @page fullpage_title {
-    background-color: #2792F3;
-  }
-  .title.fullpage_title {
-    border-color: #fff;
-    color: #fff;
-  }
-  .fullpage_title + .shortdesc,
-  .fullpage_title + .shortdesc *,
-  .fullpage_title + .abstract,
-  .fullpage_title + .abstract * {
-    color: #fff;
-  }
-  
+
   /* faq_topic.css */
   article.topic.faq {
     border-color: #2792F3;
