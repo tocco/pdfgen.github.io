@@ -1,0 +1,909 @@
+/* LAYOUT *****************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/orientation_size.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/layout/breaks.css");
+
+/* STYLING ****************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/table_of_contents.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/figure_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/table_no_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/hide_empty_elements.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/styling/formatting.css");
+
+/* DITA *******************************************************************/
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/footnote.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/paragraph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/filepath_sysoutput_userinput_varname.css"); 
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/uicontrol_wintitle_shortcut_menucascade.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/abstract_shortdesc.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/note.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/xref_related_links.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/codeblock_codeph.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/figure_image.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/description.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/definition_list.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/title.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/section.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/ordered_list_unordered_list_step_substep_choice.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choices_steps_substeps_numbering.css");
+@import url("https://jorsek.github.io/pdfgen.github.io/styles1.1/modules/dita/choicetable_table.css");
+
+/*** PALETTE ***/
+:root {
+  --font-color: #292929;
+  --font-color-light: #ffffff;
+
+  --primary-dark-blue: #142fb2;
+  --primary-light-blue: #2792F3;
+  --primary-red: #FF5014;
+  --primary-green: #47CC4C;
+
+  --secondary-blue: #237ECF;
+  --secondary-gunmetal: #40556C;
+  --secondary-red: #D95700;
+  --secondary-yellow: #FDB801;
+
+  --pastel-blue: #e1f1ff;
+  --pastel-green: #e9ffeb;
+  --pastel-yellow: #fff9e9;
+  --pastel-red: #ffede1;
+
+  --gray-darker: #545454;
+  --gray-dark: #777777;
+  --gray-light: #D8D8D8;
+  --gray-lighter: #f4f4f4;
+
+  --radius: 0.15rem;
+}
+
+/*=====================================================================
+                                LAYOUT 
+======================================================================*/
+
+/* cover.css */
+.cover-page-container {
+    background-color: #2792F3;
+  }
+  .title-text {
+    color: #fff;
+  }
+  .bottom-stripe {
+    background-color: #fff;
+  }
+  
+  /* fullpage_title.css */
+  @page fullpage_title {
+    background-color: #2792F3;
+  }
+  .title.fullpage_title {
+    border-color: #fff;
+    color: #fff;
+  }
+  .fullpage_title + .shortdesc,
+  .fullpage_title + .shortdesc *,
+  .fullpage_title + .abstract,
+  .fullpage_title + .abstract * {
+    color: #fff;
+  }
+  
+  /* faq_topic.css */
+  article.topic.faq {
+    border-color: #2792F3;
+  }
+  
+  /*=====================================================================
+                                  STYLING 
+  ======================================================================*/
+  
+  /* header_footer.css and header_footer_alternate.css =================*/
+  @page toc:left {
+    @top-left {
+      color: #2792F3;
+      background-color: transparent;
+    }
+    @top-right {
+      color: #2792F3;
+      background-color: transparent;
+    }
+    @bottom-left {
+      color: #fff;
+      background-color: transparent;
+    }
+    @bottom-right {
+      color: #fff;
+      background-color: transparent;
+    }
+  }
+  @page toc:right {
+    @top-left {
+      color: #2792F3;
+      background-color: transparent;
+    }
+    @top-right {
+      color: #2792F3;
+      background-color: transparent;
+    }
+    @bottom-left {
+      color: #fff;
+      background-color: transparent;
+    }
+    @bottom-right {
+      color: #fff;
+      background-color: transparent;
+    }
+  }
+  @page:left{
+    @top-left {
+      color: #2792F3;
+      background-color: transparent;
+    }
+    @top-right {
+      color: #2792F3;
+      background-color: transparent;
+    }
+    @bottom-left {
+      color: #fff;
+      background-color: transparent;
+    }
+    @bottom-right {
+      color: #fff;
+      background-color: transparent;
+    }
+  }
+  @page:right{
+    @top-left {
+      color: #2792F3;
+      background-color: transparent;
+    }
+    @top-right {
+      color: #2792F3;
+      background-color: transparent;
+    }
+    @bottom-left {
+      color: #fff;
+      background-color: transparent;
+    }
+    @bottom-right {
+      color: #fff;
+      background-color: transparent;
+    }
+  }
+  
+  /* image_borders.css ===================================================*/
+  .image,
+  .body img {
+    border-color: #f4f4f4;
+  }
+  
+  /* link_page_number.css ===================================================*/
+  article a[href]::after {
+    color: #404040;
+  }
+  
+  /* table_of_contents.css ===============================================*/
+  nav > ul:first-child::before {
+    color: #eafaff;
+  }
+  nav * {
+    color: #404040;
+  }
+  nav > ul:has(ul) > li > a {
+    color: #335c67;
+  }
+  nav > ul:has(ul) > li,
+  nav > ul:has(ul) > li:before {
+    color: #335c67;
+  }
+  nav > ul:has(ul) > li > a::after {
+    color: #335c67;
+  }
+  nav > ul > li > a,
+  nav > ul > li:before {
+    color: #404040;
+  }
+  
+  /*** typography.css ==================================================*/
+  body,
+  article,
+  .body * {
+    color: #404040;
+  }
+  
+  /* ====================================================================
+                                  DITA 
+  ======================================================================*/
+  
+  /* cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css */
+  .prereq::before,
+  .postreq::before,
+  .steps::before,
+  .steps-unordered::before,
+  .stepsection,
+  .cause::before,
+  .remedy::before,
+  .condition::before,
+  .context::before,
+  .result::before,
+  .example::before {
+    color: #335c67;
+  }
+  .cause > .title,
+  .remedy > .title {
+    color: #404040;
+  }
+  .cause > .title::after,
+  .remedy > .title::after {
+    color: #404040;
+  }
+  .stepsection > .ph,
+  .stepsection > .ph *,
+  .stepsection > .uicontrol,
+  .stepsection > .wintitle,
+  .stepsection > .codeph,
+  .stepsection > .b,
+  .stepsection > .i,
+  .stepsection > .u,
+  .stepsection > .term {
+    color: inherit;
+    background-color: transparent;
+  }
+  /* xref_related_links.css ============================================*/
+.xref,
+.xref *,
+.link,
+.link * {
+color: #335c67;
+}
+.related-links::before{
+color: #335c67;
+}
+.linklist > strong,
+.linklist > strong * {
+color: #335c67;
+}
+  /* choices_info_stepresult_stepexample_solution_substeps_troublesolution.css */
+  .stepresult,
+  .info,
+  .stepxmp,
+  .troubleSolution,
+  .choices,
+  .substeps,
+  .troubleSolution {
+    border-color: #dcdcdc;
+  }
+  .stepresult::before,
+  .info::before,
+  .stepxmp::before {
+    color: #404040;
+  }
+  
+  /* choices_steps_substeps_numbering.css ==============================*/
+  li.step::before,
+  li.substep::before,
+  li.choice::before {
+    background-color: #dcdcdc;
+    color: #404040;
+  }
+  .stepresult,
+  .info,
+  .stepxmp,
+  .choices,
+  .substeps {
+    border-color: #dcdcdc;
+  }
+  .cmd {
+    border-color: #dcdcdc;
+  }
+  
+  /* choicetable_table.css =============================================*/
+  table {
+    border-color: #335c67 !important; /* Needed for SSG. */
+  }
+  tr,
+  th,
+  th * {
+    color: #fff !important; /* Needed for both SSG and PDF Gen */
+    background-color: #335c67;
+  }
+  th,
+  th *,
+  th > .fn::footnote-call {
+    color: #fff;
+    background-color: #335c67;
+  }
+  tr:nth-child(odd) > td {
+    background-color: #fff;
+  }
+  tr > td {
+    background-color: #F4F4F4;
+  }
+  
+  
+  /* cite_long_quote_quote.css =========================================*/
+  .cite {
+    color: #335c67;
+  }
+  .lq {
+    border-color: #dcdcdc;
+  }
+  
+  /* codeblock_codeph.css ==============================================*/
+  code {
+    color: #404040;
+    background-color: #f4f4f4;
+  }
+  .codeblock > code {
+    border-color: #dcdcdc;
+  }
+  
+  /* definition_list.css ===============================================*/
+  .dt,
+  .dd {
+    border-color: #dcdcdc;
+  }
+  .dt,
+  .dt * {
+    color: #335c67 !important; /* Needed for both SSG and PDF Gen */
+  }
+  
+  /* filepath_sysoutput_userinput_varname.css ==========================*/
+  .userinput,
+  .userinput * {
+    color: #335c67;
+    background-color: #f4f4f4;
+  }
+  .systemoutput,
+  .filepath,
+  .sysoutput *,
+  .filepath * {
+    color: #9e2a2b;
+  }
+  
+  /* footnote.css =======================================================*/
+  @page {
+    counter-reset: footnote;
+    @footnotes {
+      border-color: #dcdcdc;
+    }
+  }
+  .fn,
+  .fn * {
+    color: #404040;
+  }
+  .fn::footnote-call {
+    color: #335c67;
+  }
+  div.fn {
+    border-top: 1px solid #dcdcdc;
+  }
+  
+  /* xref_related_links.css ============================================*/
+  .xref,
+  .link {
+    color: #2792F3;
+  }
+  .related-links::before{
+    color: #335c67;
+  }
+  
+  /* note.css ==========================================================*/
+  .note_note,
+  .note_trouble {
+    border-color: #335c67;
+    background-color: #335c6728;
+  }
+  .note_note > .note__title,
+  .note_trouble > .note__title {
+    color: #335c67;
+  }
+  .note_tip,
+  .note_fastpath {
+    border-color: #335c67;
+    background-color: #335c6728;
+  }
+  .note_tip > .note__title,
+  .note_fastpath > .note__title {
+    color: #3f6c51;
+  }
+  .note_important,
+  .note_remember,
+  .note_restriction {
+    border-color: #c4ab23;
+    background-color: #fff3b027;
+  }
+  .note_important > .note__title,
+  .note_remember > .note__title,
+  .note_restriction > .note__title {
+    color: #c4ab23;
+  }
+  .note_attention,
+  .note_caution,
+  .note_warning,
+  .note_danger {
+    border-color: #9e2a2b;
+    background-color: #9e2a2c27;
+  }
+  .note_attention > .note__title,
+  .note_caution > .note__title,
+  .note_warning > .note__title,
+  .note_danger > .note__title {
+    color: #9e2a2b;
+  }
+  
+  /* title.css =========================================================*/
+  .title,
+  .title *,
+  .table--title-label,
+  .fig--title-label,
+  figcaption:not(figcaption > .desc) {
+    color: #335c67;
+  }
+  
+  /* title-site.css ====================================================*/
+  h1.topictitle1,
+  h1.topictitle1 *,
+  h2.title.sectiontitle,
+  h2.title.sectiontitle *,
+  h2.topictitle2,
+  h2.topictitle2 *,
+  h2.title.sectiontitle,
+  h2.title.sectiontitle *,
+  h3.topictitle3,
+  h3.topictitle3 *,
+  h4.topictitle4,
+  h4.topictitle4 *,
+  h5.topictitle5,
+  h5.topictitle5 *,
+  h6.topictitle6,
+  h6.topictitle6 *,
+  figcaption,
+  .fig--title-label,
+  span.table--title-label,
+  span.title,
+  .table--title-label,
+  .table--title-label *,
+  .table > caption > .title,
+  .table > caption > .title *,
+  .table > caption > .title,
+  .table--title-label {
+    color: #335c67;
+  }
+  
+  /* title-zendesk.css ====================================================*/
+  h1.article-title,
+  h1.article-title * {
+    color: #335c67;
+  }
+  
+  /* uicontrol_wintitle_shortcut_menucascade.css =======================*/
+  .uicontrol {
+    color: #335c67;
+  }
+  .shortcut {
+    color: #335c67;
+  }
+  abbr[title] {
+    color: #335c67;
+  }
+
+/*** Typography - START */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@page {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body,
+article,
+.body * {
+  font-family: 'Open Sans', sans-serif;  
+  font-weight: normal;
+  line-height: 1.5em;
+  font-style: normal;
+  text-align: left;
+  font-size: 16px;
+}
+
+strong.b,
+strong.b * {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em.i,
+em.i * {
+  font-style: italic;
+  font-family: inherit;
+  font-size: inherit;
+}
+/*** Typography - END */
+
+/*** Cover Page - START */
+@page cover_page {
+    size: A4 portrait;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    background-image: url("https://jorsek.github.io/pdfgen.github.io/styles1.1/marketing/jorsek_marketing_2/media/marketing_2_cover_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+
+.cover-page-container {
+  prince-page-group: start;
+  page: cover_page;
+  counter-reset: page 0;
+}
+
+div.cover-page-content {
+    width: 100%;
+}
+div.title-text {
+  color:  #fff;
+  background: #335c67;
+  font-size: 54px;
+  font-weight: bold;
+  margin-top: 60mm;
+  line-height: 65px;
+  padding: 0 15mm;
+  text-align: center;
+}
+div#logo-container {
+    width:50px;
+    position: absolute;
+    bottom: 0mm;
+    right: 2.5mm;
+}
+/*** Cover Page - END */
+
+/*** Table of Contents - START */
+nav > ul > li > a,
+nav > ul > li > a::after {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+nav > ul:first-child::before { 
+    content: "Content";
+    font-size: 38px;
+    color: #335c67;
+    display: block;
+    clear: both;
+    margin: 0px 0px 60px -1.5px;
+}
+/*** Table of Contents - END */
+
+/*** Orientation and Size - START */
+article {
+    width: 95%;
+}
+
+@page toc:left{
+        @top-right{
+        content: "Heretto";
+        line-height: 1em;
+        color: gray;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    @bottom-left{
+        content: none;
+        background-color: transparent;
+}
+    @bottom-right {
+        background-color: transparent;     
+        font-size: 12px;
+        color: gray;
+        content: counter(page);
+        font-weight: 300;
+    }
+}
+@page toc:right{
+        @top-right{
+        content: "Heretto";
+        line-height: 1em;
+        color: gray;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    @bottom-left{
+        content: none;
+        background-color: transparent;
+}
+    @bottom-right{
+        background-color: transparent;     
+        font-size: 12px;
+        color: gray;
+        content: counter(page);
+        font-weight: 300;
+
+    }
+}
+/* BODY */
+@page:left{
+    @top-right{
+        content: "Heretto";
+        line-height: 1em;
+        color: gray;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    @top-left{
+        content: none;
+    }
+    @bottom-left{
+        content: none;
+        background-color: transparent;
+    }
+    @bottom-right {
+        background-color: transparent;     
+        font-size: 12px;
+        color: gray;
+        content: counter(page);
+        font-weight: 300;
+    }
+}
+@page:right{
+    @top-right{
+        content: "Heretto";
+        line-height: 1em;
+        color: gray;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    @top-left{
+        content: none;
+    }
+    @bottom-left{
+        content: none;
+        background-color: transparent;
+    }
+    @bottom-right {
+        background-color: transparent;     
+        font-size: 12px;
+        color: gray;
+        content: counter(page);
+        font-weight: 300;
+    }
+}
+/*** Orientation and Size - END */
+
+
+/* Breaks - START */
+.topictitle1 {
+  page-break-before: always;
+}
+/* Breaks - END */
+
+/* Numbering - START */
+.cover-page-container {
+    counter-reset: page 1 pages;
+}
+/* Numbering - END */
+
+
+
+/*** Titles - START */
+.topictitle1 {
+    font-size: 38px;
+    margin-bottom: 50px;
+    color: #335c67;
+}
+.topictitle2 {
+  font-size: 34px;
+}
+.topictitle3 {
+  font-size: 28px;
+}
+.topictitle4,
+.topictitle5,
+.topictitle6,
+.topictitle7,
+.topictitle8,
+.topictitle9 {
+  font-size: 24px;
+}
+
+.sectiontitle,
+.sectiontitle * {
+    font-weight: bold;
+    color: #335c67;
+    background-color: #fff;
+    margin-bottom: 0px !important;
+    font-size: 18px;
+}
+.sectiontitle + .p {
+    margin-top: 15px;
+}
+
+.title2 > .image {
+    width: 100%;
+    margin-right: -20mm;
+    margin-left: -20mm;
+    margin-bottom: -25mm;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.title2 {
+    font-weight: 400;
+}
+.title2 > .image.abs_left {
+    position: absolute;
+    left: 0px;
+}
+/*** Titles - START */
+
+/*** @outputclass attributes - START */
+.emphasis1 {
+    font-weight: bold;
+    color: #9e2a2b  ;
+}
+
+.emphasis2 {
+    display: block;
+    color: #fff3b0;
+}
+/*** @outputclass attributes - END */
+
+.p {
+    margin-top: 25px;
+}
+
+/*** Footnotes - START */
+@page {
+  counter-reset: footnote;
+  @footnotes {
+    margin-top: 10px;
+    margin-bottom: -60px;
+    border: none;
+  }
+}
+
+.fn::footnote-marker {
+  font-weight: 300;
+  font-style: italic;
+}
+.fn,
+.fn * {
+  font-size: 10px !important;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  color: gray;
+  font-style: italic;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: normal;
+}
+.fn::footnote-call {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 10px;
+}
+/*** Footnotes - END */
+
+
+
+
+/* A Wild customization - I do not recommend it 
+section.section.sticky_note {
+    margin-top: -10px !important;
+    margin-bottom: 25px !important;
+    margin-left: -20mm !important;
+    margin-right: -20mm !important;
+}
+.sticky {
+    padding: 10px;
+    background-color: #4285F4;
+    color: #fff;
+    float: left;
+    font-weight: bold;
+    text-align: center;
+    width: 20%;
+    height: 90px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.sticky_circle {
+    float: left;
+    font-weight: bold;
+    color: #4285F4;
+    background-color: #fff;
+    font-size: 24px;
+    border: 2px solid #4285F4;
+    text-align: center;
+    vertical-align: middle;
+    width: 15%;
+    height: 90px;
+    padding-top: 20px;
+}
+.sticky_para {
+    float: left;
+    width: 65%;
+    padding-left: 10px;
+    height: 90px;
+    margin-bottom: 25px;
+    line-height: 22px;
+}
+.sticky_note + .section {
+    margin-top: 25px;
+}
+*/
+
+/*** Quote, cite, long quote - START */
+.lq {
+    display: block;
+    margin: 25px 0 0 0;
+}
+
+.cite {
+    font-style: normal;
+    font-weight: normal;
+    color: #404040;
+    border: solid 1px #404040;
+    padding: 5px 30px 5px 30px;
+}
+
+.lq {
+    border-left: 10px solid #404040;
+    padding-left: 30px;
+}
+
+span.q {
+    color: #545454;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* If a block element is placed in a paragraph, discard the paragraph margins. */
+.p:has(.note:only-child, .codeblock:first-child, .fig:first-child, .image:first-child, .lq:first-child, span.q:first-child, .cite:first-child, table:first-child, dl:first-child) {
+  margin: 0;
+}
+
+/*** Quote, cite, long quote - END */
+
+/* Round corners **********/
+.note,
+.table,
+.lq,
+code,
+.image,
+.image.no_borders,
+.userinput,
+.troubleSolution {
+  border-radius: var(--radius);
+}
+.dt {
+  border-top-left-radius: var(--radius);
+}
+.dd {
+  border-bottom-left-radius: var(--radius);
+}
+
+/* Disable the left border. */
+.stepresult,
+.info,
+.stepxmp,
+.troubleSolution,
+.choices,
+.substeps {
+    border: none;
+    padding-left: 0px;
+    margin-left: 3px;
+}
+.step,
+.cmd {
+    border: none;
+}
+
+/* Make the first paragraph in a note inline */
+div.note > span.note__title + p {
+  display: inline;
+}
