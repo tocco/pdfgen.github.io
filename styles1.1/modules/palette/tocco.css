@@ -6,6 +6,10 @@
                               LAYOUT 
 ======================================================================*/
 
+* {
+  font-family: Graphik,sans-serif;
+}
+
 /* cover_responsive.css */
 .cover-page-container {
   background-color: var(--primary-red);
